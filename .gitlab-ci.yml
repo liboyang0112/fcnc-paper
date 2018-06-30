@@ -27,7 +27,7 @@ stages:
 # -- VARIABLES --
 variables:
   DOCNAME: ANA-TOPQ-2017-07-PAPER
-  MAND_TAG: "3.0.6"
+  MAND_TAG: 4.0.0
   FROZEN: newest
   IMAGE_POTL: gitlab-registry.cern.ch/atlas-physics-office/gitlab-integration/potl-2016
 # -- END OF VARIABLES --
