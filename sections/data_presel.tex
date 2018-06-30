@@ -1,0 +1,62 @@
+%-------------------------------------------------------------------------------
+\section{Data sample and event preselection}
+\label{sec:data_presel}
+%-------------------------------------------------------------------------------
+
+Both searches are based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ with 25 ns bunch spacing collected 
+with the ATLAS detector in 2015 and 2016, corresponding to an integrated luminosity of $36.1~\ifb$.
+Only events recorded with a single-electron trigger, a single-muon trigger, or a ditau trigger under stable beam conditions 
+and for which all detector subsystems were operational are considered.
+The number of $pp$ interactions per bunch crossing in this dataset ranges from about 8 to 45 interactions, with an average of 24.
+%The mean number of $pp$ interactions per bunch crossing in the dataset is 24.
+
+Single-electron and single-muon triggers with low $\pt$ threshold and lepton isolation requirements are combined in a logical OR 
+with higher-threshold triggers without isolation requirements to give maximum efficiency. 
+For muon triggers, the lowest $\pt$ threshold is 20 (26)~\gev\ in 2015 (2016), while the higher $\pt$ threshold is 50~\gev\ in both years. 
+For electrons, triggers with a $\pt$ threshold of 24 (26)~\gev\ in 2015 (2016) and isolation requirements are used
+along with triggers with a 60~\gev\ threshold and no isolation requirement, and with a 120 (140)~\gev\ threshold with looser identification criteria.
+For ditau triggers, the threshold of the leading (trailing) $\tauhad$ candidate is 35 (25)~\gev\ with the medium identification required.
+In both searches, events satisfying the trigger selection are required to have at least one primary vertex candidate.
+
+Events selected by the $\Hbb$ search are recorded with a single-electron or single-muon trigger and 
+are required to have exactly one electron or muon that matches the lepton reconstructed by the trigger.  
+Furthermore, at least four jets are required, of which at least two must be $b$-tagged.
+
+Events selected by the $\Htautau$ search are classified into $\lephad$ and $\hadhad$ channels depending on the 
+multiplicity of selected leptons. Events in the $\lephad$ channel are recorded with a single-electron or single-muon trigger 
+and are required to have exactly one selected electron or muon and at least one $\tauhad$ candidate. 
+The selected light lepton (electron or muon) is required to match, with $\Delta R < 0.15$, the lepton reconstructed by 
+the trigger and to have a $\pt$ exceeding the trigger $\pt$ threshold by 1--2~\gev. In addition, its electric charge is required to be of
+opposite sign to that of the leading $\tauhad$ candidate.
+Events in the $\hadhad$ channel are recorded with a ditau trigger, and are required to have at least two $\tauhad$ candidates and 
+no selected light leptons. The two leading $\tauhad$ candidates are required to have a charge of opposite sign. 
+In addition, in both channels at least three jets and exactly one $b$-tagged jet are required.
+
+The above requirements apply to the physics objects as defined in Section~\ref{sec:objects}.
+%, which are in general different between both searches. 
+These requirements are referred to as the ``preselection'' and are summarised in Table~\ref{tab:preselection}. 
+
+%%%%%%%%%%%%%%%
+\begin{table*}[t!]
+\begin{center}
+\begin{tabular}{l|c|cc}
+\toprule\toprule
+\multicolumn{4}{c}{Preselection requirements} \\      
+\midrule
+Requirement &  $\Hbb$ search & \multicolumn{2}{c}{$\Htautau$ search} \\      
+& & $\lephad$ channel & $\hadhad$ channel \\
+\midrule
+Trigger & single-lepton trigger & single-lepton trigger & ditau trigger  \\
+Light leptons  & =1 isolated $e$ or $\mu$ & =1 isolated $e$ or $\mu$ & no isolated $e$ or $\mu$ \\
+Tau leptons & -- & $\geq$1 $\tauhad$ & $\geq$2 $\tauhad$ \\
+Electric charge & -- & $q_\ell \times q_{\tau_{\mathrm{had,1}}} < 0$ & $q_{\tau_{\mathrm{had,1}}} \times q_{\tau_{\mathrm{had,2}}} < 0$ \\
+Jets  &  $\geq$4 jets & $\geq$3 jets & $\geq$3 jets \\
+$b$-tagging & $\geq$2 $b$-tagged jets & =1 $b$-tagged jets & =1 $b$-tagged jets  \\
+\bottomrule\bottomrule
+\end{tabular}
+\caption{\small{Summary of preselection requirements for the $\Hbb$ and $\Htautau$ searches. 
+The leading and sub-leading $\tauhad$ candidates are denoted by $\tau_{\mathrm{had,1}}$ and $\tau_{\mathrm{had,2}}$ respectively.}}
+\label{tab:preselection}
+\end{center}
+\end{table*}
+%%%%%%%%%%%%%%%

@@ -4,17 +4,31 @@
 %-------------------------------------------------------------------------------
 
 % Title
-\AtlasTitle{Search for flavor-changing neutral current $t\rightarrow Hq$ ($q=u,c$) decays in pp collisions at $\sqrt{s}$=13 TeV with the ATLAS detector }
- 
+%\AtlasTitle{Search for flavor-changing neutral current $t\rightarrow Hq$ ($q=u,c$) decays in pp collisions at $\sqrt{s}$=13 TeV with the ATLAS detector }
+\AtlasTitle{Search for top quark decays $t \to Hq$ with 36 fb$^{-1}$ of $pp$ collision data at $\sqrt{s}=13~\tev$ with the ATLAS detector}
+
 % Draft version:
 % Should be 1.0 for the first circulation, and 2.0 for the second circulation.
 % If given, adds draft version on front page, a 'DRAFT' box on top of each other page, 
 % and line numbers.
 % Comment or remove in final version.
-\AtlasVersion{1.0}
+\AtlasVersion{0.3}
 % Abstract - % directly after { is important for correct indentation
 \AtlasAbstract{%
-  This is a bare bones ATLAS document. Put the abstract for the document here.
+A search for flavour-changing neutral current decays of a top quark into an up-type quark ($q=u, c$) and the 
+Standard Model Higgs boson, is presented. 
+The search is based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ recorded in 2015 and 2016 with the ATLAS detector at the 
+CERN Large Hadron Collider and corresponds to an integrated luminosity of 36.1 fb$^{-1}$.
+Two analyses are performed searching for top quark pair events in which one top quark decays to $Wb$ and the other top quark decays to $Hq$,
+and targeting the $H \to b\bar{b}$ and $H \to \tau^+\tau^-$  decay modes, respectively.  
+They exploit either the high multiplicity of $b$-quark jets, or the presence of hadronically decaying tau leptons, and employ different
+multivariate techniques to separate the signal from the background, which is dominated by $t\bar{t}$ production.
+No significant excess of events above the background expectation is found, and observed (expected) 95\% CL upper limits are derived.
+The combination of these searches with ATLAS searches in diphoton and multilepton final states significantly improves the sensitivity, 
+yielding observed (expected) 95\% CL upper limits on the $t\to Hc$ and $t\to Hu$ branching ratios of 0.XX\% (0.XX\%) and 0.XX\% (0.XX\%) respectively.
+The corresponding combined observed (expected) upper limits on the $|\lambda_{tcH}|$ and $|\lambda_{tuH}|$ couplings are 0.XX (0.XX) and 0.XX (0.XX) respectively. 
+%Upper limits in the $t\to Hc$ versus $t\to Hu$ branching ratio plane, as well as best-fit branching ratios, are also reported.
+These are the most restrictive direct bounds on $tqH$ interactions measured so far.
 }
 
 % Author - this does not work with revtex (add it after \begin{document})
@@ -27,16 +41,17 @@
 % \AtlasDate{\today}
 
 % ATLAS heading - heading at top of title page. Set for TDR etc.
-% \AtlasHeading{ATLAS ABC TDR}
+\AtlasHeading{ATLAS ABC TDR}
 
  %-------------------------------------------------------------------------------
 % The following information is needed for the cover page. The commands are only defined
 % if you use the coverpage option in atlasdoc or use the atlascover package
 %-------------------------------------------------------------------------------
 
- % List of supporting notes  (leave as null \AtlasCoverSupportingNote{} if you want to skip this option)
-% \AtlasCoverSupportingNote{Short title note 1}{https://cds.cern.ch/record/XXXXXXX}
-% \AtlasCoverSupportingNote{Short title note 2}{https://cds.cern.ch/record/YYYYYYY}
+% List of supporting notes  (leave as null \AtlasCoverSupportingNote{} if you want to skip this option)
+\AtlasCoverSupportingNote{Search for $\ttbar \to WbHq$, $H \to b\bar{b}$}{https://cds.cern.ch/record/2257631}
+\AtlasCoverSupportingNote{Search for $\ttbar \to WbHq$, $H \to \tau^+\tau^-$}{https://cds.cern.ch/record/2273683}
+\AtlasCoverSupportingNote{Combination of $\ttbar \to WbHq$ searches}{https://cds.cern.ch/record/2312520/}
 %
 % OR (the 2nd option is deprecated, especially for CONF and PUB notes)
 %
@@ -46,20 +61,24 @@
 % Comment deadline
 % \AtlasCoverCommentsDeadline{DD Month 2016}
 
-  % Analysis team members - contact editors should no longer be specified
+% Analysis team members - contact editors should no longer be specified
 % as there is a generic email list name for the editors
-% \AtlasCoverAnalysisTeam{Peter Analyser, Susan Editor1, Jenny Editor2, Alphonse Physicien}
+\AtlasCoverAnalysisTeam{
+$H \to b\bar{b}$: Trisha Farooque, Davide Gerbaudo, Aurelio Juste, Nicola Orlando,  \\ Cheng Peng,  Laura Pereira, 
+Yulia Rodina, Yanjun Tu,  Lo\"ic Val\'ery, \\ Tal Van Daalen, Jia-Shian Wang, Daiki Yamaguchi; \\
+$H \to \tau^+\tau^-$: Xin Chen, Antonio De Maria, Boyang Li, Ligang Xia; \\
+Combination: Peter Onyisi, Harish Potti}
 
 % Editorial Board Members - indicate the Chair by a (chair) after his/her name
 % Give either all members at once (then they appear on one line), or separately
-% \AtlasCoverEdBoardMember{EdBoard~Chair~(chair), EB~Member~1, EB~Member~2, EB~Member~3}
+\AtlasCoverEdBoardMember{Ketevi Assamagan~(chair), Garabed Halladjian, Fabrice Hubaut, Michele Weber~(chair)}
 
 % \AtlasCoverEdBoardMember{EdBoard~Chair~(chair)}
 % \AtlasCoverEdBoardMember{EB~Member~1}
 % \AtlasCoverEdBoardMember{EB~Member~2}
 % \AtlasCoverEdBoardMember{EB~Member~3}
 
-   % Editors egroup
+% Editors egroup
 \AtlasCoverEgroupEditors{atlas-TOPQ-2017-07-editors@cern.ch}
 
 % EdBoard egroup
