@@ -7,10 +7,10 @@ a product of Poisson probability terms over all bins considered in the search. T
 on the signal-strength parameter $\mu$, defined as a multiplicative factor to the yield for $\Hq$ signal events
 normalised to a reference branching ratio $\BR_{\mathrm{ref}}(t\to Hq)=1\%$,
 and $\theta$, a set of nuisance parameters that encode the effect of systematic uncertainties in the signal and background expectations. 
-Therefore, the expected total number of events in a given bin depends on $\mu$ and $\theta$. With the exception of a few parameters 
+Therefore, the expected total number of events in a given bin depends on $\mu$ and $\theta$. 
+All nuisance parameters are implemented in the likelihood function as Gaussian or log-normal constraints, with the exception of a few parameters 
 that control the normalisation of the some of the background components (e.g. the \ttbin\ background in the case of the $\Hbb$ search) 
-and are treated as free parameters in the fit,  all other nuisance parameters are implemented in the likelihood function 
-as Gaussian or log-normal constraints. 
+and are treated as free parameters in the fit.
 
 For a given value of $\mu$, the nuisance parameters $\theta$ allow variations of the expectations for signal and background
 according to the corresponding systematic uncertainties, and their fitted values result in the deviations from
@@ -26,16 +26,16 @@ The best-fit $\BR(t\to Hq)$ is obtained by performing a binned likelihood fit to
 hypothesis, i.e. maximising the likelihood function $L(\mu,\theta)$ over $\mu$ and $\theta$.
 
 The test statistic $q_\mu$ is defined as the profile likelihood ratio: 
-$q_\mu = -2\ln({\cal L}(\mu,\hat{\hat{\theta}}_\mu)/{\cal L}(\hat{\mu},\hat{\theta}))$,
+$q_\mu = -2\ln({\cal L}(\mu,{\hat{\theta}}_\mu)/{\cal L}(\hat{\mu},\hat{\theta}))$,
 where $\hat{\mu}$ and $\hat{\theta}$ are the values of the parameters that
-maximise the likelihood function (subject to the constraint $0\leq \hat{\mu} \leq \mu$), and $\hat{\hat{\theta}}_\mu$ are the values of the
+maximise the likelihood function (subject to the constraint $0\leq \hat{\mu} \leq \mu$), and ${\hat{\theta}}_\mu$ are the values of the
 nuisance parameters that maximise the likelihood function for a given value of $\mu$. 
 The test statistic $q_\mu$ is evaluated with the {\textsc RooFit} package~\cite{Verkerke:2003ir,RooFitManual}.
 A related statistic is used to determine the probability that the observed data are compatible with the background-only hypothesis (i.e.~the discovery test)  
-by setting $\mu=0$ in the profile likelihood ratio and leaving $\hat{\mu}$ unconstrained: $q_0 = -2\ln({\cal L}(0,\hat{\hat{\theta}}_0)/{\cal L}(\hat{\mu},\hat{\theta}))$.
+by setting $\mu=0$ in the profile likelihood ratio and leaving $\hat{\mu}$ unconstrained: $q_0 = -2\ln({\cal L}(0,{\hat{\theta}}_0)/{\cal L}(\hat{\mu},\hat{\theta}))$.
 The $p$-value (referred to as $p_0$) representing the probability of the data being compatible with the 
 background-only hypothesis is estimated by integrating
-the distribution of $q_0$ from background-only pseudo-experiments, approximated using the asymptotic formulae given in Refs.~\cite{Cowan:2010js,ErratumCowan:2010js}, above the observed value of $q_0$. The observed $p_0$-value is checked for each explored signal scenario.
+the distribution of $q_0$ obtained from background-only pseudo-experiments, approximated using the asymptotic formulae given in Refs.~\cite{Cowan:2010js,ErratumCowan:2010js}, above the observed value of $q_0$ in the data. The observed $p_0$-value is checked for each explored signal scenario.
 In the absence of any significant excess above the background expectation, upper limits on $\mu$, and thus on 
 $\BR(t\to Hq)$, are derived by using $q_\mu$ in the CL$_{\textrm{s}}$ method~\cite{Junk:1999kv,Read:2002hq}.
 For a given signal scenario, values of the $\BR(t\to Hq)$ yielding CL$_{\textrm{s}} < 0.05$, 

@@ -9,8 +9,8 @@ follows closely that of the previous search performed on the Run 1 dataset~\cite
 \label{sec:event_categorisation}
 
 Given the choice of the $W\to\ell\nu$ and $H\to b\bar{b}$ decay modes, the $\ttbar \to WbHq$ signal 
-is expected to have four jets and three $b$-quarks in the final state, which can be effectively exploited 
-to suppress the background. 
+is expected to have four jets in the final state, three of them originating from $b$-quarks, which 
+can be effectively exploited to suppress the background. 
 Additional jets can also be present because of initial- or final-state radiation.
 However, the use of the 60\% $b$-tagging operating point, characterised by a low mistag rate for
 charm and light jets, make both $\Hc$ and $\Hu$ signals have a similar $b$-tag multiplicity spectrum,
@@ -60,7 +60,7 @@ which is determined via a likelihood fit to data. \textbf{TO DO: Improve style.}
 \subsection{Likelihood discriminant}
 \label{sec:likelihood_discriminant}
 
-After event categorisation, the signal-to-background ratio is very low even in the most sensitive analysis regions, and a suitable
+After event categorisation, the signal-to-background ratio is insufficient even in the best cases to achieve sensitivity, and a suitable
 discriminating variable between signal and background needs to be constructed in order to improve the sensitivity of the search.
 Since both signal and background result from the $\ttbar$ decay, there are few experimental handles available to discriminate
 between them. The most prominent features are the different resonances present in the decay (i.e. the Higgs boson in the case 
@@ -87,7 +87,7 @@ parton-jet assignments that are inconsistent with the correct parton candidates 
 
 Two background hypotheses are considered, corresponding to the dominant backgrounds in
 the analysis: $\ttbar$+light-jets and $\ttbin$. Thus, $P^\textrm{bkg}$ is computed as the average of
-the pdfs for both hypotheses, weighted by their relative fractions in simulated $\ttbar$+jets events, which depend
+the pdfs for both hypotheses, weighted by their relative fractions found in simulated $\ttbar$+jets events, which depend
 on the analysis region considered. Furthermore, in a significant fraction of $\Hq$ simulated events (e.g. about 40--50\% in 3b regions), 
 the light-quark jet from the hadronic top-quark decay is not among the selected jets.
 Similarly, in about 30--40\% (50--90\%) of simulated $\ttbar$+light-jets ($\ttbin$) background events in 3b regions, 
@@ -96,9 +96,15 @@ $P^\textrm{bkg}$ also includes an additional hypothesis to account for this topo
 In this case, the invariant masses involving the missing jet are computed using the highest-$\pt$ jet not matched 
 to a decay product from the $\ttbar$ system.
 
-An example of the discrimination between signal and background that is obtained is shown in Figure~\ref{fig:LHD},
-where the shape of the LH discriminant distribution is compared between the $\Hc$ and $\Hu$ signals and the 
-$t\bar{t}\to WbWb$ background in each of the analysis regions considered. 
+%An example of the discrimination between signal and background that is obtained is shown in Figure~\ref{fig:LHD},
+%where the shape of the LH discriminant distribution is compared between the $\Hc$ and $\Hu$ signals and the 
+%$t\bar{t}\to WbWb$ background in each of the analysis regions considered. 
+
+Since this analysis has higher expected sensitivity to a $\Hc$ signal than to a $\Hu$ signal and, in order to allow probing 
+of the $\BR(t\to Hu)$ versus $\BR(t\to Hc)$ plane, the discriminant optimised for $\Hc$ is used for both 
+decay modes. It was verified that using the $\Hc$ discriminant for the $\Hu$ search does not result in a significant sensitivity loss.
+Figure~\ref{fig:LHD} compares the shape of the LH distribution between the $\Hc$ and $\Hu$ signals and the 
+$t\bar{t}\to WbWb$ background in each of the analysis regions considered.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[htbp]

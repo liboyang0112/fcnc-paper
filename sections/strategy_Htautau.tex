@@ -8,22 +8,26 @@ The analysis strategy adopted by the $\Htautau$ search follows closely that deve
 \subsection{Event categorisation and kinematic reconstruction}
 \label{sec:htautau_reco_cat}
 
-In the $\Htautau$ search, the final state signature of interest is characterised by the presence of two $\tau$-leptons from the
-decay of the Higgs boson and a light-quark jet, both originating from the decay of one of the top quarks. If one of the $\tau$-leptons
-decays leptonically, an isolated electron or muon and significant $\met$ would also be expected.
-The other top quark decays into a $W$ boson and a $b$-quark, with the $W$ boson in turn decaying hadronically, giving 
-three additional jets, one of which should be tagged as a $b$-jet. Therefore, at least four jets are typically expected in signal events.
+In the $\Htautau$ search, the $\ttbar \to WbHq$ signal being probed is characterised by the presence of $\tau$-leptons from the decay of 
+the Higgs boson and at least four jets, only one of which originates from a $b$-quark.
+%In the $\Htautau$ search, the final state signature of interest is characterised by the presence of two $\tau$-leptons from the
+%decay of the Higgs boson as well as a light-quark jet, the latter two originating from the decay of one of the top quarks. 
+If one of the $\tau$-leptons decays leptonically, an isolated electron or muon and significant $\met$ is also expected.
+%The other top quark decays into a $W$ boson and a $b$-quark, with the $W$ boson in turn decaying hadronically, resulting in 
+%three additional jets. Therefore, at least four jets are typically expected in signal events.
 However, in a significant fraction of the events the trailing jet from the $W$-boson decay fails the minimum $\pt$ requirement of $30~\gev$,
 resulting in signal events with only three jets reconstructed.
-In order to optimise the sensitivity of the search, the selected events are categorised into four search 
-regions depending on the number of $\taulep$ and $\tauhad$ candidates, and on the number of jets:
+In order to optimise the sensitivity of the search, the selected events are categorised into four SRs depending 
+on the number of $\taulep$ and $\tauhad$ candidates, and on the number of jets:
 ($\lephad$, 3j), ($\lephad$, $\geq$4j), ($\hadhad$, 3j), and ($\hadhad$, $\geq$4j). 
 
 This event categorisation is primarily motivated by the different quality of the event kinematic reconstruction, depending on the amount 
 of $\met$ in the event (larger in $\lephad$ events compared to $\hadhad$ events), and whether a jet from the hadronic top-quark decay 
-is missing or not (3j vs $\geq$4j events). This analysis adopts the event reconstruction strategy developed in Ref.~\cite{Chen:2015nta},
-which is briefly summarised in the following. Events with exactly three jets that are compatible with having a fully reconstructed hadronically decaying 
-top quark ($t \to Wb \to qqb$) necessarily miss the light-quark jet from the $t \to Hq$ decay and are thus rejected. 
+is missing or not (3j vs $\geq$4j events). 
+%This analysis adopts the event reconstruction strategy developed in Ref.~\cite{Chen:2015nta}, which is briefly summarised in the following. 
+The event reconstruction strategy used~\cite{Chen:2015nta} is summarised in the following.
+Events with exactly three jets that are compatible with having a fully reconstructed hadronically decaying 
+top quark ($t \to Wb \to qqb$) are rejected, as the $t \to Hq$ decay cannot be reconstructed due to the missing light-quark jet.
 For both 3j and $\geq$4j events, the selected jets are assigned to the different top quark decay products via a criterion based on 
 minimising a sum of angular distances between objects. Finally, the four-momenta of the invisible decay products for each $\tau$-lepton decay 
 are estimated by minimising a $\chi^2$ function based on the probability density functions for the angular distance of the visible and invisible
@@ -83,7 +87,7 @@ Variable & 3j & $\geq$4j & 3j & $\geq$4j  \\
 $m_{\tau\tau}^{\text{fit}}$                      	& $\times$  & $\times$  & $\times$  & $\times$ \\
 $m_{Hq}$                                	& $\times$  & $\times$  & $\times$  & $\times$ \\
 $m_{\text{T,lep}}$                              	& $\times$  & $\times$  &             & \\
-$p_{\text{T,1}}$                             	&             &             & $\times$  & $\times$ \\
+$p_{\text{T,1}}$                             	& $\times$  & $\times$ & $\times$  & $\times$ \\
 $p_{\text{T,2}}$                             	& $\times$  & $\times$  & $\times$  & $\times$ \\
 $\met$ $\phi$ centrality                             	& $\times$  & $\times$  & $\times$  & $\times$ \\
 $E_{\text{T},\parallel}^{\text{miss}}$          	& $\times$  & $\times$  & $\times$  & $\times$ \\
@@ -103,10 +107,9 @@ The description of each variable is provided in the text.}}
 \end{table*}
 %%%%%%%%%%%%%%%
 
-Boosted decision trees (BDT)~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna} are used in each SR to improve the separation between signal and background. The separate training naturally exploits differences in event kinematics across SRs.  
+Boosted decision trees (BDT)~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna} are used in each SR to improve the separation between signal and background. The separate training exploits differences in event kinematics across SRs.  In the training, only the $\Hq$ signal is used against the total SM background, including both real and fake $\tauhad$ contributions.
 A large set of potential variables was investigated in each SR separately, and only those variables that led to an improved discrimination
-performance of the BDT were kept. In the training, only the $\Hq$ signal is used against the total SM background, including both real
-and fake $\tauhad$ contributions. The BDT input variables used per SR are listed in Table~\ref{tab:mva_var} and defined in the following:
+performance of the BDT were kept.  The BDT input variables in each SR are listed in Table~\ref{tab:mva_var} and defined in the following:
 
 \begin{itemize}
 \item $m_{\tau\tau}^{\text{fit}}$: the invariant mass of the two $\tau$-lepton candidates after the reconstruction of the neutrinos, indicating the reconstructed Higgs boson mass.

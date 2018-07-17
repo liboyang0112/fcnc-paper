@@ -6,7 +6,9 @@
 Several sources of systematic uncertainty are considered that can affect the normalisation of signal 
 and background and/or the shape of their corresponding final discriminant distributions.  
 Each source of systematic uncertainty is considered to be uncorrelated with the other sources.  
-Correlations of a given systematic uncertainty are maintained across processes and channels.  
+Correlations of a given systematic uncertainty are maintained across processes and channels 
+as appropriate.
+The following sections describe the systematic uncertainties considered.
 
 %Table~\ref{tab:SystSummary} presents a list of all systematic uncertainties considered in the analysis 
 %and indicates whether they are taken to be normalisation-only, or to affect both shape and normalisation.
@@ -122,8 +124,6 @@ Correlations of a given systematic uncertainty are maintained across processes a
 %\end{table*}
 %%%%%%%%%%%
 
-The following sections describe the systematic uncertainties considered in these searches.
-
 \subsection{Luminosity}
 \label{sec:syst_lumi}
 
@@ -187,18 +187,18 @@ The uncertainty associated with the choice of NLO generator is derived by compar
 The uncertainty due to the choice of parton shower and hadronisation (PS \& Had) model is derived 
 by comparing the predictions from {\powheg} interfaced either to {\pythiaeight} or {\herwig7}. 
 Additionally, the uncertainty on the modelling of additional radiation is assessed with two alternative {\powheg}+{\pythiaeight} samples:
-the sample with increased radiation (referred to as ``radHi'') has the renormalisation and factorisation scales decreased by a factor of two, 
-the $h_{\textrm{damp}}$ parameter doubled, and uses the Var3c upward variation of the A14 parameter set; 
-the sample with decreased radiation (referred to as ``radLow'') has the scales increased by a factor of two 
-and uses the Var3c downward variation of the A14 set~\cite{ATL-PHYS-PUB-2016-004}.
+a sample with increased radiation (referred to as ``radHi'') is obtained by decreasing the renormalisation and factorisation scales  
+by a factor of two, doubling the $h_{\textrm{damp}}$ parameter, and using the Var3c upward variation of the A14 parameter set;
+a sample with decreased radiation (referred to as ``radLow'') is obtained by increasing the scales by a factor of two 
+and using the Var3c downward variation of the A14 set~\cite{ATL-PHYS-PUB-2016-004}.
 
 In the case of the $\Hbb$ search, where the $\ttbar$+HF background plays a more prominent role, a more 
 detailed treatment of its associated systematic uncertainties is made. In particular, since several analysis 
-regions have a sufficiently large number of events of $\ttbin$ background, its normalisation is completely 
+regions have a sufficiently large number of events of $\ttbin$ background, its normalisation is 
 determined by the data during the fit procedure.
 %, with no prior uncertainty assumed. 
 In the case of the $\ttcin$ normalisation, a normalisation uncertainty of 50\% is assumed, as the fit to the data is unable 
-to precisely determine it and the analysis has very limited sensitivity to this uncertainty.
+to precisely determine it, and the analysis has very limited sensitivity to this uncertainty.
 Since the diagrams that contribute to $\ttbar$+light-jets, $\ttcin$, $\ttbin$
 production are different, all above uncertainties on $\ttbar$+jets
 background modelling (NLO generator, PS \& Had, and radHi/radLow), except the uncertainty on the inclusive cross-section, are
@@ -237,15 +237,15 @@ by comparing events produced by {\powheg} interfaced to {\pythia} 6 or {\herwigp
 These uncertainties are treated as fully correlated among single-top production processes, but uncorrelated with the
 corresponding uncertainty in the $\ttbar$+jets background.
 An additional systematic uncertainty on $Wt$-channel production concerning the separation 
-between $t\bar{t}$ and $Wt$ at NLO~\cite{Frixione:2008yi} is assessed by comparing
-the nominal sample, which uses the so-called ``diagram removal'' scheme, with an alternative sample
-using the ``diagram subtraction'' scheme.
+between $t\bar{t}$ and $Wt$ at NLO is assessed by comparing
+the nominal sample, which uses the so-called ``diagram removal'' scheme~\cite{Frixione:2008yi}, with an alternative sample
+using the ``diagram subtraction'' scheme~\cite{Frixione:2008yi}.
 
 Uncertainties on the diboson background normalisation include 5\% from the NLO theory cross sections~\cite{Campbell:1999ah},
 as well as an additional 24\% normalisation uncertainty added in quadrature for each additional inclusive jet-multiplicity bin, based on a 
 comparison among different algorithms for merging LO matrix elements and parton showers~\cite{Alwall:2007fs}
 (we assume already two jets come from the $W/Z$ decay, as in $WW/WZ \to \ell \nu jj$). 
-Therefore, the total normalisation uncertainty is $5\% \oplus \sqrt{N-2}\times 24\%$, where $N$ is the desired jet multiplicity,  
+Therefore, the total normalisation uncertainty is $5\% \oplus \sqrt{N-2}\times 24\%$, where $N$ is the selected jet multiplicity,  
 i.e. 34\%, 42\%, and 48\%, for events with exactly 4 jets, exactly 5 jets, and $\geq$6 jets, respectively.
 Recent comparisons between data and {\sherpa}~2.1.1 for $WZ(\to \ell\nu\ell\ell) + \geq$4 jets show
 agreement within the experimental uncertainty of approximately 40\%~\cite{Aaboud:2016yus}, which further justifies the above uncertainty.
@@ -253,7 +253,7 @@ agreement within the experimental uncertainty of approximately 40\%~\cite{Aaboud
 Uncertainties in the $\ttbar V$ and $\ttbar H$ cross sections are 15\% and $+10\%$/$-13\%$, respectively,
 from the uncertainties in their respective NLO theoretical cross sections~\cite{Campbell:2012dh,Garzelli:2012bn,Dittmaier:2011ti}. 
 
-Uncertainties on the data-driven multijet background in the $\Hbb$ search estimate receive
+Uncertainties on the data-driven multijet background in the $\Hbb$ search estimate include
 contributions from the limited sample size in data, particularly at high jet and $b$-tag multiplicities, as 
 well as from the uncertainty on the rate of fake leptons, estimated in 
 different control regions (e.g. selected with a requirement on either the maximum $\met$ or $\mtw$). 
@@ -265,19 +265,19 @@ the multijet background prediction, which are uncorrelated
 between bins in the final discriminant distribution, effectively cover all possible shape uncertainties. 
 
 Uncertainties on the data-driven fake $\tauhad$ background in the $\Htautau$ search are obtained by using additional signal-depleted samples. The construction is similar to that of the SRs and corresponding CRs discussed in Section~\ref{sec:fakeleptons}, but employing further loosened $\tauhad$ identification criteria, and thus referred to as ``loose SR"  and ``loose CR". 
-In each loose SR, the shape difference between the data and the data-driven prediction of its associated loose CR is extracted and applied as an uncertainty on the prediction in the nominal SR. In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. Finally, the normalisation of the fake $\tauhad$ background in each SR is completely determined by the data during the fit procedure, and thus so is its uncertainty. In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
+In each loose SR, the shape difference between the data and the data-driven prediction of its associated loose CR is extracted and applied as an uncertainty on the prediction in the nominal SR. In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. Finally, the normalisation of the fake $\tauhad$ background in each SR is determined by the data during the fit procedure, and thus so is its uncertainty. In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
 
 \subsection{Signal modelling}
 \label{sec:syst_sigmodeling}
 
 Several normalisation and shape uncertainties are taken into account for the $\Hq$ signal.
-The uncertainty on the $\ttbar$ cross section (see above) also applies to the $\Hq$ signal
-and is taken to be the same as, and fully correlated with, the uncertainty assigned to the $\ttbar \to WbWb$ background. 
+The uncertainty on the $\ttbar$ cross section also applies to the $\Hq$ signal and is taken to be the same as, 
+and fully correlated with, the uncertainty assigned to the $\ttbar \to WbWb$ background (see Sect.~\ref{sec:syst_bkgmodeling}).
 Uncertainties on the Higgs boson branching ratios are taken into account
 following the recommendation in Ref.~\cite{deFlorian:2016spz}.
 %: $\pm 1.1\%$ ($\Delta\alpha_\textrm{S}$),  $\pm 1.4\%$ ($\Delta m_b$) and $\pm 0.8\%$ (theory).
 Additional uncertainties associated with the modelling of additional radiation, with the choice of NLO generator, and
 with the choice of parton shower and hadronisation model, are estimated from the comparison of the nominal
-and alternative $\ttbar \to WbWb$ background samples (see discussion above) and applied to $\Hq$ signal. 
+and alternative $\ttbar \to WbWb$ background samples (see discussion in Sect.~\ref{sec:syst_bkgmodeling}) and applied to $\Hq$ signal. 
 These modelling uncertainties are taken to be uncorrelated with those affecting the $\ttbar \to WbWb$ background.
 
