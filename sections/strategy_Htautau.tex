@@ -23,12 +23,12 @@ on the number of $\taulep$ and $\tauhad$ candidates, and on the number of jets:
 
 This event categorisation is primarily motivated by the different quality of the event kinematic reconstruction, depending on the amount 
 of $\met$ in the event (larger in $\lephad$ events compared to $\hadhad$ events), and whether a jet from the hadronic top-quark decay 
-is missing or not (3j vs $\geq$4j events). 
+is missing or not (events with exactly three jets or at least four jets).
 %This analysis adopts the event reconstruction strategy developed in Ref.~\cite{Chen:2015nta}, which is briefly summarised in the following. 
 The event reconstruction strategy used~\cite{Chen:2015nta} is summarised in the following.
 Events with exactly three jets that are compatible with having a fully reconstructed hadronically decaying 
 top quark ($t \to Wb \to qqb$) are rejected, as the $t \to Hq$ decay cannot be reconstructed due to the missing light-quark jet.
-For both 3j and $\geq$4j events, the selected jets are assigned to the different top quark decay products via a criterion based on 
+For the remaining events, the selected jets are assigned to the different top quark decay products via a criterion based on 
 minimising a sum of angular distances between objects. Finally, the four-momenta of the invisible decay products for each $\tau$-lepton decay 
 are estimated by minimising a $\chi^2$ function based on the probability density functions for the angular distance of the visible and invisible
 decay products in the $\tau$-lepton decay, and including Gaussian constraints on the $\tau$-lepton mass, the Higgs boson mass and the
@@ -127,7 +127,7 @@ The $\met$ $\phi$ centrality is defined as the sum of the parallel ($\parallel$)
 \item $m_{\tau j}$: the invariant mass of the  $\tauhad$ candidate and the jet that has the smallest angular distance with the $\tauhad$ candidate.
 \item $x_{1}^{\text{fit}}$ and $x_{2}^{\text{fit}}$: the momentum fractions carried by the visible decay products from the two $\tau$-lepton candidates 
 (whether $\taulep$ or $\tauhad$) per event. It is based on the best-fit four-momentum of the neutrino(s) according to the event reconstruction procedure outlined in Section~\ref{sec:htautau_reco_cat}.
-\item $m_{bj_1j_2}$: the invariant mass of the $b$-jet and the two jets originating from the $W$-boson in the $t\to Wb \to j_1j_2b$ decay, corresponding to the reconstructed mass of the parent top quark. This variable is only defined for $\geq$4j events.
+\item $m_{bj_1j_2}$: the invariant mass of the $b$-jet and the two jets originating from the $W$-boson in the $t\to Wb \to j_1j_2b$ decay, corresponding to the reconstructed mass of the parent top quark. This variable is only defined for events with at least four jets.
 \end{itemize}
 
 Among these variables, the most discriminating ones include $m_{\tau\tau}^{\text{fit}}$, $p_{\text{T},2}$, $x_{1}^{\text{fit}}$ and $x_{2}^{\text{fit}}$. A comparison between data and background prediction 
@@ -142,10 +142,10 @@ The level of discrimination between signal and background achieved by the BDTs i
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_lephad_4j_FR.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/ptL2_lephad_3j_FR.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/ptL2_lephad_4j_FR.eps}} \\
-\caption{$\Htautau$ search: Comparison between the data and background prediction for the distribution of two of the most
+\caption{$\Htautau$ search: Comparison between the data and background prediction for the distribution of some of the most
 important BDT input variables in the $\lephad$ channel. The distributions are shown for
-(a) $m_{\tau\tau}^{\text{fit}}$ in the 3j region, (b) $m_{\tau\tau}^{\text{fit}}$ in the $\geq$4j region, (c) $p_{\text{T},2}$ in the 3j region,
-and (d) $p_{\text{T},2}$ in the $\geq$4j region.
+$m_{\tau\tau}^{\text{fit}}$ in (a) the ($\lephad$, 3j) region and (b) the ($\lephad$, $\geq$4j) region, and for
+$p_{\text{T},2}$ in (c) the ($\lephad$, 3j)  region and (d) the ($\lephad$, $\geq$4j) region.
 The expected $\Hc$ signal (dashed histogram) is shown normalised to $\BR(t\to Hc)=1\%$.
 The bottom panel displays the ratio of data to the SM background (``Bkg'') prediction. 
 The hashed area represents the total uncertainty of the background. \textbf{Improve style.}}
@@ -163,8 +163,8 @@ The hashed area represents the total uncertainty of the background. \textbf{Impr
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x2_fit_hadhad_4j_FR.eps}} \\
 \caption{$\Htautau$ search: Comparison between the data and background prediction for the distribution of two of the most 
 important BDT input variables in the $\hadhad$ channel. The distributions are shown for
-(a) $m_{\tau\tau}^{\text{fit}}$ in the 3j region, (b) $m_{\tau\tau}^{\text{fit}}$ in the $\geq$4j region, (c) $x_{1}^{\text{fit}}$ in the 3j region,
-and (d) $x_{2}^{\text{fit}}$ in the $\geq$4j region.
+$m_{\tau\tau}^{\text{fit}}$ in (a) the ($\hadhad$, 3j) region and (b) the ($\hadhad$, $\geq$4j) region, and for
+(c) $x_{1}^{\text{fit}}$ in the ($\hadhad$, 3j)  region, and (d) $x_{2}^{\text{fit}}$ in the ($\hadhad$, $\geq$4j) region.
 The expected $\Hc$ signal (dashed histogram) is shown normalised to $\BR(t\to Hc)=1\%$.
 The bottom panel displays the ratio of data to the SM background (``Bkg'') prediction. 
 The hashed area represents the total uncertainty of the background. \textbf{Improve style.}} 
