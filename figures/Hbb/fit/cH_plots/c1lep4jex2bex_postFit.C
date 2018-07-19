@@ -1,7 +1,7 @@
 void c1lep4jex2bex_postFit()
 {
 //=========Macro generated from canvas: c_c1lep4jex2bex_postFit/c_c1lep4jex2bex_postFit
-//=========  (Thu Jul 19 11:48:32 2018) by ROOT version6.04/14
+//=========  (Thu Jul 19 23:32:21 2018) by ROOT version6.04/14
    TCanvas *c_c1lep4jex2bex_postFit = new TCanvas("c_c1lep4jex2bex_postFit", "c_c1lep4jex2bex_postFit",0,0,600,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -53,7 +53,7 @@ void c1lep4jex2bex_postFit()
    h_dummy2__1->GetXaxis()->SetTitleSize(21);
    h_dummy2__1->GetXaxis()->SetTitleOffset(5.05);
    h_dummy2__1->GetXaxis()->SetTitleFont(43);
-   h_dummy2__1->GetYaxis()->SetTitle("Data / Bkg");
+   h_dummy2__1->GetYaxis()->SetTitle("Data / Pred");
    h_dummy2__1->GetYaxis()->SetNdivisions(-504);
    h_dummy2__1->GetYaxis()->SetLabelFont(43);
    h_dummy2__1->GetYaxis()->SetLabelOffset(0.02);
@@ -185,7 +185,7 @@ void c1lep4jex2bex_postFit()
    h_dummy2_copy__2->GetXaxis()->SetTitleSize(21);
    h_dummy2_copy__2->GetXaxis()->SetTitleOffset(5.05);
    h_dummy2_copy__2->GetXaxis()->SetTitleFont(43);
-   h_dummy2_copy__2->GetYaxis()->SetTitle("Data / Bkg");
+   h_dummy2_copy__2->GetYaxis()->SetTitle("Data / Pred");
    h_dummy2_copy__2->GetYaxis()->SetNdivisions(-504);
    h_dummy2_copy__2->GetYaxis()->SetLabelFont(43);
    h_dummy2_copy__2->GetYaxis()->SetLabelOffset(0.02);
@@ -594,7 +594,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.5508,0.63,0.94,0.93,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.5308,0.63,0.92,0.93,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(43);
    leg->SetTextSize(18.9);

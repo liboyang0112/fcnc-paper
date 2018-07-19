@@ -1,7 +1,7 @@
 void c1lep4jex3bex()
 {
 //=========Macro generated from canvas: c_c1lep4jex3bex/c_c1lep4jex3bex
-//=========  (Thu Jul 19 11:17:23 2018) by ROOT version6.04/14
+//=========  (Thu Jul 19 23:20:13 2018) by ROOT version6.04/14
    TCanvas *c_c1lep4jex3bex = new TCanvas("c_c1lep4jex3bex", "c_c1lep4jex3bex",0,0,600,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -890,7 +890,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.5508,0.63,0.94,0.93,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.5308,0.63,0.92,0.93,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(43);
    leg->SetTextSize(18.9);
