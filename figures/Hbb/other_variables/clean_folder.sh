@@ -1,0 +1,2 @@
+rm *Prob*
+rm Summary*
