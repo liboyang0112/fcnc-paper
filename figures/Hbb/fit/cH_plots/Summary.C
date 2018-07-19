@@ -1,7 +1,7 @@
 void Summary()
 {
 //=========Macro generated from canvas: base_ebv2_signal_cH_uH_default_summary/base_ebv2_signal_cH_uH_default_summary
-//=========  (Thu Jul 19 21:00:39 2018) by ROOT version6.04/14
+//=========  (Thu Jul 19 21:37:42 2018) by ROOT version6.04/14
    TCanvas *base_ebv2_signal_cH_uH_default_summary = new TCanvas("base_ebv2_signal_cH_uH_default_summary", "base_ebv2_signal_cH_uH_default_summary",0,0,900,850);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -45,13 +45,13 @@ void Summary()
    h_dummy2__109->SetMarkerStyle(20);
    h_dummy2__109->SetMarkerSize(1.2);
    h_dummy2__109->GetXaxis()->SetBinLabel(1,"4j, 2b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(2,"4j, 3b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(3,"4j, #geq4b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(4,"5j, 2b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(2,"5j, 2b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(3,"#geq6j, 2b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy2__109->GetXaxis()->SetBinLabel(5,"5j, 3b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(6,"5j, #geq4b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(7,"#geq6j, 2b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(8,"#geq6j, 3b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy2__109->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy2__109->GetXaxis()->SetBit(TAxis::kLabelsVert);
    h_dummy2__109->GetXaxis()->SetLabelFont(43);
@@ -61,13 +61,14 @@ void Summary()
    h_dummy2__109->GetXaxis()->SetTitleOffset(7.591946);
    h_dummy2__109->GetXaxis()->SetTitleFont(43);
    h_dummy2__109->GetYaxis()->SetTitle("Data / Bkg");
+   h_dummy2__109->GetYaxis()->CenterTitle(true);
    h_dummy2__109->GetYaxis()->SetNdivisions(-504);
    h_dummy2__109->GetYaxis()->SetLabelFont(43);
    h_dummy2__109->GetYaxis()->SetLabelOffset(0.01);
    h_dummy2__109->GetYaxis()->SetLabelSize(19.95);
    h_dummy2__109->GetYaxis()->SetTitleSize(21);
    h_dummy2__109->GetYaxis()->SetTickLength(0.01);
-   h_dummy2__109->GetYaxis()->SetTitleOffset(1.562219);
+   h_dummy2__109->GetYaxis()->SetTitleOffset(1.627312);
    h_dummy2__109->GetYaxis()->SetTitleFont(43);
    h_dummy2__109->GetZaxis()->SetLabelFont(43);
    h_dummy2__109->GetZaxis()->SetLabelSize(21);
@@ -87,13 +88,13 @@ void Summary()
    8.5};
    Double_t Graph_from_h_ratio_fy3037[9] = {
    0.9878955,
-   1.114024,
-   1.088015,
    0.9678634,
-   1.154995,
-   1.149501,
    0.9671717,
+   1.114024,
+   1.154995,
    1.108697,
+   1.088015,
+   1.149501,
    0.984446};
    Double_t Graph_from_h_ratio_felx3037[9] = {
    0.499,
@@ -107,13 +108,13 @@ void Summary()
    0.499};
    Double_t Graph_from_h_ratio_fely3037[9] = {
    0.002845036,
-   0.01049147,
-   0.08201221,
    0.003999674,
-   0.01067474,
-   0.05324963,
    0.005105533,
+   0.01049147,
+   0.01067474,
    0.00908982,
+   0.08201221,
+   0.05324963,
    0.02694333};
    Double_t Graph_from_h_ratio_fehx3037[9] = {
    0.5,
@@ -127,13 +128,13 @@ void Summary()
    0.5};
    Double_t Graph_from_h_ratio_fehy3037[9] = {
    0.002845036,
-   0.01049147,
-   0.08201221,
    0.003999674,
-   0.01067474,
-   0.05324963,
    0.005105533,
+   0.01049147,
+   0.01067474,
    0.00908982,
+   0.08201221,
+   0.05324963,
    0.02694333};
    TGraphAsymmErrors *grae = new TGraphAsymmErrors(9,Graph_from_h_ratio_fx3037,Graph_from_h_ratio_fy3037,Graph_from_h_ratio_felx3037,Graph_from_h_ratio_fehx3037,Graph_from_h_ratio_fely3037,Graph_from_h_ratio_fehy3037);
    grae->SetName("Graph_from_h_ratio");
@@ -204,13 +205,13 @@ void Summary()
    0.5};
    Double_t g_ratio2_fely3038[9] = {
    0.1201517,
-   0.1961233,
-   0.270756,
    0.1765058,
-   0.1867492,
-   0.2421808,
    0.2574606,
+   0.1961233,
+   0.1867492,
    0.1936562,
+   0.270756,
+   0.2421808,
    0.2093752};
    Double_t g_ratio2_fehx3038[9] = {
    0.5,
@@ -224,13 +225,13 @@ void Summary()
    0.5};
    Double_t g_ratio2_fehy3038[9] = {
    0.1201517,
-   0.1961233,
-   0.270756,
    0.1765058,
-   0.1867492,
-   0.2421808,
    0.2574606,
+   0.1961233,
+   0.1867492,
    0.1936562,
+   0.270756,
+   0.2421808,
    0.2093752};
    grae = new TGraphAsymmErrors(9,g_ratio2_fx3038,g_ratio2_fy3038,g_ratio2_felx3038,g_ratio2_fehx3038,g_ratio2_fely3038,g_ratio2_fehy3038);
    grae->SetName("g_ratio2");
@@ -282,13 +283,13 @@ void Summary()
    h_dummy2_copy__110->SetMarkerStyle(20);
    h_dummy2_copy__110->SetMarkerSize(1.2);
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(1,"4j, 2b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(2,"4j, 3b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(3,"4j, #geq4b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(4,"5j, 2b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(2,"5j, 2b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(3,"#geq6j, 2b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(5,"5j, 3b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(6,"5j, #geq4b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(7,"#geq6j, 2b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(8,"#geq6j, 3b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy2_copy__110->GetXaxis()->SetBit(TAxis::kLabelsVert);
    h_dummy2_copy__110->GetXaxis()->SetLabelFont(43);
@@ -298,13 +299,14 @@ void Summary()
    h_dummy2_copy__110->GetXaxis()->SetTitleOffset(7.591946);
    h_dummy2_copy__110->GetXaxis()->SetTitleFont(43);
    h_dummy2_copy__110->GetYaxis()->SetTitle("Data / Bkg");
+   h_dummy2_copy__110->GetYaxis()->CenterTitle(true);
    h_dummy2_copy__110->GetYaxis()->SetNdivisions(-504);
    h_dummy2_copy__110->GetYaxis()->SetLabelFont(43);
    h_dummy2_copy__110->GetYaxis()->SetLabelOffset(0.01);
    h_dummy2_copy__110->GetYaxis()->SetLabelSize(19.95);
    h_dummy2_copy__110->GetYaxis()->SetTitleSize(21);
    h_dummy2_copy__110->GetYaxis()->SetTickLength(0.01);
-   h_dummy2_copy__110->GetYaxis()->SetTitleOffset(1.562219);
+   h_dummy2_copy__110->GetYaxis()->SetTitleOffset(1.627312);
    h_dummy2_copy__110->GetYaxis()->SetTitleFont(43);
    h_dummy2_copy__110->GetZaxis()->SetLabelFont(43);
    h_dummy2_copy__110->GetZaxis()->SetLabelSize(21);
@@ -351,13 +353,13 @@ tex->SetNDC();
    h_dummy__111->SetMarkerStyle(20);
    h_dummy__111->SetMarkerSize(1.2);
    h_dummy__111->GetXaxis()->SetBinLabel(1,"4j, 2b");
-   h_dummy__111->GetXaxis()->SetBinLabel(2,"4j, 3b");
-   h_dummy__111->GetXaxis()->SetBinLabel(3,"4j, #geq4b");
-   h_dummy__111->GetXaxis()->SetBinLabel(4,"5j, 2b");
+   h_dummy__111->GetXaxis()->SetBinLabel(2,"5j, 2b");
+   h_dummy__111->GetXaxis()->SetBinLabel(3,"#geq6j, 2b");
+   h_dummy__111->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy__111->GetXaxis()->SetBinLabel(5,"5j, 3b");
-   h_dummy__111->GetXaxis()->SetBinLabel(6,"5j, #geq4b");
-   h_dummy__111->GetXaxis()->SetBinLabel(7,"#geq6j, 2b");
-   h_dummy__111->GetXaxis()->SetBinLabel(8,"#geq6j, 3b");
+   h_dummy__111->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
+   h_dummy__111->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy__111->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy__111->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy__111->GetXaxis()->SetBit(TAxis::kLabelsDown);
    h_dummy__111->GetXaxis()->SetLabelFont(43);
@@ -371,7 +373,7 @@ tex->SetNDC();
    h_dummy__111->GetYaxis()->SetLabelSize(19.95);
    h_dummy__111->GetYaxis()->SetTitleSize(21);
    h_dummy__111->GetYaxis()->SetTickLength(0.01);
-   h_dummy__111->GetYaxis()->SetTitleOffset(1.562219);
+   h_dummy__111->GetYaxis()->SetTitleOffset(1.627312);
    h_dummy__111->GetYaxis()->SetTitleFont(43);
    h_dummy__111->GetZaxis()->SetLabelFont(43);
    h_dummy__111->GetZaxis()->SetLabelSize(21);
@@ -410,22 +412,22 @@ tex->SetNDC();
    
    TH1F *topEW__112 = new TH1F("topEW__112","Non-t#bar{t}",9,0,9);
    topEW__112->SetBinContent(1,22931.79);
-   topEW__112->SetBinContent(2,1835.134);
-   topEW__112->SetBinContent(3,52.88504);
-   topEW__112->SetBinContent(4,10212.77);
+   topEW__112->SetBinContent(2,10212.77);
+   topEW__112->SetBinContent(3,5663.981);
+   topEW__112->SetBinContent(4,1835.134);
    topEW__112->SetBinContent(5,1306.218);
-   topEW__112->SetBinContent(6,62.20748);
-   topEW__112->SetBinContent(7,5663.981);
-   topEW__112->SetBinContent(8,1872.078);
+   topEW__112->SetBinContent(6,1872.078);
+   topEW__112->SetBinContent(7,52.88504);
+   topEW__112->SetBinContent(8,62.20748);
    topEW__112->SetBinContent(9,207.2869);
    topEW__112->SetBinError(1,316.9396);
-   topEW__112->SetBinError(2,90.33882);
-   topEW__112->SetBinError(3,13.14724);
-   topEW__112->SetBinError(4,213.5867);
+   topEW__112->SetBinError(2,213.5867);
+   topEW__112->SetBinError(3,151.4219);
+   topEW__112->SetBinError(4,90.33882);
    topEW__112->SetBinError(5,74.02037);
-   topEW__112->SetBinError(6,5.932192);
-   topEW__112->SetBinError(7,151.4219);
-   topEW__112->SetBinError(8,92.54617);
+   topEW__112->SetBinError(6,92.54617);
+   topEW__112->SetBinError(7,13.14724);
+   topEW__112->SetBinError(8,5.932192);
    topEW__112->SetBinError(9,22.79764);
    topEW__112->SetEntries(117);
    topEW__112->SetDirectory(0);
@@ -451,24 +453,24 @@ tex->SetNDC();
    topEW__112->GetZaxis()->SetTitleFont(43);
    h_stack->Add(topEW,"");
    
-   TH1F *ttbarbb__113 = new TH1F("ttbarbb__113","t#bar{t}+bb",9,0,9);
+   TH1F *ttbarbb__113 = new TH1F("ttbarbb__113","t#bar{t}+#geq1b",9,0,9);
    ttbarbb__113->SetBinContent(1,3620.167);
-   ttbarbb__113->SetBinContent(2,2896.615);
-   ttbarbb__113->SetBinContent(3,95.46673);
-   ttbarbb__113->SetBinContent(4,3043.01);
+   ttbarbb__113->SetBinContent(2,3043.01);
+   ttbarbb__113->SetBinContent(3,3266.823);
+   ttbarbb__113->SetBinContent(4,2896.615);
    ttbarbb__113->SetBinContent(5,4322.206);
-   ttbarbb__113->SetBinContent(6,309.8172);
-   ttbarbb__113->SetBinContent(7,3266.823);
-   ttbarbb__113->SetBinContent(8,7282.493);
+   ttbarbb__113->SetBinContent(6,7282.493);
+   ttbarbb__113->SetBinContent(7,95.46673);
+   ttbarbb__113->SetBinContent(8,309.8172);
    ttbarbb__113->SetBinContent(9,1105.328);
    ttbarbb__113->SetBinError(1,37.74998);
-   ttbarbb__113->SetBinError(2,35.31256);
-   ttbarbb__113->SetBinError(3,6.058113);
-   ttbarbb__113->SetBinError(4,34.98916);
+   ttbarbb__113->SetBinError(2,34.98916);
+   ttbarbb__113->SetBinError(3,35.82434);
+   ttbarbb__113->SetBinError(4,35.31256);
    ttbarbb__113->SetBinError(5,41.87677);
-   ttbarbb__113->SetBinError(6,12.48774);
-   ttbarbb__113->SetBinError(7,35.82434);
-   ttbarbb__113->SetBinError(8,55.35741);
+   ttbarbb__113->SetBinError(6,55.35741);
+   ttbarbb__113->SetBinError(7,6.058113);
+   ttbarbb__113->SetBinError(8,12.48774);
    ttbarbb__113->SetBinError(9,24.74525);
    ttbarbb__113->SetEntries(9);
    ttbarbb__113->SetDirectory(0);
@@ -494,24 +496,24 @@ tex->SetNDC();
    ttbarbb__113->GetZaxis()->SetTitleFont(43);
    h_stack->Add(ttbarbb,"");
    
-   TH1F *ttbarcc__114 = new TH1F("ttbarcc__114","t#bar{t}+cc",9,0,9);
+   TH1F *ttbarcc__114 = new TH1F("ttbarcc__114","t#bar{t}+#geq1c",9,0,9);
    ttbarcc__114->SetBinContent(1,8286.442);
-   ttbarcc__114->SetBinContent(2,1052.65);
-   ttbarcc__114->SetBinContent(3,3.168244);
-   ttbarcc__114->SetBinContent(4,5931.531);
+   ttbarcc__114->SetBinContent(2,5931.531);
+   ttbarcc__114->SetBinContent(3,5281.424);
+   ttbarcc__114->SetBinContent(4,1052.65);
    ttbarcc__114->SetBinContent(5,1320.828);
-   ttbarcc__114->SetBinContent(6,20.79517);
-   ttbarcc__114->SetBinContent(7,5281.424);
-   ttbarcc__114->SetBinContent(8,1814.255);
+   ttbarcc__114->SetBinContent(6,1814.255);
+   ttbarcc__114->SetBinContent(7,3.168244);
+   ttbarcc__114->SetBinContent(8,20.79517);
    ttbarcc__114->SetBinContent(9,28.98864);
    ttbarcc__114->SetBinError(1,57.19243);
-   ttbarcc__114->SetBinError(2,21.38042);
-   ttbarcc__114->SetBinError(3,1.207684);
-   ttbarcc__114->SetBinError(4,48.0997);
+   ttbarcc__114->SetBinError(2,48.0997);
+   ttbarcc__114->SetBinError(3,45.05708);
+   ttbarcc__114->SetBinError(4,21.38042);
    ttbarcc__114->SetBinError(5,25.61933);
-   ttbarcc__114->SetBinError(6,5.00452);
-   ttbarcc__114->SetBinError(7,45.05708);
-   ttbarcc__114->SetBinError(8,29.8612);
+   ttbarcc__114->SetBinError(6,29.8612);
+   ttbarcc__114->SetBinError(7,1.207684);
+   ttbarcc__114->SetBinError(8,5.00452);
    ttbarcc__114->SetBinError(9,3.767657);
    ttbarcc__114->SetEntries(9);
    ttbarcc__114->SetDirectory(0);
@@ -537,24 +539,24 @@ tex->SetNDC();
    ttbarcc__114->GetZaxis()->SetTitleFont(43);
    h_stack->Add(ttbarcc,"");
    
-   TH1F *ttbarlight__115 = new TH1F("ttbarlight__115","t#bar{t}+light",9,0,9);
+   TH1F *ttbarlight__115 = new TH1F("ttbarlight__115","t#bar{t}+light-jets",9,0,9);
    ttbarlight__115->SetBinContent(1,87210.95);
-   ttbarlight__115->SetBinContent(2,4336.567);
-   ttbarlight__115->SetBinContent(3,10.24246);
-   ttbarlight__115->SetBinContent(4,41314);
+   ttbarlight__115->SetBinContent(2,41314);
+   ttbarlight__115->SetBinContent(3,22891.83);
+   ttbarlight__115->SetBinContent(4,4336.567);
    ttbarlight__115->SetBinContent(5,3186.725);
-   ttbarlight__115->SetBinContent(6,12.57325);
-   ttbarlight__115->SetBinContent(7,22891.83);
-   ttbarlight__115->SetBinContent(8,2449.625);
+   ttbarlight__115->SetBinContent(6,2449.625);
+   ttbarlight__115->SetBinContent(7,10.24246);
+   ttbarlight__115->SetBinContent(8,12.57325);
    ttbarlight__115->SetBinContent(9,14.48885);
    ttbarlight__115->SetBinError(1,185.1584);
-   ttbarlight__115->SetBinError(2,48.14027);
-   ttbarlight__115->SetBinError(3,3.777908);
-   ttbarlight__115->SetBinError(4,126.8075);
+   ttbarlight__115->SetBinError(2,126.8075);
+   ttbarlight__115->SetBinError(3,94.60073);
+   ttbarlight__115->SetBinError(4,48.14027);
    ttbarlight__115->SetBinError(5,42.04621);
-   ttbarlight__115->SetBinError(6,3.454223);
-   ttbarlight__115->SetBinError(7,94.60073);
-   ttbarlight__115->SetBinError(8,37.39127);
+   ttbarlight__115->SetBinError(6,37.39127);
+   ttbarlight__115->SetBinError(7,3.777908);
+   ttbarlight__115->SetBinError(8,3.454223);
    ttbarlight__115->SetBinError(9,3.500927);
    ttbarlight__115->SetEntries(9);
    ttbarlight__115->SetDirectory(0);
@@ -590,13 +592,13 @@ tex->SetNDC();
    8.5};
    Double_t Graph_from_h_Tot_summary_fy3039[9] = {
    122049.3,
-   10120.97,
-   161.7625,
    60501.31,
-   10135.98,
-   405.3931,
    37104.06,
+   10120.97,
+   10135.98,
    13418.45,
+   161.7625,
+   405.3931,
    1356.093};
    Double_t Graph_from_h_Tot_summary_felx3039[9] = {
    0.5,
@@ -610,13 +612,13 @@ tex->SetNDC();
    0.5};
    Double_t Graph_from_h_Tot_summary_fely3039[9] = {
    14664.43,
-   1984.957,
-   43.79816,
    10678.83,
-   1892.885,
-   98.17843,
    9552.836,
+   1984.957,
+   1892.885,
    2598.566,
+   43.79816,
+   98.17843,
    283.9321};
    Double_t Graph_from_h_Tot_summary_fehx3039[9] = {
    0.5,
@@ -630,13 +632,13 @@ tex->SetNDC();
    0.5};
    Double_t Graph_from_h_Tot_summary_fehy3039[9] = {
    14664.43,
-   1984.957,
-   43.79816,
    10678.83,
-   1892.885,
-   98.17843,
    9552.836,
+   1984.957,
+   1892.885,
    2598.566,
+   43.79816,
+   98.17843,
    283.9321};
    grae = new TGraphAsymmErrors(9,Graph_from_h_Tot_summary_fx3039,Graph_from_h_Tot_summary_fy3039,Graph_from_h_Tot_summary_felx3039,Graph_from_h_Tot_summary_fehx3039,Graph_from_h_Tot_summary_fely3039,Graph_from_h_Tot_summary_fehy3039);
    grae->SetName("Graph_from_h_Tot_summary");
@@ -678,22 +680,22 @@ tex->SetNDC();
    
    TH1F *uHbW__116 = new TH1F("uHbW__116","t#bar{t}#rightarrowWbHu",9,0,9);
    uHbW__116->SetBinContent(1,1946.434);
-   uHbW__116->SetBinContent(2,1110.813);
-   uHbW__116->SetBinContent(3,18.72668);
-   uHbW__116->SetBinContent(4,1165.262);
+   uHbW__116->SetBinContent(2,1165.262);
+   uHbW__116->SetBinContent(3,679.6425);
+   uHbW__116->SetBinContent(4,1110.813);
    uHbW__116->SetBinContent(5,933.4817);
-   uHbW__116->SetBinContent(6,23.2776);
-   uHbW__116->SetBinContent(7,679.6425);
-   uHbW__116->SetBinContent(8,566.5908);
+   uHbW__116->SetBinContent(6,566.5908);
+   uHbW__116->SetBinContent(7,18.72668);
+   uHbW__116->SetBinContent(8,23.2776);
    uHbW__116->SetBinContent(9,35.57217);
    uHbW__116->SetBinError(1,42.08728);
-   uHbW__116->SetBinError(2,30.17524);
-   uHbW__116->SetBinError(3,8.785305);
-   uHbW__116->SetBinError(4,32.98434);
+   uHbW__116->SetBinError(2,32.98434);
+   uHbW__116->SetBinError(3,32.06103);
+   uHbW__116->SetBinError(4,30.17524);
    uHbW__116->SetBinError(5,29.25997);
-   uHbW__116->SetBinError(6,7.207257);
-   uHbW__116->SetBinError(7,32.06103);
-   uHbW__116->SetBinError(8,30.15664);
+   uHbW__116->SetBinError(6,30.15664);
+   uHbW__116->SetBinError(7,8.785305);
+   uHbW__116->SetBinError(8,7.207257);
    uHbW__116->SetBinError(9,7.457337);
    uHbW__116->SetEntries(9);
    uHbW__116->SetDirectory(0);
@@ -722,22 +724,22 @@ tex->SetNDC();
    
    TH1F *uHcW__117 = new TH1F("uHcW__117","t#bar{t}#rightarrowWbHc",9,0,9);
    uHcW__117->SetBinContent(1,1991.929);
-   uHcW__117->SetBinContent(2,1261.145);
-   uHcW__117->SetBinContent(3,24.79891);
-   uHcW__117->SetBinContent(4,1259.901);
+   uHcW__117->SetBinContent(2,1259.901);
+   uHcW__117->SetBinContent(3,765.2861);
+   uHcW__117->SetBinContent(4,1261.145);
    uHcW__117->SetBinContent(5,1011.803);
-   uHcW__117->SetBinContent(6,26.22766);
-   uHcW__117->SetBinContent(7,765.2861);
-   uHcW__117->SetBinContent(8,689.0325);
+   uHcW__117->SetBinContent(6,689.0325);
+   uHcW__117->SetBinContent(7,24.79891);
+   uHcW__117->SetBinContent(8,26.22766);
    uHcW__117->SetBinContent(9,58.78021);
    uHcW__117->SetBinError(1,42.38325);
-   uHcW__117->SetBinError(2,32.70393);
-   uHcW__117->SetBinError(3,4.885025);
-   uHcW__117->SetBinError(4,35.08014);
+   uHcW__117->SetBinError(2,35.08014);
+   uHcW__117->SetBinError(3,32.26275);
+   uHcW__117->SetBinError(4,32.70393);
    uHcW__117->SetBinError(5,31.13648);
-   uHcW__117->SetBinError(6,6.276939);
-   uHcW__117->SetBinError(7,32.26275);
-   uHcW__117->SetBinError(8,31.52531);
+   uHcW__117->SetBinError(6,31.52531);
+   uHcW__117->SetBinError(7,4.885025);
+   uHcW__117->SetBinError(8,6.276939);
    uHcW__117->SetBinError(9,8.09202);
    uHcW__117->SetEntries(9);
    uHcW__117->SetDirectory(0);
@@ -776,13 +778,13 @@ tex->SetNDC();
    8.5};
    Double_t Graph_from_Data_fy3040[9] = {
    120572,
-   11275,
-   176,
    58557,
-   11707,
-   466,
    35886,
+   11275,
+   11707,
    14877,
+   176,
+   466,
    1335};
    Double_t Graph_from_Data_felx3040[9] = {
    0.499,
@@ -796,13 +798,13 @@ tex->SetNDC();
    0.499};
    Double_t Graph_from_Data_fely3040[9] = {
    347.2348,
-   106.1838,
-   13.2665,
    241.9855,
-   108.1989,
-   21.58703,
    189.436,
+   106.1838,
+   108.1989,
    121.9713,
+   13.2665,
+   21.58703,
    36.53765};
    Double_t Graph_from_Data_fehx3040[9] = {
    0.5,
@@ -816,13 +818,13 @@ tex->SetNDC();
    0.5};
    Double_t Graph_from_Data_fehy3040[9] = {
    347.2348,
-   106.1838,
-   13.2665,
    241.9855,
-   108.1989,
-   21.58703,
    189.436,
+   106.1838,
+   108.1989,
    121.9713,
+   13.2665,
+   21.58703,
    36.53765};
    grae = new TGraphAsymmErrors(9,Graph_from_Data_fx3040,Graph_from_Data_fy3040,Graph_from_Data_felx3040,Graph_from_Data_fehx3040,Graph_from_Data_fely3040,Graph_from_Data_fehy3040);
    grae->SetName("Graph_from_Data");
@@ -865,13 +867,13 @@ tex->SetNDC();
    h_dummy_copy__118->SetMarkerStyle(20);
    h_dummy_copy__118->SetMarkerSize(1.2);
    h_dummy_copy__118->GetXaxis()->SetBinLabel(1,"4j, 2b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(2,"4j, 3b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(3,"4j, #geq4b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(4,"5j, 2b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(2,"5j, 2b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(3,"#geq6j, 2b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy_copy__118->GetXaxis()->SetBinLabel(5,"5j, 3b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(6,"5j, #geq4b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(7,"#geq6j, 2b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(8,"#geq6j, 3b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy_copy__118->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy_copy__118->GetXaxis()->SetBit(TAxis::kLabelsDown);
    h_dummy_copy__118->GetXaxis()->SetLabelFont(43);
@@ -885,7 +887,7 @@ tex->SetNDC();
    h_dummy_copy__118->GetYaxis()->SetLabelSize(19.95);
    h_dummy_copy__118->GetYaxis()->SetTitleSize(21);
    h_dummy_copy__118->GetYaxis()->SetTickLength(0.01);
-   h_dummy_copy__118->GetYaxis()->SetTitleOffset(1.562219);
+   h_dummy_copy__118->GetYaxis()->SetTitleOffset(1.627312);
    h_dummy_copy__118->GetYaxis()->SetTitleFont(43);
    h_dummy_copy__118->GetZaxis()->SetLabelFont(43);
    h_dummy_copy__118->GetZaxis()->SetLabelSize(21);
@@ -956,7 +958,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(43);
-   entry=leg->AddEntry("ttbarlight","t#bar{t}+light","f");
+   entry=leg->AddEntry("ttbarlight","t#bar{t}+light-jets","f");
    entry->SetFillStyle(1001);
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
@@ -965,7 +967,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(43);
-   entry=leg->AddEntry("ttbarcc","t#bar{t}+cc","f");
+   entry=leg->AddEntry("ttbarcc","t#bar{t}+#geq1c","f");
 
    ci = TColor::GetColor("#ccccff");
    entry->SetFillColor(ci);
@@ -977,7 +979,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(43);
-   entry=leg->AddEntry("ttbarbb","t#bar{t}+bb","f");
+   entry=leg->AddEntry("ttbarbb","t#bar{t}+#geq1b","f");
 
    ci = TColor::GetColor("#6666cc");
    entry->SetFillColor(ci);
