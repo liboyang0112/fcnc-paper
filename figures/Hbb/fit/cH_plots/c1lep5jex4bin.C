@@ -1,7 +1,7 @@
 void c1lep5jex4bin()
 {
 //=========Macro generated from canvas: c_c1lep5jex4bin/c_c1lep5jex4bin
-//=========  (Thu Jul 19 23:20:14 2018) by ROOT version6.04/14
+//=========  (Fri Jul 20 11:19:21 2018) by ROOT version6.04/14
    TCanvas *c_c1lep5jex4bin = new TCanvas("c_c1lep5jex4bin", "c_c1lep5jex4bin",0,0,600,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -54,6 +54,7 @@ void c1lep5jex4bin()
    h_dummy2__46->GetXaxis()->SetTitleOffset(5.05);
    h_dummy2__46->GetXaxis()->SetTitleFont(43);
    h_dummy2__46->GetYaxis()->SetTitle("Data / Bkg");
+   h_dummy2__46->GetYaxis()->CenterTitle(true);
    h_dummy2__46->GetYaxis()->SetNdivisions(-504);
    h_dummy2__46->GetYaxis()->SetLabelFont(43);
    h_dummy2__46->GetYaxis()->SetLabelOffset(0.02);
@@ -198,6 +199,7 @@ void c1lep5jex4bin()
    h_dummy2_copy__47->GetXaxis()->SetTitleOffset(5.05);
    h_dummy2_copy__47->GetXaxis()->SetTitleFont(43);
    h_dummy2_copy__47->GetYaxis()->SetTitle("Data / Bkg");
+   h_dummy2_copy__47->GetYaxis()->CenterTitle(true);
    h_dummy2_copy__47->GetYaxis()->SetNdivisions(-504);
    h_dummy2_copy__47->GetYaxis()->SetLabelFont(43);
    h_dummy2_copy__47->GetYaxis()->SetLabelOffset(0.02);

@@ -1,7 +1,7 @@
 void Summary()
 {
 //=========Macro generated from canvas: base_ebv2_signal_cH_uH_default_summary/base_ebv2_signal_cH_uH_default_summary
-//=========  (Thu Jul 19 21:37:42 2018) by ROOT version6.04/14
+//=========  (Fri Jul 20 10:20:53 2018) by ROOT version6.04/14
    TCanvas *base_ebv2_signal_cH_uH_default_summary = new TCanvas("base_ebv2_signal_cH_uH_default_summary", "base_ebv2_signal_cH_uH_default_summary",0,0,900,850);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -50,7 +50,7 @@ void Summary()
    h_dummy2__109->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy2__109->GetXaxis()->SetBinLabel(5,"5j, 3b");
    h_dummy2__109->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
-   h_dummy2__109->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy2__109->GetXaxis()->SetBinLabel(7,"4j, 4b");
    h_dummy2__109->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy2__109->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy2__109->GetXaxis()->SetBit(TAxis::kLabelsVert);
@@ -288,7 +288,7 @@ void Summary()
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(5,"5j, 3b");
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
-   h_dummy2_copy__110->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy2_copy__110->GetXaxis()->SetBinLabel(7,"4j, 4b");
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy2_copy__110->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy2_copy__110->GetXaxis()->SetBit(TAxis::kLabelsVert);
@@ -358,7 +358,7 @@ tex->SetNDC();
    h_dummy__111->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy__111->GetXaxis()->SetBinLabel(5,"5j, 3b");
    h_dummy__111->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
-   h_dummy__111->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy__111->GetXaxis()->SetBinLabel(7,"4j, 4b");
    h_dummy__111->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy__111->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy__111->GetXaxis()->SetBit(TAxis::kLabelsDown);
@@ -872,7 +872,7 @@ tex->SetNDC();
    h_dummy_copy__118->GetXaxis()->SetBinLabel(4,"4j, 3b");
    h_dummy_copy__118->GetXaxis()->SetBinLabel(5,"5j, 3b");
    h_dummy_copy__118->GetXaxis()->SetBinLabel(6,"#geq6j, 3b");
-   h_dummy_copy__118->GetXaxis()->SetBinLabel(7,"4j, #geq4b");
+   h_dummy_copy__118->GetXaxis()->SetBinLabel(7,"4j, 4b");
    h_dummy_copy__118->GetXaxis()->SetBinLabel(8,"5j, #geq4b");
    h_dummy_copy__118->GetXaxis()->SetBinLabel(9,"#geq6j, #geq4b");
    h_dummy_copy__118->GetXaxis()->SetBit(TAxis::kLabelsDown);
