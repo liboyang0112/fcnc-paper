@@ -215,8 +215,6 @@ at the particle level are fixed to the nominal prediction. In order to maintain 
 the normalisation of the $\ttbar$+light-jets background at the particle level is adjusted accordingly.
 Further details are available in Ref.~\cite{Aaboud:2017rss}.
 
-\textbf{Update discussion on small bkgs systs for tautau (recently updated).}
-
 Uncertainties affecting the normalisation of the $V$+jets background are estimated for the sum
 of $W$+jets and $Z$+jets, and separately for $V$+light-jets, $V$+$\geq$1$c$+jets, and $V$+$\geq$1$b$+jets subprocesses.
 The total normalisation uncertainty of $V$+jets processes is estimated by comparing the data and total background prediction in 
@@ -244,7 +242,7 @@ using the ``diagram subtraction'' scheme~\cite{Frixione:2008yi}.
 Uncertainties on the diboson background normalisation include 5\% from the NLO theory cross sections~\cite{Campbell:1999ah},
 as well as an additional 24\% normalisation uncertainty added in quadrature for each additional inclusive jet-multiplicity bin, based on a 
 comparison among different algorithms for merging LO matrix elements and parton showers~\cite{Alwall:2007fs}
-(we assume already two jets come from the $W/Z$ decay, as in $WW/WZ \to \ell \nu jj$). 
+(it is assumed that two jets come from the $W/Z$ decay, as in $WW/WZ \to \ell \nu jj$). 
 Therefore, the total normalisation uncertainty is $5\% \oplus \sqrt{N-2}\times 24\%$, where $N$ is the selected jet multiplicity,  
 i.e. 34\%, 42\%, and 48\%, for events with exactly 4 jets, exactly 5 jets, and $\geq$6 jets, respectively.
 Recent comparisons between data and {\sherpa}~2.1.1 for $WZ(\to \ell\nu\ell\ell) + \geq$4 jets show
@@ -265,7 +263,16 @@ the multijet background prediction, which are uncorrelated
 between bins in the final discriminant distribution, effectively cover all possible shape uncertainties. 
 
 Uncertainties on the data-driven fake $\tauhad$ background in the $\Htautau$ search are obtained by using additional signal-depleted samples. The construction is similar to that of the SRs and corresponding CRs discussed in Section~\ref{sec:fakeleptons}, but employing further loosened $\tauhad$ identification criteria, and thus referred to as ``loose SR"  and ``loose CR". 
-In each loose SR, the shape difference between the data and the data-driven prediction of its associated loose CR is extracted and applied as an uncertainty on the prediction in the nominal SR. In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. Finally, the normalisation of the fake $\tauhad$ background in each SR is determined by the data during the fit procedure, and thus so is its uncertainty. In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
+%The shape difference between the fake $\tauhad$ background prediction in each loose SR and its associated loose CR
+%is applied as an uncertainty on the prediction in the nominal SR.
+%In each loose SR, the shape difference between the data and the fake $\tauhad$ background estimate based on its associated loose CR,
+%in both cases having subtracted the small contribution from real $\tauhad$ candidates based on the simulation, 
+%is applied as an uncertainty on the prediction in the nominal SR. 
+%In each loose SR, the shape difference between the data and the data-driven prediction of its associated loose CR is extracted and applied as an uncertainty on the prediction in the nominal SR. 
+In each loose SR, after subtracting the small contribution from real $\tauhad$ candidates based on the simulation, 
+the shape difference between the remaining data and the fake $\tauhad$ background estimate based on its associated loose CR 
+is applied as an uncertainty on the prediction in the nominal SR.
+In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. Finally, the normalisation of the fake $\tauhad$ background in each SR is determined by the data during the fit procedure, and thus so is its uncertainty. In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
 
 \subsection{Signal modelling}
 \label{sec:syst_sigmodeling}
