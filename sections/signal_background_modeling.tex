@@ -23,8 +23,8 @@ fit to data using several signal-depleted search regions, as discussed in Sectio
 
 Samples of simulated $\ttbar \to WbHq$ events are generated with the next-to-leading-order (NLO) generator\footnote{In the following, 
 the order of a generator should be understood as referring to the order in the strong coupling constant at which the matrix element calculation 
-is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to \textsc{Pythia} 8.212~\cite{Sjostrand:2007gs} for parton showering and fragmentation. 
-The A14~\cite{ATLASUETune4} set of tuned parameters in \textsc{Pythia} controlling the description of multiparton interactions and  
+is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to {\pythia} 8.212~\cite{Sjostrand:2007gs} for parton showering and fragmentation. 
+The A14~\cite{ATLASUETune4} set of tuned parameters in {\pythia} controlling the description of multiparton interactions and  
 initial and final state radiation, referred to as the ``tune'', is used.
 The signal sample is normalised to the same cross section as used for the $t\bar{t}\to WbWb$ sample (see discussion below) and
 assuming a reference branching ratio $\BR_{\mathrm{ref}}(t\to Hq)=1\%$.
@@ -32,7 +32,7 @@ The case of both top quarks decaying into $Hq$ is neglected in the analysis give
 
 The nominal sample used to model the $\ttbar$ background is generated with the NLO generator {\powheg}~v2 \cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} using the NNPDF3.0 PDF set. The {\powheg} model parameter $h_{\textrm{damp}}$, which controls 
 matrix element to parton shower matching and effectively regulates the high-$\pt$ radiation, is set to 1.5 times the top quark mass. 
-Parton shower and hadronisation are modelled by {\textsc Pythia}~8.2 with the A14 tune.
+Parton shower and hadronisation are modelled by {\pythia}~8.2 with the A14 tune.
 Alternative $\ttbar$ simulation samples used to derive systematic uncertainties are described in Section~\ref{sec:syst_bkgmodeling}. 
 The generated $\ttbar$ samples are normalised to a theoretical cross section of $832^{+46}_{-51}$~pb, 
 computed using \textsc{Top++}~v2.0~\cite{Czakon:2011xx} at next-to-next-to-leading order (NNLO), 
@@ -83,7 +83,7 @@ at NLO and up to three partons at LO using the same procedure as for the $W/Z$+j
 The final states simulated require one of the bosons to decay leptonically and the other hadronically.
 All diboson samples are normalised to their NLO theoretical cross sections provided by {\sherpa}. 
 
-Samples of $\ttbar V$ and $\ttbar H$ events are generated with {\amcatnlo}~2.3.2, using 
+Samples of $\ttbar V$ and $\ttbar H$ events are generated with {\amcatnlo}~2.~.2, using 
 NLO matrix elements and the NNPDF3.0 NLO~\cite{Ball:2014uwa} PDF set. 
 Showering is performed using {\pythia}~8.210 and the A14 tune.
 The $\ttbar V$ samples are normalised to the NLO cross section computed with {\amcatnlo}.
@@ -91,12 +91,12 @@ The $\ttbar H$ sample is normalised using the NLO cross section~\cite{Raitio:197
 and the Higgs boson decay branching ratios calculated using \textsc{Hdecay}.
 
 %The production of four-top-quark events in the SM was simulated by samples generated at LO using {\amcatnlo}~2.2.2
-%and the NNPDF2.3 LO PDF set, interfaced to {\pythia} 8.186 in combination with the A14 tune. 
+%and the NNPDF2.3 LO PDF set, interfaced to {\pythia}~8.186 in combination with the A14 tune. 
 %The sample was normalised to a cross section of 9.2 fb, computed at NLO~\cite{Alwall:2014hca}.
 
 All simulated samples, except those produced with the {\sherpa}~\cite{Gleisberg:2008ta} event generator, 
 utilise \textsc{EvtGen}~v1.2.0~\cite{Lange:2001uf} to model the decays of heavy-flavour hadrons. 
-To model the effects of pileup, events from minimum-bias interactions are generated using the \textsc{Pythia}~8.186~\cite{Sjostrand:2007gs} 
+To model the effects of pileup, events from minimum-bias interactions are generated using the {\pythia}~8.186~\cite{Sjostrand:2007gs} 
 event generator and overlaid onto the simulated hard-scatter events according to the luminosity profile of the recorded data. 
 The generated events are processed through a simulation~\cite{Aad:2010ah} of the ATLAS detector geometry and response 
 using \textsc{Geant4}~\cite{Agostinelli:2002hh}. A faster simulation, where the full \textsc{Geant4} simulation of
