@@ -3,7 +3,8 @@
 \label{sec:objects}
 %-------------------------------------------------------------------------------
 
-The event reconstruction is affected by multiple $pp$ collisions in a single bunch crossing and by collisionsin neighboring bunch crossings, referred to as ``pileup''. 
+The event reconstruction is affected by multiple $pp$ collisions in a single bunch crossing and by collisions
+in neighboring bunch crossings, referred to as ``pileup''. 
 Interaction vertices from the $pp$ collisions are reconstructed from at least two tracks 
 with transverse momentum ($\pt$) larger than $400~\mev$ that are consistent with originating from the 
 beam collision region in the $x$--$y$ plane. If more than one primary vertex candidate is found, the
@@ -25,7 +26,7 @@ In the $\Hbb$ ($\Htautau$) search, muon candidates are required to have $\pt>30~
 and to satisfy medium identification criteria~\cite{Aad:2016jkr}. 
 
 Electron (muon) candidates are matched to the primary vertex by requiring that the significance of their transverse impact parameter, $d_0$, 
-satisfies $|d_0/\sigma(d_0)|<5(3)$, where $\sigma(d_0)$ is the measured uncertainty in $d_0$,
+satisfies $|d_0/\sigma(d_0)|<5\,(3)$, where $\sigma(d_0)$ is the measured uncertainty in $d_0$,
 and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_0 \sin\theta|<0.5$~mm.
 To further reduce the background from non-prompt leptons, photon conversions and hadrons, lepton candidates are also required to be isolated 
 in the tracker and in the calorimeter.
@@ -65,9 +66,9 @@ an average 70\% efficiency to tag a $b$-quark jet, with a light-jet\footnote{Lig
 $\pt >20~\gev$ and $|\eta|<2.5$ in simulated $\ttbar$ events. In contrast, the $\Hbb$ search employs a tighter $b$-tagging requirement, 
 corresponding to an average efficiency of 60\% to tag a $b$-quark jet, and light-jet and charm-jet rejection factors of 1539 and 34, respectively.
 
-Hadronically decaying $\tau$-lepton candidates ($\tauhad$) are reconstructed from clusters in the calorimeters and
+Hadronically decaying $\tau$-lepton ($\tauhad$) candidates are reconstructed from clusters in the calorimeters and
 associated inner detector tracks~\cite{ATL-PHYS-PUB-2015-045}. Candidates are required to have either one or three associated tracks,
-with a total charge of 1. Candidates are required to have $\pt > 25~\gev$ and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
+with a total charge of $\pm 1$. Candidates are required to have $\pt > 25~\gev$ and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
 A boosted decision tree (BDT) discriminant using calorimeter- and tracking-based variables is used to identify $\tauhad$ candidates and reject
 jet backgrounds. Three working points labelled loose, medium and tight are defined, and correspond to different $\tauhad$ identification efficiency 
 values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
@@ -77,7 +78,7 @@ decays~\cite{ATLAS-CONF-2017-029}, and an expected rejection factor against ligh
 Electrons that are reconstructed as one-prong $\tauhad$ candidates are removed via a BDT trained to reject electrons.
 Any $\tauhad$ candidate that is also $b$-tagged is rejected.
 
-Overlaps between candidate objects are removed sequentially, following this order: muons, electron, taus (only for the $\Htautau$ search) and jets. 
+Overlaps between candidate objects are removed sequentially, following this order: muons, electrons, $\tauhad$ (only for the $\Htautau$ search), and jets. 
 In the $\Hbb$ search, firstly, electron candidates that lie within $\Delta R = 0.01$ of a muon 
 candidate are removed to suppress contributions from muon bremsstrahlung.  Overlaps between electron and jet candidates are resolved 
 next, and finally, overlaps between remaining jet candidates and muon candidates are removed.
