@@ -159,8 +159,8 @@ of unclustered energy, are negligible.
 Efficiencies to tag jets from $b$- and $c$-quarks in the simulation are corrected to match the efficiencies in data by $\pt$-dependent factors,
 whereas the light-jet efficiency is scaled by $\pt$- and $\eta$-dependent factors.
 The $b$-jet efficiency is measured in a data sample enriched in $\ttbar$ events~\cite{Aaboud:2018xwy}, while the $c$-jet efficiency is measured
-using $\ttbar$ events~\cite{ATLAS-CONF-2018-001} or $W$+$c$-jet events~\cite{Aad:2015ydr}. The light-jet efficiency 
-is measured in a multijet data sample enriched in light-flavour jets~\cite{ATLAS-CONF-2018-006}.
+using $\ttbar$ events~\cite{ATLAS-CONF-2018-001} or $W$+$c$-jet events~\cite{Aad:2015ydr}. 
+The light-jet efficiency is measured in a multijet data sample enriched in light-flavour jets~\cite{ATLAS-CONF-2018-006}.
 Since the $\ttbar$ sample used to measure the $c$-jet tagging efficiency overlaps with the analysis sample, the $\Hbb$ search uses
 instead the $W$+$c$-jet based scale factors.  
 In the case of the $\Hbb$ ($\Htautau$) search, the uncertainties on these scale factors include a total of six independent sources affecting $b$-jets, one (three) source(s) affecting $c$-jets, and 17 sources affecting light jets. 
@@ -194,21 +194,21 @@ and using the Var3c downward variation of the A14 set~\cite{ATL-PHYS-PUB-2016-00
 
 In the case of the $\Hbb$ search, where the $\ttbar$+HF background plays a more prominent role, a more 
 detailed treatment of its associated systematic uncertainties is made. In particular, since several analysis 
-regions have a sufficiently large number of events of $\ttbin$ background, its normalisation is 
+regions have a sufficiently large number of events of \ttbin\ background, its normalisation is 
 determined by the data during the fit procedure.
 %, with no prior uncertainty assumed. 
-In the case of the $\ttcin$ normalisation, a normalisation uncertainty of 50\% is assumed, as the fit to the data is unable 
+In the case of the \ttcin\ normalisation, a normalisation uncertainty of 50\% is assumed, as the fit to the data is unable 
 to precisely determine it, and the analysis has very limited sensitivity to this uncertainty.
-Since the diagrams that contribute to $\ttbar$+light-jets, $\ttcin$, $\ttbin$
+Since the diagrams that contribute to $\ttbar$+light-jets, \ttcin, \ttbin\
 production are different, all above uncertainties on $\ttbar$+jets
 background modelling (NLO generator, PS \& Had, and radHi/radLow), except the uncertainty on the inclusive cross-section, are
 considered to be uncorrelated among these processes.
-Additional uncertainties on the $\ttbin$ background are considered associated with the NLO prediction from {\ShOL}, 
+Additional uncertainties on the \ttbin\ background are considered associated with the NLO prediction from {\ShOL}, 
 which is used for reweighting the nominal {\powheg}+{\pythiaeight} prediction. 
 These include three different scale variations,  a different shower-recoil model scheme, and 
 two alternative PDF sets (MSTW and NNPDF). Additional uncertainties are assessed for
-the contributions to the $\ttbin$ background originating from multiple parton interactions.
-Finally, an extra uncertainty on the $\ttbin$ background is assigned by comparing 
+the contributions to the \ttbin\ background originating from multiple parton interactions.
+Finally, an extra uncertainty on the \ttbin\ background is assigned by comparing 
 the predictions from {\powheg}+{\pythiaeight} and {\ShOL} 4F (5F vs 4F).
 In the derivation of the above uncertainties, the overall normalisations of the \ttcin\ and \ttbin\ backgrounds 
 at the particle level are fixed to the nominal prediction. In order to maintain the inclusive $\ttbar$ cross section, 
@@ -218,7 +218,7 @@ Further details are available in Ref.~\cite{Aaboud:2017rss}.
 Uncertainties affecting the normalisation of the $V$+jets background are estimated for the sum
 of $W$+jets and $Z$+jets, and separately for $V$+light-jets, $V$+$\geq$1$c$+jets, and $V$+$\geq$1$b$+jets subprocesses.
 The total normalisation uncertainty of $V$+jets processes is estimated by comparing the data and total background prediction in 
-the different analysis regions considered, but requiring exactly 0 $b$-tagged jets. Agreement between data and predicted background 
+the different analysis regions considered, but requiring exactly zero $b$-tagged jets. Agreement between data and predicted background 
 in these modified regions, which are dominated by $V$+light-jets, is found to be within approximately 30\%. This bound is taken to 
 be the normalisation uncertainty, correlated across all $V$+jets subprocesses. 
 Since {\sherpa}~2.2 has been found to underestimate $V$+heavy-flavour by about a factor
@@ -272,7 +272,11 @@ Uncertainties on the data-driven fake $\tauhad$ background in the $\Htautau$ sea
 In each loose SR, after subtracting the small contribution from real $\tauhad$ candidates based on the simulation, 
 the shape difference between the remaining data and the fake $\tauhad$ background estimate based on its associated loose CR 
 is applied as an uncertainty on the prediction in the nominal SR.
-In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. Finally, the normalisation of the fake $\tauhad$ background in each SR is determined by the data during the fit procedure, and thus so is its uncertainty. In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
+In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. 
+In addition, a systematic uncertainty is assigned to account for the different fractional composition of particles (various types of leptons and partons) originating the fake $\tauhad$ candidates 
+between each SR and its corresponding CR in the $\ttbar$ simulation. 
+Finally, the normalisation of the fake $\tauhad$ background in each SR is determined by the data during the fit procedure, and thus so is its uncertainty. 
+%In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
 
 \subsection{Signal modelling}
 \label{sec:syst_sigmodeling}
@@ -287,4 +291,4 @@ Additional uncertainties associated with the modelling of additional radiation, 
 with the choice of parton shower and hadronisation model, are estimated from the comparison of the nominal
 and alternative $\ttbar \to WbWb$ background samples (see discussion in Sect.~\ref{sec:syst_bkgmodeling}) and applied to $\Hq$ signal. 
 These modelling uncertainties are taken to be uncorrelated with those affecting the $\ttbar \to WbWb$ background.
-
+Finally, a 30\% uncertainty is assigned to the signal events with fake $\tauhad$ candidates selected by the $\Htautau$ search.
