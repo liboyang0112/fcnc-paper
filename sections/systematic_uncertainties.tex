@@ -5,7 +5,7 @@
 				   
 Several sources of systematic uncertainty are considered that can affect the normalisation of signal 
 and background and/or the shape of their corresponding final discriminant distributions.  
-Each source of systematic uncertainty is considered to be uncorrelated with the other sources.  
+Each source is considered to be uncorrelated with the other sources.  
 Correlations of a given systematic uncertainty are maintained across processes and channels 
 as appropriate.
 The following sections describe the systematic uncertainties considered.
@@ -147,9 +147,8 @@ in the case of electrons and muons, and using $Z\to \tau^+\tau^-$ events in the 
 
 Uncertainties associated with jets arise from the jet energy scale
 and resolution, and the efficiency to pass the JVT requirements. 
-The largest contribution results from the jet energy scale,
-whose uncertainty dependence on jet $\pt$ and $\eta$, jet flavour, and pileup treatment is split into 21 uncorrelated components 
-that are treated independently~\cite{Aaboud:2017jcu}.  
+The largest contribution results from the jet energy scale, whose uncertainty dependence on jet $\pt$ and $\eta$, jet flavour, and pileup treatment, 
+is split into 21 uncorrelated components that are treated independently~\cite{Aaboud:2017jcu}.  
 
 Uncertainties associated with energy scales and resolutions of leptons and jets 
 are propagated to $\met$. Additional uncertainties originating from the modelling 
@@ -195,9 +194,9 @@ and using the Var3c downward variation of the A14 set~\cite{ATL-PHYS-PUB-2016-00
 In the case of the $\Hbb$ search, where the $\ttbar$+HF background plays a more prominent role, a more 
 detailed treatment of its associated systematic uncertainties is made. In particular, since several analysis 
 regions have a sufficiently large number of events of \ttbin\ background, its normalisation is 
-determined by the data during the fit procedure.
+determined in the fit to data.
 %, with no prior uncertainty assumed. 
-In the case of the \ttcin\ normalisation, a normalisation uncertainty of 50\% is assumed, as the fit to the data is unable 
+In the case of the \ttcin\ normalisation, an uncertainty of 50\% is assumed, as the fit to the data is unable 
 to precisely determine it, and the analysis has very limited sensitivity to this uncertainty.
 Since the diagrams that contribute to $\ttbar$+light-jets, \ttcin, \ttbin\
 production are different, all above uncertainties on $\ttbar$+jets
@@ -227,15 +226,15 @@ subprocesses, considered uncorrelated between them.
 
 Uncertainties affecting the modelling of the single-top-quark background include a 
 $+5\%$/$-4\%$ uncertainty in the total cross section estimated as a weighted average 
-of the theoretical uncertainties in $t$-, $Wt$- and $s$-channel production~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
+of the theoretical uncertainties in $t$-, $tW$- and $s$-channel production~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
 Additional uncertainties associated with the modelling of additional radiation are assessed by comparing the nominal
 samples with alternative samples where generator parameters are varied.
-For the $t$- and $Wt$-channel processes, an uncertainty due to the choice of parton shower and hadronisation model is derived 
+For the $t$- and $tW$-channel processes, an uncertainty due to the choice of parton shower and hadronisation model is derived 
 by comparing events produced by {\powheg} interfaced to {\pythia}~6 or {\herwigpp}.
 These uncertainties are treated as fully correlated among single-top production processes, but uncorrelated with the
 corresponding uncertainty in the $\ttbar$+jets background.
-An additional systematic uncertainty on $Wt$-channel production concerning the separation 
-between $t\bar{t}$ and $Wt$ at NLO is assessed by comparing
+An additional systematic uncertainty on $tW$-channel production concerning the separation 
+between $t\bar{t}$ and $tW$ at NLO is assessed by comparing
 the nominal sample, which uses the so-called ``diagram removal'' scheme~\cite{Frixione:2008yi}, with an alternative sample
 using the ``diagram subtraction'' scheme~\cite{Frixione:2008yi}.
 
@@ -262,7 +261,7 @@ No explicit shape uncertainty is assigned since the large statistical uncertaint
 the multijet background prediction, which are uncorrelated 
 between bins in the final discriminant distribution, effectively cover all possible shape uncertainties. 
 
-Uncertainties on the data-driven fake $\tauhad$ background in the $\Htautau$ search are obtained by using additional signal-depleted samples. The construction is similar to that of the SRs and corresponding CRs discussed in Section~\ref{sec:fakeleptons}, but employing further loosened $\tauhad$ identification criteria, and thus referred to as ``loose SR"  and ``loose CR". 
+Uncertainties on the data-driven fake $\tauhad$ background in the $\Htautau$ search are obtained by using additional signal-depleted regions. The construction is similar to that of the SRs and corresponding CRs discussed in Section~\ref{sec:fakeleptons}, but employing further loosened $\tauhad$ identification criteria, and thus referred to as ``loose SR"  and ``loose CR". 
 %The shape difference between the fake $\tauhad$ background prediction in each loose SR and its associated loose CR
 %is applied as an uncertainty on the prediction in the nominal SR.
 %In each loose SR, the shape difference between the data and the fake $\tauhad$ background estimate based on its associated loose CR,
@@ -272,11 +271,11 @@ Uncertainties on the data-driven fake $\tauhad$ background in the $\Htautau$ sea
 In each loose SR, after subtracting the small contribution from real $\tauhad$ candidates based on the simulation, 
 the shape difference between the remaining data and the fake $\tauhad$ background estimate based on its associated loose CR 
 is applied as an uncertainty on the prediction in the nominal SR.
-In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. 
+In addition, a 30\% uncertainty is applied to the fraction of $\ttbar$ events with a fake $\tauhad$ candidate from the simulation that are added to the fake $\tauhad$ template in the $\hadhad$ channel as part of the fake $\tauhad$ background estimation procedure (see Section~\ref{sec:faketaus}). This uncertainty, associated with the modelling of the fake $\tauhad$ rate by the simulation, is estimated by comparing data and simulation in a sample enriched in $\ttbar$ dilepton events plus a fake $\tauhad$ candidate. 
 The same uncertainty is assigned to the selected signal events with fake $\tauhad$ candidates.
 In addition, a systematic uncertainty is assigned to account for the different fractional composition of particles (various types of leptons and partons) originating the fake $\tauhad$ candidates 
 between each SR and its corresponding CR in the $\ttbar$ simulation. 
-Finally, the normalisation of the fake $\tauhad$ background in each SR is determined by the data during the fit procedure, and thus so is its uncertainty. 
+Finally, the normalisation of the fake $\tauhad$ background in each SR is determined in the fit to data. 
 %In order to be conservative, the yield of different origins of the fake taus is studied and a dedicated uncertainty is added to the fake template. The MC studies shows that non-H-to-tautau signal with fake taus can contribute to the $\lephad$ channel. So a 30\% uncertainty is  applied to these signal-faking-tau events.
 
 \subsection{Signal modelling}
