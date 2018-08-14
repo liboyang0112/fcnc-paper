@@ -36,10 +36,15 @@ direction of the lepton.  The value of $R_{\textrm{cut}}$ is the smaller of $r_{
 $r_{\textrm{min}}$ is set to 0.2 (0.3) for electron (muon) candidates, and $\pt^\ell$ is the lepton $\pt$. 
 The $\Hbb$ search requires lepton candidates to satisfy $I_R/\pt^\ell < 0.06$, while the $\Htautau$ search 
 makes $\pt$-dependent requirements on $I_R/\pt^\ell$. Additionally, the $\Htautau$ search requires leptons to
-satisfy a calorimeter-based isolation criterion; a requirement is made on the sum of the transverse energy of
-topological clusters within the cone defined by $\Delta R<0.2$ around the lepton, after subtracting the contribution
-from the energy deposit of the lepton itself and correcting for pile-up effects, to be less than a $\pt$-dependent 
+satisfy a calorimeter-based isolation criterion: the sum of the transverse energy of
+topological clusters within the cone defined by $\Delta R<0.2$ around the lepton, after subtracting the contributions
+from pile-up and the energy deposit of the lepton itself, is required to be less than a $\pt$-dependent 
 percentage of the lepton energy. 
+%Additionally, the $\Htautau$ search requires leptons to
+%satisfy a calorimeter-based isolation criterion; a requirement is made on the sum of the transverse energy of
+%topological clusters within the cone defined by $\Delta R<0.2$ around the lepton, after subtracting the contribution
+%from the energy deposit of the lepton itself and correcting for pile-up effects, to be less than a $\pt$-dependent 
+%percentage of the lepton energy. 
 %The combined efficiency of track-based and calorimeter-based isolation requirements made by the $\Htautau$ 
 %search is 90\% (99\%) at $\pt=25\;(60)~\gev$.
 
@@ -72,10 +77,10 @@ with a total charge of $\pm 1$. Candidates are required to have $\pt > 25~\gev$ 
 A boosted decision tree (BDT) discriminant using calorimeter- and tracking-based variables is used to identify $\tauhad$ candidates and reject
 jet backgrounds. Three working points labelled loose, medium and tight are defined, and correspond to different $\tauhad$ identification efficiency 
 values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
-working point for the nominal selection, while the loose working point is used for the purpose of background estimation.
+working point for the nominal selection, while the loose working point is used for background estimation.
 The medium working point has a combined reconstruction and identification efficiency of 55\% (40\%) for one (three)-prong $\tauhad$ 
 decays~\cite{ATLAS-CONF-2017-029}, and an expected rejection factor against light-quark/gluon jets of 100~\cite{ATL-PHYS-PUB-2015-045}. 
-Electrons that are reconstructed as one-prong $\tauhad$ candidates are removed via a BDT trained to reject electrons.
+Electrons that are reconstructed as one-prong $\tauhad$ candidates are removed via a BDT.
 Any $\tauhad$ candidate that is also $b$-tagged is rejected.
 
 Overlaps between candidate objects are removed sequentially, following this order: muons, electrons, $\tauhad$ (only for the $\Htautau$ search), and jets. 

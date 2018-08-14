@@ -3,7 +3,7 @@
 \label{sec:signal_background_model}
 %-------------------------------------------------------------------------------
 
-Signal and most background processes are modelled using Monte Carlo (MC) simulations.
+Signal and most background processes are modelled using Monte Carlo (MC) simulation.
 After the event preselection, the main background is $\ttbar$ production, often in association with jets, denoted by $\ttbar$+jets in the following.
 Small contributions arise from single-top-quark, $W/Z$+jets, multijet and diboson ($WW,WZ,ZZ$) production, as well as from the associated 
 production of a vector boson $V$ ($V=W,Z$) or a Higgs boson and a $\ttbar$ pair ($\ttbar V$ and $\ttbar H$). All backgrounds 
@@ -14,7 +14,7 @@ and the Higgs boson is allowed to decay into all SM particles with branching rat
 Backgrounds with non-prompt electrons or muons, with photons or jets misidentified as electrons, or with jets misidentified as $\tauhad$ candidates, 
 generically referred to as ``fake leptons", are estimated using data-driven methods. 
 The background prediction is further improved during the statistical analysis by performing a likelihood 
-fit to data using several signal-depleted search regions, as discussed in Sections~\ref{sec:strategy_Hbb} and~\ref{sec:strategy_Htautau}.
+fit to data using several signal-depleted analysis regions, as discussed in Sections~\ref{sec:strategy_Hbb} and~\ref{sec:strategy_Htautau}.
 
 %-------------------------------------------------------------------------------
 \subsection{Simulated signal and background processes}
@@ -23,16 +23,16 @@ fit to data using several signal-depleted search regions, as discussed in Sectio
 
 Samples of simulated $\ttbar \to WbHq$ events are generated with the next-to-leading-order (NLO) generator\footnote{In the following, 
 the order of a generator should be understood as referring to the order in the strong coupling constant at which the matrix element calculation 
-is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to {\pythia} 8.212~\cite{Sjostrand:2007gs} for the modelling of parton showering, hadronisation, and the underlying event. 
+is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0 NLO~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to {\pythia} 8.212~\cite{Sjostrand:2007gs} with the NNPDF2.3 LO~\cite{Ball:2012cx} PDF set for the modelling of parton showering, hadronisation, and the underlying event. 
 The A14~\cite{ATLASUETune4} set of tuned parameters in {\pythia} controlling the description of multiparton interactions and  
 initial and final state radiation, referred to as the ``tune'', is used.
 The signal sample is normalised to the same cross section as used for the $t\bar{t}\to WbWb$ sample (see discussion below) and
 assuming a reference branching ratio $\BR_{\mathrm{ref}}(t\to Hq)=1\%$.
 The case of both top quarks decaying into $Hq$ is neglected in the analysis given existing upper limits on $\BR(t \to Hq)$ (see Section~\ref{sec:intro}).
 
-The nominal sample used to model the $\ttbar$ background is generated with the NLO generator {\powheg}~v2 \cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} using the NNPDF3.0 PDF set. The {\powheg} model parameter $h_{\textrm{damp}}$, which controls 
+The nominal sample used to model the $\ttbar$ background is generated with the NLO generator {\powheg}~v2 \cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} using the NNPDF3.0 NLO PDF set. The {\powheg} model parameter $h_{\textrm{damp}}$, which controls 
 matrix element to parton shower matching and effectively regulates the high-$\pt$ radiation, is set to 1.5 times the top quark mass. 
-Parton shower and hadronisation are modelled by {\pythia}~8.2 with the A14 tune.
+Parton shower, hadronisation, and underlying event are modelled by {\pythia}~8.210 with the NNPDF2.3 LO PDF set in combination with the A14 tune.
 Alternative $\ttbar$ simulation samples used to derive systematic uncertainties are described in Section~\ref{sec:syst_bkgmodeling}. 
 The generated $\ttbar$ samples are normalised to a theoretical cross section of $832^{+46}_{-51}$~pb, 
 computed using \textsc{Top++}~v2.0~\cite{Czakon:2011xx} at next-to-next-to-leading order (NNLO), 
@@ -44,24 +44,28 @@ top quark mass, and in the PDF and $\alpha_{\textrm{S}}$. The latter two represe
 in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
 with the MSTW 2008 68\% CL NNLO, CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3 5f FFN~\cite{Ball:2012cx} PDF sets.
 
-The $\Hbb$ search requires a more sophisticated treatment of the $\ttbar$ background. Therefore, the simulated $\ttbar$ events are categorised depending 
+%The $\Hbb$ search requires a more sophisticated treatment of the $\ttbar$ background. 
+The $\ttbar$ background selected by the $\Hbb$ search is enriched in $\ttbar$+heavy-flavour production, and thus requires a more sophisticated 
+treatment than provided by the nominal $\ttbar$ sample. 
+%The large and complex $\ttbar$ background selected by the $\Hbb$ search requires a more sophisticated treatment than provided by the nominal $\ttbar$ sample. 
+Therefore, the simulated $\ttbar$ events are categorised depending 
 on the flavour content of additional particle jets not originating from the decay of the $\ttbar$ system (see Ref.~\cite{Aaboud:2017rss} for details).
 Events labelled as either \ttbin\ or \ttcin\ are generically referred to in the following as $\ttbar$+HF events, where HF stands for ``heavy flavour''.
 The remaining events are labelled as $\ttbar$+light-jets events, including those with no additional jets. 
 A finer categorisation of \ttbin\ events is considered for the purpose of applying further corrections and
-assigning systematic uncertainties associated with the modelling of heavy-flavour production in different topologies~\cite{Aaboud:2017rss}.
+assigning systematic uncertainties associated with the modelling of heavy-flavour production in different event topologies~\cite{Aaboud:2017rss}.
 In particular, the \ttbin\ events are reweighted to an NLO prediction in the four-flavour (4F) scheme 
 of \ttbin\ production including parton showering~\cite{Cascioli:2013era}, based on {\ShOLlong}~\cite{Gleisberg:2008ta, Cascioli:2011va} (referred to as {\ShOL} 
 in the following) using the CT10 PDF set.  This reweighting is performed in such a way that the inter-normalisations of the \ttbin\ categories are at NLO accuracy, 
-while preserving the nominal \ttbin\ cross section in {\powheg}+{\pythia}. This reweighting is applied as well to the alternative $\ttbar$ samples.
+while preserving the nominal \ttbin\ cross section of the nominal $\ttbar$ sample. This reweighting is applied to the alternative $\ttbar$ samples as well.
 
 Samples of single-top-quark events corresponding to the $t$-channel production mechanism are generated with the 
 {\powheg}~v1~\cite{Frederix:2012dh} generator that uses the 4F scheme  for the NLO matrix element calculations
 and the fixed 4F \textsc{CT10}f\textsc{4}~\cite{Lai:2010vv} PDF set.
-Samples corresponding to the $Wt$- and $s$-channel production mechanisms are generated 
-with {\powheg}~v1 using the CT10 PDF set. Overlaps between the $\ttbar$ and $Wt$ final states are avoided by using 
+Samples corresponding to the $tW$- and $s$-channel production mechanisms are generated 
+with {\powheg}~v1 using the CT10 PDF set. Overlaps between the $\ttbar$ and $tW$ final states are avoided by using 
 the ``diagram removal'' scheme~\cite{Frixione:2005vw}.
-The parton shower, hadronisation and the underlying event are modelled using {\pythia}~6.428 with the CTEQ6L1 PDF set 
+The parton shower, hadronisation and the underlying event are modelled using {\pythia}~6.428 with the CTEQ6L1~\cite{Pumplin:2002vw,Nadolsky:2008zw} PDF set 
 in combination with the Perugia 2012 tune~\cite{Skands:2010ak}.
 The single-top-quark samples are normalised to the approximate NNLO theoretical cross 
 sections~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}. 
@@ -78,17 +82,16 @@ Both the $W$+jets and $Z$+jets samples are normalised to their respective inclus
 cross sections in QCD calculated with \textsc{FEWZ}~\cite{Anastasiou:2003ds}.
 
 Samples of $WW/WZ/ZZ$+jets events are generated with {\sherpa}~2.1.1 using the CT10 PDF set
-and include processes containing up to four electroweak vertices. The matrix element includes zero additional partons 
+and include processes containing up to four electroweak vertices. 
+In the case of $WW/WZ$+jets ($ZZ$+jets) the matrix element is calculated for zero (up to one) additional partons 
 at NLO and up to three partons at LO using the same procedure as for the $W/Z$+jets samples. 
 The final states simulated require one of the bosons to decay leptonically and the other hadronically.
 All diboson samples are normalised to their NLO theoretical cross sections provided by {\sherpa}. 
 
-Samples of $\ttbar V$ and $\ttbar H$ events are generated with {\amcatnlo}~2.2.1, using 
-NLO matrix elements and the NNPDF3.0 NLO~\cite{Ball:2014uwa} PDF set. 
-Showering is performed using {\pythia}~8.210 and the A14 tune.
+Samples of $\ttbar V$ and $\ttbar H$ events are generated with {\amcatnlo}~2.2.1, using NLO matrix elements and the NNPDF3.0 NLO PDF set,
+and interfaced to {\pythia}~8.210 with the NNPDF2.3 LO PDF set and the A14 tune.
 The $\ttbar V$ samples are normalised to the NLO cross section computed with {\amcatnlo}.
-The $\ttbar H$ sample is normalised using the NLO cross section~\cite{Raitio:1978pt,Beenakker:2002nc,Dawson:2003zu,Yu:2014cka,Frixione:2015zaa}  
-and the Higgs boson decay branching ratios calculated using \textsc{Hdecay}.
+The $\ttbar H$ sample is normalised using the NLO cross section~\cite{Raitio:1978pt,Beenakker:2002nc,Dawson:2003zu,Yu:2014cka,Frixione:2015zaa}. 
 
 %The production of four-top-quark events in the SM was simulated by samples generated at LO using {\amcatnlo}~2.2.2
 %and the NNPDF2.3 LO PDF set, interfaced to {\pythia}~8.186 in combination with the A14 tune. 
@@ -132,7 +135,10 @@ It is also found that the fake rate decreases as the $\tauhad$ candidate $\pt$ i
 This background is estimated directly from data by defining control regions (CR) enriched in fake $\tauhad$ candidates via loosened $\tauhad$ requirements. These CRs do not overlap with the main search regions (SRs), discussed in Section~\ref{sec:strategy_Htautau}. The CR selection requirements are analogous to those used to define the different SRs, except that the leading (trailing) $\tauhad$ candidate 
 in the $\lephad$ ($\hadhad$) channel is required to be of loose-not-medium quality, and the requirement on its charge is dropped.
 
-The fake $\tauhad$ background prediction in a given SR is modelled by the fake template derived from its corresponding CR, which is a data-driven method. The fake template is defined as the data subtracted by the contributions from the simulated backgrounds with real $\tauhad$ candidates. In the $\lephad$ channel, simulation studies indicate that the fake $\tauhad$ background composition is consistent between the SR and the CR, and dominated by $\ttbar$. In this case, the fake template is simply normalised to the fake $\tauhad$ background yield in the SR and taken as the fake $\tauhad$ background prediction. In the $\hadhad$ channel, the fake $\tauhad$ background is expected to be dominated by multijet production. However, simulation studies indicate that the fraction of $\ttbar$ yield is higher in the SR than in the CR. Therefore, an appropriate amount of simulated $\ttbar$ events with fake $\tauhad$ candidates in the CR are added to the fake template to match the fake $\tauhad$ background composition in the SR. This modified fake template is then normalised to the expected fake $\tauhad$ background yield in the SR, as sone in the case of the $\lephad$ channel.
+The fake $\tauhad$ background prediction in a given SR is modelled by the distribution (referred to as ``fake $\tauhad$ template") derived from data in the corresponding CR. The fake $\tauhad$ template is defined as the data distribution from which the contributions from the simulated backgrounds with real $\tauhad$ candidates are subtracted. In the $\lephad$ channel, simulation studies indicate that the fake $\tauhad$ background composition is consistent between the SR and the CR, and dominated by $\ttbar$. In the $\hadhad$ channel, the fake $\tauhad$ background is expected to be dominated by multijet production. However, simulation studies indicate that the contribution of $\ttbar$ events to the fake $\tauhad$ background is higher in the SR than in the CR. Therefore, an appropriate amount of simulated $\ttbar$ events with fake $\tauhad$ candidates in the CR is added to the fake $\tauhad$ template to match the fake $\tauhad$ background composition in the SR. 
+In both the $\lephad$ and $\hadhad$ channels, the fake $\tauhad$ template in each SR is initially normalised to the estimated fake $\tauhad$ background yield, 
+defined as the data yield minus the contributions from the simulated backgrounds with real $\tauhad$ candidates (i.e. assuming no signal contribution).
+During the statistical analysis, the normalisation of the fake $\tauhad$ background in each SR will be allowed to vary unconstrained in the fit to data, as discussed in Section~\ref{sec:results_Htautau}.
 
 %In the $\Htautau$ search, the background events with real tau leptons are modelled by MC samples, including $t\bar{t}$, $t\bar{t}+H/V$, single top events with real taus, and $Z\to\tau\tau$+jets. The $Z\to ee,\mu\mu$ processes are included for lepton faking tau background. They are small compared to the other background components. The fake-tau background with one or more taus faked by jets consists of the top fake (with at least one fake tau from jets in the top events), QCD multijet and $W$+jets events. This background is estimated in a dedicated control region (fake-tau CR), which is shown in Fig. \ref{fig:region-definition}. The events in the fake-tau CR are required to pass mostly the same selection as fit region (FR, the region after the preselection and the cut in Eq. \ref{eq:chi2-3jet}; the tau candidates in FR are also required to have the same charge) except for the tau charge and identification requirement. The fake-tau CR consists of two kinds of events: 1. The $\tauhad$'s have medium ID and the tau candidates have the same charge; 2. The leading (sub-leading) $\tauhad$ in $\lephad$ ($\hadhad$) channel has loose ID but fails medium ID requirement and there is no charge requirement. So the fake-tau CR is orthogonal to the FR and dominated by fake $\tauhad$'s.
 %
@@ -155,7 +161,7 @@ The fake $\tauhad$ background prediction in a given SR is modelled by the fake t
 %\end{equation}
 %
 %where $N_{\text{data}}^{\text{FR}}$ and $N_{\text{non-fake}}^{\text{FR}}$ are total event yields of data and non-fake MC background in FR, $N_{\text{fake}}^{\text{fake-tau-CR}}$ is the fake events from fake-tau CR, which is data-driven. Eq. \ref{eq:transfer-factor} gives a pre-fit normalization of the fake events to demonstrate the agreement of the data and total background prediction. After the fit, $f_{\text{trans}}$ will be modified by a new multiplicative factor (freely floating in the fit) replacting the final normalization of the fake. The fit untilizes the different distribution shapes of signal and background, as well as the background-enriched region in FR to determine the fake normalization.
-%
+%  
 %In the $\hadhad$ channel, regarding that the QCD events have a considerable contribution to the fake-tau background and there is no guarentee that the fractions of top-fake-tau event in FR and fake-tau CR are the same. So a small amount of MC top-fake-tau events in fake-tau CR are added to the data-driven estimate to make them equal. The fractions of top-fake-tau events in both regions are simply computed by MC prediction. As a result, the fraction is also considered to have a systematic uncertainty (1-$\sigma$ deviation is around 30\%, which is measured in another top-enriched control region). So the transfer factor in the $\hadhad$ channel becomes:
 %
 %\begin{equation}
