@@ -109,7 +109,8 @@ The description of each variable is provided in the text.}}
 
 Boosted decision trees (BDT)~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna} are used in each SR to improve the separation between signal and background. 
 %The separate training exploits differences in event kinematics across SRs.  
-In the training, only the $\Hq$ signal is used against the total SM background, including both real and fake $\tauhad$ contributions.
+In the training, only $\ttbar \to W(qq)bH(\tau\tau)q$ signal events are used against the total SM background (including both real and fake $\tauhad$ contributions), 
+whereas to obtain the result the contributions from $\ttbar \to W(\ell\nu)bHq$ signal events are also taken into account. 
 A large set of potential variables was investigated in each SR separately, and only those variables that led to an improved discrimination
 performance of the BDT were kept.  The BDT input variables in each SR are listed in Table~\ref{tab:mva_var} and defined in the following:
 
@@ -167,11 +168,11 @@ which is determined via a likelihood fit to data.}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_hadhad_3j_FR.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_hadhad_4j_FR.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x1_fit_hadhad_3j_FR.eps}}
-\subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x2_fit_hadhad_4j_FR.eps}} \\
+\subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x1_fit_hadhad_4j_FR.eps}} \\
 \caption{$\Htautau$ search: Comparison between the data and background prediction for the distribution of two of the most 
 important BDT input variables in the $\hadhad$ channel before performing the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\hadhad$, 3j) region and (b) the ($\hadhad$, $\geq$4j) region, and for
-(c) $x_{1}^{\text{fit}}$ in the ($\hadhad$, 3j)  region, and (d) $x_{2}^{\text{fit}}$ in the ($\hadhad$, $\geq$4j) region.
+$x_{1}^{\text{fit}}$ in (c) the ($\hadhad$, 3j)  region and (d) the ($\hadhad$, $\geq$4j) region.
 The contributions with real $\tauhad$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single top backgrounds are combined into
 a single background source referred to as ``Top (real $\tauhad$)", whereas the small contributions from 
 $Z\to \ell^+\ell^-$ ($\ell = e, \mu$) and diboson backgrounds are combined into ``Other''. 
