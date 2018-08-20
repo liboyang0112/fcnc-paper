@@ -1,0 +1,5 @@
+# Exception list for TOPQ-2017-07 with reference date 2018-08-20
+# Exception list for paper ID TOPQ-2017-07 on date August 20th, 2018 at 2:36pm
+
+
+% Created with Glance <Atlas.Glance@cern.ch>
