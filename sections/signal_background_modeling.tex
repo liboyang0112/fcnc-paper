@@ -26,7 +26,7 @@ the order of a generator should be understood as referring to the order in the s
 is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0 NLO~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to {\pythia} 8.212~\cite{Sjostrand:2007gs} with the NNPDF2.3 LO~\cite{Ball:2012cx} PDF set for the modelling of parton showering, hadronisation, and the underlying event. 
 The A14~\cite{ATLASUETune4} set of tuned parameters in {\pythia} controlling the description of multiparton interactions and  
 initial and final state radiation, referred to as the ``tune'', is used.
-The signal sample is normalised to the same cross section as used for the $t\bar{t}\to WbWb$ sample (see discussion below) and
+The signal sample is normalised to the same total cross section as used for the $t\bar{t}\to WbWb$ sample (see discussion below) and
 assuming a reference branching ratio $\BR_{\mathrm{ref}}(t\to Hq)=1\%$.
 The case of both top quarks decaying into $Hq$ is neglected in the analysis given existing upper limits on $\BR(t \to Hq)$ (see Section~\ref{sec:intro}).
 
@@ -57,7 +57,10 @@ assigning systematic uncertainties associated with the modelling of heavy-flavou
 In particular, the \ttbin\ events are reweighted to an NLO prediction in the four-flavour (4F) scheme 
 of \ttbin\ production including parton showering~\cite{Cascioli:2013era}, based on {\ShOLlong}~\cite{Gleisberg:2008ta, Cascioli:2011va} (referred to as {\ShOL} 
 in the following) using the CT10 PDF set.  This reweighting is performed in such a way that the inter-normalisations of the \ttbin\ categories are at NLO accuracy, 
-while preserving the nominal \ttbin\ cross section of the nominal $\ttbar$ sample. This reweighting is applied to the alternative $\ttbar$ samples as well.
+while preserving the nominal \ttbin\ cross section of the nominal $\ttbar$ sample. 
+%This reweighting is applied to the alternative $\ttbar$ samples as well.
+This reweighting is also applied to the alternative $\ttbar$ samples that are used to study systematic uncertainties (see section~\ref{sec:syst_bkgmodeling}).
+
 
 Samples of single-top-quark events corresponding to the $t$-channel production mechanism are generated with the 
 {\powheg}~v1~\cite{Frederix:2012dh} generator that uses the 4F scheme  for the NLO matrix element calculations
