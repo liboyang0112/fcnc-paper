@@ -42,7 +42,7 @@ and using the MSTW 2008 NNLO~\cite{Martin:2009iq,Martin:2009bu} PDF set.
 The theoretical uncertainties result from variations of the factorisation and renormalisation scales, as well as from uncertainties in the
 top quark mass, and in the PDF and $\alpha_{\textrm{S}}$. The latter two represent the largest contribution to the overall theoretical uncertainty 
 in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
-with the MSTW 2008 68\% CL NNLO, CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3 5f FFN~\cite{Ball:2012cx} PDF sets.
+with the MSTW 2008 68\% CL NNLO, CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3 5F FFN~\cite{Ball:2012cx} PDF sets.
 
 %The $\Hbb$ search requires a more sophisticated treatment of the $\ttbar$ background. 
 The $\ttbar$ background selected by the $\Hbb$ search is enriched in $\ttbar$+heavy-flavour production, and thus requires a more sophisticated 
@@ -65,7 +65,8 @@ and the fixed 4F \textsc{CT10}f\textsc{4}~\cite{Lai:2010vv} PDF set.
 Samples corresponding to the $tW$- and $s$-channel production mechanisms are generated 
 with {\powheg}~v1 using the CT10 PDF set. Overlaps between the $\ttbar$ and $tW$ final states are avoided by using 
 the ``diagram removal'' scheme~\cite{Frixione:2005vw}.
-The parton shower, hadronisation and the underlying event are modelled using {\pythia}~6.428 with the CTEQ6L1~\cite{Pumplin:2002vw,Nadolsky:2008zw} PDF set 
+The parton shower, hadronisation and the underlying event are modelled using {\pythia}~6.428~\cite{Sjostrand:2006za} 
+with the CTEQ6L1~\cite{Pumplin:2002vw,Nadolsky:2008zw} PDF set 
 in combination with the Perugia 2012 tune~\cite{Skands:2010ak}.
 The single-top-quark samples are normalised to the approximate NNLO theoretical cross 
 sections~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}. 
@@ -104,7 +105,8 @@ event generator and overlaid onto the simulated hard-scatter events according to
 The generated events are processed through a simulation~\cite{Aad:2010ah} of the ATLAS detector geometry and response 
 using \textsc{Geant4}~\cite{Agostinelli:2002hh}. A faster simulation, where the full \textsc{Geant4} simulation of
 the calorimeter response is replaced by a detailed parameterisation of the shower shapes~\cite{FastCaloSim},
-is adopted for some of the samples used to estimate systematic uncertainties.
+is adopted for some of the samples.
+% used to estimate systematic uncertainties.
 Simulated events are processed through the same reconstruction software as the data, and corrections are applied so that the object identification 
 efficiencies, energy scales and energy resolutions match those determined from data control samples.
 
