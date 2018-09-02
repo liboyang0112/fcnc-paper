@@ -51,10 +51,13 @@ percentage of the lepton energy.
 %search is 90\% (99\%) at $\pt=25\;(60)~\gev$.
 
 %a Gradient isolation working points are used for both electrons and muons. The working points are based on cut maps derived from the $Z\to l^+l^-$ Monte Carlo samples. The efficiency maps are simply derived from the sum of transverse energy of the clusters deposited in the calorimeter in the given cone. The efficiency for the leptons with a certain $\pt$ is $(0.1143*\pt[\GeV]+92.14)\%*(0.1143*\pt[\GeV]+92.14)\%$.
-
-Candidate jets are reconstructed with the anti-$k_t$ algorithm~\cite{Cacciari:2008gp,Cacciari:2005hq,Cacciari:2011ma} with a
-radius parameter $R=0.4$, using topological clusters~\cite{Aad:2016upy} 
-built from energy deposits in the calorimeters calibrated to the electromagnetic scale. 
+%draft 1 version
+%Candidate jets are reconstructed with the anti-$k_t$ algorithm~\cite{Cacciari:2008gp,Cacciari:2005hq,Cacciari:2011ma} with a
+%radius parameter $R=0.4$, using topological clusters~\cite{Aad:2016upy} 
+%built from energy deposits in the calorimeters calibrated to the electromagnetic scale. 
+Candidate jets are reconstructed with the anti-$k_t$ algorithm~\cite{Cacciari:2008gp,Cacciari:2005hq} with a
+radius parameter $R=0.4$, as implemented in the \fastjet\ package~\cite{Cacciari:2011ma}.  
+Jet reconstruction in the calorimeter starts from topological clustering~\cite{Aad:2016upy} of individual calorimeter cells calibrated to the electromagnetic scale. 
 The reconstructed jets are then calibrated to the particle level by the application of a jet energy scale 
 derived from simulation and {\textit{in situ}} corrections based on $\sqrt{s}=13~\tev$ data~\cite{Aaboud:2017jcu}.
 The calibrated jets used by the $\Hbb$ search are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$,
