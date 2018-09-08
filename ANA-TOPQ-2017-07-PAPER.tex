@@ -13,7 +13,8 @@
 % Use this variant if the files are in a central location, e.g. $HOME/texmf.
 % \newcommand*{\ATLASLATEXPATH}{}
 %-------------------------------------------------------------------------------
-\documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%\documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+\documentclass[CONF, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
 % The language of the document must be set: usually UKenglish or USenglish.
 % british and american also work!
 % Commonly used options:
@@ -137,20 +138,20 @@
 %\url{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PubComAcknowledgements}
 
 
-%-------------------------------------------------------------------------------
-\clearpage
-\appendix
-\part*{Appendix}
-\addcontentsline{toc}{part}{Appendix}
-%-------------------------------------------------------------------------------
-%In a paper, an appendix is used for technical details that would otherwise disturb the flow of the paper.
-%Such an appendix should be printed before the Bibliography.
-\input{sections/prepostfit_yields_Hbb_appendix}
-\FloatBarrier
-
-\input{sections/prepostfit_yields_Htautau_appendix}
-\FloatBarrier
-\clearpage
+%%-------------------------------------------------------------------------------
+%\clearpage
+%\appendix
+%\part*{Appendix}
+%\addcontentsline{toc}{part}{Appendix}
+%%-------------------------------------------------------------------------------
+%%In a paper, an appendix is used for technical details that would otherwise disturb the flow of the paper.
+%%Such an appendix should be printed before the Bibliography.
+%\input{sections/prepostfit_yields_Hbb_appendix}
+%\FloatBarrier
+%
+%\input{sections/prepostfit_yields_Htautau_appendix}
+%\FloatBarrier
+%\clearpage
 
 %-------------------------------------------------------------------------------
 % If you use biblatex and either biber or bibtex to process the bibliography
@@ -163,7 +164,7 @@
 
 %-------------------------------------------------------------------------------
 % Auxiliary material - comment out the following line if you do not have any
-\include{ANA-TOPQ-2017-07-PAPER-auxmat}
+%\include{ANA-TOPQ-2017-07-PAPER-auxmat}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
