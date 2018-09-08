@@ -128,9 +128,12 @@ performance of the BDT were kept.  The BDT input variables in each SR are listed
 \item $\met$ $\phi$ centrality: a variable that quantifies the relative angular position of the $\mpt$ with respect to the 
 visible tau decay products in the transverse plane. The transverse plane is transformed such that the direction of the tau decay products are 
 orthogonal, and that the smaller angle between the tau decay products defines the positive quadrant of the transformed plane. 
-The $\met$ $\phi$ centrality is defined as the sum of the parallel ($\parallel$) and perpendicular ($\perp$) components of the $\mpt$ unit vector in this transformed plane.
-\item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the parallel direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
-\item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the transverse direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
+The $\met$ $\phi$ centrality is defined as the sum of the $x$- and $y$-components of the $\mpt$ unit vector in this transformed plane.
+%\item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the parallel direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
+%\item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the transverse direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
+\item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of the original $\mpt$ vector parallel to the fitted $\mpt$ vector, minus 
+the magnitude of the fitted $\mpt$ vector.
+\item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of the original $\mpt$ vector parallel to the fitted $\mpt$ vector.
 \item $m_{b j_1}$: the invariant mass of the $b$-jet and the leading jet candidate from the hadronically-decaying $W$ boson.
 \item $m_{\text{lep}j}$: the invariant mass of the lepton and the jet that has the smallest angular distance to the $\lep$ candidate.
 \item $m_{\tau j}$: the invariant mass of the  $\tauhad$ candidate and the jet that has the smallest angular distance to the $\tauhad$ candidate.
@@ -150,7 +153,7 @@ The level of discrimination between signal and background achieved by the BDTs i
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_lephad_4j_FR.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/ptL2_lephad_3j_FR.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/ptL2_lephad_4j_FR.eps}} \\
-\caption{$\Htautau$ search: Comparison between the data and background prediction for the distribution of some of the most
+\caption{$\Htautau$ search: Comparison between the data and background prediction after preselection for the distribution of some of the most
 important BDT input variables in the $\lephad$ channel before performing the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\lephad$, 3j) region and (b) the ($\lephad$, $\geq$4j) region, and for
 $p_{\text{T},2}$ in (c) the ($\lephad$, 3j)  region and (d) the ($\lephad$, $\geq$4j) region.
@@ -175,7 +178,7 @@ which is determined via a likelihood fit to data.}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_hadhad_4j_FR.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x1_fit_hadhad_3j_FR.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x1_fit_hadhad_4j_FR.eps}} \\
-\caption{$\Htautau$ search: Comparison between the data and background prediction for the distribution of two of the most 
+\caption{$\Htautau$ search: Comparison between the data and background prediction after preselection for the distribution of two of the most 
 important BDT input variables in the $\hadhad$ channel before performing the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\hadhad$, 3j) region and (b) the ($\hadhad$, $\geq$4j) region, and for
 $x_{1}^{\text{fit}}$ in (c) the ($\hadhad$, 3j)  region and (d) the ($\hadhad$, $\geq$4j) region.
@@ -200,7 +203,7 @@ which is determined via a likelihood fit to data.}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/discriminant_shape/shape_discriminant_hl4j/canv_.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/discriminant_shape/shape_discriminant_hh3j/canv_.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/discriminant_shape/shape_discriminant_hh4j/canv_.eps}} \\
-\caption{$\Htautau$ search: Comparison of the shape of the BDT discriminant distribution between the $\Hc$ (red dashed) and $\Hu$ (blue dotted) signals, 
+\caption{$\Htautau$ search: Comparison of the shape of the BDT discriminant distribution after preselection between the $\Hc$ (red dashed) and $\Hu$ (blue dotted) signals, 
 and the total background (black solid) in the different search regions considered:
 (a) ($\lephad$, 3j), (b) ($\lephad$, $\geq$4j), (c) ($\hadhad$, 3j), and (d) ($\hadhad$, $\geq$4j). }
 \label{fig:BDT}
