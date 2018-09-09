@@ -26,7 +26,7 @@ the order of a generator should be understood as referring to the order in the s
 is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0 NLO~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to {\pythia} 8.212~\cite{Sjostrand:2007gs} with the NNPDF2.3 LO~\cite{Ball:2012cx} PDF set for the modelling of parton showering, hadronisation, and the underlying event. 
 The A14~\cite{ATLASUETune4} set of tuned parameters in {\pythia} controlling the description of multiparton interactions and  
 initial and final state radiation, referred to as the ``tune'', is used.
-The signal sample is normalised to the same total cross section as used for the $t\bar{t}\to WbWb$ sample (see discussion below) and
+The signal sample is normalised to the same total cross section as used for the inclusive $t\bar{t}\to WbWb$ sample (see discussion below) and
 assuming an arbitrary branching ratio of $\BR_{\mathrm{ref}}(t\to Hq)=1\%$.
 The case of both top quarks decaying into $Hq$ is neglected in the analysis given existing upper limits on $\BR(t \to Hq)$ (see Section~\ref{sec:intro}).
 
@@ -39,10 +39,10 @@ computed using \textsc{Top++}~v2.0~\cite{Czakon:2011xx} at next-to-next-to-leadi
 including resummation of next-to-next-to-leading logarithmic (NNLL) soft gluon 
 terms~\cite{Cacciari:2011hy,Baernreuther:2012ws,Czakon:2012zr,Czakon:2012pz,Czakon:2013goa}, 
 and using the MSTW 2008 NNLO~\cite{Martin:2009iq,Martin:2009bu} PDF set. 
-The theoretical uncertainties result from variations of the factorisation and renormalisation scales, as well as from uncertainties in the
-top quark mass, and in the PDF and $\alpha_{\textrm{S}}$. The latter two represent the largest contribution to the overall theoretical uncertainty 
-in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
-with the MSTW 2008 68\% CL NNLO, CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3 5F FFN~\cite{Ball:2012cx} PDF sets.
+%The theoretical uncertainties result from variations of the factorisation and renormalisation scales, as well as from uncertainties in the
+%top quark mass, and in the PDF and $\alpha_{\textrm{S}}$. The latter two represent the largest contribution to the overall theoretical uncertainty 
+%in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
+%with the MSTW 2008 68\% CL NNLO, CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3 5F FFN~\cite{Ball:2012cx} PDF sets.
 
 %The $\Hbb$ search requires a more sophisticated treatment of the $\ttbar$ background. 
 The $\ttbar$ background selected by the $\Hbb$ search is enriched in $\ttbar$+heavy-flavour production, and thus requires a more sophisticated 
@@ -94,7 +94,8 @@ All diboson samples are normalised to their NLO theoretical cross sections provi
 Samples of $\ttbar V$ and $\ttbar H$ events are generated with {\amcatnlo}~2.2.1, using NLO matrix elements and the NNPDF3.0 NLO PDF set,
 and interfaced to {\pythia}~8.210 with the NNPDF2.3 LO PDF set and the A14 tune.
 The $\ttbar V$ samples are normalised to the NLO cross section computed with {\amcatnlo}.
-The $\ttbar H$ sample is normalised using the NLO cross section~\cite{Raitio:1978pt,Beenakker:2002nc,Dawson:2003zu,Yu:2014cka,Frixione:2015zaa}. 
+The $\ttbar H$ sample is normalised using the NLO cross section~\cite{deFlorian:2016spz}.
+%Raitio:1978pt,Beenakker:2002nc,Dawson:2003zu,Yu:2014cka,Frixione:2015zaa}. 
 
 %The production of four-top-quark events in the SM was simulated by samples generated at LO using {\amcatnlo}~2.2.2
 %and the NNPDF2.3 LO PDF set, interfaced to {\pythia}~8.186 in combination with the A14 tune. 
@@ -107,8 +108,7 @@ event generator and overlaid onto the simulated hard-scatter events according to
 The generated events are processed through a simulation~\cite{Aad:2010ah} of the ATLAS detector geometry and response 
 using \textsc{Geant4}~\cite{Agostinelli:2002hh}. A faster simulation, where the full \textsc{Geant4} simulation of
 the calorimeter response is replaced by a detailed parameterisation of the shower shapes~\cite{FastCaloSim},
-is adopted for some of the samples.
-% used to estimate systematic uncertainties.
+is adopted for some of the samples used to estimate modelling systematic uncertainties.
 Simulated events are processed through the same reconstruction software as the data, and corrections are applied so that the object identification 
 efficiencies, energy scales and energy resolutions match those determined from data control samples.
 
