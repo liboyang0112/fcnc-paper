@@ -90,8 +90,24 @@ decays~\cite{ATLAS-CONF-2017-029}, and an expected rejection factor against ligh
 Electrons that are reconstructed as one-prong $\tauhad$ candidates are removed via a BDT trained to reject electrons.
 Any $\tauhad$ candidate that is also $b$-tagged is rejected.
 
-Overlaps between candidate objects are removed sequentially, following this order: muons, electrons,
-$\tauhad$ (only for the $\Htautau$ search), and jets. In the $\Hbb$ search, firstly, electron candidates that lie 
+%Overlaps between candidate objects are removed sequentially, following this order: muons, electrons,
+%$\tauhad$ (only for the $\Htautau$ search), and jets. In the $\Hbb$ search, firstly, electron candidates that lie 
+%within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributions from muon bremsstrahlung. 
+%Overlaps between electron and jet candidates are resolved next, and finally, overlaps between remaining jet candidates 
+%and muon candidates are removed. Clusters from identified electrons are not excluded during jet reconstruction. 
+%In order to avoid double-counting of electrons as jets, the closest jet whose axis is within ${\Delta}R = 0.2$ of an electron 
+%is discarded. If the electron is within ${\Delta}R = 0.4$ of the axis of any jet after this initial removal, the jet is retained and  the electron is removed.
+%The overlap removal procedure between the remaining jet candidates and muon candidates is designed to remove those muons 
+%that are likely to have arisen in the decay chain of hadrons and to retain the overlapping jet instead. 
+%Jets and muons may also appear in close proximity when the jet results from high-$\pt$ muon bremsstrahlung, 
+%and in such cases the jet should be removed and the muon retained. Such jets are characterised by having very 
+%few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\textrm{jet}}) < 0.04+10~\gev/\pt^\mu$ are rejected
+%if the jet has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
+%In the $\Htautau$ search, a fixed cone size of $\Delta R=0.2$ is used to determine the overlap between
+%candidate objects, and only the highest-$\pt$ (leading) or the two leading $\tauhad$ candidates (depending on the
+%analysis channel, see Section~\ref{sec:data_presel}) are considered to resolve their overlap with jets.
+
+Overlaps between candidate objects are removed sequentially. In the $\Hbb$ search, firstly, electron candidates that lie 
 within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributions from muon bremsstrahlung. 
 Overlaps between electron and jet candidates are resolved next, and finally, overlaps between remaining jet candidates 
 and muon candidates are removed. Clusters from identified electrons are not excluded during jet reconstruction. 
@@ -103,17 +119,15 @@ Jets and muons may also appear in close proximity when the jet results from high
 and in such cases the jet should be removed and the muon retained. Such jets are characterised by having very 
 few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\textrm{jet}}) < 0.04+10~\gev/\pt^\mu$ are rejected
 if the jet has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
-In the $\Htautau$ search, a fixed cone size of $\Delta R=0.2$ is used to determine the overlap betweencandidate objects, and only the highest-$\pt$ (leading) or the two leading $\tauhad$ candidates (depending on theanalysis channel, see Section~\ref{sec:data_presel}) are considered to resolve their overlap with jets.
+The overlap removal procedure in $\Htautau$ search is similar to that of the $\Hbb$ search, except that the
+first step is the removal of $\tauhad$ candidates within $\Delta R=0.2$ of electrons or muons, and the last step is the
+removal of jets whose axis lies within $\Delta R=0.2$ of the highest-$\pt$ (leading) or the two leading $\tauhad$ candidates (depending on the
+analysis channel, see Section~\ref{sec:data_presel}). In addition, the muon--jet overlap removal is slightly different:
+if a muon lies within $\Delta R = 0.2$ of the axis of a jet, the jet is removed if either it has fewer than three tracks originating from the 
+primary vertex or it has a small $\pt$ compared to that of the muon (the $\pt$ of the jet is less than 50\% of the $\pt$ of the muon,
+or the scalar sum of the $\pt$ of the tracks associated to the jet is less than 70\% of the $\pt$ of the muon).
 
 % TEXT FROM BOYANG. NEED TO RECHECK WHAT WE HAVE ABOVE IS ACCURATE
-%In the $\Hbb$ search, overlaps between candidate objects are removed sequentially, following this order: muons, electrons and jets. Firstly, electron candidates that lie within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributions from muon bremsstrahlung. Overlaps between electron and jet candidates are resolved 
-%next, and finally, overlaps between remaining jet candidates and muon candidates are removed. Clusters from identified electrons are not excluded during jet reconstruction. In order to avoid double-counting of electrons as jets, the closest jet whose axis is within ${\Delta}R = 0.2$ of an electron is discarded. If the electron is within ${\Delta}R = 0.4$ of the axis of any jet after this initial removal, the jet is retained and  the electron is removed.
-%The overlap removal procedure between the remaining jet candidates and muon candidates is designed to remove those muons 
-%that are likely to have arisen in the decay chain of hadrons and to retain the overlapping jet instead. 
-%Jets and muons may also appear in close proximity when the jet results from high-$\pt$ muon bremsstrahlung, 
-%and in such cases the jet should be removed and the muon retained. Such jets are characterised by having very 
-%few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\textrm{jet}}) < 0.04+10~\gev/\pt^\mu$ are rejected
-%if the jet has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
 %In the $\Htautau$ search, the objects are removed with the following sequence: if two electrons have overlapping second-layer cluser, or shared tracks, the electron with lower $\pt$ is removed; $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed; if a muon sharing an ID track with an electron and the muon is calo-tagged, the muon is removed, otherwise the electron is removed; jets within a $\Delta R=0.2$ cone of an electron are removed; electrons within a $\Delta R=0.4$ cone of a jet are removed; when a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it has less than 3 tracks with $\pt>500$ MeV or has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]); muons within a $\Delta R=0.4$ cone of a jet are removed; jets within a $\Delta R=0.2$ cone of the leading $\tauhad$ ($\lephad$), or with the two leading $\tauhad$'s ($\hadhad$), are removed.
 
 %firstly, the electron within a ${\Delta}R = 0.2$ cone of muons are excluded, then the $\tau_{had}$'s or jets within a ${\Delta}R = 0.2$ cone of an electron or muon are excluded. Finally, the jets within a ${\Delta}R = 0.2$ cone of the leading $\had$ ($\lephad$), or with the two leading $\had$’s ($\hadhad$) are excluded.
