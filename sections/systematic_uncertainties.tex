@@ -183,10 +183,14 @@ scales, as well as from the top quark mass, the PDF and $\alpha_{\textrm{S}}$. T
 to the overall theoretical uncertainty in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
 with the MSTW 2008 68\% CL NNLO, CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3 5F FFN~\cite{Ball:2012cx} PDF sets.
 The uncertainty associated with the choice of NLO generator is derived by comparing the nominal prediction from
-{\powheg}+{\pythiaeight} with a prediction from either {\amcatnlo}+{\pythiaeight} (in the case of the $\Htautau$ search) or
-\textsc{Sherpa} (in the case of the $\Hbb$ search). 
+{\powheg}+{\pythiaeight} with a prediction from \textsc{Sherpa}~2.2.1. For the latter, the matrix element calculation is performed 
+for up to two partons at NLO and up to four partons at LO using \textsc{Comix} and \textsc{OpenLoops}, and
+merged with the {\sherpa} parton shower using the ME+PS@NLO prescription.
+%either {\amcatnlo}+{\pythiaeight} (in the case of the $\Htautau$ search) or
+%\textsc{Sherpa} (in the case of the $\Hbb$ search). 
 The uncertainty due to the choice of parton shower and hadronisation (PS \& Had) model is derived 
 by comparing the predictions from {\powheg} interfaced either to {\pythiaeight} or {\herwig7}. 
+The latter uses MMHT2014 LO~\cite{Harland-Lang:2014zoa} PDF set in combination with the H7UE tune~\cite{Bellm:2015jjp}.
 Additionally, the uncertainty on the modelling of additional radiation is assessed with two alternative {\powheg}+{\pythiaeight} samples:
 a sample with increased radiation (referred to as ``radHi'') is obtained by decreasing the renormalisation and factorisation scales  
 by a factor of two, doubling the $h_{\textrm{damp}}$ parameter, and using the Var3c upward variation of the A14 parameter set;
@@ -207,7 +211,7 @@ considered to be uncorrelated among these processes.
 Additional uncertainties on the \ttbin\ background are considered associated with the NLO prediction from {\ShOL}, 
 which is used for reweighting the nominal {\powheg}+{\pythiaeight} prediction. 
 These include three different scale variations,  a different shower-recoil model scheme, and 
-two alternative PDF sets (MSTW and NNPDF). Additional uncertainties are assessed for
+two alternative PDF sets (MSTW 2008 NLO and NNPDF2.3 NLO). Additional uncertainties are assessed for
 the contributions to the \ttbin\ background originating from multiple parton interactions.
 Finally, an extra uncertainty on the \ttbin\ background is assigned by comparing 
 the predictions from {\powheg}+{\pythiaeight} and {\ShOL} 4F (5F vs 4F).

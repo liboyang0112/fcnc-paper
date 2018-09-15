@@ -37,8 +37,8 @@ Alternative $\ttbar$ simulation samples used to derive systematic uncertainties 
 The generated $\ttbar$ samples are normalised to a theoretical cross section of $832^{+46}_{-51}$~pb, 
 computed using \textsc{Top++}~v2.0~\cite{Czakon:2011xx} at next-to-next-to-leading order (NNLO), 
 including resummation of next-to-next-to-leading logarithmic (NNLL) soft gluon 
-terms~\cite{Cacciari:2011hy,Baernreuther:2012ws,Czakon:2012zr,Czakon:2012pz,Czakon:2013goa}, 
-and using the MSTW 2008 NNLO~\cite{Martin:2009iq,Martin:2009bu} PDF set. 
+terms~\cite{Cacciari:2011hy,Baernreuther:2012ws,Czakon:2012zr,Czakon:2012pz,Czakon:2013goa}.
+%and using the MSTW 2008 NNLO~\cite{Martin:2009iq,Martin:2009bu} PDF set. 
 %The theoretical uncertainties result from variations of the factorisation and renormalisation scales, as well as from uncertainties in the
 %top quark mass, and in the PDF and $\alpha_{\textrm{S}}$. The latter two represent the largest contribution to the overall theoretical uncertainty 
 %in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
@@ -46,17 +46,17 @@ and using the MSTW 2008 NNLO~\cite{Martin:2009iq,Martin:2009bu} PDF set.
 
 %The $\Hbb$ search requires a more sophisticated treatment of the $\ttbar$ background. 
 The $\ttbar$ background selected by the $\Hbb$ search is enriched in $\ttbar$+heavy-flavour production, and thus requires a more sophisticated 
-treatment than provided by the nominal $\ttbar$ sample. 
+treatment than provided by the nominal $\ttbar$ sample, which is briefly outlined below. A detailed discussion can be found in Ref.~\cite{Aaboud:2017rss}.
 %The large and complex $\ttbar$ background selected by the $\Hbb$ search requires a more sophisticated treatment than provided by the nominal $\ttbar$ sample. 
-Therefore, the simulated $\ttbar$ events are categorised depending 
-on the flavour content of additional particle jets not originating from the decay of the $\ttbar$ system (see Ref.~\cite{Aaboud:2017rss} for details).
+The simulated $\ttbar$ events are categorised depending 
+on the flavour content of additional particle jets not originating from the decay of the $\ttbar$ system.
 Events labelled as either \ttbin\ or \ttcin\ are generically referred to in the following as $\ttbar$+HF events, where HF stands for ``heavy flavour''.
 The remaining events are labelled as $\ttbar$+light-jets events, including those with no additional jets. 
 A finer categorisation of \ttbin\ events is considered for the purpose of applying further corrections and
 assigning systematic uncertainties associated with the modelling of heavy-flavour production in different event topologies~\cite{Aaboud:2017rss}.
 In particular, the \ttbin\ events are reweighted to an NLO prediction in the four-flavour (4F) scheme 
 of \ttbin\ production including parton showering~\cite{Cascioli:2013era}, based on {\ShOLlong}~\cite{Gleisberg:2008ta, Cascioli:2011va} (referred to as {\ShOL} 
-in the following) using the CT10 PDF set.  This reweighting is performed in such a way that the inter-normalisations of the \ttbin\ categories are at NLO accuracy, 
+in the following) using the CT10 4F PDF set.  This reweighting is performed in such a way that the inter-normalisations of the \ttbin\ categories are at NLO accuracy, 
 while preserving the \ttbin\ cross section of the nominal $\ttbar$ sample. 
 %This reweighting is applied to the alternative $\ttbar$ samples as well.
 This reweighting is also applied to the alternative $\ttbar$ samples that are used to study systematic uncertainties (see Section~\ref{sec:syst_bkgmodeling}).
@@ -73,7 +73,7 @@ in combination with the Perugia 2012 tune~\cite{Skands:2010ak}.
 The single-top-quark samples are normalised to the approximate NNLO theoretical cross 
 sections~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}. 
 
-Samples of $W/Z$+jets events are generated with the {\sherpa}~2.2.0~\cite{Gleisberg:2008ta} generator. 
+Samples of $W/Z$+jets events are generated with the {\sherpa}~2.2.1~\cite{Gleisberg:2008ta} generator. 
 The matrix element is calculated for up to two partons at NLO and up to four partons at LO using 
 \textsc{Comix}~\cite{Gleisberg:2008fv} and \textsc{OpenLoops}~\cite{Cascioli:2011va}. The matrix element calculation 
 is merged with the {\sherpa} parton shower~\cite{Schumann:2007mg} using the ME+PS@NLO prescription~\cite{Hoeche:2012yf}. 
@@ -92,9 +92,11 @@ The final states simulated require one of the bosons to decay leptonically and t
 All diboson samples are normalised to their NLO theoretical cross sections provided by {\sherpa}. 
 
 Samples of $\ttbar V$ and $\ttbar H$ events are generated with {\amcatnlo}~2.2.1, using NLO matrix elements and the NNPDF3.0 NLO PDF set,
-and interfaced to {\pythia}~8.210 with the NNPDF2.3 LO PDF set and the A14 tune.
-The $\ttbar V$ samples are normalised to the NLO cross section computed with {\amcatnlo}.
-The $\ttbar H$ sample is normalised using the NLO cross section~\cite{deFlorian:2016spz}.
+and interfaced to {\pythia}~8.210 with the NNPDF2.3 LO PDF set and the A14 tune. 
+Instead, the $\ttbar V$ samples used by the $\Hbb$ search are based on LO matrix elements computed for up to two additional partons 
+using the NNPDF3.0 NLO PDF set, and merged using the CKKW-L approach~\cite{Lonnblad:2001iq}.
+The $\ttbar V$ samples are normalised to the NLO cross section computed with {\amcatnlo}, while the $\ttbar H$ sample is normalised using 
+the NLO cross section recommended in Ref.~\cite{deFlorian:2016spz}.
 %Raitio:1978pt,Beenakker:2002nc,Dawson:2003zu,Yu:2014cka,Frixione:2015zaa}. 
 
 %The production of four-top-quark events in the SM was simulated by samples generated at LO using {\amcatnlo}~2.2.2
@@ -103,8 +105,9 @@ The $\ttbar H$ sample is normalised using the NLO cross section~\cite{deFlorian:
 
 All generated samples, except those produced with the {\sherpa}~\cite{Gleisberg:2008ta} event generator, 
 utilise \textsc{EvtGen}~1.2.0~\cite{Lange:2001uf} to model the decays of heavy-flavour hadrons. 
-To model the effects of pile-up, events from minimum-bias interactions are generated using the {\pythia}~8.186~\cite{Sjostrand:2007gs} 
-event generator and overlaid onto the simulated hard-scatter events according to the luminosity profile of the recorded data. 
+To model the effects of pile-up, events from minimum-bias interactions are generated using {\pythia}~8.186~\cite{Sjostrand:2007gs}  
+in combination with the A2 tune~\cite{ATL-PHYS-PUB-2011-014}, 
+and overlaid onto the simulated hard-scatter events according to the luminosity profile of the recorded data. 
 The generated events are processed through a simulation~\cite{Aad:2010ah} of the ATLAS detector geometry and response 
 using \textsc{Geant4}~\cite{Agostinelli:2002hh}. A faster simulation, where the full \textsc{Geant4} simulation of
 the calorimeter response is replaced by a detailed parameterisation of the shower shapes~\cite{FastCaloSim},
