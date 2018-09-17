@@ -18,7 +18,7 @@ If one of the $\tau$-leptons decays leptonically, an isolated electron or muon a
 However, in a significant fraction of the events the lowest-$\pt$ jet from the $W$-boson decay fails the minimum $\pt$ requirement of $30~\gev$,
 resulting in signal events with only three jets reconstructed.
 In order to optimise the sensitivity of the search, the selected events are categorised into four SRs depending 
-on the number of $\taulep$ and $\tauhad$ candidates, and on the number of jets:
+on the number of $\taulep$ and $\had$ candidates, and on the number of jets:
 ($\lephad$, 3j), ($\lephad$, $\geq$4j), ($\hadhad$, 3j), and ($\hadhad$, $\geq$4j). 
 
 This event categorisation is primarily motivated by the different quality of the event kinematic reconstruction, depending on the amount 
@@ -116,7 +116,7 @@ Boosted decision trees (BDT)~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xn
 %draft 1 version
 %In the training, only $\ttbar \to W(qq)bH(\tau\tau)q$ signal events are used against the total SM background (including both real and fake $\tauhad$ contributions), 
 %whereas to obtain the result the contributions from $\ttbar \to W(\ell\nu)bHq$ signal events are also taken into account. 
-In the training, only $\ttbar \to W(qq)bH(\tau\tau)q$ signal events are used against the total SM background (including both real and fake $\tauhad$ contributions), 
+In the training, only $\ttbar \to W(qq)bH(\tau\tau)q$ signal events are used against the total SM background (including both real and fake $\had$ contributions), 
 elsewhere the contributions from $\ttbar \to W(\ell\nu)bHq$ signal events are also taken into account. 
 
 A large set of potential variables was investigated in each SR separately, and only those variables that led to an improved discrimination
@@ -126,7 +126,7 @@ performance of the BDT were kept.  The BDT input variables in each SR are listed
 \item $m_{\tau\tau}^{\text{fit}}$: the invariant mass of the two $\tau$-lepton candidates after the reconstruction of the neutrinos, indicating the reconstructed Higgs boson mass.
 \item $m_{Hq}$: the invariant mass of the reconstructed Higgs boson and the associated light-quark jet in the $t \to Hq$ decay, corresponding to the reconstructed mass of the parent top quark.
 \item $m_{\text{T,lep}}$: the transverse mass calculated from the lepton and $\met$ in the $\lephad$ channel.
-\item $p_{\text{T,1}}$ and $p_{\text{T,2}}$:  the transverse momenta of the lepton and $\tauhad$ candidate (denoted as particles 1 and 2 respectively) in the $\lephad$ channel, or the transverse momenta of the leading and trailing $\tauhad$ candidates (denoted as particles 1 and 2 respectively) in the $\hadhad$ channel.
+\item $p_{\text{T,1}}$ and $p_{\text{T,2}}$:  the transverse momenta of the lepton and $\had$ candidate (denoted as particles 1 and 2 respectively) in the $\lephad$ channel, or the transverse momenta of the leading and trailing $\had$ candidates (denoted as particles 1 and 2 respectively) in the $\hadhad$ channel.
 \item $\met$ $\phi$ centrality: a variable that quantifies the relative angular position of the $\mpt$ with respect to the 
 visible tau decay products in the transverse plane. The transverse plane is transformed such that the direction of the tau decay products are 
 orthogonal, and that the smaller angle between the tau decay products defines the positive quadrant of the transformed plane. 
@@ -138,9 +138,9 @@ the magnitude of the fitted $\mpt$ vector.
 \item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of the original $\mpt$ vector perpendicular to the fitted $\mpt$ vector.
 \item $m_{b j_1}$: the invariant mass of the $b$-jet and the leading jet candidate from the hadronically-decaying $W$ boson.
 \item $m_{\text{lep}j}$: the invariant mass of the lepton and the jet that has the smallest angular distance to the $\lep$ candidate.
-\item $m_{\tau j}$: the invariant mass of the  $\tauhad$ candidate and the jet that has the smallest angular distance to the $\tauhad$ candidate.
+\item $m_{\tau j}$: the invariant mass of the  $\had$ candidate and the jet that has the smallest angular distance to the $\had$ candidate.
 \item $x_{1}^{\text{fit}}$ and $x_{2}^{\text{fit}}$: the momentum fractions carried by the visible decay products from the two $\tau$-lepton candidates 
-(whether $\taulep$ or $\tauhad$) per event. It is based on the best-fit four-momentum of the neutrino(s) according to the event reconstruction procedure outlined in Section~\ref{sec:htautau_reco_cat}.
+(whether $\taulep$ or $\had$) per event. It is based on the best-fit four-momentum of the neutrino(s) according to the event reconstruction procedure outlined in Section~\ref{sec:htautau_reco_cat}.
 \item $m_{bj_1j_2}$: the invariant mass of the $b$-jet and the two jets originating from the $W$ boson in the $t\to Wb \to j_1j_2b$ decay, corresponding to the reconstructed mass of the parent top quark. This variable is only defined for events with at least four jets.
 \end{itemize}
 
@@ -159,14 +159,14 @@ The level of discrimination between signal and background achieved by the BDTs i
 important BDT input variables in the $\lephad$ channel before performing the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\lephad$, 3j) region and (b) the ($\lephad$, $\geq$4j) region, and for
 $p_{\text{T},2}$ in (c) the ($\lephad$, 3j)  region and (d) the ($\lephad$, $\geq$4j) region.
-The contributions with real $\tauhad$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
-a single background source referred to as ``Top (real $\tauhad$)'', whereas the small contributions from 
+The contributions with real $\had$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
+a single background source referred to as ``Top (real $\had$)'', whereas the small contributions from 
 $Z\to \ell^+\ell^-$ ($\ell = e, \mu$) and diboson backgrounds are combined into ``Other''. 
 The expected $\Hc$ signal (solid red) corresponding to $\BR(t\to Hc)=1\%$ is also shown,
 added on top of the background prediction.
 The first and the last bins in all figures contain the underflow and overflow respectively.
 The bottom panel displays the ratio of data to the SM background (``Bkg'') prediction.
-The hashed area represents the total uncertainty on the background, excluding the normalisation uncertainty of the fake $\tauhad$ background, 
+The hashed area represents the total uncertainty on the background, excluding the normalisation uncertainty of the fake $\had$ background, 
 which is determined via a likelihood fit to data.}
 \label{fig:BDT_inputs_lephad}
 \end{center}
@@ -184,14 +184,14 @@ which is determined via a likelihood fit to data.}
 important BDT input variables in the $\hadhad$ channel before performing the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\hadhad$, 3j) region and (b) the ($\hadhad$, $\geq$4j) region, and for
 $x_{1}^{\text{fit}}$ in (c) the ($\hadhad$, 3j)  region and (d) the ($\hadhad$, $\geq$4j) region.
-The contributions with real $\tauhad$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
-a single background source referred to as ``Top (real $\tauhad$)'', whereas the small contributions from 
+The contributions with real $\had$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
+a single background source referred to as ``Top (real $\had$)'', whereas the small contributions from 
 $Z\to \ell^+\ell^-$ ($\ell = e, \mu$) and diboson backgrounds are combined into ``Other''. 
 The expected $\Hc$ signal (solid red) corresponding to $\BR(t\to Hc)=1\%$ is also shown,
 added on top of the background prediction.
 The first and the last bins in the figures in (a) and (b) contain the underflow and overflow respectively.
 The bottom panel displays the ratio of data to the SM background (``Bkg'') prediction.
-The hashed area represents the total uncertainty on the background, excluding the normalisation uncertainty of the fake $\tauhad$ background, 
+The hashed area represents the total uncertainty on the background, excluding the normalisation uncertainty of the fake $\had$ background, 
 which is determined via a likelihood fit to data.} 
 \label{fig:BDT_inputs_hadhad}
 \end{center}

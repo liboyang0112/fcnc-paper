@@ -11,7 +11,7 @@ with prompt leptons, i.e. those originating from the decay of a $W$ boson, a $Z$
 are estimated using samples of simulated events and initially normalised to their theoretical cross sections.
 In the simulation, the top quark and SM Higgs boson masses are set to $172.5~\gev$ and $125~\gev$, respectively,
 and the Higgs boson is allowed to decay into all SM particles with branching ratios calculated using \textsc{Hdecay}~\cite{Djouadi:1997yw}.  
-Backgrounds with non-prompt electrons or muons, with photons or jets misidentified as electrons, or with jets misidentified as $\tauhad$ candidates, 
+Backgrounds with non-prompt electrons or muons, with photons or jets misidentified as electrons, or with jets misidentified as $\had$ candidates, 
 generically referred to as ``fake leptons'', are estimated using data-driven methods. 
 The background prediction is further improved during the statistical analysis by performing a likelihood 
 fit to data using several signal-depleted analysis regions, as discussed in Sections~\ref{sec:strategy_Hbb} and~\ref{sec:strategy_Htautau}.
@@ -133,20 +133,20 @@ Further details can be found in Ref.~\cite{Aaboud:2018mjh}.
 
 \subsubsection{Fake taus}
 \label{sec:faketaus}
-In the $\Htautau$ search, the background with one or more fake $\tauhad$ candidates is mainly arising from $\ttbar$ or
+In the $\Htautau$ search, the background with one or more fake $\had$ candidates is mainly arising from $\ttbar$ or
 multijet production, depending on the analysis channel, with $W$+jets production contributing to a lesser extent. 
-Studies based on the simulation show that, for all above processes, fake $\tauhad$ candidates primarily result from the 
+Studies based on the simulation show that, for all above processes, fake $\had$ candidates primarily result from the 
 misidentification of light-quark jets, with the contribution from $b$-quarks and gluon jets playing a subdominant role.
-It is also found that the fake rate decreases as the $\tauhad$ candidate $\pt$ increases for all jet flavours.
+It is also found that the fake rate decreases as the $\had$ candidate $\pt$ increases for all jet flavours.
 
-This background is estimated directly from data by defining control regions (CR) enriched in fake $\tauhad$ candidates via loosened $\tauhad$ requirements or flipped charge. These CRs do not overlap with the main search regions (SRs), discussed in Section~\ref{sec:strategy_Htautau}. The CR selection requirements are analogous to those used to define the different SRs, except that the leading (trailing) $\tauhad$ candidate 
+This background is estimated directly from data by defining control regions (CR) enriched in fake $\had$ candidates via loosened $\had$ requirements or flipped charge. These CRs do not overlap with the main search regions (SRs), discussed in Section~\ref{sec:strategy_Htautau}. The CR selection requirements are analogous to those used to define the different SRs, except that the leading (trailing) $\had$ candidate 
 in the $\lephad$ ($\hadhad$) channel is required to fail the medium tau identification but pass the loose one, or the two tau candidates have the same charge.
 
-The fake $\tauhad$ background prediction in a given SR is modelled by the distribution (referred to as ``fake $\tauhad$ template'') derived from data in the corresponding CR. The fake $\tauhad$ template is defined as the data distribution from which the contributions from the simulated backgrounds with real $\tauhad$ candidates, originating primarily from 
-$W(\to \tau\nu)$+jets and $Z(\to \tau\tau)$+jets, are subtracted. In the $\lephad$ channel, simulation studies indicate that the fake $\tauhad$ background composition is consistent between the SR and the CR, and dominated by $\ttbar$. In the $\hadhad$ channel, the fake $\tauhad$ background is expected to be dominated by multijet production. However, simulation studies indicate that the contribution of $\ttbar$ events to the fake $\tauhad$ background is higher in the SR than in the CR. Therefore, an appropriate amount of simulated $\ttbar$ events with fake $\tauhad$ candidates in the CR is added to the fake $\tauhad$ template to match the fake $\tauhad$ background composition in the SR. 
-In both the $\lephad$ and $\hadhad$ channels, the fake $\tauhad$ template in each SR is initially normalised to the estimated fake $\tauhad$ background yield, 
-defined as the data yield minus the contributions from the simulated backgrounds with real $\tauhad$ candidates (i.e. assuming no signal contribution).
-During the statistical analysis, the normalisation of the fake $\tauhad$ background in each SR is allowed to vary unconstrained in the fit to data, as discussed in Section~\ref{sec:results_Htautau}.
+The fake $\had$ background prediction in a given SR is modelled by the distribution (referred to as ``fake $\had$ template'') derived from data in the corresponding CR. The fake $\had$ template is defined as the data distribution from which the contributions from the simulated backgrounds with real $\had$ candidates, originating primarily from 
+$W(\to \tau\nu)$+jets and $Z(\to \tau\tau)$+jets, are subtracted. In the $\lephad$ channel, simulation studies indicate that the fake $\had$ background composition is consistent between the SR and the CR, and dominated by $\ttbar$. In the $\hadhad$ channel, the fake $\had$ background is expected to be dominated by multijet production. However, simulation studies indicate that the contribution of $\ttbar$ events to the fake $\had$ background is higher in the SR than in the CR. Therefore, an appropriate amount of simulated $\ttbar$ events with fake $\had$ candidates in the CR is added to the fake $\had$ template to match the fake $\had$ background composition in the SR. 
+In both the $\lephad$ and $\hadhad$ channels, the fake $\had$ template in each SR is initially normalised to the estimated fake $\had$ background yield, 
+defined as the data yield minus the contributions from the simulated backgrounds with real $\had$ candidates (i.e. assuming no signal contribution).
+During the statistical analysis, the normalisation of the fake $\had$ background in each SR is allowed to vary unconstrained in the fit to data, as discussed in Section~\ref{sec:results_Htautau}.
 
 %In the $\Htautau$ search, the background events with real tau leptons are modelled by MC samples, including $t\bar{t}$, $t\bar{t}+H/V$, single top events with real taus, and $Z\to\tau\tau$+jets. The $Z\to ee,\mu\mu$ processes are included for lepton faking tau background. They are small compared to the other background components. The fake-tau background with one or more taus faked by jets consists of the top fake (with at least one fake tau from jets in the top events), QCD multijet and $W$+jets events. This background is estimated in a dedicated control region (fake-tau CR), which is shown in Fig. \ref{fig:region-definition}. The events in the fake-tau CR are required to pass mostly the same selection as fit region (FR, the region after the preselection and the cut in Eq. \ref{eq:chi2-3jet}; the tau candidates in FR are also required to have the same charge) except for the tau charge and identification requirement. The fake-tau CR consists of two kinds of events: 1. The $\tauhad$'s have medium ID and the tau candidates have the same charge; 2. The leading (sub-leading) $\tauhad$ in $\lephad$ ($\hadhad$) channel has loose ID but fails medium ID requirement and there is no charge requirement. So the fake-tau CR is orthogonal to the FR and dominated by fake $\tauhad$'s.
 %
