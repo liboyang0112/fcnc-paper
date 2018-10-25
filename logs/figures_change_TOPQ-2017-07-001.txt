@@ -1,0 +1,25 @@
+Changes affecting the figures
+
+
+Main body 
+
+- Figure 1 Zoomed the Y axis of the top panel, it was a suggested change in 1st circulation.  
+
+- Added Figure 2 in Draft 2 showing some control plots for the bb channel, pre-fit level, earlier belonging to the aux material of Draft 1 (Figure 16). These plots differ in the new version due to a finer binning and inclusion of overflow bin for Figure 2 a,b,c. Figure 2 d was not changed. 
+
+- Figure 4 Draft 2 (was Figure 3 in Draft 1) uses now a different binning as suggested during 1st circulation, power of 5 rather than power of 4. 
+
+- Figure 5 a,b in Draft 2 (was Figure 4 a,b in Draft 1) use now 10 GeV bin width instead of 8 (Draft 1), a change suggested during 1st circulation. 
+
+ 
+Auxiliary material 
+
+- Figue 16 (a,b,c) and 17 (a,b,c) in Draft 2 (was Figures 15 and 17 in draft 1), now use a finer binning and include the overflow bin. Figure 15 and 17 d are unchanged. 
+
+- New plots introduced for Htautau search, figures 19, 20, 22, 23, as requested during 1st circulation. 
+
+- Added ranking plots for the bb and tautau channels in Figures 24 and 25 as requested in first circulation. 
+
+
+
+
