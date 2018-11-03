@@ -6,8 +6,8 @@
 <cal:publicationReference>TOPQ-2017-07</cal:publicationReference>
 <cal:publicationReference></cal:publicationReference>
 <cal:authorlistReferenceDate>2018-08-20</cal:authorlistReferenceDate>
-<cal:authorlistUpdateDate>29-OCT-18</cal:authorlistUpdateDate>
-<cal:creationDate>29-Oct-2018</cal:creationDate>
+<cal:authorlistUpdateDate>03-NOV-18</cal:authorlistUpdateDate>
+<cal:creationDate>03-Nov-2018</cal:creationDate>
 <cal:collaborations>
     <cal:collaboration id="c1">
         <foaf:name>ATLAS</foaf:name>
@@ -98,7 +98,7 @@
     <foaf:Organization id="o9">
         <cal:orgDomain>uoa.gr</cal:orgDomain>
         <foaf:name>Physics Department, National and Kapodistrian University of Athens, Athens, Greece</foaf:name>
-        <cal:orgName source="spiresICN">Athens U., National and Kapodistrian University of Athens</cal:orgName>
+        <cal:orgName source="spiresICN">Athens U.</cal:orgName>
         <cal:orgName source="InstId">15</cal:orgName>
         <cal:orgName source="shortName">Athens NKUA</cal:orgName>
         <cal:orgStatus>member</cal:orgStatus>
@@ -882,7 +882,7 @@
     <foaf:Organization id="o71a">
         <cal:orgDomain></cal:orgDomain>
         <foaf:name>INFN Sezione di Roma Tor Vergata, Italy</foaf:name>
-        <cal:orgName source="spiresICN">INFN, Rome2</cal:orgName>
+        <cal:orgName source="spiresICN">INFN</cal:orgName>
         <cal:orgName source="InstId">INFN-125</cal:orgName>
         <cal:orgName source="shortName">INFN Sezione di Roma Tor Vergata</cal:orgName>
         <cal:orgStatus>member</cal:orgStatus>
@@ -890,7 +890,7 @@
     <foaf:Organization id="o71b">
         <cal:orgDomain>roma2.infn.it; uniroma2.it</cal:orgDomain>
         <foaf:name>Dipartimento di Fisica, Universit\`a di Roma Tor Vergata, Roma, Italy</foaf:name>
-        <cal:orgName source="spiresICN">Rome2 U.</cal:orgName>
+        <cal:orgName source="spiresICN">Rome U., Tor Vergata</cal:orgName>
         <cal:orgName source="InstId">125</cal:orgName>
         <cal:orgName source="shortName">Roma II</cal:orgName>
         <cal:orgStatus>member</cal:orgStatus>
@@ -898,7 +898,7 @@
     <foaf:Organization id="o72a">
         <cal:orgDomain></cal:orgDomain>
         <foaf:name>INFN Sezione di Roma Tre, Italy</foaf:name>
-        <cal:orgName source="spiresICN">INFN, Rome3</cal:orgName>
+        <cal:orgName source="spiresICN">INFN</cal:orgName>
         <cal:orgName source="InstId">INFN-126</cal:orgName>
         <cal:orgName source="shortName">INFN Sezione di Roma Tre</cal:orgName>
         <cal:orgStatus>member</cal:orgStatus>
@@ -1514,7 +1514,7 @@
     <foaf:Organization id="o137f">
         <cal:orgDomain>cafpe3.ugr.es</cal:orgDomain>
         <foaf:name>Departamento de F\'isica Teorica y del Cosmos, Universidad de Granada, Granada (Spain), Spain</foaf:name>
-        <cal:orgName source="spiresICN">U. Granada, Dept. Theor. Phys. Cosmos</cal:orgName>
+        <cal:orgName source="spiresICN">Granada U., Theor. Phys. Astrophys.</cal:orgName>
         <cal:orgName source="InstId">236</cal:orgName>
         <cal:orgName source="shortName">Portugal 6-Granada</cal:orgName>
         <cal:orgStatus>member</cal:orgStatus>
@@ -1906,7 +1906,7 @@
     <foaf:Organization id="oa">
         <cal:orgDomain>http://www.bmcc.cuny.edu/j2ee/index.jsp</cal:orgDomain>
         <foaf:name>Borough of Manhattan Community College, City University of New York, NY, United States of America</foaf:name>
-        <cal:orgName source="spiresICN">CUNY, BMCC</cal:orgName>
+        <cal:orgName source="spiresICN">BMCC, New York</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="ob">
         <cal:orgDomain>http://www.sci.csuhayward.edu/physics</cal:orgDomain>
@@ -1914,9 +1914,9 @@
         <cal:orgName source="spiresICN">Cal State, East Bay</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oc">
-        <cal:orgDomain>CSIR</cal:orgDomain>
+        <cal:orgDomain>http://www.chpc.ac.za/</cal:orgDomain>
         <foaf:name>Centre for High Performance Computing, CSIR Campus, Rosebank, Cape Town, South Africa</foaf:name>
-        <cal:orgName source="spiresICN">http://www.chpc.ac.za/</cal:orgName>
+        <cal:orgName source="spiresICN">CHPC, Cape Town</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="od">
         <cal:orgDomain>cern.ch</cal:orgDomain>
@@ -1941,7 +1941,7 @@
     <foaf:Organization id="oh">
         <cal:orgDomain>cafpe3.ugr.es</cal:orgDomain>
         <foaf:name>Departamento de F\&#039;isica Teorica y del Cosmos, Universidad de Granada, Granada (Spain), Spain</foaf:name>
-        <cal:orgName source="spiresICN">U. Granada, Dept. Theor. Phys. Cosmos</cal:orgName>
+        <cal:orgName source="spiresICN">Granada U., Theor. Phys. Astrophys.</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oi">
         <cal:orgDomain>http://tecnico.ulisboa.pt/</cal:orgDomain>
@@ -1951,12 +1951,12 @@
     <foaf:Organization id="oj">
         <cal:orgDomain>http://www.sharjah.ac.ae</cal:orgDomain>
         <foaf:name>Department of Applied Physics and Astronomy, University of Sharjah, Sharjah, United Arab Emirates</foaf:name>
-        <cal:orgName source="spiresICN">University of Sharjah</cal:orgName>
+        <cal:orgName source="spiresICN">American U., Sharjah</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="ok">
         <cal:orgDomain>aegean.gr</cal:orgDomain>
         <foaf:name>Department of Financial and Management Engineering, University of the Aegean, Chios, Greece</foaf:name>
-        <cal:orgName source="spiresICN">U. Aegean, Chios</cal:orgName>
+        <cal:orgName source="spiresICN">Aegean U., Chios</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="ol">
         <cal:orgDomain>www.physics.louisville.edu</cal:orgDomain>
@@ -2034,7 +2034,7 @@
         <cal:orgName source="spiresICN">ICREA, Barcelona</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oaa">
-        <cal:orgDomain>wwwiexp.desy.de</cal:orgDomain>
+        <cal:orgDomain>http://wwwiexp.desy.de</cal:orgDomain>
         <foaf:name>Institut f\&quot;{u}r Experimentalphysik, Universit\&quot;{a}t Hamburg, Hamburg, Germany</foaf:name>
         <cal:orgName source="spiresICN">Hamburg U.</cal:orgName>
     </foaf:Organization>
@@ -2044,12 +2044,12 @@
         <cal:orgName source="spiresICN">Nijmegen U.</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oac">
-        <cal:orgDomain>www.rmki.kfki.hu</cal:orgDomain>
+        <cal:orgDomain>http://www.rmki.kfki.hu/en/home.html</cal:orgDomain>
         <foaf:name>Institute for Particle and Nuclear Physics, Wigner Research Centre for Physics, Budapest, Hungary</foaf:name>
         <cal:orgName source="spiresICN">Budapest, RMKI</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oad">
-        <cal:orgDomain>www.ipp.ca</cal:orgDomain>
+        <cal:orgDomain>http://www.ipp.ca/</cal:orgDomain>
         <foaf:name>Institute of Particle Physics (IPP), Canada</foaf:name>
         <cal:orgName source="spiresICN">IPP, Canada</cal:orgName>
     </foaf:Organization>
@@ -2136,7 +2136,8 @@
     <foaf:Organization id="oau">
         <cal:orgDomain>http://www.tsu.ru/</cal:orgDomain>
         <foaf:name>Tomsk State University, Tomsk, and Moscow Institute of Physics and Technology State University, Dolgoprudny, Russia</foaf:name>
-        <cal:orgName source="spiresICN">Tomsk State U. and Moscow, MIPT</cal:orgName>
+        <cal:orgName source="spiresICN">testinggpiccofootnote</cal:orgName>
+        <cal:orgName source="spiresICN">Tomsk State U; Moscow, MIPT</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oav">
         <cal:orgDomain>triumf.ca</cal:orgDomain>
@@ -2144,7 +2145,7 @@
         <cal:orgName source="spiresICN">TRIUMF</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oaw">
-        <cal:orgDomain>www.uniparthenope.it</cal:orgDomain>
+        <cal:orgDomain>http://www.uniparthenope.it</cal:orgDomain>
         <foaf:name>Universita di Napoli Parthenope, Napoli, Italy</foaf:name>
         <cal:orgName source="spiresICN">Parthenope U., Naples</cal:orgName>
     </foaf:Organization>
@@ -20567,7 +20568,7 @@
         </cal:authorAffiliations>
         <cal:authorids>
             <cal:authorid source="INSPIRE">INSPIRE-00651662</cal:authorid>
-            <cal:authorid source="ORCID"></cal:authorid>
+            <cal:authorid source="ORCID">0000-0002-2657-7532</cal:authorid>
         </cal:authorids>
     </foaf:Person>
 <foaf:Person>
@@ -21691,6 +21692,23 @@
         <cal:authorids>
             <cal:authorid source="INSPIRE">INSPIRE-00334449</cal:authorid>
             <cal:authorid source="ORCID">0000-0003-4223-7316</cal:authorid>
+        </cal:authorids>
+    </foaf:Person>
+<foaf:Person>
+        <foaf:name>Julia Hrdinka</foaf:name>
+        <foaf:givenName>Julia</foaf:givenName>
+        <foaf:familyName>Hrdinka</foaf:familyName>
+        <cal:authorNameNative></cal:authorNameNative>
+        <cal:authorSuffix></cal:authorSuffix>
+        <cal:authorStatus></cal:authorStatus>
+        <cal:authorNamePaper>J. Hrdinka</cal:authorNamePaper>
+        <cal:authorCollaboration collaborationid="c1" position="" />
+        <cal:authorAffiliations>
+            <cal:authorAffiliation organizationid="o35" connection="" />
+        </cal:authorAffiliations>
+        <cal:authorids>
+            <cal:authorid source="INSPIRE">INSPIRE-00547626</cal:authorid>
+            <cal:authorid source="ORCID"></cal:authorid>
         </cal:authorids>
     </foaf:Person>
 <foaf:Person>
@@ -36184,6 +36202,23 @@
         </cal:authorids>
     </foaf:Person>
 <foaf:Person>
+        <foaf:name>Chen Peng</foaf:name>
+        <foaf:givenName>Chen</foaf:givenName>
+        <foaf:familyName>Peng</foaf:familyName>
+        <cal:authorNameNative></cal:authorNameNative>
+        <cal:authorSuffix></cal:authorSuffix>
+        <cal:authorStatus></cal:authorStatus>
+        <cal:authorNamePaper>C. Peng</cal:authorNamePaper>
+        <cal:authorCollaboration collaborationid="c1" position="" />
+        <cal:authorAffiliations>
+            <cal:authorAffiliation organizationid="o61b" connection="" />
+        </cal:authorAffiliations>
+        <cal:authorids>
+            <cal:authorid source="INSPIRE"></cal:authorid>
+            <cal:authorid source="ORCID"></cal:authorid>
+        </cal:authorids>
+    </foaf:Person>
+<foaf:Person>
         <foaf:name>Cong Peng</foaf:name>
         <foaf:givenName>Cong</foaf:givenName>
         <foaf:familyName>Peng</foaf:familyName>
@@ -36266,6 +36301,23 @@
         <cal:authorids>
             <cal:authorid source="INSPIRE">INSPIRE-00576910</cal:authorid>
             <cal:authorid source="ORCID">0000-0003-3424-7338</cal:authorid>
+        </cal:authorids>
+    </foaf:Person>
+<foaf:Person>
+        <foaf:name>Laura Pereira Sanchez</foaf:name>
+        <foaf:givenName>Laura</foaf:givenName>
+        <foaf:familyName>Pereira Sanchez</foaf:familyName>
+        <cal:authorNameNative></cal:authorNameNative>
+        <cal:authorSuffix></cal:authorSuffix>
+        <cal:authorStatus></cal:authorStatus>
+        <cal:authorNamePaper>L. Pereira Sanchez</cal:authorNamePaper>
+        <cal:authorCollaboration collaborationid="c1" position="" />
+        <cal:authorAffiliations>
+            <cal:authorAffiliation organizationid="o43b" connection="" />
+        </cal:authorAffiliations>
+        <cal:authorids>
+            <cal:authorid source="INSPIRE"></cal:authorid>
+            <cal:authorid source="ORCID"></cal:authorid>
         </cal:authorids>
     </foaf:Person>
 <foaf:Person>
@@ -46947,7 +46999,7 @@
         <cal:authorNameNative></cal:authorNameNative>
         <cal:authorSuffix></cal:authorSuffix>
         <cal:authorStatus></cal:authorStatus>
-        <cal:authorNamePaper>R. Turra</cal:authorNamePaper>
+        <cal:authorNamePaper>R.T. Turra</cal:authorNamePaper>
         <cal:authorCollaboration collaborationid="c1" position="" />
         <cal:authorAffiliations>
             <cal:authorAffiliation organizationid="o66a" connection="" />

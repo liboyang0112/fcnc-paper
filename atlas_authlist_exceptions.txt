@@ -1,6 +1,8 @@
 # Exception list for TOPQ-2017-07 with reference date 2018-08-20
-# Last updated on 29-OCT-18
-# Exception list for paper ID TOPQ-2017-07 on date October 29th, 2018 at 11:37am
+# Last updated on 03-NOV-18
+# Exception list for paper ID TOPQ-2017-07 on date November 3rd, 2018 at 10:46am
 
+Include Peng Chen at institute Department of Physics, University of Hong Kong, Hong Kong, China -- 03-NOV-18
+Include Pereira Sanchez Laura at institute Oskar Klein Centre, Stockholm, Sweden -- 03-NOV-18
 
 % Created with Glance <Atlas.Glance@cern.ch>
