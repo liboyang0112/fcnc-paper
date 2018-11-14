@@ -15,14 +15,14 @@ the Higgs boson and at least four jets, only one of which originates from a $b$-
 If one of the $\tau$-leptons decays leptonically, an isolated electron or muon and significant $\met$ is also expected.
 %The other top quark decays into a $W$ boson and a $b$-quark, with the $W$ boson in turn decaying hadronically, resulting in 
 %three additional jets. Therefore, at least four jets are typically expected in signal events.
-However, in a significant fraction of the events the lowest-$\pt$ jet from the $W$-boson decay fails the minimum $\pt$ requirement of $30~\gev$,
+However, in a significant fraction of the events the lowest-$\pt$ jet from the $W$ boson decay fails the minimum $\pt$ requirement of $30~\gev$,
 resulting in signal events with only three jets reconstructed.
 In order to optimise the sensitivity of the search, the selected events are categorised into four SRs depending 
 on the number of $\taulep$ and $\had$ candidates, and on the number of jets:
 ($\lephad$, 3j), ($\lephad$, $\geq$4j), ($\hadhad$, 3j), and ($\hadhad$, $\geq$4j). 
 
 This event categorisation is primarily motivated by the different quality of the event kinematic reconstruction, depending on the amount 
-of $\met$ in the event (larger in $\lephad$ events compared to $\hadhad$ events), and whether a jet from the hadronic top-quark decay 
+of $\met$ in the event (larger in $\lephad$ events compared with $\hadhad$ events), and whether a jet from the hadronic top-quark decay 
 is missing or not (events with exactly three jets or at least four jets).
 %This analysis adopts the event reconstruction strategy developed in Ref.~\cite{Chen:2015nta}, which is briefly summarised in the following. 
 %The event reconstruction strategy used~\cite{Chen:2015nta} is summarised in the following.
@@ -82,6 +82,8 @@ that discriminate between signal and background are defined. These variables are
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
+\caption{\small{$\Htautau$ search: Discriminating variables used in the training of the BDT for each search region (denoted by $\times$). 
+The description of each variable is provided in the text.}}
 \begin{center}
 \begin{tabular}{ccccc}
 \toprule\toprule 
@@ -105,8 +107,6 @@ $m_{b j_1 j_2 }$             	   		&             & $\times$  &             & $\t
 %\hline
 \bottomrule\bottomrule
 \end{tabular}
-\caption{\small{$\Htautau$ search: Discriminating variables used in the training of the BDT for each search region (denoted by $\times$). 
-The description of each variable is provided in the text.}}
 \label{tab:mva_var}
 \end{center}
 \end{table*}
@@ -128,8 +128,8 @@ performance of the BDT were kept.  The BDT input variables in each SR are listed
 \item $m_{Hq}$: the invariant mass of the reconstructed Higgs boson and the associated light-quark jet in the $t \to Hq$ decay, corresponding to the reconstructed mass of the parent top quark.
 \item $m_{\text{T,lep}}$: the transverse mass calculated from the lepton and $\met$ in the $\lephad$ channel.
 \item $p_{\text{T,1}}$ and $p_{\text{T,2}}$:  the transverse momenta of the lepton and $\had$ candidate (denoted as particles 1 and 2 respectively) in the $\lephad$ channel, or the transverse momenta of the leading and trailing $\had$ candidates (denoted as particles 1 and 2 respectively) in the $\hadhad$ channel.
-\item $\met$ $\phi$ centrality: a variable that quantifies the relative angular position of the $\mpt$ with respect to the 
-visible $\tau$-lepton decay products in the transverse plane. The transverse plane is transformed such that the direction of the $\tau$-lepton decay products are 
+\item $\met$ $\phi$ centrality: a variable that quantifies the angular position of the $\mpt$ relative to the 
+visible $\tau$-lepton decay products in the transverse plane. The transverse plane is transformed such that the directions of the $\tau$-lepton decay products are 
 orthogonal, and that the smaller angle between the $\tau$-lepton decay products defines the positive quadrant of the transformed plane. 
 The $\met$ $\phi$ centrality is defined as the sum of the $x$ and $y$ components of the $\mpt$ unit vector in this transformed plane.
 %\item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the parallel direction in the transformed plane (see definition of $\met$ $\phi$ centrality).

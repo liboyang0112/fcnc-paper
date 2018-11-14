@@ -14,7 +14,7 @@ is performed on the LH discriminant distributions in the nine analysis regions c
 In the regions with exactly three $b$-tagged jets, which have the highest sensitivity, the full LH distribution is used with ten equidistant bins. 
 In contrast, in the regions with at least four $b$-tagged jets,
 which have limited data statistics and a small signal fraction, only two equidistant bins are used. Finally, in the regions with exactly two $b$-tagged jets 
-the total event yield after applying a cut on the LH discriminant above 0.6, is used. 
+the total event yield after requiring the LH discriminant to be above 0.6, is used. 
 %As discussed previously, the primary role of the 2b and $\geq$4b regions in
 %the fit to data is to provide additional constraints to obtained an improved  $\ttbar$+light-jet and $\ttbin$ background predictions, with reduced
 %uncertainties.
@@ -23,7 +23,7 @@ common to all analysis regions.
 Figures~\ref{fig:prepostfit_unblinded_WbHc_3btagex} and~\ref{fig:prepostfit_unblinded_WbHc_4btagin} show a comparison of the LH discriminant for 
 data and prediction in the regions with exactly three and at least four $b$-tagged jets, 
 both before and after performing the fit to data, in the case of the $\Hc$ search.  
-%Tables summarising the pre-fit and post-fit yields can be found in Appendix~\ref{sec:prepostfit_yields_Hbb_appendix}.
+Tables summarising the pre-fit and post-fit yields can be found in Appendix~\ref{sec:prepostfit_yields_Hbb_appendix}.
 
 The best-fit branching ratio obtained is $\BR(t\to Hc)=[-0.2^{+0.7}_{-0.7}\,(\mathrm{stat})^{+2.2}_{-2.3}\,(\mathrm{syst})] \times 10^{-3}$,
 assuming $\BR(t\to Hu)=0$. 
@@ -48,7 +48,7 @@ relative to the nominal prediction by adjusting the corresponding nuisance param
 by a factor of $1.34 \pm  0.40$. These corrections are in agreement with those found in Ref.~\cite{Aaboud:2017rss}.
 Additionally, a few nuisance parameters are adjusted by the fit, with the largest effects corresponding to the 
 leading nuisance parameters related to the $b$-tagging and $c$-tagging calibrations (by about 0.8 standard deviations),
-and those related to $\ttbin$ and $\ttcin$ modelling based on the comparison to alternative generators (by 0.5 standard deviations or less).
+and those related to $\ttbin$ and $\ttcin$ modelling based on a comparison with alternative generators (by 0.5 standard deviations or less).
 The leading uncertainties affecting the signal extraction by the fit are related to the $c$-tagging calibration ($\Delta\BR$ $\sim$ $1.5 \times 10^{-3}$),
 followed by the $\ttbar$+light-jets PS \& Had uncertainty ($\Delta\BR$ $\sim$ $1.2 \times 10^{-3}$). Smaller contributions ($\Delta\BR$ $\sim$ 0.5--$1.0 \times 10^{-3}$ each)
 result from the uncertainties associated with the $\ttbin$ 5F vs 4F comparison, the dependence of jet energy scale on the jet flavour, 
@@ -196,7 +196,7 @@ very close to the pre-fit, albeit with reduced uncertainties due to the anti-cor
 Figure~\ref{fig:prepostfit_unblinded_WbHc_lh} shows a comparison of the data and prediction for the BDT discriminant distribution in
 the ($\lephad$, 3j) and ($\lephad$, $\geq$4j) regions, both pre- and post-fit to data, in the case of the $\Hc$ search.  
 A similar comparison for the ($\hadhad$, 3j) and ($\hadhad$, $\geq$4j) regions can be found in Figure~\ref{fig:prepostfit_unblinded_WbHc_hh}.
-%Tables summarising the pre-fit and post-fit yields can be found in Appendix~\ref{sec:prepostfit_yields_Htautau_appendix}.
+Tables summarising the pre-fit and post-fit yields can be found in Appendix~\ref{sec:prepostfit_yields_Htautau_appendix}.
 
 The best-fit branching ratio obtained is $\BR(t\to Hc)=[-4.4^{+7.7}_{-7.0}\,(\mathrm{stat})^{+6.2}_{-4.9}\,(\mathrm{syst})] \times 10^{-4}$, assuming $\BR(t\to Hu)=0$. 
 The best-fit normalisation factors for the fake $\had$ background are: $0.82 \pm 0.23$ in the ($\lephad$, 3j) region, $0.84^{+0.25}_{-0.28}$ in the ($\lephad$, $\geq$4j) region,
@@ -278,7 +278,7 @@ and in each search the dominant systematic uncertainties are different, the comb
 insensitive to the assumed correlations of systematic uncertainties across searches.
 Therefore, the only systematic uncertainties taken to be fully correlated among the four searches are 
 those affecting the integrated luminosity, the $\ttbar$ cross section, signal modelling, a subset of the uncertainties
-on the Higgs-boson branching ratios (those associated with uncertainties on $\alpha_\mathrm{S}$ and $m_b$), 
+on the Higgs boson branching ratios (those associated with uncertainties on $\alpha_\mathrm{S}$ and $m_b$), 
 and a subset of jet-related uncertainties (jet energy resolution and JVT requirement). 
 The rest of the jet-related uncertainties (jet energy scale and $b$-tagging) are taken as fully correlated among 
 the $\Hbb$, $\Htautau$, and $\HML$ searches, but uncorrelated with the $\Hgg$ search. The rest of the uncertainties, 
@@ -343,17 +343,18 @@ in Table~\ref{tab:limits_summary} and in Figures~\ref{fig:limits_combo_1D_hc} an
 Upper limits on the branching ratios $\BR(t\to Hq)$ ($q=u,c$) can be translated to upper limits on the non-flavour-diagonal Yukawa couplings $\lamHq$ 
 appearing in the Lagrangian~\cite{Harnik:2012pb}:
 \begin{equation*}
-{\cal L}_\mathrm{FCNC} = -\lambda_{t_L q_R} \bar{t}_L q_R H - \lambda_{q_L t_R} \bar{q}_L t_R H  + h.c.
+{\cal L}_\mathrm{FCNC} = -\lambda_{t_\mathrm{L} q_\mathrm{R}} \bar{t}_\mathrm{L} q_\mathrm{R} H - \lambda_{q_\mathrm{L} t_\mathrm{R}} \bar{q}_\mathrm{L} t_\mathrm{R} H  + \mathrm{h.c.}
 \end{equation*}
 The branching ratio $\BR(t\to Hq)$ is estimated as the ratio of its partial width~\cite{Zhang:2013xya} to the SM $t \to Wb$ partial width~\cite{Denner:1990ns}, 
 which is assumed to be dominant. Both predicted partial widths include next-to-leading-order QCD corrections.
 Using the expression derived in Ref.~\cite{Aad:2014dya}, the coupling $|\lamHq|$ can be extracted as $| \lamHq | = (1.92 \pm 0.02) \sqrt{\BR(t\to Hq)}$.
 The $\lamHq$ coupling corresponds to the sum in quadrature of the couplings relative to the two possible chirality combinations of the quark fields, 
-$\lamHq \equiv \sqrt{ |\lambda_{t_Lq_R}|^2 +   |\lambda_{q_L t_R}|^2 }$~\cite{Harnik:2012pb}.
+$\lamHq \equiv \sqrt{ |\lambda_{t_\mathrm{L} q_\mathrm{R}}|^2 +   |\lambda_{q_\mathrm{L} t_\mathrm{R}}|^2 }$~\cite{Harnik:2012pb}.
 The observed (expected) upper limits on the couplings from the combination of the searches are $|\lamHc|<0.064\,(0.055)$ and $|\lamHu|<0.066\,(0.055)$.
 
 %%%%%%%%%%%%%%%
 \begin{table}[t!]
+\caption{\small{Summary of 95\% CL upper limits on $\BR(t \to Hc)$ and $\BR(t \to Hu)$, in each case neglecting the other decay mode. Signatures with two same-charge (three) leptons and no $\had$ candidates are denoted as $2\ell$SS ($3\ell$). }}
 \begin{center}
 \begin{tabular}{lcc}
 \toprule\toprule
@@ -369,8 +370,6 @@ $H \to \gamma\gamma$~\cite{Aaboud:2017mfd} & $2.2 \times 10^{-3}$ ($1.6 \times 1
 Combination  & $1.1 \times 10^{-3}$ ($8.3 \times 10^{-4}$) & $1.2 \times 10^{-3}$ ($8.3 \times 10^{-4}$) \\
 \bottomrule\bottomrule
 \end{tabular}
-\caption{\small{Summary of 95\% CL upper limits on $\BR(t \to Hc)$ and $\BR(t \to Hu)$, in each case neglecting the other decay mode. Signatures with two same-charge (three) leptons and no $\had$ candidates
-are denoted as $2\ell$SS ($3\ell$). }}
 \label{tab:limits_summary}
 \end{center}
 \end{table}
@@ -381,7 +380,7 @@ are denoted as $2\ell$SS ($3\ell$). }}
 \begin{center}
 \subfloat[]{\includegraphics[width=0.7\textwidth]{figures/Combo/Limits.eps}}
 \caption{\small {95\% CL upper limits on $\BR(t\to Hc)$ for the individual searches as well as their
-combination, assuming $\BR(t\to Hu)=0$. The observed limits (solid lines) are compared to the 
+combination, assuming $\BR(t\to Hu)=0$. The observed limits (solid lines) are compared with the 
 expected (median) limits under the background-only
 hypothesis (dotted lines). The surrounding shaded bands correspond to the 68\% and 95\% CL intervals around the expected limits, 
 denoted by $\pm 1\sigma$ and $\pm 2\sigma$, respectively.
@@ -399,7 +398,7 @@ denoted by $\pm 1\sigma$ and $\pm 2\sigma$, respectively.
 \begin{center}
 \subfloat[]{\includegraphics[width=0.7\textwidth]{figures/Combo/Limits2.eps}}
 \caption{\small {95\% CL upper limits on $\BR(t\to Hu)$ for the individual searches as well as their
-combination, assuming $\BR(t\to Hc)=0$. The observed limits (solid lines) are compared to the 
+combination, assuming $\BR(t\to Hc)=0$. The observed limits (solid lines) are compared with the 
 expected (median) limits under the background-only
 hypothesis (dotted lines). The surrounding shaded bands correspond to the 68\% and 95\% CL intervals around the expected limits, 
 denoted by $\pm 1\sigma$ and $\pm 2\sigma$, respectively.
@@ -443,7 +442,7 @@ The corresponding upper limits on the couplings in the $|\lamHu|$ versus $|\lamH
 \subfloat[]{\includegraphics[width=0.49\textwidth]{figures/Combo/Limits2D.eps}}
 \subfloat[]{\includegraphics[width=0.49\textwidth]{figures/Combo/Coupling2D.eps}}
 \caption{\small {95\% CL upper limits (a) on the plane of $\BR(t\to Hu)$ versus $\BR(t\to Hc)$ and (b) on the plane 
-of $|\lamHu|$ versus $|\lamHc|$ for the combination of the searches. The observed limits (solid lines) are compared to the expected (median) limits under the background-only hypothesis (dotted lines). The surrounding shaded bands correspond to the 68\% and 95\% CL intervals around the expected limits, 
+of $|\lamHu|$ versus $|\lamHc|$ for the combination of the searches. The observed limits (solid lines) are compared with the expected (median) limits under the background-only hypothesis (dotted lines). The surrounding shaded bands correspond to the 68\% and 95\% CL intervals around the expected limits, 
 denoted by $\pm 1\sigma$ and $\pm 2\sigma$, respectively.}}
 \label{fig:limits_combo_2D} 
 \end{center}
