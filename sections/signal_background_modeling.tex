@@ -9,7 +9,7 @@ Small contributions arise from single-top-quark, $W/Z$+jets, multijet and diboso
 production of a vector boson $V$ ($V=W,Z$) or a Higgs boson and a $\ttbar$ pair ($\ttbar V$ and $\ttbar H$). All backgrounds 
 with prompt leptons, i.e. those originating from the decay of a $W$ boson, a $Z$ boson, or a $\tau$-lepton,
 are estimated using samples of simulated events and initially normalised to their theoretical cross sections.
-In the simulation, the top quark and SM Higgs boson masses are set to $172.5~\gev$ and $125~\gev$, respectively,
+In the simulation, the top-quark and SM Higgs boson masses are set to $172.5~\gev$ and $125~\gev$, respectively,
 and the Higgs boson is allowed to decay into all SM particles with branching ratios calculated using \textsc{Hdecay}~\cite{Djouadi:1997yw}.  
 Backgrounds with non-prompt electrons or muons, with photons or jets misidentified as electrons, or with jets misidentified as $\had$ candidates, 
 generically referred to as fake leptons, are estimated using data-driven methods. 
@@ -22,16 +22,16 @@ fit to data using several signal-depleted analysis regions, as discussed in Sect
 %-------------------------------------------------------------------------------
 
 Samples of simulated $\ttbar \to WbHq$ events were generated with the next-to-leading-order (NLO) generator\footnote{In the following, 
-the order of a generator should be understood as referring to the order in the strong coupling constant at which the matrix element calculation 
+the order of a generator should be understood as referring to the order in the strong coupling constant at which the matrix-element calculation 
 is performed.} {\amcatnlolong}~2.4.3~\cite{Alwall:2014hca}  (referred to in the following as {\amcatnlo}) with the NNPDF3.0 NLO~\cite{Ball:2014uwa} parton distribution function (PDF) set and interfaced to {\pythia} 8.212~\cite{Sjostrand:2007gs} with the NNPDF2.3 LO~\cite{Ball:2012cx} PDF set for the modelling of parton showering, hadronisation, and the underlying event. 
 The A14~\cite{ATLASUETune4} set of tuned parameters in {\pythia} controlling the description of multiparton interactions and  
-initial and final state radiation, referred to as the tune, was used.
+initial- and final-state radiation, referred to as the tune, was used.
 The signal sample is normalised to the same total cross section as used for the inclusive $t\bar{t}\to WbWb$ sample (see discussion below) and
 assuming an arbitrary branching ratio of $\BR_{\mathrm{ref}}(t\to Hq)=1\%$.
 The case of both top quarks decaying into $Hq$ is neglected in the analysis given the existing upper limits on $\BR(t \to Hq)$ (Section~\ref{sec:intro}).
 
 The nominal sample used to model the $\ttbar$ background was generated with the NLO generator {\powheg}~v2 \cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd} using the NNPDF3.0 NLO PDF set. The {\powheg} model parameter $h_{\textrm{damp}}$, which controls 
-matrix element to parton shower matching and effectively regulates the high-$\pt$ radiation, was set to 1.5 times the top quark mass. 
+matrix element to parton shower matching and effectively regulates the high-$\pt$ radiation, was set to 1.5 times the top-quark mass. 
 Parton shower, hadronisation, and underlying event were modelled by {\pythia}~8.210 with the NNPDF2.3 LO PDF set in combination with the A14 tune.
 Alternative $\ttbar$ simulation samples used to derive systematic uncertainties are described in Section~\ref{sec:syst_bkgmodeling}. 
 The generated $\ttbar$ samples are normalised to a theoretical cross section of $832^{+46}_{-51}$~pb, 
@@ -65,7 +65,7 @@ Samples of single-top-quark events corresponding to the $t$-channel production m
 {\powheg}~v1~\cite{Frederix:2012dh} generator that uses the 4F scheme  for the NLO matrix-element calculations
 and the fixed 4F \textsc{CT10}f\textsc{4}~\cite{Lai:2010vv} PDF set.
 Samples corresponding to the $tW$- and $s$-channel production mechanisms were generated 
-with {\powheg}~v1 using the CT10 PDF set. Overlaps between the $\ttbar$ and $tW$ final states are avoided by using 
+with {\powheg}~v1 using the CT10 PDF set. Overlaps between the $\ttbar$ and $tW$ final states were avoided by using 
 the diagram removal scheme~\cite{Frixione:2005vw}.
 The parton shower, hadronisation and the underlying event were modelled using {\pythia}~6.428~\cite{Sjostrand:2006za} 
 with the CTEQ6L1~\cite{Pumplin:2002vw,Nadolsky:2008zw} PDF set 
@@ -74,7 +74,7 @@ The single-top-quark samples are normalised to the approximate NNLO theoretical 
 sections~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}. 
 
 Samples of $W/Z$+jets events were generated with the {\sherpa}~2.2.1~\cite{Gleisberg:2008ta} generator. 
-The matrix element is calculated for up to two partons at NLO and up to four partons at LO using 
+The matrix element was calculated for up to two partons at NLO and up to four partons at LO using 
 \textsc{Comix}~\cite{Gleisberg:2008fv} and \textsc{OpenLoops}~\cite{Cascioli:2011va}. The matrix-element calculation 
 is merged with the {\sherpa} parton shower~\cite{Schumann:2007mg} using the ME+PS@NLO prescription~\cite{Hoeche:2012yf}. 
 The PDF set used for the matrix-element calculation is NNPDF3.0 NNLO~\cite{Ball:2014uwa} with a dedicated parton shower tuning developed for {\sherpa}. 
@@ -86,7 +86,7 @@ cross sections calculated with \textsc{FEWZ}~\cite{Anastasiou:2003ds}.
 
 Samples of $WW/WZ/ZZ$+jets events were generated with {\sherpa}~2.2.1 using the CT10 PDF set
 and include processes containing up to four electroweak vertices. 
-In the case of $WW/WZ$+jets ($ZZ$+jets) the matrix element is calculated for zero (up to one) additional partons 
+In the case of $WW/WZ$+jets ($ZZ$+jets) the matrix element was calculated for zero (up to one) additional partons 
 at NLO and up to three partons at LO using the same procedure as for the $W/Z$+jets samples. 
 The final states simulated require one of the bosons to decay leptonically and the other hadronically.
 All diboson samples are normalised to their NLO theoretical cross sections provided by {\sherpa}. 
@@ -131,7 +131,7 @@ technique~\cite{Aad:2010ey,ATLAS-CONF-2014-058}, which exploits differences in l
 prompt leptons and leptons that are either non-prompt or result from the misidentification of photons or jets. 
 % Further details can be found in Ref.~\cite{Aaboud:2018mjh}.
 
-\subsubsection{Fake tau candidates}
+\subsubsection{Fake $\tau$-lepton candidates}
 \label{sec:faketaus}
 In the $\Htautau$ search, the background with one or more fake $\had$ candidates is mainly arising from $\ttbar$ or
 multijet production, depending on the analysis channel, with $W$+jets production contributing to a lesser extent. 
