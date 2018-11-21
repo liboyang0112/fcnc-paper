@@ -3,7 +3,7 @@
 \label{sec:strategy_Htautau}
 %-------------------------------------------------------------------------------
 
-The analysis strategy adopted in the $\Htautau$ search follows closely that developed in Ref.~\cite{Chen:2015nta} and is summarised in this section.
+The analysis strategy adopted in the $\Htautau$ search closely follows that developed in Ref.~\cite{Chen:2015nta} and is summarised in this section.
 
 \subsection{Event categorisation and kinematic reconstruction}
 \label{sec:htautau_reco_cat}
@@ -30,14 +30,14 @@ The event reconstruction is based on the strategy used in Ref.~\cite{Chen:2015nt
 
 Events with exactly three jets that are compatible with having a fully reconstructed hadronically decaying 
 top quark ($t \to Wb \to qqb$) are rejected, as the $t \to Hq$ decay cannot be reconstructed due to the missing light-quark jet.
-This compatibility is assessed via a likelihood function that depens on the reconstructed mass of the three-jet 
+This compatibility is assessed via a likelihood function that depends on the reconstructed mass of the three-jet 
 system and the two non-$b$-tagged jets.
 For the remaining events, the selected jets are assigned to the different top-quark decay products via a criterion based on 
 minimising a sum of angular distances between objects. Finally, the four-momenta of the invisible decay products for each $\tau$-lepton decay 
 are estimated by minimising a $\chi^2$ function based on the probability density functions for the angular distance of the visible and invisible
-decay products in the $\tau$-lepton decay, and including Gaussian constraints on the $\tau$-lepton mass, the Higgs boson mass and the
-measured $\met$. After the $\chi^2$ minimisation, an improved resolution is obtained on the determination of the Higgs boson four-momentum, and hence
-its invariant mass, as well as on the four-momentum of the parent top quark. Following the event kinematic reconstruction, several kinematic variables
+products of the $\tau$-lepton decay, and including Gaussian constraints on the $\tau$-lepton mass, the Higgs boson mass and the
+measured $\met$. After the $\chi^2$ minimisation, the Higgs boson four-momentum, and hence its invariant mass, as well as the 
+four-momentum of the parent top quark, are determined with better resolution. Following the event kinematic reconstruction, several kinematic variables
 that discriminate between signal and background are defined. These variables are used in the multivariate analysis discussed in the next section.
 
 %To comply with the signal topology, in each event, exactly one jet should be tagged as a $b$-jet. If all jets from the top hadronic decay and the jet from $t\to Hq$, denoted as the FCNC jet, pass the jet selection, there should be at least four jets. However, some jets have a $\pt$ less than 30 GeV and may fail to pass the jet selection. The most likely missing jet is the subleading jet from the $W$ decay. These 3-jet events are still kept if the FCNC jet can be found and matched with the Higgs to reconstruct the top. It is done as follows. In the 3-jet events, if the three jets, denoted by $j_1$, $j_2$, $b$, satisfy
@@ -120,14 +120,14 @@ Boosted decision trees are used in each SR to improve the separation between sig
 In the training, only $\ttbar \to W(qq)bH(\tau\tau)q$ signal events are used against the total SM background (including both real and fake $\had$ contributions), 
 elsewhere the contributions from $\ttbar \to W(\ell\nu)bHq$ signal events are also taken into account. 
 
-A large set of potential variables was investigated in each SR separately, and only those variables that led to an improved discrimination
-performance of the BDT were kept.  The BDT input variables in each SR are listed in Table~\ref{tab:mva_var} and defined in the following:
+A large set of potential variables were investigated in each SR separately, and only those variables that led to better discrimination
+by the BDT were kept.  The BDT input variables in each SR are listed in Table~\ref{tab:mva_var} and defined in the following:
 
 \begin{itemize}
 \item $m_{\tau\tau}^{\text{fit}}$: the invariant mass of the two $\tau$-lepton candidates after the reconstruction of the neutrinos, indicating the reconstructed Higgs boson mass.
 \item $m_{Hq}$: the invariant mass of the reconstructed Higgs boson and the associated light-quark jet in the $t \to Hq$ decay, corresponding to the reconstructed mass of the parent top quark.
 \item $m_{\text{T,lep}}$: the transverse mass calculated from the lepton and $\met$ in the $\lephad$ channel.
-\item $p_{\text{T,1}}$ and $p_{\text{T,2}}$:  the transverse momenta of the lepton and $\had$ candidate (denoted as particles 1 and 2 respectively) in the $\lephad$ channel, or the transverse momenta of the leading and trailing $\had$ candidates (denoted as particles 1 and 2 respectively) in the $\hadhad$ channel.
+\item $p_{\text{T,1}}$ and $p_{\text{T,2}}$:  the transverse momenta of the lepton and $\had$ candidate (referred to as particles 1 and 2 respectively) in the $\lephad$ channel, or the transverse momenta of the leading and trailing $\had$ candidates (referred to as particles 1 and 2 respectively) in the $\hadhad$ channel.
 \item $\met$ $\phi$ centrality: a variable that quantifies the angular position of the $\mpt$ relative to the 
 visible $\tau$-lepton decay products in the transverse plane. The transverse plane is transformed such that the directions of the $\tau$-lepton decay products are 
 orthogonal, and that the smaller angle between the $\tau$-lepton decay products defines the positive quadrant of the transformed plane. 
@@ -145,7 +145,7 @@ the magnitude of the fitted $\mpt$ vector.
 \item $m_{bj_1j_2}$: the invariant mass of the $b$-jet and the two jets originating from the $W$ boson in the $t\to Wb \to j_1j_2b$ decay, corresponding to the reconstructed mass of the parent top quark. This variable is only defined for events with at least four jets.
 \end{itemize}
 
-Among these variables, the most discriminating are $m_{\tau\tau}^{\text{fit}}$, $p_{\text{T},2}$, $x_{1}^{\text{fit}}$ and $x_{2}^{\text{fit}}$. A comparison between data and background prediction for some of these variables in each of the SRs considered is shown in Figures~\ref{fig:BDT_inputs_lephad} and~\ref{fig:BDT_inputs_hadhad}.
+Among these variables, the most discriminating are $m_{\tau\tau}^{\text{fit}}$, $p_{\text{T},2}$, $x_{1}^{\text{fit}}$ and $x_{2}^{\text{fit}}$. A comparison between data and the predicted background for some of these variables in each of the SRs considered is shown in Figures~\ref{fig:BDT_inputs_lephad} and~\ref{fig:BDT_inputs_hadhad}.
 A good description of the data by the background model is observed in all cases.
 The level of discrimination between signal and background achieved by the BDTs is illustrated in Figure~\ref{fig:BDT}.
 
@@ -156,7 +156,7 @@ The level of discrimination between signal and background achieved by the BDTs i
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_lephad_4j_FR.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/ptL2_lephad_3j_FR.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/ptL2_lephad_4j_FR.eps}} \\
-\caption{$\Htautau$ search: Comparison between the data and background prediction after preselection for the distribution of some of the most
+\caption{$\Htautau$ search: Comparison between the data and predicted background after preselection for the distributions of two of the most
 discriminating BDT input variables in the $\lephad$ channel before the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\lephad$, 3j) region and (b) the ($\lephad$, $\geq$4j) region, and for
 $p_{\text{T},2}$ in (c) the ($\lephad$, 3j)  region and (d) the ($\lephad$, $\geq$4j) region.
@@ -181,7 +181,7 @@ which is determined via a likelihood fit to data.}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/m_tt_hadhad_4j_FR.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x1_fit_hadhad_3j_FR.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/control_plots/x1_fit_hadhad_4j_FR.eps}} \\
-\caption{$\Htautau$ search: Comparison between the data and background prediction after preselection for the distribution of two of the most 
+\caption{$\Htautau$ search: Comparison between the data and predicted background after preselection for the distributions of two of the most 
 discriminating BDT input variables in the $\hadhad$ channel before the fit to data (``Pre-Fit''). The distributions are shown for
 $m_{\tau\tau}^{\text{fit}}$ in (a) the ($\hadhad$, 3j) region and (b) the ($\hadhad$, $\geq$4j) region, and for
 $x_{1}^{\text{fit}}$ in (c) the ($\hadhad$, 3j)  region and (d) the ($\hadhad$, $\geq$4j) region.
@@ -206,7 +206,7 @@ which is determined via a likelihood fit to data.}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/discriminant_shape/shape_discriminant_hl4j/canv_.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/discriminant_shape/shape_discriminant_hh3j/canv_.eps}}
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Htautau/discriminant_shape/shape_discriminant_hh4j/canv_.eps}} \\
-\caption{$\Htautau$ search: Comparison of the distributions of the BDT discriminant after preselection between the $\Hc$ (red dashed) and $\Hu$ (blue dotted) signals, 
+\caption{$\Htautau$ search: Comparison of the distributions of the BDT discriminant after preselection of the $\Hc$ (red dashed) and $\Hu$ (blue dotted) signals, 
 and the total background (black solid) in the different search regions considered:
 (a) ($\lephad$, 3j), (b) ($\lephad$, $\geq$4j), (c) ($\hadhad$, 3j), and (d) ($\hadhad$, $\geq$4j). }
 \label{fig:BDT}
