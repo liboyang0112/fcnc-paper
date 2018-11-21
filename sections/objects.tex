@@ -23,7 +23,7 @@ separation between electrons and jets.
 
 Muon candidates~\cite{Aad:2016jkr} are reconstructed by matching track segments in %the various
 different layers of the muon spectrometer to tracks found in the inner detector;
-the resulting muon candidates are refitted using the complete track information from both detector systems.
+the resulting muon candidates are re-fitted using the complete track information from both detector systems.
 In the $\Hbb$ ($\Htautau$) search, muon candidates are required to have $\pt>30~(10)~\gev$ and $|\eta|<2.5$ 
 and to satisfy medium identification criteria~\cite{Aad:2016jkr}. 
 
@@ -33,12 +33,12 @@ and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_
 To further reduce the background from non-prompt leptons, photon conversions and hadrons, lepton candidates are also required to be isolated 
 in the tracker and in the calorimeter.
 A track-based lepton isolation criterion is defined by calculating the quantity $I_R = \sum \pt^{\textrm{trk}}$, where
-the scalar sum includes all tracks (excluding the lepton candidate itself) within the cone defined by $\Delta R<R_{\textrm{cut}}$ about the %axis
+the scalar sum includes all tracks (excluding the lepton candidate itself) within the cone defined by $\Delta R<R_{\textrm{cut}}$ around the %axis
 direction of the lepton.  The value of $R_{\textrm{cut}}$ is the smaller of $r_{\textrm{min}}$ and $10~\gev/\pt^\ell$, where
 $r_{\textrm{min}}$ is set to 0.2 (0.3) for electron (muon) candidates, and $\pt^\ell$ is the lepton $\pt$. 
 The $\Hbb$ search requires lepton candidates to satisfy $I_R/\pt^\ell < 0.06$, while the $\Htautau$ search 
 makes $\pt$-dependent requirements on $I_R/\pt^\ell$. Additionally, the $\Htautau$ search requires leptons to
-satisfy a calorimeter-based isolation criterion: the sum of the transverse energy within a cone of
+satisfy a calorimeter-based isolation criterion: the sum of the transverse energy within a cone of size
 $\Delta R<0.2$ around the lepton, after subtracting the contributions
 from pile-up and the energy deposit of the lepton itself, is required to be less than a $\pt$-dependent 
 fraction of the lepton energy. 
@@ -57,7 +57,7 @@ fraction of the lepton energy.
 %built from energy deposits in the calorimeters calibrated to the electromagnetic scale. 
 Candidate jets are reconstructed with the anti-$k_t$ algorithm~\cite{Cacciari:2008gp,Cacciari:2005hq} with a
 radius parameter $R=0.4$, as implemented in the \fastjet\ package~\cite{Cacciari:2011ma}.  
-Jet reconstruction in the calorimeter starts from topological clustering~\cite{Aad:2016upy} of individual calorimeter cells calibrated to the electromagnetic scale. 
+Jet reconstruction in the calorimeter starts from topological clustering~\cite{Aad:2016upy} of individual calorimeter cells calibrated to the electromagnetic energy scale. 
 The reconstructed jets are then calibrated to the particle level by the application of a jet energy scale 
 derived from simulation and in situ corrections based on $\sqrt{s}=13~\tev$ data~\cite{Aaboud:2017jcu}.
 The calibrated jets used in the $\Hbb$ search are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$,
@@ -66,7 +66,7 @@ Jet four-momenta are corrected for pile-up effects using the jet-area method~\ci
 
 Quality criteria are imposed to reject events that contain any jets arising from non-collision sources
 or detector noise~\cite{ATLAS-CONF-2015-029}.  To reduce the contamination due to jets originating from pile-up interactions,
-additional requirements are made on the jet vertex tagger (JVT)~\cite{Aad:2015ina} output for jets with $\pt<60~\gev$ and $|\eta| < 2.4$,
+additional requirements are imposed on the jet vertex tagger (JVT)~\cite{Aad:2015ina} output for jets with $\pt<60~\gev$ and $|\eta| < 2.4$,
 or on the forward JVT~\cite{Aaboud:2017pou} output for jets with $\pt<50~\gev$ and $|\eta| > 2.5$.
 
 Jets containing $b$-hadrons are identified ($b$-tagged) via an algorithm~\cite{Aad:2015ydr,ATL-PHYS-PUB-2016-012} 
@@ -85,7 +85,7 @@ A boosted decision tree (BDT) discriminant~\cite{Breiman:1984jka,Friedman:2002we
 jet backgrounds. Three working points labelled loose, medium and tight are defined, and correspond to different $\had$ identification efficiency 
 values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
 working point for the nominal selection, while the loose working point is used for background estimation.
-The medium working point has a combined reconstruction and identification efficiency of 55\% (40\%) for one (three)-prong $\had$ 
+The medium working point has a combined reconstruction and identification efficiency of 55\% (40\%) for one-prong (three-prong) $\had$ 
 decays~\cite{ATLAS-CONF-2017-029}, and an expected rejection factor against light-jets of 100~\cite{ATL-PHYS-PUB-2015-045}. 
 Electrons that are reconstructed as one-prong $\had$ candidates are removed via a BDT trained to reject electrons.
 Any $\had$ candidate that is also $b$-tagged is rejected.
@@ -121,7 +121,7 @@ few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\
 if the jet has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
 The overlap removal procedure in the $\Htautau$ search is similar to that of the $\Hbb$ search, except that the
 first step is the removal of $\had$ candidates within $\Delta R=0.2$ of electrons or muons, and the last step is the
-removal of jets whose axis lies within $\Delta R=0.2$ of the highest-$\pt$ (leading) or the two leading $\had$ candidates (depending on the
+removal of jets whose axis lies within $\Delta R=0.2$ of the leading (highest-$\pt$) $\had$ candidate or the two leading $\had$ candidates (depending on the
 analysis channel). In addition, the muon--jet overlap removal is slightly different:
 if a muon lies within $\Delta R = 0.2$ of the axis of a jet, the jet is removed if either it has fewer than three tracks originating from the 
 primary vertex or it has a small $\pt$ compared with that of the muon (the $\pt$ of the jet is less than 50\% of the $\pt$ of the muon,
