@@ -42,12 +42,14 @@ nuisance parameters that maximise the likelihood function for a given value of $
 The test statistic $q_\mu$ is evaluated with the {\textsc RooFit} package~\cite{Verkerke:2003ir,RooFitManual}.
 A related statistic is used to determine whether the observed data is compatible with the background-only hypothesis (the so-called discovery test)  
 by setting $\mu=0$ in the profile likelihood ratio and leaving $\hat{\mu}$ unconstrained: $q_0 = -2\ln({\cal L}(0,{\hat{\theta}}_0)/{\cal L}(\hat{\mu},\hat{\theta}))$.
-The $p$-value (referred to as $p_0$) representing the probability of the data being compatible with the background-only hypothesis is estimated by integrating
+The $p$-value (referred to as $p_0$), representing the level of agreement between the data and the background-only hypothesis, is estimated by integrating
+%representing the probability of the data being compatible with the background-only hypothesis is estimated by integrating
 %the distribution of $q_0$ obtained from background-only pseudo-experiments, approximated using the asymptotic formulae given in Refs.~\cite{Cowan:2010js}, 
 the distribution of $q_0$ based on the asymptotic formulae in Ref.~\cite{Cowan:2010js}, 
 above the observed value of $q_0$ in the data. 
 %The observed $p_0$-value is checked for each explored signal scenario.
-In the case of the data being compatible with the background-only hypothesis, upper limits on $\mu$, and thus on 
+%In the case of the data being compatible with the background-only hypothesis, 
+Upper limits on $\mu$, and thus on 
 $\BR(t\to Hq)$, are derived by using $q_\mu$ in the CL$_{\textrm{s}}$ method~\cite{Junk:1999kv,Read:2002hq}.
 For a given signal scenario, values of the $\BR(t\to Hq)$ yielding CL$_{\textrm{s}} < 0.05$, 
 where CL$_{\textrm{s}}$ is computed using the asymptotic approximation~\cite{Cowan:2010js}, are excluded at $\geq 95\%$ CL.

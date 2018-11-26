@@ -126,12 +126,17 @@ by the BDT were kept.  The BDT input variables in each SR are listed in Table~\r
 \begin{itemize}
 \item $m_{\tau\tau}^{\text{fit}}$: the invariant mass of the two $\tau$-lepton candidates after the reconstruction of the neutrinos, indicating the reconstructed Higgs boson mass.
 \item $m_{Hq}$: the invariant mass of the reconstructed Higgs boson and the associated light-quark jet in the $t \to Hq$ decay, corresponding to the reconstructed mass of the parent top quark.
-\item $m_{\text{T,lep}}$: the transverse mass calculated from the lepton and $\met$ in the $\lephad$ channel.
+\item $m_{\text{T,lep}}$: the transverse mass calculated from the lepton and $\mpt$ in the $\lephad$ channel.
 \item $p_{\text{T,1}}$ and $p_{\text{T,2}}$:  the transverse momenta of the lepton and $\had$ candidate (referred to as particles 1 and 2 respectively) in the $\lephad$ channel, or the transverse momenta of the leading and trailing $\had$ candidates (referred to as particles 1 and 2 respectively) in the $\hadhad$ channel.
-\item $\met$ $\phi$ centrality: a variable that quantifies the angular position of the $\mpt$ relative to the 
-visible $\tau$-lepton decay products in the transverse plane. The transverse plane is transformed such that the directions of the $\tau$-lepton decay products are 
-orthogonal, and that the smaller angle between the $\tau$-lepton decay products defines the positive quadrant of the transformed plane. 
-The $\met$ $\phi$ centrality is defined as the sum of the $x$ and $y$ components of the $\mpt$ unit vector in this transformed plane.
+\item $\met$ $\phi$ centrality: a variable that quantifies the angular position of $\mpt$ relative to the visible $\tau$-lepton decay products in the transverse plane. It is defined as:
+\begin{equation*}
+\met\; \phi\; \mathrm{centrality} = \frac{\sin(\phi_\mathrm{miss}-\phi_1)+\sin(\phi_\mathrm{miss}-\phi_2)}{\sqrt{\sin^2(\phi_\mathrm{miss}-\phi_1)+\sin^2(\phi_\mathrm{miss}-\phi_2)}}
+\end{equation*}
+\noindent where $\phi_\mathrm{miss}$ denotes the azimuthal angle of $\mpt$, and $\phi_1$ and $\phi_2$ denote the azimuthal angles the two $\tau$-lepton candidates 
+(the lepton and $\had$ candidate in the $\lephad$ channel, or the leading and trailing $\had$ candidates in the $\hadhad$ channel), referred to as particles 1 and 2 respectively.
+%The transverse plane is transformed such that the directions of the $\tau$-lepton decay products are 
+%rthogonal, and that the smaller angle between the $\tau$-lepton decay products defines the positive quadrant of the transformed plane. 
+%The $\met$ $\phi$ centrality is defined as the sum of the $x$ and $y$ components of the $\mpt$ unit vector in this transformed plane.
 %\item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the parallel direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
 %\item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the transverse direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
 \item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of the original $\mpt$ vector parallel to the fitted $\mpt$ vector, minus 

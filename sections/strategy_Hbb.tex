@@ -35,6 +35,7 @@ The other regions have significantly lower signal-to-background ratios, but they
 the $\ttbar$+jets background prediction and constraining the related systematic uncertainties
 through a likelihood fit to data.  
 Because of a somewhat larger fraction of $\Hc$ signal in the regions with exactly three $b$-tagged jets,
+resulting from the higher mistag rate for $c$-jets than for light-jets,
 this analysis is expected to have slightly better sensitivity to a $\Hc$ signal than to a $\Hu$ signal.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,16 +77,27 @@ The LH variable for a given event is defined as:
 L(\mathbf{x}) = \frac{P^\textrm{sig}(\mathbf{x}) }{P^\textrm{sig}(\mathbf{x}) +P^\textrm{bkg}(\mathbf{x}) },
 \label{eq:D}
 \end{equation*}
-where $P^\textrm{sig}(\mathbf{x}) $ and $P^\textrm{bkg}(\mathbf{x}) $ represent the probability density functions (pdf) of a given event under
+where $P^\textrm{sig}(\mathbf{x}) $ and $P^\textrm{bkg}(\mathbf{x})$ represent the probability density functions (pdf) of a given event under
 the signal hypothesis ($\ttbar \to WbHq$) and under the background hypothesis ($\ttbar \to WbWb$), respectively.
-Both $P^\textrm{sig}$ and $P^\textrm{bkg}$ are functions of $\mathbf{x}$, which denotes the set of two-body and three-body invariant masses 
-that correspond to the expected resonances in the event (the leptonically decaying $W$ boson, the Higgs boson or the hadronically 
-decaying $W$ boson, and the corresponding parent top quarks). These invariant masses are computed from the reconstructed 
-lepton, jets, and missing transverse momentum.
-As in Ref.~\cite{Aad:2015pja}, $P^\textrm{sig}$ and $P^\textrm{bkg}$ are approximated as a product of one-dimensional pdfs for
-each of the invariant masses considered, and averaged over all possible parton--jet matching combinations. 
+%Both $P^\textrm{sig}$ and $P^\textrm{bkg}$ are functions of $\mathbf{x}$, which denotes the set of two-body and three-body invariant masses 
+%that correspond to the expected resonances in the event (the leptonically decaying $W$ boson, the Higgs boson or the hadronically 
+%decaying $W$ boson, and the corresponding parent top quarks). These invariant masses are computed from the reconstructed 
+%lepton, jets, and missing transverse momentum.
+%As in Ref.~\cite{Aad:2015pja}, $P^\textrm{sig}$ and $P^\textrm{bkg}$ are approximated as a product of one-dimensional pdfs for
+%each of the invariant masses considered, and averaged over all possible parton--jet matching combinations. 
+%
+Both $P^\textrm{sig}$ and $P^\textrm{bkg}$ are functions of $\mathbf{x}$, representing the four-momentum vectors of all final-state particles at the reconstruction level:
+the lepton, the missing transverse momentum, and the selected jets in a given analysis region.
+The value of the multivariate $b$-tagging discriminant for each jet is also included in $\mathbf{x}$.
+As in Ref.~\cite{Aad:2015pja}, $P^\textrm{sig}$ and $P^\textrm{bkg}$ are approximated as a product of one-dimensional pdfs 
+over the set of two-body and three-body invariant masses that correspond to the expected resonances in the event (the leptonically decaying $W$ boson, 
+the Higgs boson or the hadronically decaying $W$ boson, and the corresponding parent top quarks) and averaged over all possible parton--jet matching combinations. 
+%
 Combinations are weighted using the per-jet multivariate $b$-tagging discriminant value to suppress the impact from 
 parton--jet assignments that are inconsistent with the correct flavour of the parton candidates.
+The invariant masses are computed from the reconstructed lepton, missing transverse momentum, and jets. After a suitable transformation of the three-body invariant masses 
+(see Ref.~\cite{Aad:2015pja}), all considered invariant mass variables are largely uncorrelated, thus making possible the factorisation of $P^\textrm{sig}$ and $P^\textrm{bkg}$
+as discussed above.
 
 Two background hypotheses are considered, corresponding to the dominant backgrounds in
 the analysis: $\ttbar$+light-jets and \ttbin. Thus, $P^\textrm{bkg}$ is computed as the average of
@@ -105,8 +117,12 @@ to a decay product from the $\ttbar$ system.
 Figure~\ref{fig:Hbb_extravars_4j3b} shows a comparison between data and prediction in the most sensitive analysis region, (4j, 3b), 
 for several kinematic variables associated with the reconstructed lepton, jets, and missing transverse momentum. 
 The distributions shown correspond to the lepton $\pt$, the $\met$, the scalar sum of the transverse momenta of 
-the jets, and the invariant mass distribution of the two $b$-tagged jets with lowest $\Delta R$ separation.
-In general, a good description of the data by the background prediction is observed.
+the jets, and the invariant mass distribution of the two $b$-tagged jets with lowest $\Delta R$ separation. 
+The variables displayed do not correspond directly to those used internally in the evaluation the LH discriminant, as to build them it is necessary 
+to select a particular signal or background hypothesis and a jet permutation. Instead, these distributions are shown to demonstrate that
+a good description of the data by the background prediction is observed in several kinematic variables related to the information used in 
+the LH discriminant construction. 
+%In general, a good description of the data by the background prediction is observed. 
 
 Figure~\ref{fig:LHD} compares the shape of the LH discriminant distribution between the $\Hc$ and $\Hu$ signals and the 
 $t\bar{t}\to WbWb$ background in each of the analysis regions considered.
@@ -121,7 +137,7 @@ decay modes. It was verified that using the $\Hc$ discriminant for the $\Hu$ sea
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Hbb/other_variables/c1lep4jex3bex_met.eps}} \\
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Hbb/other_variables/c1lep4jex3bex_hthad.eps}} 
 \subfloat[]{\includegraphics[width=0.40\textwidth]{figures/Hbb/other_variables/c1lep4jex3bex_mbb_mindR.eps}} \\ 
-\caption{\small{$\Hbb$ search: Comparison between the data and predicted background for several kinematic 
+\caption{\small{$\Hbb$ search: Comparison between the data and predicted background after preselection for several kinematic 
 distributions in the (4j, 3b) region before the fit to data (``Pre-Fit''). 
 The distributions are shown for (a) lepton $\pt$, (b) $\met$, (c) scalar sum of the transverse momenta of 
 the jets ($\hthad$), and (d) the invariant mass of the two $b$-tagged jets with lowest 
