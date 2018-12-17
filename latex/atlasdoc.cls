@@ -8,9 +8,9 @@
 %
 % Copyright (C) 2002-2018 CERN for the benefit of the ATLAS collaboration
 %-------------------------------------------------------------------------------
-\def\ATPackageVersion{05-06-00}
+\def\ATPackageVersion{06-00-00}
 
-\ProvidesClass{latex/atlasdoc}[2018/01/10 v.05-06-00 ATLAS document class]
+\ProvidesClass{latex/atlasdoc}[2018/11/30 v.06-00-00 ATLAS document class]
 % Needs 2009 TeX Live or later
 \NeedsTeXFormat{LaTeX2e}[2009/01/01]
 
@@ -849,20 +849,25 @@
 % \addtolength{\abstractparbox}{-2\fboxsep}
 \newlength{\abstractheight}
 \setlength{\abstractheight}{0.50\textheight}
+% Add 5em to title height for notes
+% \ifADOC@NOTE
+%   \addtolength{\abstractheight}{-5em}
+% \fi
 \addtolength{\abstractheight}{-\ADOC@titleextraheight}
 \newlength{\copyrightoffset}
 \ifthenelse{\equal{\ADOC@maintitlesize}{small}}{%
-  \setlength{\copyrightoffset}{-7.5em}
+  \setlength{\copyrightoffset}{-8.0em}
 }{%
-  \setlength{\copyrightoffset}{-7.5em}
+  \setlength{\copyrightoffset}{-8.0em}
 }
 \addtolength{\copyrightoffset}{\ADOC@copyrightoffset}
 \newcommand{\AtlasAbstractCopyright}{%
-  \vspace*{\stretch{1}}
+  % \vspace*{\stretch{1}}
   % \fbox{\begin{minipage}[b][\abstractheight]{\abstractparbox}
   \begin{minipage}[b][\abstractheight]{\abstractparbox}
-    % Astract
-    \if\AtlasAbstractText\@empty
+    % Abstract
+  % \vspace*{\stretch{1}}
+  \if\AtlasAbstractText\@empty
       \mbox{}
     \else
       \begin{quote}\ADOC@abstractsize
@@ -953,6 +958,7 @@
   \fi
 \else
   \publishers{\vspace*{\fill}\normalsize\rmfamily\AtlasAbstractCopyright}
+  % \publishers{\normalsize\rmfamily\AtlasAbstractCopyright}
 \fi
 
 \AtBeginDocument{%
