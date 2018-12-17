@@ -1,27 +1,106 @@
-Project for ANA-TOPQ-2017-07-PAPER
-====================
+# ATLAS LaTeX
 
-This project has been automatically generated following the default setup for all document projects under the atlas-physics-office GitLab group including the Continuous Integration (CI) tools which will check the health of the document after each commit has been push to the project.
+ATLAS LaTeX class, style files and templates to typeset notes and papers.
+See ChangeLog or Git log for history of changes.
 
-## Issues
-if there is any issue with the CI pipelines, any job failing, any bug spotted or any question relating the project configuration or GitLab workflow please place an issue following the instructions in the issues wiki page.
+*Responsible:* Ian Brock (Ian.Brock@cern.ch)
 
-If you have further questions or any concern you can send an e-mail to the e-group `atlas-phys-office-glance-gitlab`.
+Copyright (C) 2002-2018 CERN for the benefit of the ATLAS collaboration
 
-## Permissions
-All users in the ANA-TOPQ-2017-07 have developer access to the repositories stored in it. This means that every the editors of this project have access to work without any limit in this project but cannot access the project configuration.
+------
 
-The users under the group ANA-TOPQ-2017-07 are managed via the editors e-group. If at any point anyone wants to have access to this project please include that user in the e-group and the automatic synchronization will take care of it. Keep in mind that this synchronization can take time.
+## Included files
 
-## Continuous integration
+The following template main files exist:
 
-On the left side-bard there is a menu called CD/CD. Here will appear the different pipelines triggered after each commit. The PO-GitLab CI tools will check after each commit has been pushed to the repository that the document is properly formatted for publication and using the latest version of the ATLAS Latex Template. For more details about the pipelines visit [the Pipelines wiki page](https://gitlab.cern.ch/atlas-physics-office/gitlab-integration/wikis/pipelines).
+- `atlas-paper.tex`:    ATLAS paper draft (including CONF and PUB notes)
+- `atlas-note.tex`:     ATLAS note
+- `atlas-book.tex`:     Long ATLAS document,  such as a TDR
+- `atlas-draft-cover.tex`:  Make a standalone cover for an ATLAS draft
+- `atlas-preprint-cover.tex`: Make a standalone cover for an ATLAS CERN preprint
+- `atlas-auxmat-main.tex`:  A front page for auxiliary material
+- `atlas-hepdata-main.tex`: A front page for material destined for HEPData
+  
+The ATLAS document class (`atlasdoc.cls`) and style files can be found in 
+the latex directory. The following main style files exist:
 
-## Preparing for submission
+- `atlasbiblatex.sty`:  Reference style adjustments for `biblatex`
+- `atlascover.sty`:     Make a cover (CONF note, CERN preprint, ATLAS draft)
+- `atlascontribute.sty`: List of contributors (and authors) for a document
+- `atlaspackage.sty`:   Standard packages used in ATLAS documents
+- `atlasphysics.sty`:   Useful definitions. This file simply inputs others.
 
-In order to proceed to submission a merge should be placed following [his instructions](https://gitlab.cern.ch/atlas-physics-office/gitlab-integration/wikis/mergerequest) but before doing so it is important to check the different items stated in the [Document Handling twiki page](https://twiki.cern.ch/twiki/bin/view/AtlasProtected/DocumentHandling#PO_GitLab_papers) which are mainly:
+Options can be used to specify which should be included.
 
-1. Check that the document is properly formatted following the document checklist. Most of the items are taking care by checking that the [pipelines](https://gitlab.cern.ch/atlas-physics-office/gitlab-integration/wikis/pipelines) are working properly but it is good to read them and make sure nothing is missing.
-2. Prepared the [Metadata.txt](https://twiki.cern.ch/twiki/bin/view/AtlasProtected/MetadataPreparation) file. This file can be either added to the project and linked in the merge request or attached directly to the merge request itself.
-3. Check that the figures and tables webpages tarball will be properly generated. This is done in the `PO-*` pipelines automatically after the merge request is accepted by Physics Office but it is good if editors can test it first following the instructions in the [wiki page](https://gitlab.cern.ch/atlas-physics-office/gitlab-integration/wikis/pipelines#po-pipelines).
-4. Finally [place the merge request.](https://gitlab.cern.ch/atlas-physics-office/gitlab-integration/wikis/mergerequest).
+Documentation can be found in the doc directory.
+
+- `atlas-latex.pdf`:    Guide to the use of the ATLAS document templates and styles
+- `atlas-bibtex.pdf`:   Guide to references and BibTeX in ATLAS
+- `atlas-physics.pdf`:  Symbols defined in `atlasphysics.sty`
+- `atlas-tables.pdf`:   Some guidelines and help for tables  
+
+More detailed information about the package can be found under:
+<https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PubComLaTeX>
+
+## How to use
+
+The general idea is that, for each document, this package should be cloned into a new directory.
+It is assumed that all style files are in a directory latex, which is a subdirectory of 
+the one in which the main document sits.
+
+The latex subdirectory can of course be a link to a central style directory.
+
+You can use the `\ATLASLATEXPATH` variable to specify an arbitrary directory.  
+
+To make a new paper/CONF note/PUB note draft give the command:
+
+    make newpaper [BASENAME=mydocument] [TEXLIVE=YYYY]
+
+To make a new ATLAS note give the command:
+
+    make newnote [BASENAME=mydocument] [TEXLIVE=YYYY]
+
+`make new` is an alias for `make newpaper`.
+
+The TeX Live version is set to 2016 by default.
+This version number should be fine for newer versions of TeX Live
+and also for an up-to-date MikTeX 2.9 installation. The command `make help` gives you a bit more assistance on which make targets exist.
+
+To add the cover pages for a paper/CONF note/PUB note when circulating it
+to the ATLAS collaboration, add the option `coverpage` to the `\documentclass`.
+
+If you want to use the templates for documents that are stored in CERN GitLab,
+but are not inside PO-GitLab and hence should not make use of the PO-GitLab CI tools,
+you should delete the file: `.gitlab-ci.yml`.
+For PO-GitLab documents, the Git repository is in a subdirectory of: https://gitlab.cern.ch/groups/atlas-physics-office/subgroups.
+
+### Running on lxplus
+
+The most common FAQ I get is why `atlaslatex` does not just compile "out of the box"?
+If you are running on `lxplus` for it to work, you MUST set your PATH correctly as follows:
+
+    export PATH=/afs/cern.ch/sw/XML/TL2016/bin/x86_64-linux:$PATH
+
+in order to use TeX Live 2016.
+TeX Live 2016 is the current version used in the Physics Office Continuous Integration.
+
+A users guide to the templates can be found in `doc/atlas_latex.pdf`. You can produce
+this document yourself (and thus test that your LaTeX setup is working)
+by giving the commands:
+
+    cd doc/atlas_latex
+    make
+
+or  
+
+    cd doc/atlas_latex
+    pdflatex atlas_latex
+    biber    atlas_latex
+    pdflatex atlas_latex
+    pdflatex atlas_latex
+
+Three other make targets are:
+
+- `make clean`: Cleans up intermediate files
+- `make cleanpdf`: Remove output pdf file
+- `make cleanall`: Also cleans up output pdf file
