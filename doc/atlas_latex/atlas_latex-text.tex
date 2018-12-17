@@ -234,6 +234,9 @@ Note that \Package{atlasdoc} has to be loaded with the option \Option{maketitle=
 and \Macro{maketitle} should be added after \verb|\begin{document}|.
 This is the default as of Version 01-07-00 of \Package{atlaslatex}.
 
+In order that the footnote and the copyright statement do not overlap,
+you may need to pass the option \Option{copyrightoffset=1em} to the \Package{atlasdoc} class.
+
 
 %-------------------------------------------------------------------------------
 \subsection{Metadata commands}
@@ -400,7 +403,7 @@ In the following the default option is in boldface.
 \item[\Option{mhchem={\normalfont true}|false}] include \Package{mhchem} before \Package{xpatch} to avoid
   an error with \TeX\ Live 2014;
 \item[\Option{abstract=true|\normalfont{false}}] the document contains an abstract.
-  This option is only needed together wth the \Option{BOOK} option,
+  This option is only needed together with the \Option{BOOK} option,
   if the book does not have an abstract;
 \item[\Option{datetop=true|{\normalfont false}}] put the date at the top of the title page;
 \item[\Option{showframe={\normalfont true}|false}] load the \Package{showframe} package, to display frames showing the boxes for text body, header, footer and margin;
@@ -447,7 +450,7 @@ The default value is set to \Option{true}.
 
 As of \Package{atlasdoc} Version 02-00-00,
 the \KOMAScript elements are used to create the title pages.
-In particular, \Macro{publishers} is used for the abtract and copyright.
+In particular, \Macro{publishers} is used for the abstract and copyright.
 The space and position for this may need to be adjusted,
 if you have a very long title. Use the options
 \Option{titleextraheight} and \Option{copyrightoffset} to make adjustments.
@@ -834,6 +837,27 @@ The definitions can be found in a separate document \File{atlas\_physics.pdf}.
 
 
 %-------------------------------------------------------------------------------
+\section{Snippets and templates for standard text}
+\label{sec:atlassnippets}
+%-------------------------------------------------------------------------------
+
+The Publication Committee provides standard texts giving examples
+for the description of the ATLAS detector, and the appropriate references,
+as well as other text snippets that may be useful to avoid too much use of ATLAS jargon.
+For example, the ATLAS detector description can be found in \File{template/atlas-detector.tex}
+
+You can find some text snippets that can be used in papers in \File{latex/atlassnippets.sty}.
+To use them, provide the \Option{snippets} option to \Package{atlasphysics}.
+Text snippets can also be found on the web pages~\cite{pubcom-snippet}.
+Comments and/or suggestions on improvements are very welcome and
+should be given to the Publication Committee.
+
+In addition, CP and analysis groups have started providing templates for supporting (INT) notes.
+These are included in a subdirectory of the \File{template} directory.
+For now (2018-10-29) there are some templates from the EXOT group.
+
+
+%-------------------------------------------------------------------------------
 \section{\texttt{atlaslatex} directories and Git or SVN}
 \label{sec:gitsvn}
 %-------------------------------------------------------------------------------
@@ -841,8 +865,9 @@ The definitions can be found in a separate document \File{atlas\_physics.pdf}.
 There is some flexibility in how you set up your directory structure for using \Package{atlaslatex}.
 By default the \Package{atlaslatex} style files are in the \File{latex} subdirectory and the
 logos are in \File{logos}. This structure assumes that you will make a separate directory tree
-for each document that you create. If you want to include these files in Git or SVN, note that you only need to add the
-\File{latex}, \File{logos} and \File{bib} directories of the \Package{atlaslatex} package to Git or SVN.
+for each document that you create.
+If you want to include these files in Git or SVN, note that you only need to add the
+\File{latex}, \File{logos} and \File{bib} directories of the \Package{atlaslatex} package to Git or SVN\@.
 In order to create a new document, you also need the \File{template} directory.
 
 If you want use a centrally installed \texttt{atlaslatex} package, then you would usually unpack the\\
@@ -859,7 +884,7 @@ Such a structure makes it very easy to switch between \Package{atlaslatex} versi
 
 
 %-------------------------------------------------------------------------------
-\section{Language editor commands}
+\section{Language editor commands}%
 \label{sec:langedit}
 %-------------------------------------------------------------------------------
 
@@ -878,9 +903,41 @@ you can set up your own macros.
 
 
 %-------------------------------------------------------------------------------
-\section{Installation of \Package{atlaslatex} in \File{texmf} tree}
+\section{Math mode macros}%
+\label{sec:math}
 %-------------------------------------------------------------------------------
+
+The correct \LaTeX\ macros for math mode are \(\textbackslash(\ldots\textbackslash)\)
+and not \(\$\ldots\$\) (which are \TeX\ primitives),
+even though the \TeX\ primitives are used by most people.
+As of Version 06-00-00 of \Package{atlaslatex}
+the standard ATLAS bibliography and template files use the correct \LaTeX\ macros and
+the documentation, example files will also be adjusted to use them.
+
+If you are using a version of \LaTeX\ from before 2015, you may have problems
+if you use the \LaTeX\ delimiters in captions and want to make as list of tables or figures.
+If this is the case, just switch to \TeX\ primitives in the caption (or subcaption).
+
+
+%-------------------------------------------------------------------------------
+\section{Scripts}%
+\label{sec:script}
+%-------------------------------------------------------------------------------
+
+Two scripts are provided in the \File{scripts} directory to help updating existing documents:
+\begin{description}
+  \item[\File{atlaslatex\_update.sh}] Script to update the \Package{atlaslatex} version
+    to the latest master version in Git.
+  \item[\File{tex\_dollars.py}] Script to change from use of \TeX\ primitive \verb|$...$|
+    to the \LaTeX\ macro \verb|\(...\)|.
+\end{description}
+Have a look at the scripts for the available options.
+
+
+%-------------------------------------------------------------------------------
+\section{Installation of \Package{atlaslatex} in \File{texmf} tree}%
 \label{sec:texmf}
+%-------------------------------------------------------------------------------
 
 As discussed above, the \texttt{atlasdoc} class and the style files can all be found in the 
 \File{latex} subdirectory. The template documents are usually set up to pick up the style files from there.
@@ -1190,8 +1247,7 @@ This is not a problem for the ATLAS preprint style as it uses a serif font for t
 %-------------------------------------------------------------------------------
 \section{Remarks on units and symbols}
 
-As discussed in the \enquote{General guidelines for ATLAS papers}~\cite{atlas-paper},
-it is highly recommended to use a units package to format your units properly.
+It is highly recommended to use a units package to format your units properly.
 The package \Package{siunitx} works very well and is the package of choice.
 Alternatives include \Package{units} and \Package{hepunits},
 which is based on \Package{SIunits}.
