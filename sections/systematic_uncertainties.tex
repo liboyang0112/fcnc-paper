@@ -127,9 +127,11 @@ The following sections describe the systematic uncertainties considered.
 \subsection{Luminosity}
 \label{sec:syst_lumi}
 
-The uncertainty in the integrated luminosity is 2.1\%, affecting the overall normalisation of
-all processes estimated from the simulation. It is derived, following a methodology similar to that detailed in Ref.~\cite{Aaboud:2016hhf}, 
-from a calibration of the luminosity scale using $x$--$y$ beam-separation scans performed in August 2015 and May 2016.
+The uncertainty in the integrated luminosity is 2.1\%, affecting the overall normalisation of all processes estimated from the simulation. 
+%It is derived, following a methodology similar to that detailed in Ref.~\cite{Aaboud:2016hhf}, 
+%from a calibration of the luminosity scale using $x$--$y$ beam-separation scans performed in August 2015 and May 2016.
+It is derived, following a methodology similar to that detailed in Ref.~\cite{Aaboud:2016hhf}, and using the LUCID-2 detector 
+for the baseline luminosity measurements \cite{Avoni:2018iuv}, from a calibration of the luminosity scale using $x$--$y$ beam-separation scans.
 
 \subsection{Reconstructed objects}
 \label{sec:syst_objects}
@@ -155,7 +157,7 @@ are propagated to $\met$. Additional uncertainties originating from the modellin
 of the underlying event, in particular its impact on the $\pt$ scale and resolution 
 of unclustered energy, are negligible.
 
-Efficiencies to tag jets from $b$- and $c$-quarks in the simulation are corrected to match the efficiencies in data by $\pt$-dependent factors,
+Efficiencies to tag $b$-jets and $c$-jets in the simulation are corrected to match the efficiencies in data by $\pt$-dependent factors,
 whereas the light-jet efficiency is scaled by $\pt$- and $\eta$-dependent factors.
 The $b$-jet efficiency is measured in a data sample enriched in $\ttbar$ events~\cite{Aaboud:2018xwy}, while the $c$-jet efficiency is measured
 using $\ttbar$ events~\cite{ATLAS-CONF-2018-001} or $W$+$c$-jet events~\cite{Aad:2015ydr}. 
@@ -245,14 +247,16 @@ between $t\bar{t}$ and $tW$ at NLO is assessed by comparing
 the nominal sample, which uses the diagram removal scheme~\cite{Frixione:2008yi}, with an alternative sample
 using the diagram subtraction scheme~\cite{Frixione:2008yi}.
 
-Uncertainties of the diboson background normalisation include 5\% from the NLO theory cross sections~\cite{Campbell:1999ah},
+Uncertainties of the diboson background normalisation include 5\% from the NLO theory cross sections~\cite{Campbell:1999ah,Campbell:2011bn},
 as well as an additional 24\% normalisation uncertainty added in quadrature for each additional inclusive jet-multiplicity bin, based on a 
 comparison among different algorithms for merging LO matrix elements and parton showers~\cite{Alwall:2007fs}
 (it is assumed that two jets originate from the $W/Z$ decay, as in $WW/WZ \to \ell \nu jj$). 
 Therefore, the total normalisation uncertainty is $5\% \oplus \sqrt{N-2}\times 24\%$, where $N$ is the selected jet multiplicity,  
-34\%, 42\%, and 48\%, for events with exactly 4 jets, exactly 5 jets, and $\geq$6 jets, respectively.
+resulting in 34\%, 42\%, and 48\%, for events with exactly 4 jets, exactly 5 jets, and $\geq$6 jets, respectively. 
 Recent comparisons between data and {\sherpa}~2.1.1 for $WZ(\to \ell\nu\ell\ell) + \geq$4 jets show
 agreement within the experimental uncertainty of approximately 40\%~\cite{Aaboud:2016yus}, which further justifies the above uncertainty.
+Given the very small contribution of this background to the total prediction, the final result is not affected by the assumed modelling
+uncertainties.
 
 Uncertainties of the $\ttbar V$ and $\ttbar H$ cross sections are 15\% and $+10\%$/$-13\%$, respectively,
 from the uncertainties of their respective NLO theoretical cross sections~\cite{Campbell:2012dh,Garzelli:2012bn,deFlorian:2016spz}. 
@@ -260,7 +264,7 @@ from the uncertainties of their respective NLO theoretical cross sections~\cite{
 Uncertainties of the data-driven multijet background in the $\Hbb$ search include
 contributions from the limited size of the data sample, particularly at high jet and $b$-tag multiplicities, as 
 well as from the uncertainty in the rate of fake leptons, estimated in 
-different control regions (e.g.\ selected with a requirement on either the maximum $\met$ or $\mtw$). 
+different control regions (e.g.\ selected with a upper requirement on either $\met$ or $\mtw$). 
 A combined normalisation uncertainty of 50\% due 
 to all these effects is assigned, which is taken as correlated across jet
 and $b$-tag multiplicity bins, but uncorrelated between electron and muon channels. 
