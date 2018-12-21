@@ -50,7 +50,8 @@
 % See doc/atlas_physics.pdf for a list of the defined symbols.
 % Default options are:
 %   true:  journal, misc, particle, unit, xref
-%   false: BSM, heppparticle, hepprocess, hion, jetetmiss, math, process, other, texmf
+%   false: BSM, heppparticle, hepprocess, hion, jetetmiss, math, process,
+%          other, snippets, texmf
 % See the package for details on the options.
 
 % Files with references for use with biblatex.
@@ -108,9 +109,8 @@ The ATLAS detector~\cite{PERF-2007-01} ...
 \label{sec:analysis}
 %-------------------------------------------------------------------------------
 
-You can find some text snippets that can be used in papers in \texttt{template/atlas-snippets.tex}.
-Some of the snippets need the \texttt{jetetmiss} option passed to \texttt{atlasphysics}.
-%\input{atlas-snippets}
+You can find some text snippets that can be used in papers in \texttt{latex/atlassnippets.sty}.
+To use them, provide the \texttt{snippets} option to \texttt{atlasphysics}.
 
 
 %-------------------------------------------------------------------------------

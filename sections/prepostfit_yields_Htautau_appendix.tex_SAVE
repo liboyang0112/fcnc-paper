@@ -1,0 +1,124 @@
+%-------------------------------------------------------------------------------
+\section{Pre-fit and post-fit event yields in the $\Htautau$ search}
+\label{sec:prepostfit_yields_Htautau_appendix}
+%-------------------------------------------------------------------------------
+
+Table~\ref{tab:Htautau_Prefit_Yields_Unblind} presents the observed and predicted yields in each of the analysis regions 
+for the $\Htautau$ search before the fit to data. 
+Tables~\ref{tab:Htautau_Postfit_Yields_Unblind_Hc} and~\ref{tab:Htautau_Postfit_Yields_Unblind_Hu} present the observed and predicted yields 
+in each of the analysis regions after the fit to the data under the signal-plus-background hypothesis, assuming 
+$\Hc$ and $\Hu$ as signal, respectively.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+\small
+\begin{center}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+ & $\lephad$ 3j & $\lephad$ $\geq$4j & $\hadhad$ 3j &  $\hadhad$ $\geq$4j \\
+\hline
+$\Hc$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$\Hu$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Fake $\tauhad$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$\ttbar$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$Z \to \tau\tau$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$Z \to ee, \mu\mu$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+Diboson & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Total background & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Data & $$ & $$ & $$ & $$\\
+\hline\hline    
+\end{tabular}
+%%\\
+%\vspace{0.2cm}
+
+%
+\end{center}
+%\vspace{-0.5cm}
+\caption{
+$\Htautau$ search: Predicted and observed yields in each of the analysis regions considered.
+The prediction is shown before the fit to data. Also shown are the signal expectations for 
+$\Hc$ and $\Hu$ assuming $\BR(t\to Hc)=1\%$ and $\BR(t\to Hu)=1\%$ respectively.
+The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties in the yields.
+}
+\label{tab:Htautau_Prefit_Yields_Unblind}
+\end{table} 
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+\small
+\begin{center}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+ & $\lephad$ 3j & $\lephad$ $\geq$4j & $\hadhad$ 3j &  $\hadhad$ $\geq$4j \\
+\hline
+$\Hc$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Fake $\tauhad$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$\ttbar$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$Z \to \tau\tau$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$Z \to ee, \mu\mu$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+Diboson & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Total & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Data & $$ & $$ & $$ & $$\\
+\hline\hline    
+\end{tabular}
+%%\\
+%\vspace{0.2cm}
+
+%
+\end{center}
+%\vspace{-0.5cm}
+\caption{
+$\Htautau$ search: Predicted and observed yields in each of the analysis regions considered.
+The background prediction is shown after the fit to data under the signal-plus-background hypothesis 
+(assuming $\Hc$ as signal).
+The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties on the yields, 
+computed taking into account correlations among nuisance parameters and among processes.
+}
+\label{tab:Htautau_Postfit_Yields_Unblind_Hc}
+\end{table} 
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+\small
+\begin{center}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+ & $\lephad$ 3j & $\lephad$ $\geq$4j & $\hadhad$ 3j &  $\hadhad$ $\geq$4j \\
+\hline
+$\Hu$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Fake $\tauhad$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$\ttbar$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$Z \to \tau\tau$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+$Z \to ee, \mu\mu$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+Diboson & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Total & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$ & $$ $\pm$ $$\\
+\hline
+Data & $$ & $$ & $$ & $$\\
+\hline\hline    
+\end{tabular}
+%%\\
+%\vspace{0.2cm}
+
+%
+\end{center}
+%\vspace{-0.5cm}
+\caption{
+$\Htautau$ search: Predicted and observed yields in each of the analysis regions considered.
+The background prediction is shown after the fit to data under the signal-plus-background hypothesis 
+(assuming $\Hu$ as signal).
+The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties on the yields, 
+computed taking into account correlations among nuisance parameters and among processes.
+}
+\label{tab:Htautau_Postfit_Yields_Unblind_Hu}
+\end{table} 
+%%%%%%%%%%%%%%%%%%%%%%%%

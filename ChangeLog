@@ -1,3 +1,31 @@
+2018-11-30  Ian Brock  <Ian.Brock@cern.ch>
+	* Tag as version 06-00-00.
+	* Number and unit spacing in bib files changed to ~ instead of \;.
+	* Use \text instead of \mbox, \textrm, \mathrm in bib files.
+	* Use \(...\) instead of $...$ in template and bib files.
+	* Use firstinits instead of giveninits as biblatex option for TeX Live < 2016 instead of 2015.
+	* Moved atlaslatex_update.sh script to scripts subdirectory.
+	* Added a script tex_dollars.py to convert $...$ to \(...\).
+
+2018-10-29  Ian Brock  <Ian.Brock@cern.ch>
+	* Tag as version 05-09-00.
+	* September updates of publications.
+	* Add INT note templates for EXOT group. These are a WIP and subject to further change.
+	* Updated acknowledgements.
+2018-10-11  Ian Brock  <Ian.Brock@cern.ch>
+	* Tag as version 05-08-00.
+	* July and August updates of publications.
+	* A few tweaks to box sizes to get the copyright more often in the right place.
+	* BASENAME should be set correctly if Makefile is overwritten via atlaslatex_update.sh.
+	* Added bib files ATLAS-useful.bib and ATLAS-SUSY.bib.
+	* Start adding text snippets to new atlassnippets.sty style file.
+	* Use latexmk to make documentation.
+	* Changed instructions for references for big collaborations (only collaboration name).
+	* Add microtype package to standard packages that are included.
+	* Moved atlas_paper to atlaslatex-admin, as the ATLAS Style Guide should contain everything.
+2018-08-02  Ian Brock  <Ian.Brock@cern.ch>
+	* Tag as version 05-07-00.
+	* May and June updates of publications.
 2018-05-15  Ian Brock  <Ian.Brock@cern.ch>
 	* Tag as version 05-06-00.
 	* April updates of publications.

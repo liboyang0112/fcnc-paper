@@ -1,10 +1,10 @@
 %-------------------------------------------------------------------------------
 % This file provides a skeleton ATLAS paper.
 %-------------------------------------------------------------------------------
-% \pdfoutput=1
+\pdfoutput=1
 % The \pdfoutput command is needed by arXiv/JHEP/JINST to ensure use of pdflatex.
 % It should be included in the first 5 lines of the file.
-% \pdfinclusioncopyfonts=1
+\pdfinclusioncopyfonts=1
 % This command may be needed in order to get \ell in PDF plots to appear. Found in
 % https://tex.stackexchange.com/questions/322010/pdflatex-glyph-undefined-symbols-disappear-from-included-pdf
 %-------------------------------------------------------------------------------
@@ -13,7 +13,10 @@
 % Use this variant if the files are in a central location, e.g. $HOME/texmf.
 % \newcommand*{\ATLASLATEXPATH}{}
 %-------------------------------------------------------------------------------
-\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+\documentclass[cernpreprint, PAPER, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%\documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%\documentclass[CONF, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
 % The language of the document must be set: usually UKenglish or USenglish.
 % british and american also work!
 % Commonly used options:
@@ -33,7 +36,7 @@
 
 %-------------------------------------------------------------------------------
 % Extra packages:
-\usepackage{\ATLASLATEXPATH atlaspackage}
+\usepackage[block=none]{\ATLASLATEXPATH atlaspackage}
 % Commonly used options:
 %  biblatex=true|false   Use biblatex (default) or bibtex for the bibliography.
 %  backend=bibtex        Use the bibtex backend rather than biber.
@@ -55,7 +58,7 @@
 
 % Files with references for use with biblatex.
 % Note that biber gives an error if it finds empty bib files.
-% \addbibresource{.bib}
+\addbibresource{ANA-TOPQ-2017-07-PAPER.bib}
 \addbibresource{bib/ATLAS.bib}
 \addbibresource{bib/CMS.bib}
 \addbibresource{bib/ConfNotes.bib}
@@ -64,15 +67,18 @@
 % Paths for figures - do not forget the / at the end of the directory name.
 \graphicspath{{logos/}{figures/}}
 
-% Add you own definitions here (file -defs.sty).
-\usepackage{-defs}
+% Add you own definitions here (file ANA-TOPQ-2017-07-PAPER-defs.sty).
+\usepackage{ANA-TOPQ-2017-07-PAPER-defs}
+
+% for special fonts
+\pdfinclusioncopyfonts=1 
 
 %-------------------------------------------------------------------------------
 % Generic document information
 %-------------------------------------------------------------------------------
 
 % Title, abstract and document
-\input{-metadata}
+\input{ANA-TOPQ-2017-07-PAPER-metadata}
 % Author and title for the PDF file
 \hypersetup{pdftitle={ATLAS document},pdfauthor={The ATLAS Collaboration}}
 
@@ -83,68 +89,55 @@
 
 \maketitle
 
-\tableofcontents
+%\tableofcontents
 
+%Introduction
+\input{sections/introduction}
 
-%-------------------------------------------------------------------------------
-\section{Introduction}
-\label{sec:intro}
-%-------------------------------------------------------------------------------
+% ATLAS detector
+\input{sections/detector}
 
-Place your introduction here.
+% Object reconstruction
+\input{sections/objects}
 
+% Data sample and event preselection
+\input{sections/data_presel}
 
-%-------------------------------------------------------------------------------
-\section{ATLAS detector}
-\label{sec:detector}
-%-------------------------------------------------------------------------------
+%% Signal and background modelling
+\input{sections/signal_background_modeling}
 
-The ATLAS detector~\cite{PERF-2007-01} ...
-% \input{atlas-detector}
+% Strategy Hbb
+\input{sections/strategy_Hbb} 
+\FloatBarrier
 
+% Strategy Htautau
+\input{sections/strategy_Htautau} 
+\FloatBarrier
 
-%-------------------------------------------------------------------------------
-\section{Analysis}
-\label{sec:analysis}
-%-------------------------------------------------------------------------------
+% Systematic uncertainties
+\input{sections/systematic_uncertainties} 
 
-You can find some text snippets that can be used in papers in \texttt{template/atlas-snippets.tex}.
-Some of the snippets need the \texttt{jetetmiss} option passed to \texttt{atlasphysics}.
-%\input{atlas-snippets}
+% Statistical analysis
+\input{sections/statistical_analysis}
 
+% Results
+\input{sections/results}
 
-%-------------------------------------------------------------------------------
-\section{Results}
-\label{sec:result}
-%-------------------------------------------------------------------------------
+\FloatBarrier
 
-Place your results here.
-
-% All figures and tables should appear before the summary and conclusion.
-% The package placeins provides the macro \FloatBarrier to achieve this.
-% \FloatBarrier
-
-
-%-------------------------------------------------------------------------------
-\section{Conclusion}
-\label{sec:conclusion}
-%-------------------------------------------------------------------------------
-
-Place your conclusion here.
-
+% Conclusion
+\input{sections/conclusion}
 
 %-------------------------------------------------------------------------------
 \section*{Acknowledgements}
 %-------------------------------------------------------------------------------
-
-%\input{acknowledgements/Acknowledgements}
-
-The \texttt{atlaslatex} package contains the acknowledgements that were valid
-at the time of the release you are using.
-These can be found in the \texttt{acknowledgements} subdirectory.
-When your ATLAS paper or PUB/CONF note is ready to be published,
-download the latest set of acknowledgements from:\\
-\url{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PubComAcknowledgements}
+\input{acknowledgements/Acknowledgements}
+%The \texttt{atlaslatex} package contains the acknowledgements that were valid
+%at the time of the release you are using.
+%These can be found in the \texttt{acknowledgements} subdirectory.
+%When your ATLAS paper or PUB/CONF note is ready to be published,
+%download the latest set of acknowledgements from:\\
+%\url{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PubComAcknowledgements}
 
 
 %-------------------------------------------------------------------------------
@@ -153,9 +146,13 @@ download the latest set of acknowledgements from:\\
 \part*{Appendix}
 \addcontentsline{toc}{part}{Appendix}
 %-------------------------------------------------------------------------------
-
-In a paper, an appendix is used for technical details that would otherwise disturb the flow of the paper.
-Such an appendix should be printed before the Bibliography.
+%In a paper, an appendix is used for technical details that would otherwise disturb the flow of the paper.
+%Such an appendix should be printed before the Bibliography.
+\input{sections/prepostfit_yields_Hbb_appendix}
+\FloatBarrier
+\input{sections/prepostfit_yields_Htautau_appendix}
+\FloatBarrier
+\clearpage
 
 %-------------------------------------------------------------------------------
 % If you use biblatex and either biber or bibtex to process the bibliography
@@ -168,12 +165,14 @@ Such an appendix should be printed before the Bibliography.
 
 %-------------------------------------------------------------------------------
 % Auxiliary material - comment out the following line if you do not have any
-\include{-auxmat}
+\include{ANA-TOPQ-2017-07-PAPER-auxmat}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
 % Extra tables etc. for HepData - comment in the following line if you have any
 % \include{-hepdata}
 %-------------------------------------------------------------------------------
+
+\clearpage \input{atlas_authlist} 
 
 \end{document}
