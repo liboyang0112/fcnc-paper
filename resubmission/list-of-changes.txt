@@ -1,0 +1,18 @@
+
+Dear Editor,
+
+following the comments from the referee, the following changes were made on the manuscript:
+
+Section 1, 1st paragraph:
+Added the following references:  [14], [16], [17] and [21]-[25].
+
+Section 7.2, 2nd paragraph:
+Added the following sentence:
+“The discrimination of a given variable was quantified by the ``separation" and ``importance" measures provided by the TMVA package [103].”
+ Section 8.2, 4th paragraph:
+Added the following sentence:
+“Since the fraction of signal and background in this kinematic regime is very small, these uncertainties have a negligible impact in the analyses. Finally, an uncertainty related to the application of $c$-jet scale factors to $\tau$-jets is considered, which also has a negligible impact.”
+
+Best regards,
+
+The ATLAS Collaboration
