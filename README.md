@@ -1,3 +1,4 @@
+
 # ATLAS LaTeX
 
 ATLAS LaTeX class, style files and templates to typeset notes and papers.
