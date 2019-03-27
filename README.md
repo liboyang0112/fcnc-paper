@@ -105,3 +105,5 @@ Three other make targets are:
 - `make clean`: Cleans up intermediate files
 - `make cleanpdf`: Remove output pdf file
 - `make cleanall`: Also cleans up output pdf file
+
+---
