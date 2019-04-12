@@ -1,0 +1,25 @@
+
+Dear Editor,
+
+following the comments from the referee, the following changes were made on the manuscript:
+
+Section 1, 2nd paragraph:
+Added the following sentences:
+“The simplifying assumption of SM-like Higgs boson branching ratios is motivated by the fact that measurements of the flavour-diagonal Higgs boson couplings by the ATLAS and CMS collaborations are in agreement with the SM prediction within about 10\%~\cite{Khachatryan:2016vau,Sirunyan:2018koj}. Furthermore, typical beyond-the-SM scenarios that predict significant enhancements to $\BR(t\to Hq)$, also predict modifications to the Higgs boson branching ratios at the few percent level or below, well beyond the current experimental precision.”
+
+Added the following references: [32] and [33].
+
+Section 1, last paragraph:
+Added the following sentences:
+“The combination is performed after verifying the overall consistency of the results obtained by the different searches, which exploit very different experimental signatures and thus are affected by different backgrounds and related systematic uncertainties. By combining all searches, the expected sensitivity is improved by about a factor of two relative to the most sensitive individual results.”
+
+Sect. 10.3, 1st paragraph:
+Rephrased the following sentence from:
+“Since all searches, with the exception of the $\Hbb$ search, are dominated by the data statistics…”
+to:
+“Since all searches, with the exception of the $\Hbb$ search, are dominated by the data statistical uncertainty,...”
+
+Best regards,
+
+The ATLAS Collaboration
+
