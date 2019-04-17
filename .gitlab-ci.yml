@@ -27,8 +27,9 @@ stages:
 # -- VARIABLES --
 variables:
   DOCNAME: ANA-TOPQ-2017-07-PAPER
-  MAND_TAG: 4.0.0
+  MAND_TAG: 5.0.1
   FROZEN: newest
+  JOBS_SCRIPTS_PATH: "/usr/share/scripts"
   IMAGE_POTL: gitlab-registry.cern.ch/atlas-physics-office/gitlab-integration/potl-2016
 # -- END OF VARIABLES --
 
@@ -40,34 +41,32 @@ variables:
   only:
     - /^PO-.*/
 
-.version-check: &version-check
-  script:
-    - pogitlab --validate --doc $DOCNAME
-  artifacts:
-    paths:
-      - gitlab-ci.yml.update
-    when: on_failure
+.preparing_script: &preparing_script
+  before_script:
+    - DOCNAME=$DOCNAME
+    - export DOCNAME
 
-
-.build_template: &build_template
-  stage: Build
+.cleanup: &cleanup
   before_script:
     - rm -rf *.bbl *.bak *.aux .*bcf *.blg .*.lb *.fdb_latexmk *.fls
     - rm -rf *.log *.out *.run.xml *.spl *.synctex.gz *.toc *.lof *.lot *.synctex.gz
+
+.build_template: &build_template
+  stage: Build
+  <<: *cleanup
   script:
     - make BASENAME=$DOCNAME
 
 .build_po: &build_po
   stage: Build
-  before_script:
-    - rm -rf *.bbl *.bak *.aux .*bcf *.blg .*.lb *.fdb_latexmk *.fls
-    - rm -rf *.log *.out *.run.xml *.spl *.synctex.gz *.toc *.lof *.lot *.synctex.gz
+  <<: *cleanup
   script:
     - cd flattened
     - make BASENAME=$DOCNAME
     - rm Makefile
     - rm -rf *.bak *.aux .*bcf *.blg .*.lb *.fdb_latexmk *.fls
     - rm -rf *.log *.out *.run.xml *.spl *.synctex.gz *.toc *.lof *.lot *.synctex.gz
+
   dependencies:
     - Clean Auxmat
   artifacts:
@@ -95,7 +94,12 @@ variables:
 
 Version check:
   stage: Preparation
-  <<: *version-check
+  script:
+    - pogitlab --validate --doc $DOCNAME
+  artifacts:
+    paths:
+      - gitlab-ci.yml.update
+    when: on_failure
 
 # ######################################
 # Run needed checks for the Technical checks
@@ -351,7 +355,7 @@ Figures:
     paths:
       - flattened
       - copyFigures.log
-  
+
 Tables Texlive:
   stage: Organize
   image: $IMAGE_POTL
@@ -377,15 +381,11 @@ Clean Auxmat:
 arXiv tar TL16:
   stage: Packaging
   <<: *onlypo
+  <<: *preparing_script
   dependencies:
     - "Build 2016"
   script:
-    - cd flattened
-    - rm $DOCNAME.pdf
-    - rm figaux*
-    - tar -czvf $DOCNAME.tar.gz $(ls | grep -v .txt | grep -v tab_)
-    - cd ..
-    - mv flattened/$DOCNAME.tar.gz publicationTL2016.tar.gz
+    - $JOBS_SCRIPTS_PATH/arxiv_tar.sh
   artifacts:
     expire_in: 1 week
     paths:
@@ -395,33 +395,26 @@ arXiv tar TL16:
 APS tar TL17:
   stage: Packaging
   <<: *onlypo
+  <<: *preparing_script
   dependencies:
     - "Build 2017"
   script:
-    - cd flattened
-    - rm $DOCNAME.pdf
-    - rm figaux*
-    - tar -czvf $DOCNAME.tar.gz $(ls | grep -v .txt | grep -v tab_)
-    - cd ..
-    - mv flattened/$DOCNAME.tar.gz publicationTL2017.tar.gz
+    - $JOBS_SCRIPTS_PATH/aps_tar.sh
   artifacts:
     expire_in: 1 week
     paths:
       - flattened
-      - publicationTL2017.tar.gz      
+      - publicationTL2017.tar.gz
 
 Webpage tar:
   stage: Packaging
   <<: *onlypo
+  <<: *preparing_script
   dependencies:
     - "Build 2016"
     - "Build 2017"
   script:
-    - cd flattened
-    - rm $DOCNAME.pdf
-    - tar -czvf $DOCNAME.tar.gz {tab,fig}*{txt,pdf}
-    - cd ..
-    - mv flattened/$DOCNAME.tar.gz webpages.tar.gz
+    - $JOBS_SCRIPTS_PATH/webpages_tar.sh
   artifacts:
     expire_in: 1 week
     paths:
