@@ -1,0 +1,49 @@
+
+Dear reviewer,
+
+Thanks for your useful comments, which helped to improve the clarity of the paper.
+Please find our replies below, starting by “——>”.
+
+Best regards,
+
+The ATLAS Collaboration                       
+            
+
+I reviewed the new draft and the responses provided by the authors. I am satisfied with the improvements in the draft and many of the answers offered by the authors. But there are still a few points that deserve further clarification:
+
+- Concerning the answer to my first question, the authors explained very well that the SM-like assumption for the Higgs Branching Ratios is safe in the context of the considered simplified model. I would like this explanation to translate into a clarifying modification of the text, so that this fact is spelled out. 
+
+----> The following clarifying statements have been added in the 2nd paragraph of Sect. 1:
+
+“The simplifying assumption of SM-like Higgs boson branching ratios is motivated by the fact that measurements of the flavour-diagonal Higgs boson couplings by the ATLAS and CMS collaborations are in agreement with the SM prediction within about 10\%~\cite{Khachatryan:2016vau,Sirunyan:2018koj}. Furthermore, typical beyond-the-SM scenarios that predict significant enhancements to $\BR(t\to Hq)$, also predict modifications to the Higgs boson branching ratios at the few percent level or below, well beyond the current experimental precision.”
+
+
+
+- Once I take the answer to the previous comment for granted, I am puzzled by the answer to the following point. I was just convinced that the BRs of the Higgs in the considered scenario are SM-like and then, when I raise a question about the small impact of the presented measurement (I am trying to understand if this paper meets the JHEP standard or not, which is part of my referee role) I am told that every BR should be tested. I can agree with that, if one expects some final-state-related deviation. But I was told that this is not the case in the considered scenario. I see two options here: or the two provided answers are contradicting each other or (as I believe) it is interesting to perform these studies beyond the stringent assumptions of the considered simplified model. But then, if this is the case, the paper is missing to consider an alternative scenario where the predictions of Higgs BR values are broken and BSM effects are enhanced in the final states considered in this paper. To me, this is the most relevant point left. 
+
+----> There is no contradiction between the answers. As explained in the first set of replies, the assumption of SM-like Higgs boson branching ratios is well motivated and we would not consider it particularly stringent. The reason to perform the search for different Higgs boson decay modes is (we reproduce the original answer): “... to assess the overall consistency of the results obtained, as well as to improve the sensitivity through their combination. By combining all searches, the expected sensitivity is improved by about a factor of two relative to the most sensitive published individual searches.”. The combined result reported in this paper is the most stringent limit available from the LHC to date, and thus we believe by itself already meets the JHEP standard. Leaving aside the improvement in sensitivity through the combination, the consistency check is important since the different searches have very different experimental signatures, and thus are affected by different backgrounds and systematic uncertainties. If a significant deviation is seen in one of the searches (again, this would be unrelated to the Higgs branching ratios, which are expected to be very SM-like), one would like to know whether it’s also seen in the other searches, to determine its consistency with a FCNC signal interpretation. To make this clearer, the following sentences were added at the end of Sect. 1:
+
+“The combination is performed after verifying the overall consistency of the results obtained by the different searches, which exploit very different experimental signatures and thus are affected by different backgrounds and related systematic uncertainties. By combining all searches, the expected sensitivity is improved by about a factor of two relative to the most sensitive individual results.”
+
+
+
+- Concerning my question of the BDT, I agree with the authors that the final score of the BDT is well modelled. I disagree on their statement that BDT training is better when no cut on the quantities is applied. This is true when the input features and the correlations among them are correctly modelled. Here, we might have a hint of the opposite and the fact that the score distribution looks safe is not sufficient to make a statement in general. First of all, we are looking at an integrated projection across the full dataset, that could hide the effect. Or, it could just be that the incorrectly modelled feature has small impact/discrimination power (in which case, why was it added to start with?). To solve this point, I ask the authors to select the events in the [40, 80] slice of the feature under discussion and make a plot of the BDT score for data and Monte Carlo events.
+
+----> As indicated in the previous set of replies, the discrepancy in the low mττ region was also observed in the dedicated control region for the fake τhad background (see attached Figs. 1a and 1b). The difference observed in this control region was assigned as a systematic uncertainty to the fake τhad background in the signal region. Since the incorrectly modelled feature affects a small fraction of the total number of events (<10%), is far from where the signal is expected, and a systematic uncertainty was assigned, we decided not to exclude those events from the analysis. Ultimately, the mismodeled events are expected to have a negligible impact on the result. This is demonstrated in the attached Figs. 2a and 2b which, as requested by the referee, display the BDT score of the subset of events with mττ<80 GeV. As it can be appreciated, they are all concentrated in the first bin of the BDT, where they represent ~20% of the total number of events in that bin. Since the discrepancy for this subset amounts to 30-40%, the total effect on the bin content is at the level of 6-8%, well within the assigned systematic uncertainty (see Figs. 10a and 10b in the paper).
+
+To conclude, we would like to repeat again the statements made in the first reply:
+“ As shown in Fig. 10, the BDT output distribution is well modeled both before and after the fit. Also, as indicated in Sect. 9, one of the tests performed was to verify that the fit is able to correctly determine the strength of a simulated signal injected into the real data. Therefore, no significant bias was expected nor observed. Since a possible bias due to this mismodelling is well under control there was no reason to apply a cut on the variable. “
+
+Figure 1: The distributions of mττ in the fake τhad control regions comparing data to the background prediction (denoted nOS). (a) ττ, 3j channel. (b) ττ, 4j channel.
+
+Figure 2: The distributions of BDT score for events with mττ<80 GeV, comparing data to the background prediction. (a) ττ, 3j channel. (b) ττ, 4j channel. Only statistical uncertainties in the background prediction are displayed. 
+
+
+
+- I raised a point about page 29 and the use of ”dominated by statistics” for the result. Now that the authors confirm that what they mean is that the uncertainty (not the result) is dominated by statistics, I would ask them to rephrase the sentence to make it clear while avoiding to use ”statistics dominated result” which is jargon. The word ”uncertainty” should appear somewhere. This is more to help non expert readers. I was giving for granted that the authors were going to change the text after my question. I should have been more explicit.
+
+----> You are correct, it should have been changed. The 1st sentence in Sect. 10.3 has been rephrased to:
+
+“Since all searches, with the exception of the $\Hbb$ search, are dominated by the data statistical uncertainty,...”
+
+
