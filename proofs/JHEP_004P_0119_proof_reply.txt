@@ -8,7 +8,7 @@ Figures 11, 12, 13 and 14: missing $\ell$ latex symbol in "H->WW*,tautau,ZZ* (2l
 Tables 7, 8 and 9: add coma in analysis region name (e.g. "tau_lep tau_had 3j" -> "tau_lep tau_had, 3j"). See attached snapshot of Table 7 as an example. Fix also in Tables 8 and 9.
 
 References:
-[2] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
+[3] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
 [4] add author names after "collaboration":  "collaboration, K. Agashe et al., Working Group...."
 [19] remove extra space in title: "H iggs" -> "Higgs"
 [32] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
