@@ -1,0 +1,22 @@
+General comments and corrections
+================================
+
+page 2, para 1, line 13: "some scenario" -> "some scenarios"
+
+Figures 11, 12, 13 and 14: missing $\ell$ latex symbol in "H->WW*,tautau,ZZ* (2lSS, 3l)" y-axis label. See attached snapshot of Fig. 11 as an example. Fix also in Figs 12, 13 and 14.
+
+Tables 7, 8 and 9: add coma in analysis region name (e.g. "tau_lep tau_had 3j" -> "tau_lep tau_had, 3j"). See attached snapshot of Table 7 as an example. Fix also in Tables 8 and 9.
+
+References:
+[2] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
+[4] add author names after "collaboration":  "collaboration, K. Agashe et al., Working Group...."
+[19] remove extra space in title: "H iggs" -> "Higgs"
+[32] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
+[36] add active link to "ATLAS-TDR-19" (url = "https://cds.cern.ch/record/1291633"), as in [40]
+[37] add active link to "ATLAS-TDR-19-ADD-1" (url = "https://cds.cern.ch/record/1451888"), as in [40]
+[55] "run-2" -> "Run-2"
+[96] add author names after "collaboration":  "collaboration, D. de Florian et al., Handbook...."
+[100] add author names after "collaboration":  "collaboration, S. Agostinelli et al., GEANT4..."
+[118] use title of published paper: "An update on..." -> "Update on..."
+[123] remove extra spaces between in "ttW" and "ttZ" in title. See snapshop of Ref. [123] as an example.
+[125] add link to manual: "url = "http://roofit.sourceforge.net".
