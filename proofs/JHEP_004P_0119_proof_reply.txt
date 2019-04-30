@@ -4,7 +4,7 @@ General comments and corrections
 page 2, para 1, line 13: "some scenario" -> "some scenarios"
 
 Figures 11, 12, 13 and 14: 
-- an extraneous dot was found to the right of “H->bb” in these four figures. Please replace the figures with the fixed ones (attached files POI.pdf, POI2.pdf, Limit.pdf and Limit2.pdf, respectively).
+- an extraneous dot was found to the right of “H->bb” in these four figures. Please replace the figures with the fixed ones (attached files POI.pdf, POI2.pdf, Limit.pdf and Limit2.pdf, respectively). Alternatively, just edit the previous figures are remove that dot.
 - please make sure the $\ell$ latex symbols in "H->WW*,tautau,ZZ* (2lSS, 3l)" y-axis label are shown (missing in proofs).
 
 Tables 7, 8 and 9: add coma in analysis region name (e.g. "tau_lep tau_had 3j" -> "tau_lep tau_had, 3j"). See attached snapshot of Table 7 as an example. Please fix also in Tables 8 and 9.
