@@ -1,0 +1,10 @@
+General comments and corrections
+================================
+
+Figures 11, 12, 13 and 14: 
+
+- an extraneous dot was found to the right of “H->bb” in the original figures (see problem in Fig11_snapshot.tiff; same issue is present in Figs. 12, 13 and 14)
+-> please replace these four figures with the fixed ones (attached files POI.pdf, POI2.pdf, Limit.pdf and Limit2.pdf, respectively). This was already requested in the reply to the 1st proofs.
+ 
+- after fixing a problem reported in the 1st proofs (missing $\ell$ latex symbols in "H->WW*,tautau,ZZ* (2lSS, 3l)" vertical axis label), now in the 2nd proofs the {\mathscr{B}} symbol is missing in two places: horizontal axis title and legend (see problem in Fig11_snapshot.tiff; same issue is present in Figs. 12, 13 and 14). 
+-> after having updated the figures as per the request above, please check carefully that these issues are not present in the 3rd proofs.
