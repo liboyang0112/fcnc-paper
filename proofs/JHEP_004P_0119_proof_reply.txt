@@ -1,0 +1,24 @@
+General comments and corrections
+================================
+
+page 2, para 1, line 13: "some scenario" -> "some scenarios"
+
+Figures 11, 12, 13 and 14: 
+- an extraneous dot was found to the right of “H->bb” in these four figures (see problem in Fig11_snapshot.tiff). Please replace the figures with the fixed ones (attached files POI.pdf, POI2.pdf, Limit.pdf and Limit2.pdf, respectively). Alternatively, just edit the previous figures are remove that dot.
+- please make sure the $\ell$ latex symbols in "H->WW*,tautau,ZZ* (2lSS, 3l)" y-axis label are shown (see problem in Fig11_snapshot.tiff).
+
+Tables 7, 8 and 9: add coma in analysis region name (e.g. "tau_lep tau_had 3j" -> "tau_lep tau_had, 3j"). See Table7_snapshot.tiff as an example of what it should look like. Please fix also in Tables 8 and 9.
+
+References:
+[3] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
+[4] add author names after "collaboration":  "collaboration, K. Agashe et al., Working Group...."
+[19] remove extra space in title: "H iggs" -> "Higgs"
+[32] "ATLAS, CMS collaboration" -> "ATLAS and CMS collaborations"
+[36] add active link to "ATLAS-TDR-19" (url = "https://cds.cern.ch/record/1291633"), as in [40]
+[37] add active link to "ATLAS-TDR-19-ADD-1" (url = "https://cds.cern.ch/record/1451888"), as in [40]
+[55] "run-2" -> "Run-2"
+[96] add author names after "collaboration":  "collaboration, D. de Florian et al., Handbook...."
+[100] add author names after "collaboration":  "collaboration, S. Agostinelli et al., GEANT4..."
+[118] use title of published paper: "An update on..." -> "Update on..."
+[123] remove extra spaces between in "ttW" and "ttZ" in title. See Ref123_snapshot.tiff as an example of what it should look like.
+[125] add link to manual: "url = "http://roofit.sourceforge.net".
