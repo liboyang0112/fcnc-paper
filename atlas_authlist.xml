@@ -2136,7 +2136,6 @@
     <foaf:Organization id="oau">
         <cal:orgDomain>http://www.tsu.ru/</cal:orgDomain>
         <foaf:name>Tomsk State University, Tomsk, and Moscow Institute of Physics and Technology State University, Dolgoprudny, Russia</foaf:name>
-        <cal:orgName source="spiresICN">testinggpiccofootnote</cal:orgName>
         <cal:orgName source="spiresICN">Tomsk State U; Moscow, MIPT</cal:orgName>
     </foaf:Organization>
     <foaf:Organization id="oav">
