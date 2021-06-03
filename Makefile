@@ -67,13 +67,14 @@ run_latexmk:
 # Specify the tex and bib file dependencies for running pdflatex
 # If your bib files are not in the main directory adjust this target accordingly
 #%.pdf:	%.tex *.tex bib/*.bib
-%.pdf:	%.tex *.tex *.bib
+%.pdf:	%.tex *.tex *.bib FCNCpaths.sty
 	$(PDFLATEX) $<
 	-$(BIBTEX)  $(basename $<)
 	$(PDFLATEX) $<
 	$(PDFLATEX) $<
 #-------------------------------------------------------------------------------
-
+FCNCpaths.sty:
+	./generatePath.sh
 # Default is to make a new paper
 new: newnote
 
