@@ -67,7 +67,7 @@ run_latexmk:
 # Specify the tex and bib file dependencies for running pdflatex
 # If your bib files are not in the main directory adjust this target accordingly
 #%.pdf:	%.tex *.tex bib/*.bib
-%.pdf:	%.tex *.tex *.bib FCNCpaths.sty
+%.pdf:	%.tex *.tex *.bib FCNCpaths.sty sections/*
 	$(PDFLATEX) $<
 	-$(BIBTEX)  $(basename $<)
 	$(PDFLATEX) $<
