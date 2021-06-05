@@ -50,6 +50,7 @@
 
 % Useful macros
 \usepackage{\ATLASLATEXPATH atlasphysics}
+\usepackage{multirow}
 % See doc/atlas_physics.pdf for a list of the defined symbols.
 % Default options are:
 %   true:  journal, misc, particle, unit, xref
@@ -106,10 +107,6 @@
 %% Signal and background modelling
 \input{sections/signal_background_modeling}
 
-% Strategy Hbb
-\input{sections/strategy_Hbb} 
-\FloatBarrier
-
 % Strategy Htautau
 \input{sections/strategy_Htautau} 
 \FloatBarrier
@@ -148,8 +145,6 @@
 %-------------------------------------------------------------------------------
 %In a paper, an appendix is used for technical details that would otherwise disturb the flow of the paper.
 %Such an appendix should be printed before the Bibliography.
-\input{sections/prepostfit_yields_Hbb_appendix}
-\FloatBarrier
 \input{sections/prepostfit_yields_Htautau_appendix}
 \FloatBarrier
 \clearpage

@@ -10,11 +10,7 @@ The analysis strategy adopted in the $\Htautau$ search closely follows that deve
 
 In the $\Htautau$ search, the $\ttbar \to WbHq$ signal being probed is characterised by the presence of $\tau$-leptons from the decay of 
 the Higgs boson and at least four jets, only one of which originates from a $b$-quark.
-%In the $\Htautau$ search, the final state signature of interest is characterised by the presence of two $\tau$-leptons from the
-%decay of the Higgs boson as well as a light-quark jet, the latter two originating from the decay of one of the top quarks. 
 If one of the $\tau$-leptons decays leptonically, an isolated electron or muon and significant $\met$ is also expected.
-%The other top quark decays into a $W$ boson and a $b$-quark, with the $W$ boson in turn decaying hadronically, resulting in 
-%three additional jets. Therefore, at least four jets are typically expected in signal events.
 However, in a significant fraction of the events the lowest-$\pt$ jet from the $W$ boson decay fails the minimum $\pt$ requirement of $30~\gev$,
 resulting in signal events with only three jets reconstructed.
 In order to optimise the sensitivity of the search, the selected events are categorised into four SRs depending 
@@ -24,8 +20,6 @@ on the number of $\taulep$ and $\had$ candidates, and on the number of jets:
 This event categorisation is primarily motivated by the different quality of the event kinematic reconstruction, depending on the amount 
 of $\met$ in the event (larger in $\lephad$ events compared with $\hadhad$ events), and whether a jet from the hadronic top-quark decay 
 is missing or not (events with exactly three jets or at least four jets).
-%This analysis adopts the event reconstruction strategy developed in Ref.~\cite{Chen:2015nta}, which is briefly summarised in the following. 
-%The event reconstruction strategy used~\cite{Chen:2015nta} is summarised in the following.
 The event kinematic reconstruction is based on the strategy used in Ref.~\cite{Chen:2015nta}, and is summarised below.
 
 Events with exactly three jets that are compatible with having a fully reconstructed hadronically decaying 
@@ -42,44 +36,6 @@ $\sqrt{\sum E_T}$, with $\sum E_T$ denoting the scalar sum of the $\pt$ of all p
 After the $\chi^2$ minimisation, the Higgs boson four-momentum, and hence its invariant mass, as well as the 
 four-momentum of the parent top quark, are determined with better resolution. Following the event kinematic reconstruction, several kinematic variables
 that discriminate between signal and background are defined. These variables are used in the multivariate analysis discussed in the next section.
-
-%To comply with the signal topology, in each event, exactly one jet should be tagged as a $b$-jet. If all jets from the top hadronic decay and the jet from $t\to Hq$, denoted as the FCNC jet, pass the jet selection, there should be at least four jets. However, some jets have a $\pt$ less than 30 GeV and may fail to pass the jet selection. The most likely missing jet is the subleading jet from the $W$ decay. These 3-jet events are still kept if the FCNC jet can be found and matched with the Higgs to reconstruct the top. It is done as follows. In the 3-jet events, if the three jets, denoted by $j_1$, $j_2$, $b$, satisfy
-%\begin{equation}
-%\chi_{Wb}^2 \equiv \left(\frac{m_{j_1 j_2}-80.4}{20}\right)^2 + \left(\frac{m_{j_1 j_2 b}-172.5}{25}\right)^2 <5,
-%\label{eq:chi2-3jet}
-%\end{equation}
-%where the mass is in GeV, the event is discarded. In these events, a good hadronic top is reconstructed, but the FCNC jet from the other top is missing.
-%
-%If Eq.~(\ref{eq:chi2-3jet}) is not satisfied, the FCNC jet is identified by the least sum of angular distances, $\Delta R_{3j}$, expressed as 
-%\begin{equation}
-%\Delta R_{3j} \equiv \Delta R(j_c ,H) + \Delta R(j_W ,b) \: ,
-%\label{eq:deltaR-3jet}
-%\end{equation}
-%where the $j_W$ denotes the jet from the $W$ decay, and the event is kept.
-%
-%For the events with at least four jets (denoted as 4-jet events), the three leading ones other than the $b$-jet are considered. Out of the three possible combinations that form the two sets of top decay products, the one with the least sum of angular distances, $\Delta R_{4j}$, is chosen, which is defined as
-%\begin{equation}
-%\Delta R_{4j} \equiv \Delta R(j_c ,H) + \Delta R(j_{1} ,b) + \Delta R(j_{2} ,b) + \Delta R(j_{1} ,j_{2}),
-%\label{eq:deltaR-4jet}
-%\end{equation}
-%where $j_{1,2}$ are the jets from the $W$ decay. No explicit $c$-tagging is used, and as can be seen above, the FCNC jet is found through pure kinematic criteria such as $\Delta R$.
-%
-%The method introduced in \cite{Chen:2015nta} is used to recontruct the ditau mass and momentum by taking the tau decay kinematics into account. To determine the 4-momenta of the invisible decay products of the tau decays, the following $\chi^2$ in Eq.~\ref{eq:tautau-chi2}, based on the probability functions above and the constraints from the tau mass, the Higgs mass and the measured $\met$, is defined,
-%\begin{eqnarray}
-%\begin{array}{ll}
-%\chi^2 = & -2\ln \mathcal{P}_1 -2\ln \mathcal{P}_2 + \left( \frac{m_{\tau_1}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{\tau_2}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{H}^{\text{fit}} - 125}{\sigma_{\text{Higgs}}} \right)^2 + \\
-% & \left( \frac{E_{x,\text{miss}}^{\text{fit}} - E_{x,\text{miss}}}{\sigma_{\text{miss}}} \right)^2 + \left( \frac{E_{y,\text{miss}}^{\text{fit}} - E_{y,\text{miss}}}{\sigma_{\text{miss}}} \right)^2 ,
-%\end{array}
-%\label{eq:tautau-chi2}
-%\end{eqnarray}
-%where $\mathcal{P}_i(\Delta R)$ are the probability distributions of the angular distance of the visible and invisible decay products in the tau decay, parametrized as a function of the momentum of the tau lepton. In the $\taulep$ mode where two neutrinos are present, it is extended to be the joint probability distribution of $\Delta R$ and $m_{\text{mis}}$ with $m_{\text{mis}}$ being the invariant mass of the neutrinos, denoted by $\mathcal{P}(\Delta R, m_{\text{mis}})$. These probability density functions are obtained from the MC simulation.
-%
-%In the Eq. \ref{eq:tautau-chi2}, the free parameters scanned are the 4-momentum components of the invisible decay products for each tau decay. In the $\tauhad$ mode, only three momentum components are scanned since a single neutrino is massless. $m_{\tau_{1,2}}^{\text{fit}}$,  $m_{H}^{\text{fit}}$ and $E_{xy,\text{miss}}^{\text{fit}}$ are the calculated tau mass, Higgs mass, and missing transverse energy with the scanned parameters. The corresponding mass resolutions, $\sigma_{\tau}$ and $\sigma_{\text{Higgs}}$, are set to 1.8~GeV and 20~GeV respectively. The $\met$ resolution is parametrized as
-%\begin{equation}
-%\sigma_{\text{miss}}=13.1 + 0.50\sqrt{\Sigma E_\text{T}},
-%\label{eq:sigma-missing-E}
-%\end{equation}
-%where $\Sigma E_\text{T}$ (in GeV) is the scalar sum of transverse energy depositions of all objects and clusters. The invisible 4-momenta are obtained by minimizing the combined $\chi^2$ for each event. By adding the Higgs mass constraint term in the kinematic fit, not only is the Higgs mass resolution improved, but also the resolutions of the Higgs boson's four-momentum, and the mass of the top from which the Higgs comes.
 
 \subsection{Multivariate discriminant}
 
@@ -139,11 +95,6 @@ The BDT input variables in each SR are listed in Table~\ref{tab:mva_var} and def
 \end{equation*}
 \noindent where $\phi_\mathrm{miss}$ denotes the azimuthal angle of $\mpt$, and $\phi_1$ and $\phi_2$ denote the azimuthal angles the two $\tau$-lepton candidates 
 (the lepton and $\had$ candidate in the $\lephad$ channel, or the leading and trailing $\had$ candidates in the $\hadhad$ channel), referred to as particles 1 and 2 respectively.
-%The transverse plane is transformed such that the directions of the $\tau$-lepton decay products are 
-%rthogonal, and that the smaller angle between the $\tau$-lepton decay products defines the positive quadrant of the transformed plane. 
-%The $\met$ $\phi$ centrality is defined as the sum of the $x$ and $y$ components of the $\mpt$ unit vector in this transformed plane.
-%\item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the parallel direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
-%\item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of $\mpt$ in the transverse direction in the transformed plane (see definition of $\met$ $\phi$ centrality).
 \item $E_{\text{T},\parallel}^{\text{miss}}$: the magnitude of the projection of the original $\mpt$ vector parallel to the fitted $\mpt$ vector, minus 
 the magnitude of the fitted $\mpt$ vector.
 \item $E_{\text{T},\perp}^{\text{miss}}$: the magnitude of the projection of the original $\mpt$ vector perpendicular to the fitted $\mpt$ vector.

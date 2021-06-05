@@ -16,32 +16,23 @@ Electron candidates~\cite{ATLAS-CONF-2016-024,Aaboud:2018ugz} are reconstructed 
 clusters in the EM calorimeter that are matched to reconstructed tracks in the inner detector;
 electron candidates in the transition region between the EM barrel and endcap calorimeters 
 ($1.37 < |\eta_{\textrm{cluster}}| < 1.52$) are excluded.
-In the $\Hbb$ ($\Htautau$) search, electron candidates are required to have $\pt>30~(15)~\gev$ and 
-$|\eta_{\textrm{cluster}}| < 2.47$, and to satisfy tight (medium) likelihood-based identification 
+Electron candidates are required to have $|\eta_{\textrm{cluster}}| < 2.47$, and to satisfy tight likelihood-based identification 
 criteria~\cite{ATLAS-CONF-2016-024} based on calorimeter, tracking and combined variables that provide 
 separation between electrons and jets. 
 
 Muon candidates~\cite{Aad:2016jkr} are reconstructed by matching track segments in %the various
 different layers of the muon spectrometer to tracks found in the inner detector;
 the resulting muon candidates are re-fitted using the complete track information from both detector systems.
-In the $\Hbb$ ($\Htautau$) search, muon candidates are required to have $\pt>30~(10)~\gev$ and $|\eta|<2.5$ 
-and to satisfy medium identification criteria~\cite{Aad:2016jkr}. 
+Muon candidates are required to satisfy medium identification criteria~\cite{Aad:2016jkr}. 
 
 Electron (muon) candidates are matched to the primary vertex by requiring that the significance of their transverse impact parameter, $d_0$, 
 satisfies $|d_0/\sigma(d_0)|<5\,(3)$, where $\sigma(d_0)$ is the measured uncertainty in $d_0$,
-and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_0 \sin\theta|<0.5$~mm.
+and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_0 \sin\theta|<0.5$~mm. To reduce the impact of the trigger efficiency uncertainty around the threshold, the leptons are required to have \pt 1~GeV above the threshold.
 To further reduce the background from non-prompt leptons, photon conversions and hadrons, lepton candidates are also required to be isolated 
 in the tracker and in the calorimeter.
-A track-based lepton isolation criterion is defined by calculating the quantity $I_R = \sum \pt^{\textrm{trk}}$, where
-the scalar sum includes all tracks (excluding the lepton candidate itself) within the cone defined by $\Delta R<R_{\textrm{cut}}$ around the %axis
-direction of the lepton.  The value of $R_{\textrm{cut}}$ is the smaller of $r_{\textrm{min}}$ and $10~\gev/\pt^\ell$, where
-$r_{\textrm{min}}$ is set to 0.2 (0.3) for electron (muon) candidates, and $\pt^\ell$ is the lepton $\pt$. 
-The $\Hbb$ search requires lepton candidates to satisfy $I_R/\pt^\ell < 0.06$, while the $\Htautau$ search 
-makes $\pt$-dependent requirements on $I_R/\pt^\ell$. Additionally, the $\Htautau$ search requires leptons to
-satisfy a calorimeter-based isolation criterion: the sum of the transverse energy within a cone of size
-$\Delta R<0.2$ around the lepton, after subtracting the contributions
-from pile-up and the energy deposit of the lepton itself, is required to be less than a $\pt$-dependent 
-fraction of the lepton energy. 
+A track-based lepton isolation criterion is defined by calculating the quantity $p_R = \sum \pt^{\textrm{trk}}$ and $E_R = \sum E^{\textrm{clst}}$, where
+the scalar sum includes all tracks and energy deposit (excluding the lepton candidate itself) within the cone defined by $\Delta R<0.2 (0.3)$ around the %axis
+direction of the electron (muon). The electron (muon) candidates are required satisfy both $I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$.
 %Additionally, the $\Htautau$ search requires leptons to
 %satisfy a calorimeter-based isolation criterion; a requirement is made on the sum of the transverse energy of
 %topological clusters within the cone defined by $\Delta R<0.2$ around the lepton, after subtracting the contribution
@@ -59,36 +50,31 @@ Candidate jets are reconstructed with the anti-$k_t$ algorithm~\cite{Cacciari:20
 radius parameter $R=0.4$, as implemented in the \fastjet\ package~\cite{Cacciari:2011ma}.  
 Jet reconstruction in the calorimeter starts from topological clustering~\cite{Aad:2016upy} of individual calorimeter cells calibrated to the electromagnetic energy scale. 
 The reconstructed jets are then calibrated to the particle level by the application of a jet energy scale 
-derived from simulation and in situ corrections based on $\sqrt{s}=13~\tev$ data~\cite{Aaboud:2017jcu}.
-The calibrated jets used in the $\Hbb$ search are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$,
-while the $\Htautau$ search uses jets with $\pt > 30~\gev$ and $|\eta| < 4.5$.
+derived from simulation and in situ corrections based on $\sqrt{s}=13~\tev$ data~\cite{Aaboud:2017jcu}. (TBD: check PFlow jets description)
+The calibrated jets used are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$.
 Jet four-momenta are corrected for pile-up effects using the jet-area method~\cite{Cacciari:2008gn}.
 
 Quality criteria are imposed to reject events that contain any jets arising from non-collision sources
 or detector noise~\cite{ATLAS-CONF-2015-029}.  To reduce the contamination due to jets originating from pile-up interactions,
-additional requirements are imposed on the jet vertex tagger (JVT)~\cite{Aad:2015ina} output for jets with $\pt<60~\gev$ and $|\eta| < 2.4$,
-or on the forward JVT~\cite{Aaboud:2017pou} output for jets with $\pt<50~\gev$ and $|\eta| > 2.5$.
+additional requirements are imposed on the jet vertex tagger (JVT)~\cite{Aad:2015ina} output for jets with $\pt<60~\gev$ and $|\eta| < 2.4$.
 
 Jets containing $b$-hadrons are identified ($b$-tagged) via an algorithm~\cite{Aad:2015ydr,ATL-PHYS-PUB-2016-012} 
 that uses multivariate techniques to combine information about the impact parameters of displaced tracks and the  topological properties 
 of secondary and tertiary decay vertices reconstructed within the jet. For each jet, a value for the multivariate $b$-tagging discriminant is 
-calculated. In the $\Htautau$ search, a jet is considered $b$-tagged if this value is above the threshold corresponding to
+calculated. A jet is considered $b$-tagged if this value is above the threshold corresponding to
 an average 70\% efficiency to tag a $b$-quark jet, with a light-jet\footnote{Light-jet refers to a jet originating from the hadronisation of a light quark 
 ($u$, $d$, $s$) or a gluon.} rejection factor of about 380 and a charm-jet rejection factor of about 12, as determined for jets with
-$\pt >20~\gev$ and $|\eta|<2.5$ in simulated $\ttbar$ events. In contrast, the $\Hbb$ search employs a tighter $b$-tagging requirement, 
-corresponding to an average efficiency of 60\% to tag a $b$-quark jet, and light-jet and charm-jet rejection factors of about 1500 and 34, respectively.
+$\pt >20~\gev$ and $|\eta|<2.5$ in simulated $\ttbar$ events.  (TBD: check DL1r description)
 
 Hadronically decaying $\tau$-lepton ($\had$) candidates are reconstructed from energy clusters in the calorimeters and
 associated inner-detector tracks~\cite{ATL-PHYS-PUB-2015-045}. Candidates are required to have either one or three associated tracks,
-with a total charge of $\pm 1$. Candidates are required to have $\pt > 25~\gev$ and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
-A boosted decision tree (BDT) discriminant~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna} using calorimeter- and tracking-based variables is used to identify $\had$ candidates and reject
-jet backgrounds. Three working points labelled loose, medium and tight are defined, and correspond to different $\had$ identification efficiency 
-values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
+with a total charge of $\pm 1$. Candidates are required to have \pt 5 GeV higher than the trigger threshold, and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
+A Recurrent Neural Network (RNN) ~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna} (citation to be changed) using calorimeter- and tracking-based variables is used to identify $\had$ candidates and reject jet backgrounds. Three working points labelled loose, medium and tight are defined, and correspond to different $\had$ identification efficiency values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
 working point for the nominal selection, while the loose working point is used for background estimation.
 The medium working point has a combined reconstruction and identification efficiency of 55\% (40\%) for one-prong (three-prong) $\had$ 
 decays~\cite{ATLAS-CONF-2017-029}, and an expected rejection factor against light-jets of 100~\cite{ATL-PHYS-PUB-2015-045}. 
 Electrons that are reconstructed as one-prong $\had$ candidates are removed via a BDT trained to reject electrons.
-Any $\had$ candidate that is also $b$-tagged is rejected.
+Any $\had$ candidate that is also $b$-tagged is rejected. (TBD: check RNN description and update then numbers)
 
 %Overlaps between candidate objects are removed sequentially, following this order: muons, electrons,
 %$\tauhad$ (only for the $\Htautau$ search), and jets. In the $\Hbb$ search, firstly, electron candidates that lie 
@@ -107,7 +93,7 @@ Any $\had$ candidate that is also $b$-tagged is rejected.
 %candidate objects, and only the highest-$\pt$ (leading) or the two leading $\tauhad$ candidates (depending on the
 %analysis channel, see Section~\ref{sec:data_presel}) are considered to resolve their overlap with jets.
 
-Overlaps between reconstructed objects are removed sequentially. In the $\Hbb$ search, firstly, electron candidates that lie 
+Overlaps between reconstructed objects are removed sequentially. Firstly, electron candidates that lie 
 within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributions from muon bremsstrahlung. 
 Overlaps between electron and jet candidates are resolved next, and finally, overlaps between remaining jet candidates 
 and muon candidates are removed. Energy clusters from identified electrons are not excluded during jet reconstruction. 
@@ -119,13 +105,6 @@ Jets and muons may also appear in close proximity when the jet results from high
 and in such cases the jet should be removed and the muon retained. Such jets are characterised by having very 
 few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\textrm{jet}}) < 0.04+10~\gev/\pt^\mu$ are rejected
 if the jet has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
-The overlap removal procedure in the $\Htautau$ search is similar to that of the $\Hbb$ search, except that the
-first step is the removal of $\had$ candidates within $\Delta R=0.2$ of electrons or muons, and the last step is the
-removal of jets whose axis lies within $\Delta R=0.2$ of the leading (highest-$\pt$) $\had$ candidate or the two leading $\had$ candidates (depending on the
-search channel). In addition, the muon--jet overlap removal is slightly different:
-if a muon lies within $\Delta R = 0.2$ of the axis of a jet, the jet is removed if either it has fewer than three tracks originating from the 
-primary vertex or it has a small $\pt$ compared with that of the muon (the $\pt$ of the jet is less than 50\% of the $\pt$ of the muon,
-or the scalar sum of the $\pt$ of the tracks associated with the jet is less than 70\% of the $\pt$ of the muon).
 
 % TEXT FROM BOYANG. NEED TO RECHECK WHAT WE HAVE ABOVE IS ACCURATE
 %In the $\Htautau$ search, the objects are removed with the following sequence: if two electrons have overlapping second-layer cluser, or shared tracks, the electron with lower $\pt$ is removed; $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed; if a muon sharing an ID track with an electron and the muon is calo-tagged, the muon is removed, otherwise the electron is removed; jets within a $\Delta R=0.2$ cone of an electron are removed; electrons within a $\Delta R=0.4$ cone of a jet are removed; when a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it has less than 3 tracks with $\pt>500$ MeV or has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]); muons within a $\Delta R=0.4$ cone of a jet are removed; jets within a $\Delta R=0.2$ cone of the leading $\tauhad$ ($\lephad$), or with the two leading $\tauhad$'s ($\hadhad$), are removed.
