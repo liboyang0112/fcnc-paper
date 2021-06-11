@@ -33,7 +33,7 @@ DVIPDF   = dvipdf
 
 #-------------------------------------------------------------------------------
 # The main document filename
-BASENAME = ANA-TOPQ-2017-07-PAPER
+BASENAME = ANA-TOPQ-2019-17-PAPER
 
 #-------------------------------------------------------------------------------
 # Adjust this according to your top-level figures directory

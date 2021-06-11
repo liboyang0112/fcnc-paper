@@ -13,9 +13,9 @@
 % Use this variant if the files are in a central location, e.g. $HOME/texmf.
 % \newcommand*{\ATLASLATEXPATH}{}
 %-------------------------------------------------------------------------------
-\documentclass[cernpreprint, PAPER, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%\documentclass[cernpreprint, PAPER, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
 %\documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
-%\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
 %\documentclass[CONF, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
 % The language of the document must be set: usually UKenglish or USenglish.
 % british and american also work!
@@ -54,6 +54,9 @@
 \usepackage{FCNCPaths}
 \usepackage{FCNCsupport-defs}
 \usepackage{float}
+%add line numbers in draft
+\usepackage{lineno}
+\linenumbers
 % See doc/atlas_physics.pdf for a list of the defined symbols.
 % Default options are:
 %   true:  journal, misc, particle, unit, xref
@@ -62,7 +65,7 @@
 
 % Files with references for use with biblatex.
 % Note that biber gives an error if it finds empty bib files.
-\addbibresource{ANA-TOPQ-2017-07-PAPER.bib}
+\addbibresource{ANA-TOPQ-2019-17-PAPER.bib}
 \addbibresource{bib/ATLAS.bib}
 \addbibresource{bib/CMS.bib}
 \addbibresource{bib/ConfNotes.bib}
@@ -71,8 +74,8 @@
 % Paths for figures - do not forget the / at the end of the directory name.
 \graphicspath{{logos/}{figures/}}
 
-% Add you own definitions here (file ANA-TOPQ-2017-07-PAPER-defs.sty).
-\usepackage{ANA-TOPQ-2017-07-PAPER-defs}
+% Add you own definitions here (file ANA-TOPQ-2019-17-PAPER-defs.sty).
+\usepackage{ANA-TOPQ-2019-17-PAPER-defs}
 
 % for special fonts
 \pdfinclusioncopyfonts=1 
@@ -82,7 +85,7 @@
 %-------------------------------------------------------------------------------
 
 % Title, abstract and document
-\input{ANA-TOPQ-2017-07-PAPER-metadata}
+\input{ANA-TOPQ-2019-17-PAPER-metadata}
 % Author and title for the PDF file
 \hypersetup{pdftitle={ATLAS document},pdfauthor={The ATLAS Collaboration}}
 
@@ -163,7 +166,7 @@
 
 %-------------------------------------------------------------------------------
 % Auxiliary material - comment out the following line if you do not have any
-\include{ANA-TOPQ-2017-07-PAPER-auxmat}
+\include{ANA-TOPQ-2019-17-PAPER-auxmat}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -171,6 +174,6 @@
 % \include{-hepdata}
 %-------------------------------------------------------------------------------
 
-\clearpage \input{atlas_authlist} 
+%%\clearpage \input{atlas_authlist} 
 
 \end{document}
