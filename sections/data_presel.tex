@@ -19,12 +19,14 @@ The signal final state including an electron or muon or \lep are referred to as 
 
 The events in the leptonic channel are recorded by single-electron or single-muon trigger, required to have exactly one electron or muon that matches, with $\Delta R < 0.15$, the lepton reconstructed by the trigger. Further requirement are defined targeting different signal decay mode:  
 \begin{itemize}
-	\item $t_h\lephad$: Targeting $t(q)H\to bqq(q)\lephad$ decay mode. Exactly one additional $\had$ with charge opposite to the lepton is further required. At least 3 jets with exactly one $b$-tagged are required.
-	\item $t_l\hadhad$: Targeting $t(q)H\to bl\nu(q)\hadhad$ decay mode. At least two additional $\had$ with opposite charge are further required. At least 1 jet with exactly one $b$-tagged is required.
-	\item $t_l\had$: Targeting $t(q)H\to bl\nu(q)\hadhad$ decay mode when one of the \had fails the tau reconstruction or identificaiton so that there is only one reconstructed \had candidate. Exactly one additional $\had$ with charge same for the lepton is further required. At least 2 jets with exactly one $b$-tagged are required.
+\item $t_h\lephad$: Targeting $t_hH$ and $t_ht(qH)$ with $H\to\lephad$ decay. Exactly one $\had$ with opposite-side charge to $\tau_l$ is required, including at least three jets with exactly one $b$-tagged jet.
+\item $t_l\hadhad$: Targeting $t_lH$ and $t_lt(qH)$ with $H\to\hadhad$ decay. Exactly one lepton and two opposite-sign $\had$ are selected, including at least 1 jet with exactly one $b$-tagged jet.
+\item $t_l\had$: Also targeting $t_lH$ and $t_lt(qH)$ with $H\to\hadhad$ decay when one of the \had fails the tau reconstruction or identificaiton so that there is only
+  one \had candidate reconstructed. Exactly one $\had$ with same-sign charge to the lepton is required, including at least 2 jets with exactly one $b$-tagged jet.
 \end{itemize}
 
-The events in the hadronic channel are recorded by di-tau trigger, required to have both leading and trailing $\had$ matched to the $\had$'s reconstructed by the trigger. No selected electrons or muons is required. The two \had candidates are required to have charges of opposite sign. 
+The events in the hadronic channel are recorded by di-tau trigger, required to have both leading and trailing $\had$ passed the trigger.
+The two \had candidates are required to have charges of opposite sign. 
 
 The above requirements apply to the reconstructed objects defined in Section~\ref{sec:objects}.
 %, which are in general different between both searches. 
@@ -43,7 +45,7 @@ The leading and trailing $\had$ candidates are denoted by $\tau_{\mathrm{had,1}}
 Trigger & \multicolumn{3}{c|}{single-lepton trigger} & di-$\tau$ trigger  \\
 Leptons  & \multicolumn{3}{c|}{=1 isolated $e$ or $\mu$}  & no isolated $e$ or $\mu$ \\
 \had  & $=$1 $\had$ & $\geq$2 $\had$ & $=$1 $\had$ & $\geq$2 $\had$ \\
-Electric charge ($q$) & $q_\ell \times q_{\tau_{\mathrm{had,1}}} < 0$ & $q_{\tau_{\mathrm{had,1}}} \times q_{\tau_{\mathrm{had,2}}} < 0$ & $q_\ell \times q_{\tau_{\mathrm{had,1}}} > 0$ & $q_{\tau_{\mathrm{had,1}}} \times q_{\tau_{\mathrm{had,2}}} < 0$ \\
+Electric charge ($Q$) & $Q_\ell \times Q_{\tau_{\mathrm{had,1}}} < 0$ & $Q_{\tau_{\mathrm{had,1}}} \times Q_{\tau_{\mathrm{had,2}}} < 0$ & $Q_\ell \times Q_{\tau_{\mathrm{had,1}}} > 0$ & $Q_{\tau_{\mathrm{had,1}}} \times Q_{\tau_{\mathrm{had,2}}} < 0$ \\
 Jets  &  $\geq$ 3 jets & $\geq$1 jets & $\geq$2 jets & $\geq$3 jets \\
 $b$-tagging & \multicolumn{3}{c|}{=1 $b$-tagged jets} & =1 $b$-tagged jets\\
 \bottomrule\bottomrule

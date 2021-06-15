@@ -8,14 +8,38 @@ The analysis strategy adopted in the $\Htautau$ search follows that developed in
 \subsection{Event categorisation and kinematic reconstruction}
 \label{sec:htautau_reco_cat}
 
-The $Wb(q)H\to q\bar{q}b(q)\tau\tau$ signal being probed is characterised by the presence of $\tau$-leptons from the decay of 
-the Higgs boson and at least  four (three) jets in the decay (production) mode, only one of which originates from a $b$-quark.
-If one of the $\tau$-leptons decays leptonically, an isolated electron or muon and significant $\met$ is also expected.
-In a significant fraction of the events, the lowest-$\pt$ jet from the $W$ boson decay fails the minimum $\pt$ requirement of $30~\gev$,
+The $tt(qH)$ and $tH$ signal being probed is characterised by the presence of $\tau$-leptons from the decay of 
+the Higgs boson and the remaining $t\to Wb$ decay as well as an additional $q$-jet for $t\to qH$ decay. 
+%at least  four (three) jets in the decay (production) mode, only one of which originates from a $b$-quark.
+If the $W$ boson or one of the $\tau$-leptons decays leptonically, an isolated electron or muon and significant $\met$ is also expected.
+In a significant fraction of the events, the lowest-$\pt$ jet from the hadronic $W$ boson decay fails the minimum $\pt$ requirement of $25~\gev$,
 resulting in some decay mode signal events mixed with production mode having only three jets reconstructed.
-In order to optimise the sensitivity of the search, the selected events are categorised into four SRs depending 
-on the number of $\taulep$ and $\had$ candidates, and on the number of light flavored jets:
-($t_h\lephad$, 2j), ($t_h\lephad$, $\geq$4j), ($t_h\hadhad$, 3j), and ($t_h\hadhad$, $\geq$4j). 
+In order to optimise the sensitivity of the search, the selected events are categorised into seven SRs depending on the number of leptons and
+$\had$ candidates, and on the number of light flavored jets:
+$t_l\hadhad$, $t_l\had$-1j, $t_l\had$-2j, $t_h\lephad$-2j, $t_h\lephad$-3j, $t_h\hadhad$-2j, and $t_h\hadhad$-3j, as shown in Table~\ref{tab:srcr}. 
+
+\begin{table}
+\centering
+\caption{Overview of the signal regions and the control regions used for fake tau scale factor derivation in leptonic channels.}
+\label{tab:srcr}
+\begin{tabular}[h]{c|c|c|c|c|c|c}
+\hline \hline
+\multicolumn{2}{c|}{Regions} & b-jet & light flavor jets        & lepton & hadronic taus & charge\\ \hline
+\multirow{7}{*}{SR}&$t_l\thadhad$     & 1     & any                                & 1      & 2             & $\thadhad$ OS\\ \cline{2-7}
+&$t_l\tauhad$-1j  & 1     & 1                                   & 1      & 1                     & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_l\tauhad$-2j  & 1     & 2                                        & 1      & 1                     & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_h\tlhad$-2j   & 1     & 2                           & 1      & 1             & $\tlhad$ OS\\ \cline{2-7}
+&$t_h\tlhad$-3j   & 1     & $\ge3$                      & 1      & 1             & $\tlhad$ OS\\ \cline{2-7}
+&$t_h\thadhad$-2j & 1     & 2                            & 0      & 2             & $\thadhad$ OS\\ \cline{2-7}
+&$t_h\thadhad$-3j & 1     & $\ge3$                       & 0      & 2             & $\thadhad$ OS\\ \hline
+\multirow{6}{*}{CRtt}&$t_lt_l1b\tauhad$ & 1     & any                           & 2      & 1                     & $t_lt_l$ OS\\ \cline{2-7}
+&$t_lt_l2b\tauhad$      & 2     & any                           & 2      & 1                     & $t_lt_l$ OS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-2jSS & 2     & 2                             & 1      & 1             & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-2jOS & 2     & 2                             & 1      & 1             & $t_l\tauhad$ OS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-3jSS & 2     & $\ge3$                        & 1      & 1             & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-3jOS & 2     & $\ge3$                & 1      & 1             & $t_l\tauhad$ OS\\ \hline
+\end{tabular}
+\end{table}
 
 This event categorisation is primarily motivated by the different quality of the event kinematic reconstruction, depending on the amount 
 of $\met$ in the event (larger in $\lephad$ events compared with $\hadhad$ events), and whether a jet from the hadronic top-quark decay 
@@ -34,7 +58,7 @@ four-momentum of the parent top quark in the decay mode signal events, are deter
 
 Following the event kinematic reconstruction, several kinematic variables that discriminate between signal and background are defined. These variables are used in the multivariate analysis discussed in the next section.
 
-The $Wb(q)H\to l\nu b(q)\tau\tau$ signal, the additional $q$ jet in the decay mode can still be found, but since the $W$ boson decays leptonically, there is a neutrino with large momentum and the flying direction is unknown. The kinematics fit is no longer feasible. The variables calculated from the visible objects are directly used in the multivariate analysis.
+In the  $t_lt(qH)$ and $t_lH$ signal, the additional $q$ jet in the decay mode can still be found, but since the $W$ boson decays leptonically, there is a neutrino with large momentum and the flying direction is unknown. The kinematics fit is no longer feasible. The variables calculated from the visible objects are directly used in the multivariate analysis.
 
 \subsection{Multivariate discriminant}
 
