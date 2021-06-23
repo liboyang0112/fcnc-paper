@@ -11,13 +11,57 @@ analysis regions considered. The unconstrained parameters of the fit are the sig
 strength, and four independent parameters associated with the normalisation of the fake $\had$ background in each of the analysis regions. 
 No significant pulls or constraints are obtained for the fitted nuisance parameters, resulting in a post-fit background prediction in each analysis region that is
 very close to the pre-fit prediction, albeit with reduced uncertainties due to the anti-correlations among sources of systematic uncertainty resulting from the fit.
-Figure~\ref{fig:xTFW_trexPrefit} shows a comparison of the data and prediction for the BDT discriminant distribution in
-the hadronic channel, both pre- and post-fit to data, in the case of the $\Hc$ search.  
-A similar comparison for the leptonic channel is shown in Figure~\ref{fig:tthML_trexPrefit} and \ref{fig:tthML_trexPrefit_1}.
+Figure~\ref{fig:asimov_prefitbdt} shows a comparison of the data and prediction for the BDT discriminant distribution in
+the search channels. Figure~\ref{fig:asimov_postfitbdtHc} and~\ref{fig:asimov_postfitbdtHu} show a post-fit to the asimov data for the $tHc$ and $tHu$ search separately.
+%both pre- and post-fit to data, in the case of the $\Hc$ search.  
+%A similar comparison for the leptonic channel is shown in Figure~\ref{fig:tthML_trexPrefit} and \ref{fig:tthML_trexPrefit_1}.
 Tables summarising the pre-fit and post-fit yields can be found in Appendix~\ref{sec:prepostfit_yields_Htautau_appendix}.
 
-\input{\FCNCFigures/tex/tthML_trexPrefit}
-\input{\FCNCFigures/tex/xTFW_trexPrefit}
+
+%\input{\FCNCFigures/tex/tthML_trexPrefit}
+%\input{\FCNCFigures/tex/xTFW_trexPrefit}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tcH_reg1l2tau1bnj_os_postFit.pdf}
+\put(-30, 110){\small\textbf{(a1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tcH_reg1l1tau1b1j_ss_postFit.pdf}
+\put(-30, 110){\small\textbf{(a2)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tcH_reg1l1tau1b2j_ss_postFit.pdf}
+\put(-30, 110){\small\textbf{(a3)}}\\
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tcH_reg1l1tau1b2j_os_postFit.pdf}
+\put(-30, 110){\small\textbf{(b1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tcH_reg1l1tau1b3j_os_postFit.pdf}
+\put(-30, 110){\small\textbf{(b2)}}\\
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tcH_reg2mtau1b2jos_vetobtagwp70_highmet_postFit.pdf}
+\put(-30, 110){\small\textbf{(c1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tcH_reg2mtau1b3jos_vetobtagwp70_highmet_postFit.pdf}
+\put(-30, 110){\small\textbf{(c2)}}\\
+\caption{ The BDT output distributions are fitted to the asimov data in $tHc$ search: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3),
+  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (c1), and $t_h\thadhad$-3j (c2). }
+\label{fig:asimov_postfitbdtHc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l2tau1bnj_os_postFit.pdf}
+\put(-30, 110){\small\textbf{(a1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b1j_ss_postFit.pdf}
+\put(-30, 110){\small\textbf{(a2)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b2j_ss_postFit.pdf}
+\put(-30, 110){\small\textbf{(a3)}}\\
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b2j_os_postFit.pdf}
+\put(-30, 110){\small\textbf{(b1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b3j_os_postFit.pdf}
+\put(-30, 110){\small\textbf{(b2)}}\\
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b2jos_vetobtagwp70_highmet_postFit.pdf}
+\put(-30, 110){\small\textbf{(c1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b3jos_vetobtagwp70_highmet_postFit.pdf}
+\put(-30, 110){\small\textbf{(c2)}}\\
+\caption{ The BDT output distributions are fitted to the asimov data in $tHu$ search: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3),
+  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (c1), and $t_h\thadhad$-3j (c2). }
+\label{fig:asimov_postfitbdtHu}
+\end{figure}
+
 
 %Comparison between the data and prediction for the BDT discriminant distribution in the
 %$\lephad$ channel, before and after the fit to data  (``Pre-Fit'' and ``Post-Fit'', respectively) under the signal-plus-background hypothesis.

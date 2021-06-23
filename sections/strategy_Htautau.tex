@@ -145,11 +145,61 @@ The bottom panel displays the ratio of data to the SM background (``Bkg'') predi
 The hashed area represents the total uncertainty of the background.
 A good description of the data by the background model is observed in all cases.
 
-The final observable used to extract signal events is defined as the BDT distribution in each SRs corresponding to either $tHu$ or $tHc$ signal training.
-Figure~\ref{fig:asimov_fitbdt_thu} and~\ref{fig:asimov_fitbdt_thc} show the fits to the data of BDT observable in each SRs with all background processes
+The final observable used to extract signal events is defined as the BDT distribution in each SRs corresponding to either $tHu$ or $tHc$ signal.
+Figure~\ref{fig:asimov_prefitbdt} show the prefits to the data of BDT observable in each SRs with all background processes
 constrained to the SM expectation.
 %The level of discrimination between signal and background achieved by the BDTs is illustrated in Figure~\ref{fig:overtrain_hadhad}-~\ref{fig:overtrain_lhadhad}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\input{\FCNCFigures/tex/BDTinput}
+\begin{figure}[H]
+\centering
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l2tau1bnj_os/ttvismass.pdf}
+\put(-130, 105){\small\textbf{(a1)}}
+%\put(-30, 80){\textbf{(a1)}}
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l2tau1bnj_os/drtautau.pdf}
+\put(-130, 105){\small\textbf{(a2)}}
+%\put(-30, 80){\textbf{(a2)}}
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l2tau1bnj_os/t2vismass.pdf}
+\put(-130, 105){\small\textbf{(a3)}} 
+%\put(-70, 70){\textbf{(a3)}}
+\\
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/tautaumass.pdf}
+\put(-130, 105){\small\textbf{(b1)}}
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/ttvismass.pdf}
+\put(-130, 105){\small\textbf{(b2)}}
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/drtautau.pdf}
+\put(-130, 105){\small\textbf{(b3)}}
+\\
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b3j_os_vetobtagwp70_highmet/ttvismass.pdf}
+\put(-130, 105){\small\textbf{(c1)}}
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b3j_os_vetobtagwp70_highmet/ttvismass.pdf}
+\put(-130, 105){\small\textbf{(c2)}}
+\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b3j_os_vetobtagwp70_highmet/drltau.pdf}
+\put(-130, 105){\small\textbf{(c3)}}
+\\
+\caption{ The BDT input distributions for the background and merged signal in the three main decay channels: $t_l\thadhad$ (a1-3), $t_h\thadhad$-3j (b1-3), and $t_h\tlhad$-3j (c1-3). }% The Kolmogorov Test values for the training and testing BDT distributions are also indicated.                                
+\label{fig:mva_input_l2had_hadhad_lephad}
+\end{figure}
 
 %\input{\FCNCFigures/tex/BDT}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/reg1l2tau1bnj_os.pdf}
+\put(-30, 110){\small\textbf{(a1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/reg1l1tau1b1j_ss.pdf}
+\put(-30, 110){\small\textbf{(a2)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/reg1l1tau1b2j_ss.pdf}
+\put(-30, 110){\small\textbf{(a3)}}\\
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/reg1l1tau1b2j_os.pdf}
+\put(-30, 110){\small\textbf{(b1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/reg1l1tau1b3j_os.pdf}
+\put(-30, 110){\small\textbf{(b2)}}\\
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b2jos_vetobtagwp70_highmet.pdf}
+\put(-30, 110){\small\textbf{(c1)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b3jos_vetobtagwp70_highmet.pdf}
+\put(-30, 110){\small\textbf{(c2)}}\\
+\caption{ The BDT output distributions are compared between the expected background and either $tHu$ or  $tHc$ signals in: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3),
+  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (c1), and $t_h\thadhad$-3j (c2). }
+\label{fig:asimov_prefitbdt}
+\end{figure}
+

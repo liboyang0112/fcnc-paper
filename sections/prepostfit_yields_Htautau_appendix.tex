@@ -4,47 +4,93 @@
 %-------------------------------------------------------------------------------
 
 Table~\ref{tab:Htautau_Prefit_Yields_Unblind} presents the observed and predicted yields in each of the analysis regions 
-for the $\Htautau$ search before the fit to data. 
+for the search before the fit to data. 
 Tables~\ref{tab:Htautau_Postfit_Yields_Unblind_Hc} and~\ref{tab:Htautau_Postfit_Yields_Unblind_Hu} present the observed and predicted yields 
 in each of the analysis regions after the fit to the data under the signal-plus-background hypothesis, assuming 
-$\Hc$ and $\Hu$ as signal, respectively.
+$tHc$ and $tHu$ as signal, respectively.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[htbp]
 \caption{
-$\Htautau$ search: Predicted and observed yields in each of the analysis regions considered.
+Predicted and observed yields in each of the analysis regions considered.
 The prediction is shown before the fit to data. Also shown are the signal expectations for 
-$\Hc$ and $\Hu$ assuming $\BR(t\to Hc)=1\%$ and $\BR(t\to Hu)=1\%$ respectively.
-The contributions with real $\had$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
-a single background source referred to as ``Top (real $\had$)'', whereas the small contributions from 
-$Z\to \ell^+\ell^-$ ($\ell = e, \mu$) and diboson backgrounds are combined into ``Other''. 
-The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties of the yields, 
-excluding the normalisation uncertainty of the fake $\had$ background, which is determined via a likelihood fit to data.
-}
+$\Hc$ and $\Hu$ assuming $\BR(t\to Hc)=0.2\%$ and $\BR(t\to Hu)=0.2\%$ respectively.
+The contributions with real $\had$ candidates from $\ttbar$ and  $Z\to \ell^+\ell^-$ ($\ell = e, \mu$), diboson, $\ttbar V$, $\ttbar H$, single-top-quark, and other small backgrounds are combined into
+a single background source referred to as ``Other MC'' in the leptonic channels , whereas single-top-quark and the small contributions are combined into ``Rare'' in the hadronic channels.  
+The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties of the yields.}
 \small
-\begin{center}
-\begin{tabular}{l*{4}{c}}
-\hline\hline
- & $\lephad$, 3j & $\lephad$, $\geq$4j & $\hadhad$, 3j &  $\hadhad$, $\geq$4j \\
-\hline
-$\Hc$  &   $ 89 \pm 14 $ &   $ 226 \pm 43 $ &   $ 46 \pm 14 $ &   $ 122 \pm 32 $ \\ 
-$\Hu$  &   $ 100 \pm 17 $ &   $ 237 \pm 47 $ &   $ 32 \pm 10 $ &   $ 114 \pm 28 $ \\ 
-\hline
-Fake $\had$  &   $ 2828 \pm 78 $ &   $ 3200 \pm 100 $ &   $ 710 \pm 110 $ &   $ 500 \pm 62 $ \\
-Top (real $\had$)  &   $ 3840 \pm 720 $ &   $ 3160 \pm 890 $ &   $ 113 \pm 72 $ &   $ 117 \pm 35 $ \\  
-$Z \to \tau\tau$  &   $ 420 \pm 140 $ &   $ 320 \pm 120 $ &   $ 283 \pm 99 $ &   $ 267 \pm 96 $ \\ 
-Other  &   $ 168 \pm 56 $ &   $ 103 \pm 33 $ &   $ 8.9 \pm 2.5 $ &   $ 11.2 \pm 2.5 $ \\ 
-\hline
-Total background  &   $ 7260 \pm 730 $ &   $ 6770 \pm 880 $ &   $ 1120 \pm 120 $ &   $ 900 \pm 120 $ \\ 
-\hline
-Data  & 7259  & 6768  & 1119  & 894  \\
-\hline\hline    
-\end{tabular}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+ & $t_{l}\tau_{had}-1j$ & $t_{l}\tau_{had}-2j$ & $t_{h}\tau_{lep}\tau_{had}-3j$ & $t_{h}\tau_{lep}\tau_{had}-2j$ & $t_{l}\tau_{had}\tau_{had}$\\\hline 
+  QCD Fake lep  & $916.84 \pm 469.22$ & $434.65 \pm 218.77$ & $233.82 \pm 155.13$ & $416.75 \pm 232.61$ & $0 \pm 0$ \\ 
+  W-jet fake $\tau$   & $839.60 \pm 257.79$ & $963.47 \pm 297.97$ & $2934.6 \pm 2722.5$ & $3434.22 \pm 3525.35$ & $4.96 \pm 2.80$ \\ 
+  Other Fake $\tau$   & $2918.71 \pm 315.44$ & $2625.87 \pm 196.24$ & $1767.93 \pm 721.15$ & $1635.44 \pm 910.48$ & $138.86 \pm 23.10$ \\ 
+  b Fake $\tau$   & $811.72 \pm 149.76$ & $1015.84 \pm 244.27$ & $522.39 \pm 236.07$ & $573.09 \pm 171.86$ & $68.10 \pm 14.20$ \\ 
+  %tuH   & 71.0825 \pm 8.98689 & 62.9807 \pm 4.44175 & 123.517 \pm 14.72 & 87.6489 \pm 6.581 & 93.0677 \pm 3.83729 \\ 
+  Lep fake $\tau$    & $221.68 \pm 31.75$ & $87.81 \pm 10.74$ & $307.45 \pm 102.87$ & $563.25 \pm 84.76$ & $0.88 \pm 0.36$ \\ 
+  Double Fake $\tau$    & $0 \pm 0$ & $0 \pm 0$ & $0 \pm 0$ & $0 \pm 0$ & $89.74 \pm 37.20$ \\ 
+  $\bar{t}t$   & $280.14 \pm 20.08$ & $178.8 \pm 42.01$ & $7081.53 \pm 2237.99$ & $11610.1 \pm 1263.95$ & $5.10 \pm 4.28$ \\ 
+  Other MC   & $84.62 \pm 8.00$ & $83.30 \pm 3.31$ & $880.00 \pm 233.62$ & $1591.41 \pm 254.97$ & $40.79 \pm 2.02$ \\\hline
+  Total B & $6073 \pm 488$ & $5390 \pm 291$ & $13728 \pm 1192$ & $19824 \pm 2091$ & $348 \pm 42$ \\ \hline
+  Data & $6353\pm80$ & $5390 \pm 291$ & $35942\pm190$ & $50412\pm225$ & $351\pm19$\\\hline
+  $\bar{t}t\to bWcH$ & $57.59\pm0.61$ &$52.80\pm0.58$ & $133.14\pm1.19$ &$102.58\pm0.97$ & $66.43\pm0.65$\\
+$cg\to tH$ & $2.23\pm0.04$ & $1.38\pm0.03$  & $4.47\pm0.08$ & $5.66\pm0.08$ & $5.10\pm0.06$\\
+tcH~merged & $59.82\pm0.61$ & $54.19\pm0.58$ & $137.61\pm1.19$ & $108.24\pm0.98$ & $71.53\pm0.65$\\\hline
+$\bar{t}t\to bWuH$ & $59.72\pm7.52$ & $55.47\pm3.91$ & $139.67\pm16.65$ & $105.62\pm7.93$ & $69.10\pm2.85$\\
+$ug\to tH$ & $11.36\pm1.43$ &$7.51\pm0.53$ & $24.78\pm3.00$ &$28.60\pm2.15$ & $24.00\pm1.00$\\
+tuH~merged & $71.08\pm9.00$ & $62.98\pm4.44$ & $164.45\pm19.60$ & $134.22\pm10.10$ & $93.10\pm3.84$\\\hline
+ % Total  & 6144.39 \pm 487.946 & 5452.72 \pm 291.302 & 13851.2 \pm 1191.74 & 19911.9 \pm 2091.1 & 441.49 \pm 41.7833 \\ 
+\hline 
+\end{tabular} 
+\begin{tabular}{|c|c|c|}
+\hline 
+ & $t_{h}\tau_{had}\tau_{had}-2j$ & $t_{h}\tau_{had}\tau_{had}-3j$\\
+\hline 
+  only $\tau_{sub}$ real   & $64.23 \pm 70.07$ & $84.46 \pm 100.98$ \\ 
+  %tcH   & 31.4803 \pm 6.36964 & 84.4383 \pm 10.5275 \\ 
+  %tuH   & 45.6609 \pm 6.76374 & 105.38 \pm 10.798 \\ 
+  Diboson   & $8.40 \pm 1.65$ & $10.75 \pm 1.25$ \\ 
+  Fake $\tau$ MC   & $277.11 \pm 148.41$ & $332.76 \pm 153.96$ \\ 
+  $\bar{t}t$   & $225.85 \pm 34.02$ & $209.75 \pm 50.43$ \\ 
+  $Z\rightarrow\tau\tau$   & $485.70 \pm 53.51$ & $406.02 \pm 64.48$ \\ 
+  $\bar{t}tV$   & $0.75 \pm 0.44$ & $5.46 \pm 1.13$ \\ 
+  Rare   & $17.84 \pm 2.96$ & $10.05 \pm 2.72$ \\ 
+  SM Higgs   & $17.29 \pm 2.18$ & $25.88 \pm 2.55$ \\ 
+\hline 
+Total B  & $1097 \pm 197$ & $1085 \pm 230$ \\ \hline
+data                  & $1033\pm32$                   & $1052\pm32$  \\\hline
+$\bar{t}t\to bWcH$    & $28.13\pm5.70$        & $80.14\pm9.94$     \\
+$cg\to tH$            & $3.35\pm0.67$                 & $4.30\pm0.53$      \\
+tcH~merged            & $31.48\pm6.37$                & $84.44\pm10.53$     \\\hline
+$\bar{t}t\to bWuH$    & $28.37\pm4.26$        & $83.75\pm8.40$     \\
+$ug\to tH$            & $17.29\pm2.59$                & $21.63\pm2.40$     \\
+tuH~merged            & $45.66\pm6.76$                & $105.38\pm10.80$    \\\hline
+\end{tabular} 
+%\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL_SROnly/yield_chart}
+%\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart}
+%\begin{center}
+%\begin{tabular}{l*{4}{c}}
+%\hline\hline
+% & $\lephad$, 3j & $\lephad$, $\geq$4j & $\hadhad$, 3j &  $\hadhad$, $\geq$4j \\
+%\hline
+%$\Hc$  &   $ 89 \pm 14 $ &   $ 226 \pm 43 $ &   $ 46 \pm 14 $ &   $ 122 \pm 32 $ \\ 
+%$\Hu$  &   $ 100 \pm 17 $ &   $ 237 \pm 47 $ &   $ 32 \pm 10 $ &   $ 114 \pm 28 $ \\ 
+%\hline
+%Fake $\had$  &   $ 2828 \pm 78 $ &   $ 3200 \pm 100 $ &   $ 710 \pm 110 $ &   $ 500 \pm 62 $ \\
+%Top (real $\had$)  &   $ 3840 \pm 720 $ &   $ 3160 \pm 890 $ &   $ 113 \pm 72 $ &   $ 117 \pm 35 $ \\  
+%$Z \to \tau\tau$  &   $ 420 \pm 140 $ &   $ 320 \pm 120 $ &   $ 283 \pm 99 $ &   $ 267 \pm 96 $ \\ 
+%Other  &   $ 168 \pm 56 $ &   $ 103 \pm 33 $ &   $ 8.9 \pm 2.5 $ &   $ 11.2 \pm 2.5 $ \\ 
+%\hline
+%Total background  &   $ 7260 \pm 730 $ &   $ 6770 \pm 880 $ &   $ 1120 \pm 120 $ &   $ 900 \pm 120 $ \\ 
+%\hline
+%Data  & 7259  & 6768  & 1119  & 894  \\
+%\hline\hline    
+%\end{tabular}
 %%\\
 %\vspace{0.2cm}
-
 %
-\end{center}
+%\end{center}
 %\vspace{-0.5cm}
 \label{tab:Htautau_Prefit_Yields_Unblind}
 \end{table} 
@@ -53,37 +99,67 @@ Data  & 7259  & 6768  & 1119  & 894  \\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[htbp]
 \caption{
-$\Htautau$ search: Predicted and observed yields in each of the analysis regions considered.
-The background prediction is shown after the fit to data under the signal-plus-background hypothesis 
+Predicted and observed yields in each of the analysis regions considered.
+The background prediction is shown after the fit to asimov data under the signal-plus-background hypothesis 
 (assuming $\Hc$ as signal).
-The contributions with real $\had$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
-a single background source referred to as ``Top (real $\had$)'', whereas the small contributions from 
-$Z\to \ell^+\ell^-$ ($\ell = e, \mu$) and diboson backgrounds are combined into ``Other''. 
+The contributions with real $\had$ candidates from $\ttbar$ and  $Z\to \ell^+\ell^-$ ($\ell = e, \mu$), diboson, $\ttbar V$, $\ttbar H$, single-top-quark, and other small backgrounds are combined into
+a single background source referred to as ``Other MC'' in the leptonic channels , whereas single-top-quark and the small contributions are combined into ``Rare'' in the hadronic channels.
 The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties of the yields, 
-computed taking into account correlations among nuisance parameters and among processes.
-}
+computed taking into account correlations among nuisance parameters and among processes.}
 \small
-\begin{center}
-\begin{tabular}{l*{4}{c}}
-\hline\hline
- & $\lephad$, 3j & $\lephad$, $\geq$4j & $\hadhad$, 3j &  $\hadhad$, $\geq$4j \\
-\hline
-$\Hc$  &   $ -4.2 \pm 8.2 $ &   $ -11 \pm 21 $ &   $ -2.4 \pm 4.3 $ &   $ -10 \pm 11 $ \\ 
-\hline
-Fake $\had$  &   $ 2290 \pm 680 $ &   $ 2640 \pm 880 $ &   $ 640 \pm 110 $ &   $ 440 \pm 100 $ \\ 
-Top (real $\had$)  &   $ 4300 \pm 670 $ &   $ 3660 \pm 860 $ &   $ 147 \pm 84 $ &   $ 139 \pm 35 $ \\ 
-$Z \to \tau\tau$  &   $ 500 \pm 100 $ &   $ 359 \pm 90 $ &   $ 320 \pm 79 $ &   $ 306 \pm 76 $ \\ 
-Other  &   $ 178 \pm 45 $ &   $ 112 \pm 28 $ &   $ 9.6 \pm 2.6 $ &   $ 12.5 \pm 2.6 $ \\ 
-\hline
-Total  &   $ 7230 \pm 160 $ &   $ 6760 \pm 170 $ &   $ 1117 \pm 65 $ &   $ 893 \pm 45 $ \\
-\hline
-Data & 7259  & 6768  & 1119  & 894 \\ 
-\hline\hline    
-\end{tabular}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}\hline 
+  & $t_{l}\tau_{had}-1j$ & $t_{l}\tau_{had}2j$ & $t_{h}\tau_{lep}\tau_{had}-3j$ & $t_{h}\tau_{lep}\tau_{had}-2j$ & $t_{l}\tau_{had}\tau_{had}$\\\hline 
+  QCD Fake lep   & $916.84 \pm 213.23$ & $434.65 \pm 98.21$ & $233.82 \pm 77.52$ & $416.75 \pm 107.82$ & $0 \pm 0$ \\ 
+  W-jet fake $\tau$  & $839.60 \pm 176.84$ & $963.47 \pm 211.11$ & $2934.6 \pm 602.46$ & $3434.22 \pm 820.85$ & $4.96 \pm 1.58$ \\ 
+  Other Fake $\tau$  & $2918.71 \pm 217.11$ & $2625.87 \pm 161.15$ & $1767.93 \pm 455.10$ & $1635.44 \pm 784.74$ & $138.86 \pm 14.05$ \\ 
+  b Fake $\tau$  & $811.72 \pm 109.86$ & $1015.84 \pm 158.82$ & $522.39 \pm 69.31$ & $573.09 \pm 75.11$ & $68.10 \pm 8.32$ \\ 
+    tcH   & $59.82 \pm xxx$ & $54.19 \pm xxx$ & $137.61 \pm xxx$ & $108.24 \pm xxx$ & $71.53 \pm xxx$ \\ 
+  Lep fake $\tau$  & $221.68 \pm 29.45$ & $87.81 \pm 9.62$ & $307.45 \pm 33.81$ & $563.25 \pm 60.64$ & $0.88 \pm 0.34$ \\ 
+  Double Fake $\tau$  & $0 \pm 0$ & $0 \pm 0$ & $0 \pm 0$ & $0 \pm 0$ & $89.74 \pm 23.31$ \\ 
+  $\bar{t}t$   & $280.14 \pm 15.02$ & $178.8 \pm 26.84$ & $7081.53 \pm 363.91$ & $11610.1 \pm 475.80$ & $5.10 \pm 2.69$ \\ 
+  Other MC   & $84.62 \pm 7.34$ & $83.30 \pm 3.10$ & $880.00 \pm 67.57$ & $1591.41 \pm 84.97$ & $40.79 \pm 1.75$ \\ 
+\hline 
+  Total  & $6144 \pm 170$ & $5453 \pm 94$ & $13851 \pm 138$ & $19912 \pm 164$ & $441 \pm 29$ \\ \hline 
+\end{tabular} 
+\begin{tabular}{|c|c|c|}
+\hline 
+ & $t_{h}\tau_{had}\tau_{had}-2j$ & $t_{h}\tau_{had}\tau_{had}-3j$\\
+\hline 
+  only $\tau_{sub}$ real   & $64.23 \pm 49.64$ & $84.46 \pm 66.13$ \\ 
+  tcH   & $31.48 \pm 9.43$ & $84.44 \pm 22.34$ \\ 
+%  tuH   & $45.66 \pm 13.02$ & $105.38 \pm 27.65$ \\ 
+  Diboson   & $8.40 \pm 1.59$ & $10.75 \pm 1.10$ \\ 
+  Fake $\tau$ MC   & $277.11 \pm 87.45$ & $332.77 \pm 93.32$ \\ 
+  $\bar{t}t$   & $225.85 \pm 26.18$ & $209.75 \pm 31.01$ \\ 
+  $Z\rightarrow\tau\tau$   & $485.70 \pm 43.14$ & $406.02 \pm 51.63$ \\ 
+  $\bar{t}tV$   & $0.76 \pm 0.43$ & $5.46 \pm 1.03$ \\ 
+  Rare   & $17.84 \pm 2.76$ & $10.05 \pm 2.53$ \\ 
+  SM Higgs   & $17.30 \pm 1.90$ & $25.88 \pm 2.05$ \\ \hline 
+  Total background  & $1097 \pm 38$ & $1085 \pm 45$ \\ 
+\hline 
+\end{tabular} 
+%\begin{center}
+%\begin{tabular}{l*{4}{c}}
+%\hline\hline
+% & $\lephad$, 3j & $\lephad$, $\geq$4j & $\hadhad$, 3j &  $\hadhad$, $\geq$4j \\
+%\hline
+%$\Hc$  &   $ -4.2 \pm 8.2 $ &   $ -11 \pm 21 $ &   $ -2.4 \pm 4.3 $ &   $ -10 \pm 11 $ \\ 
+%\hline
+%Fake $\had$  &   $ 2290 \pm 680 $ &   $ 2640 \pm 880 $ &   $ 640 \pm 110 $ &   $ 440 \pm 100 $ \\ 
+%Top (real $\had$)  &   $ 4300 \pm 670 $ &   $ 3660 \pm 860 $ &   $ 147 \pm 84 $ &   $ 139 \pm 35 $ \\ 
+%$Z \to \tau\tau$  &   $ 500 \pm 100 $ &   $ 359 \pm 90 $ &   $ 320 \pm 79 $ &   $ 306 \pm 76 $ \\ 
+%Other  &   $ 178 \pm 45 $ &   $ 112 \pm 28 $ &   $ 9.6 \pm 2.6 $ &   $ 12.5 \pm 2.6 $ \\ 
+%\hline
+%Total  &   $ 7230 \pm 160 $ &   $ 6760 \pm 170 $ &   $ 1117 \pm 65 $ &   $ 893 \pm 45 $ \\
+%\hline
+%Data & 7259  & 6768  & 1119  & 894 \\ 
+%\hline\hline    
+%\end{tabular}
 %%\\
 %\vspace{0.2cm}
 %
-\end{center}
+%\end{center}
 %\vspace{-0.5cm}
 \label{tab:Htautau_Postfit_Yields_Unblind_Hc}
 \end{table} 
@@ -92,37 +168,70 @@ Data & 7259  & 6768  & 1119  & 894 \\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[htbp]
 \caption{
-$\Htautau$ search: Predicted and observed yields in each of the analysis regions considered.
-The background prediction is shown after the fit to data under the signal-plus-background hypothesis 
+Predicted and observed yields in each of the analysis regions considered.
+The background prediction is shown after the fit to the asimov data under the signal-plus-background hypothesis 
 (assuming $\Hu$ as signal).
-The contributions with real $\had$ candidates from $\ttbar$,  $\ttbar V$, $\ttbar H$, and single-top-quark backgrounds are combined into
-a single background source referred to as ``Top (real $\had$)'', whereas the small contributions from 
-$Z\to \ell^+\ell^-$ ($\ell = e, \mu$) and diboson backgrounds are combined into ``Other''. 
+The contributions with real $\had$ candidates from $\ttbar$ and  $Z\to \ell^+\ell^-$ ($\ell = e, \mu$), diboson, $\ttbar V$, $\ttbar H$, single-top-quark, and other small backgrounds are combined into
+a single background source referred to as ``Other MC'' in the leptonic channels , whereas single-top-quark and the small contributions are combined into ``Rare'' in the hadronic channels.
 The quoted uncertainties are the sum in quadrature of statistical and systematic uncertainties of the yields, 
 computed taking into account correlations among nuisance parameters and among processes.
 }
 \small
-\begin{center}
-\begin{tabular}{l*{4}{c}}
-\hline\hline
- & $\lephad$, 3j & $\lephad$, $\geq$4j & $\hadhad$, 3j &  $\hadhad$, $\geq$4j \\
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+ & $t_{l}\tau_{had}-1j$ & $t_{l}\tau_{had}2j$ & $t_{h}\tau_{lep}\tau_{had}-3j$ & $t_{h}\tau_{lep}\tau_{had}-2j$ & $t_{l}\tau_{had}\tau_{had}$\\
 \hline
-$\Hu$  &   $ -5.7 \pm 8.6 $ &   $ -14 \pm 21 $ &   $ -2,0 \pm 2.8 $ &   $ -7.1 \pm 9.8 $ \\ 
-\hline
-Fake $\had$  &   $ 2270 \pm 680 $ &   $ 2620 \pm 880 $ &   $ 640 \pm 110 $ &   $ 440 \pm 100 $ \\
-Top (real $\had$)  &   $ 4320 \pm 660 $ &   $ 3680 \pm 860 $ &   $ 148 \pm 84 $ &   $ 140 \pm 35 $ \\ 
-$Z \to \tau\tau$  &   $ 470 \pm 100 $ &   $ 359 \pm 89 $ &   $ 321 \pm 79 $ &   $ 308 \pm 77 $ \\ 
-Other  &   $ 177 \pm 44 $ &   $ 111 \pm 27 $ &   $ 9.7 \pm 2.6 $ &   $ 12.5 \pm 2.6 $ \\ 
-\hline
-Total  &   $ 7230 \pm 160 $ &   $ 6760 \pm 160 $ &   $ 1118 \pm 66 $ &   $ 892 \pm 45 $ \\ 
-\hline
-Data  & 7259  & 6768  & 1119  & 894  \\ 
-\hline\hline    
+  QCD Fake lep   & $916.84 \pm 213.23$ & $434.65 \pm 98.21$ & $233.82 \pm 77.52$ & $416.75 \pm 107.82$ & $0 \pm 0$ \\
+  W-jet fake $\tau$  & $839.60 \pm 176.84$ & $963.47 \pm 211.11$ & $2934.6 \pm 602.46$ & $3434.22 \pm 820.85$ & $4.96 \pm 1.58$ \\
+  Other Fake $\tau$  & $2918.71 \pm 217.11$ & $2625.87 \pm 161.15$ & $1767.93 \pm 455.10$ & $1635.44 \pm 784.74$ & $138.86 \pm 14.05$ \\
+  b Fake $\tau$  & $811.72 \pm 109.86$ & $1015.84 \pm 158.82$ & $522.39 \pm 69.31$ & $573.09 \pm 75.11$ & $68.10 \pm 8.32$ \\
+  tuH   & $71.08 \pm 14.95$ & $62.98 \pm 11.26$ & $123.52 \pm 20.39$ & $87.65 \pm 13.75$ & $93.07 \pm 14.64$ \\                                                                                           
+  Lep fake $\tau$  & $221.68 \pm 29.45$ & $87.81 \pm 9.62$ & $307.45 \pm 33.81$ & $563.25 \pm 60.64$ & $0.88 \pm 0.34$ \\
+  Double Fake $\tau$  & $0 \pm 0$ & $0 \pm 0$ & $0 \pm 0$ & $0 \pm 0$ & $89.74 \pm 23.31$ \\
+  $\bar{t}t$   & $280.14 \pm 15.02$ & $178.8 \pm 26.84$ & $7081.53 \pm 363.91$ & $11610.1 \pm 475.80$ & $5.10 \pm 2.69$ \\
+  Other MC   & $84.62 \pm 7.34$ & $83.30 \pm 3.10$ & $880.00 \pm 67.57$ & $1591.41 \pm 84.97$ & $40.79 \pm 1.75$ \\
+\hline	
+  Total  & $6144 \pm 170$ & $5453 \pm 94$ & $13851 \pm 138$ & $19912 \pm 164$ & $441 \pm 29$ \\ \hline
 \end{tabular}
+\begin{tabular}{|c|c|c|}
+\hline
+ & $t_{h}\tau_{had}\tau_{had}-2j$ & $t_{h}\tau_{had}\tau_{had}-3j$\\
+\hline
+  only $\tau_{sub}$ real   & $64.23 \pm 49.64$ & $84.46 \pm 66.13$ \\
+  %  tcH   & $31.48 \pm 9.43$ & $84.44 \pm 22.34$ \\
+  tuH   & $45.66 \pm 13.02$ & $105.38 \pm 27.65$ \\                                                                                                                                                       
+  Diboson   & $8.40 \pm 1.59$ & $10.75 \pm 1.10$ \\
+  Fake $\tau$ MC   & $277.11 \pm 87.45$ & $332.77 \pm 93.32$ \\	
+  $\bar{t}t$   & $225.85 \pm 26.18$ & $209.75 \pm 31.01$ \\
+  $Z\rightarrow\tau\tau$   & $485.70 \pm 43.14$ & $406.02 \pm 51.63$ \\	
+  $\bar{t}tV$   & $0.76 \pm 0.43$ & $5.46 \pm 1.03$ \\
+  Rare   & $17.84 \pm 2.76$ & $10.05 \pm 2.53$ \\
+  SM Higgs   & $17.30 \pm 1.90$ & $25.88 \pm 2.05$ \\ \hline
+  Total background  & $1097 \pm 38$ & $1085 \pm 45$ \\
+\hline 
+\end{tabular} 
+%\begin{center}
+%\begin{tabular}{l*{4}{c}}
+%\hline\hline
+% & $\lephad$, 3j & $\lephad$, $\geq$4j & $\hadhad$, 3j &  $\hadhad$, $\geq$4j \\
+%\hline
+%$\Hu$  &   $ -5.7 \pm 8.6 $ &   $ -14 \pm 21 $ &   $ -2,0 \pm 2.8 $ &   $ -7.1 \pm 9.8 $ \\ 
+%\hline
+%Fake $\had$  &   $ 2270 \pm 680 $ &   $ 2620 \pm 880 $ &   $ 640 \pm 110 $ &   $ 440 \pm 100 $ \\
+%Top (real $\had$)  &   $ 4320 \pm 660 $ &   $ 3680 \pm 860 $ &   $ 148 \pm 84 $ &   $ 140 \pm 35 $ \\ 
+%$Z \to \tau\tau$  &   $ 470 \pm 100 $ &   $ 359 \pm 89 $ &   $ 321 \pm 79 $ &   $ 308 \pm 77 $ \\ 
+%Other  &   $ 177 \pm 44 $ &   $ 111 \pm 27 $ &   $ 9.7 \pm 2.6 $ &   $ 12.5 \pm 2.6 $ \\ 
+%\hline
+%Total  &   $ 7230 \pm 160 $ &   $ 6760 \pm 160 $ &   $ 1118 \pm 66 $ &   $ 892 \pm 45 $ \\ 
+%\hline
+%Data  & 7259  & 6768  & 1119  & 894  \\ 
+%\hline\hline    
+%\end{tabular}
 %%\\
 %\vspace{0.2cm}
 %
-\end{center}
+%\end{center}
 %\vspace{-0.5cm}
 \label{tab:Htautau_Postfit_Yields_Unblind_Hu}
 \end{table} 
