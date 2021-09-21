@@ -4,8 +4,8 @@
 The final discriminant distributions across all analysis regions considered are jointly analysed to test for the 
 presence of a signal. The statistical analysis uses a binned likelihood function ${\cal L}(\mu,\theta)$ constructed as
 a product of Poisson probability terms over all bins considered in the search. This function depends
-on the signal-strength parameter $\mu$, defined as a factor multiplying the expected yield of $\Hq$ signal events
-normalised to a reference branching ratio $\BR_{\mathrm{ref}}(t\to Hq)=0.2\%$,
+on the signal-strength parameter $\mu$, defined as a factor multiplying the expected yield of $tH$ and $tt(Hq)$ signal events
+normalised to a reference branching ratio $\BR_{\mathrm{ref}}(t\to Hq)=0.1\%$,
 and $\theta$, a set of nuisance parameters that encode the effect of systematic uncertainties on the signal and background expectations. 
 Therefore, the expected total number of events in a given bin depends on $\mu$ and $\theta$. 
 All nuisance parameters are subject to Gaussian constraints in the likelihood.
@@ -23,7 +23,7 @@ hypothesis, maximising the likelihood function ${\cal L}(\mu,\theta)$ over $\mu$
 
 The fitting procedure was initially validated through extensive studies using mock data, defined as the sum of all predicted backgrounds 
 plus an injected signal of variable strength, as well as by performing fits to real data where bins of the final discriminant variable with 
-a signal contamination above 5\% are excluded (referred to as blinding requirements).
+a signal contamination above 10\% are excluded (referred to as blinding requirements).
 In both cases, the robustness of the model for systematic uncertainties is established by verifying the stability of the fitted background 
 when varying assumptions about some of the leading sources of uncertainty. 
 After this, the blinding requirements
@@ -37,18 +37,21 @@ where $\hat{\mu}$ and $\hat{\theta}$ are the values of the parameters that
 maximise the likelihood function (subject to the constraint $0\leq \hat{\mu} \leq \mu$), and ${\hat{\theta}}_\mu$ are the values of the
 nuisance parameters that maximise the likelihood function for a given value of $\mu$. 
 The test statistic $q_\mu$ is evaluated with the {\textsc RooFit} package~\cite{Verkerke:2003ir,RooFitManual}.
-A related statistic is used to determine whether the observed data is compatible with the background-only hypothesis (the so-called discovery test)  
-by setting $\mu=0$ in the profile likelihood ratio and leaving $\hat{\mu}$ unconstrained: $q_0 = -2\ln({\cal L}(0,{\hat{\theta}}_0)/{\cal L}(\hat{\mu},\hat{\theta}))$.
-The $p$-value (referred to as $p_0$), representing the level of agreement between the data and the background-only hypothesis, is estimated by integrating
-%representing the probability of the data being compatible with the background-only hypothesis is estimated by integrating
-%the distribution of $q_0$ obtained from background-only pseudo-experiments, approximated using the asymptotic formulae given in Refs.~\cite{Cowan:2010js}, 
-the distribution of $q_0$ based on the asymptotic formulae in Ref.~\cite{Cowan:2010js}, 
-above the observed value of $q_0$ in the data. 
-%The observed $p_0$-value is checked for each explored signal scenario.
-%In the case of the data being compatible with the background-only hypothesis, 
-Upper limits on $\mu$, and thus on 
+%A related statistic is used to determine whether the observed data is compatible with the background-only hypothesis (the so-called discovery test)  
+%by setting $\mu=0$ in the profile likelihood ratio and leaving $\hat{\mu}$ unconstrained: $q_0 = -2\ln({\cal L}(0,{\hat{\theta}}_0)/{\cal L}(\hat{\mu},\hat{\theta}))$.
+%The $p$-value (referred to as $p_0$), representing the level of agreement between the data and the background-only hypothesis, is estimated by integrating
+%%representing the probability of the data being compatible with the background-only hypothesis is estimated by integrating
+%%the distribution of $q_0$ obtained from background-only pseudo-experiments, approximated using the asymptotic formulae given in Refs.~\cite{Cowan:2010js}, 
+%the distribution of $q_0$ based on the asymptotic formulae in Ref.~\cite{Cowan:2010js}, 
+%above the observed value of $q_0$ in the data. 
+%%The observed $p_0$-value is checked for each explored signal scenario.
+%%In the case of the data being compatible with the background-only hypothesis, 
+%Upper limits on $\mu$, and thus on 
+%$\BR(t\to Hq)$, are derived by using $q_\mu$ in the CL$_{\textrm{s}}$ method~\cite{Junk:1999kv,Read:2002hq}.
+%For a given signal scenario, values of the $\BR(t\to Hq)$ yielding CL$_{\textrm{s}} < 0.05$, 
+%where CL$_{\textrm{s}}$ is computed using the asymptotic approximation~\cite{Cowan:2010js}, are excluded at $\geq 95\%$ CL.
+
+In the absence of signal, exclusion limits are set on $\mu$ , and thus on
 $\BR(t\to Hq)$, are derived by using $q_\mu$ in the CL$_{\textrm{s}}$ method~\cite{Junk:1999kv,Read:2002hq}.
-For a given signal scenario, values of the $\BR(t\to Hq)$ yielding CL$_{\textrm{s}} < 0.05$, 
+For a given signal scenario, values of the $\BR(t\to Hq)$ yielding CL$_{\textrm{s}} < 0.05$,
 where CL$_{\textrm{s}}$ is computed using the asymptotic approximation~\cite{Cowan:2010js}, are excluded at $\geq 95\%$ CL.
-
-
