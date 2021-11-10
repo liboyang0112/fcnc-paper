@@ -53,12 +53,13 @@ uncertainty is highly correlated with the luminosity uncertainty and may be an o
 \subsection{Background modelling}
 \label{sec:syst_bkgmodeling}
 
-A number of sources of systematic uncertainty affecting the modelling of $t\bar{t}$+jets are considered. 
-An uncertainty of  6\% is assigned to the inclusive $\ttbar$ production
-cross section~\cite{Czakon:2011xx}, including contributions from varying the factorisation and renormalisation 
-scales, as well as from the top-quark mass, the PDF and $\alpha_{\textrm{S}}$. The latter two represent the largest contribution 
-to the overall theoretical uncertainty in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
-with the NNPDF3.0(NLO), CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3(LO) 5F FFN~\cite{Ball:2012cx} PDF sets.
+A number of sources of systematic uncertainty affecting the modelling of $t\bar{t}$+jets are considered: the choice of the renormalisation and factorisation scale in the matrix-element calculation, the choice of the matching scale when matching the matrix elements to the parton show generator, the uncertainty in the value of $\alpha_s$ when modeling intial-state radiation (ISR), the choice of the renormalisation scale when modeling final-state radiation (FSR).
+%%An uncertainty of  6\% is assigned to the inclusive $\ttbar$ production
+%%cross section~\cite{Czakon:2011xx}, including contributions from varying the factorisation and renormalisation 
+%%scales, as well as from the top-quark mass, the PDF and $\alpha_{\textrm{S}}$. The latter two represent the largest contribution 
+%%to the overall theoretical uncertainty in the cross section and were calculated using the PDF4LHC prescription~\cite{Botje:2011sn} 
+%%with the NNPDF3.0(NLO), CT10 NNLO~\cite{Lai:2010vv,Gao:2013xoa} and NNPDF2.3(LO) 5F FFN~\cite{Ball:2012cx} PDF sets.
+
 The hdamp parameter (which controls the amount of radiation produced by the parton shower in
 POWHEG-BOX v2) is set to 1.5$m_{top}$ in the nominal case. Alternative samples are generated with hdamp=3$m_{top}$. The
 difference between two samples is treated as one of the systematics as ``$t\bar{t}$ hdamp''. 
@@ -77,10 +78,14 @@ and using the Var3c upward variation of the A14 parameter set;
 a sample with decreased radiation (referred to as radLow) is obtained by increasing the scales by a factor of two 
 and using the Var3c downward variation of the A14 set~\cite{ATL-PHYS-PUB-2016-004}.
 
-Uncertainties affecting the normalisation of the $V$+jets background are estimated for the sum
-of $W$+jets and $Z$+jets, and separately for $V$+light-jets, $V$+$\geq$1$c$+jets, and $V$+$\geq$1$b$+jets subprocesses.
-The total normalisation uncertainty of $V$+jets processes is estimated by comparing the data and total background prediction in 
-the different analysis regions considered, but requiring exactly zero $b$-tagged jets.
+
+Another significancant background in hadronic channel stems from the ztautau samples, several sources of uncertainty are considered for these samples: 
+the PDF variation considering the standarnd deviation of the 100 NNPDF replicas event weights of NNPDF3.0nnlo PDF set used in Sherpa, renormalisation($\mu_{R}$) and factorisation scales($\mu_{F}$),jet-to-parton matching uncertainty,resummation scale uncertainty, variation in the choice of $\alpha_{S}$, alternative PDF variation evalatued comparing predictions from NNPDF3.0nnlo PDF set (nominal) with MMHT2014nnlo68cl and CT14nnlo PDF sets.
+
+%%Uncertainties affecting the normalisation of the $V$+jets background are estimated for the sum
+%%of $W$+jets and $Z$+jets, and separately for $V$+light-jets, $V$+$\geq$1$c$+jets, and $V$+$\geq$1$b$+jets subprocesses.
+%%The total normalisation uncertainty of $V$+jets processes is estimated by comparing the data and total background prediction in 
+%%the different analysis regions considered, but requiring exactly zero $b$-tagged jets.
 %Agreement between data and predicted background 
 %in these modified regions, which are dominated by $V$+light-jets, is found to be within approximately 30\%. This bound is taken to 
 %be the normalisation uncertainty, correlated across all $V$+jets subprocesses. 
@@ -88,33 +93,42 @@ the different analysis regions considered, but requiring exactly zero $b$-tagged
 %of 1.3~\cite{Aaboud:2017xsd}, additional 30\% normalisation uncertainties are assumed for $V$+$\geq$1$c$+jets and $V$+$\geq$1$b$+jets
 %subprocesses, considered uncorrelated between them.
 
-Uncertainties affecting the modelling of the single-top-quark background include a 
-$+5\%$/$-4\%$ uncertainty of the total cross section estimated as a weighted average 
-of the theoretical uncertainties in $t$-, $tW$- and $s$-channel production~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
-Additional uncertainties associated with the modelling of additional radiation are assessed by comparing the nominal
-samples with alternative samples where generator parameters are varied.
-For the $t$- and $tW$-channel processes, an uncertainty due to the choice of parton shower and hadronisation model is derived 
-by comparing events produced by {\powheg} interfaced to {\pythia}~8 or {\herwigpp}.
-These uncertainties are treated as fully correlated among single-top-quark production processes, but uncorrelated with the
-corresponding uncertainty of the $\ttbar$+jets background.
-An additional systematic uncertainty in $tW$-channel production concerning the separation 
-between $t\bar{t}$ and $tW$ at NLO is assessed by comparing
-the nominal sample, which uses the diagram removal scheme~\cite{Frixione:2008yi}, with an alternative sample
-using the diagram subtraction scheme~\cite{Frixione:2008yi}.
+To estimate the uncertainty originating from ISR modelling in the single top samples, the same procedure as $t\bar{t}$ is used. One NP reflects the symmetrised effect of the two shower variations Var3cDown and Var3cUp, and the other NP with name ``scale'' describe the symmetrised effect from the independent variations of the renormalisation and factorisation scale. The impact of the uncertainty from FSR modelling is estimated by reweighting the nominal single top sample. The two variations $\mu^{FSR}_{R} \times 0.5$ and $\mu^{FSR}_{R} \times 2$ are considered.  The standard deviation of 100 NNPDF3.0nnlo variations is calculated Uncertainties on the PDF are evaluated following the recommended prescription in Ref.~\cite{ttRun2}.
 
-Uncertainties of the diboson background normalisation include 5\% from the NLO theory cross sections~\cite{Campbell:1999ah,Campbell:2011bn},
-as well as an additional 24\% normalisation uncertainty added in quadrature for each additional inclusive jet-multiplicity bin, based on a 
-comparison among different algorithms for merging LO matrix elements and parton showers~\cite{Alwall:2007fs}
-(it is assumed that two jets originate from the $W/Z$ decay, as in $WW/WZ \to \ell \nu jj$). 
-Therefore, the total normalisation uncertainty is $5\% \oplus \sqrt{N-2}\times 24\%$, where $N$ is the selected jet multiplicity,  
-resulting in 34\%, 42\%, and 48\%, for events with exactly 4 jets, exactly 5 jets, and $\geq$6 jets, respectively. 
-Recent comparisons between data and {\sherpa}~2.1.1 for $WZ(\to \ell\nu\ell\ell) + \geq$4 jets show
-agreement within the experimental uncertainty of approximately 40\%~\cite{Aaboud:2016yus}, which further justifies the above uncertainty.
-Given the very small contribution of this background to the total prediction, the final result is not affected by the assumed modelling
-uncertainties.
+The values of the scale-parameters $\mu_{f}$ and $\mu_{f}$ are varied by factors of 2.0 and 0.5 with respect to their default values to obtain the uncertainties related to the renormalization and factorization scales in ttV samples. Uncertainties on the PDF are evaluated following the same procedure in Ref.~\cite{ttZRun2}.
 
-Uncertainties of the $\ttbar V$ and $\ttbar H$ cross sections are 15\% and $+10\%$/$-13\%$, respectively,
-from the uncertainties of their respective NLO theoretical cross sections~\cite{Campbell:2012dh,Garzelli:2012bn,deFlorian:2016spz}. 
+Following the recommendations of the PMG group, the uncertainties to be considered for diboson background include~\cite{dibosonRes} scale variations of the renormalization and factorization scale,
+PDF variations and $\alpha_{S}$ variations.
+
+A $+5.8\%-9.2\%$ normalization uncertainty is considered for the ttH background, corresponding to the scale and $\alpha_{S}$ uncertainties in the NLO cross-section computation. A constant PDF uncertainty of $\pm3.6$\% is assumed, as it was done for the previous measurement. Therefore, a overall sytematics with variation 9\% is entered in the final fit model~\cite{ttZRun2}.
+
+%%%Uncertainties affecting the modelling of the single-top-quark background include a 
+%%%$+5\%$/$-4\%$ uncertainty of the total cross section estimated as a weighted average 
+%%%of the theoretical uncertainties in $t$-, $tW$- and $s$-channel production~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
+%%%Additional uncertainties associated with the modelling of additional radiation are assessed by comparing the nominal
+%%%samples with alternative samples where generator parameters are varied.
+%%%For the $t$- and $tW$-channel processes, an uncertainty due to the choice of parton shower and hadronisation model is derived 
+%%%by comparing events produced by {\powheg} interfaced to {\pythia}~8 or {\herwigpp}.
+%%%These uncertainties are treated as fully correlated among single-top-quark production processes, but uncorrelated with the
+%%%corresponding uncertainty of the $\ttbar$+jets background.
+%%%An additional systematic uncertainty in $tW$-channel production concerning the separation 
+%%%between $t\bar{t}$ and $tW$ at NLO is assessed by comparing
+%%%the nominal sample, which uses the diagram removal scheme~\cite{Frixione:2008yi}, with an alternative sample
+%%%using the diagram subtraction scheme~\cite{Frixione:2008yi}.
+
+%%%%Uncertainties of the diboson background normalisation include 5\% from the NLO theory cross sections~\cite{Campbell:1999ah,Campbell:2011bn},
+%%%%as well as an additional 24\% normalisation uncertainty added in quadrature for each additional inclusive jet-multiplicity bin, based on a 
+%%%%comparison among different algorithms for merging LO matrix elements and parton showers~\cite{Alwall:2007fs}
+%%%%(it is assumed that two jets originate from the $W/Z$ decay, as in $WW/WZ \to \ell \nu jj$). 
+%%%%Therefore, the total normalisation uncertainty is $5\% \oplus \sqrt{N-2}\times 24\%$, where $N$ is the selected jet multiplicity,  
+%%%%resulting in 34\%, 42\%, and 48\%, for events with exactly 4 jets, exactly 5 jets, and $\geq$6 jets, respectively. 
+%%%%Recent comparisons between data and {\sherpa}~2.1.1 for $WZ(\to \ell\nu\ell\ell) + \geq$4 jets show
+%%%%agreement within the experimental uncertainty of approximately 40\%~\cite{Aaboud:2016yus}, which further justifies the above uncertainty.
+%%%%Given the very small contribution of this background to the total prediction, the final result is not affected by the assumed modelling
+%%%%uncertainties.
+%%%%
+%%%%Uncertainties of the $\ttbar V$ and $\ttbar H$ cross sections are 15\% and $+10\%$/$-13\%$, respectively,
+%%%%from the uncertainties of their respective NLO theoretical cross sections~\cite{Campbell:2012dh,Garzelli:2012bn,deFlorian:2016spz}. 
 
 The statistical uncertainties of the fake $\had$ background calibration in the leptonic channel is applied with uncorrelated uncertainties for different fake $\had$ source and different $\pt$ slices. The uncertainties of the ABCD method is applied with a normalisation factor for muon and electron respectively considering both statistical fluctuation and the differences between signal regions.
 
@@ -126,4 +140,5 @@ The uncertainties of the fake factor method applied in hadronic channel includes
 Several normalisation and shape uncertainties are taken into account for the $\Hq$ and $pp\to tH$ signals.
 Uncertainties of the Higgs boson branching ratios are taken into account
 following the recommendation in Ref.~\cite{deFlorian:2016spz}.
-The uncertainty of ISR, FSR and PDF are treated correlatedly with $\ttbar$ samples. The parton shower uncertainties is estimated by comparing the predictions from {\powheg} interfaced either to {\pythiaeight} or {\herwig7}. 
+The uncertainty of ISR, FSR, scale and PDF are considered in all SRs. The parton shower uncertainties is estimated by comparing the predictions from {\powheg} interfaced either to {\pythiaeight} or {\herwig7}. 
+%treated correlatedly with $\ttbar$ samples. 
