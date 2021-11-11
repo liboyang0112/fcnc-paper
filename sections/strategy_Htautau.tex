@@ -3,7 +3,7 @@
 \label{sec:strategy_Htautau}
 %-------------------------------------------------------------------------------
 
-The analysis strategy adopted in the $\Htautau$ search is similar to the one used in Ref.~\cite{fcnc36,Chen:2015nta} but extended to more signal channels.
+The analysis strategy adopted in the $\Htautau$ search is similar to the one used in Ref.~\cite{fcnc36,Chen:2015nta} but extended to more search channels.
 
 \subsection{Event categorisation and kinematic reconstruction}
 \label{sec:htautau_reco_cat}
@@ -14,7 +14,7 @@ the Higgs boson and the remaining SM $t\to Wb$ decay. There is an additional $q$
 If the $W$ boson or one of the $\tau$-leptons decays leptonically, an isolated electron or muon with significant $\met$ is also expected.
 In a significant fraction of the events, the smaller jet from the hadronic $W$ boson decay fails the minimum $\pt$ requirement of $25~\gev$,
 resulting in some signal events mixed with production mode having only three reconstructed jets.
-In order to optimise the sensitivity of the search, the selected events are categorised into seven SRs based on the number of light lepton and
+In order to optimise the sensitivity of the search, the selected events are categorised into seven SRs based on the number of light leptons,
 $\had$ candidates, and on the number of light flavored jets:
 $t_l\hadhad$, $t_l\had$-1j, $t_l\had$-2j, $t_h\lephad$-2j, $t_h\lephad$-3j, $t_h\hadhad$-2j, and $t_h\hadhad$-3j, as shown in Table~\ref{tab:srcr}. 
 
@@ -65,7 +65,7 @@ In the $t_hH$ events, there are 3 jets coming from top hadronic decay including 
 the jets are expected.
 
 Finally, the four-momenta of the invisible decay products from the decay of di-taus 
-are estimated from a kinematics fit. The fit is done by minimising a $\chi^2$ function based on the Gaussian constraints on the Higgs boson mass and the
+are estimated using a kinematics fit. The fit is done by minimising a $\chi^2$ function based on the Gaussian constraints on the Higgs boson mass and the
 measured $\met$ within their expected resolutions. The resolution on the Higgs boson mass is taken to be $20~\gev$, respectively, while the resolution on the measured $\met$ is parameterised as a linear function of 
 $\sqrt{\sum E_T}$, where $\sum E_T$ is the scalar sum of the $\pt$ of all physics objects contributing to the $\met$ reconstruction~\cite{Aaboud:2018tkc}.
 After the $\chi^2$ minimisation, the Higgs boson four-momentum, and hence its invariant mass, as well as the 
@@ -103,7 +103,7 @@ Boosted decision trees are used in each SR to improve the separation between sig
 In the training, All signal events, $tt(qH)$ and $tH$ are merged together, are used for $tuH$ and $tcH$ against the total SM background (including both real and fake $\had$ contributions).
 
 A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the ``separation" and ``importance" measures provided by the TMVA package~\cite{Hocker:2007ht}, and only those variables whose importance is large than 2\% were kept.
-The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance_tthML} -~\ref{tab:importance_xTFW} and defined in the following:
+The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance_tthML} and~\ref{tab:importance_xTFW} and defined in the following:
 \begin{itemize}
 \item $E^{T}_{miss}$ is the missing transverse momentum.
 \item $p_{T,\tau}$ is the transverse momentum of the leading tau candidate.
@@ -139,7 +139,7 @@ m^{T}_{W} = \sqrt{2 p_{\text{T,lep}} E_{\text{T}}^{\text{miss}} \left(1-\cos\Del
 \item $\Delta R(\tau,bjet)$ is the angular distance between the tau and b-jet. If there are two taus in the event, the leading one is selected for the calculation.
 \item $\eta_{\tau,max}$ is the maximum $\eta$ value among the tau candidates.
 \item $\Delta R(l,\tau)$ is the angular distance between the lepton and the closest tau candidate in the leptonic channels.
-\item $\Delta R(\tau,qjet)$ is the angular distance between the tau and the reconstructed $q$-jet.
+\item $\Delta R(\tau,qjet)$ is the angular distance between the tau and the reconstructed $q$-jet. If there are two taus in the event, the leading one is used.
 \item $\Delta R(\tau,\tau)$ is the angular distance between two tau candidates, in case of $t_h\tlhad$ channels, the definition is the same as $\Delta R(l,\tau)$.
 \item $\Delta\phi(\tau\tau,P^{T}_{miss})$ is the azimuthal angle between the $\met$ and di-tau $\pt$.
 \end{itemize}
@@ -149,8 +149,9 @@ is shown in Figures~\ref{fig:taupt_postfit}.
 %each of the SRs considered is shown in Figures~\ref{fig:mva_input_hadhad} -~\ref{fig:mva_input_lhadhad}.
 %The comparison between the data and predicted background after preselection for the distributions of two of the most 
 %discriminating BDT input variables in the $\hadhad$ channel before the fit to data (``Pre-Fit'').
-The expected signals (dashed red) are also shown after normalized to the total number of events in the predicted
-background for the shape comparison of the distributions.   
+The expected signals (dashed) are also shown after scaled up for the shape comparison of the distributions.
+%by a large factor normalized to the total number of events in the predicted
+%background for the shape comparison.   
 %corresponding to $\BR(t\to Hq)=0.2\%$ is also shown.
 The first and the last bins in the figures contain the underflow and overflow respectively.
 The bottom panel displays the ratio of data to the SM background (``Bkg'') prediction.
