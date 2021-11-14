@@ -35,7 +35,7 @@ direction of the electron (muon). The electron (muon) candidates are required sa
 
 Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based a trained isolation boosted decision tree \texttt{PromptLeptonVeto}(PLIV), which is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged particle tracks inside the jet can be
 used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced non-prompt leptons.
-The tight working points are: \texttt{PLIV}$<-0.6734$ for high $\pt$ muons and \texttt{PLIV}$<-0.704$ for hight $\pt$ barrel electrons.
+The tight working points are used for high $\pt$ lepton.
 The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method
 with $Z\rightarrow l^+l^-$ events. These scale factors are also checked applicable to the electron or muon from the tau decay
 using $Z\rightarrow\tau\tau\rightarrow e\mu$ samples, which is consistent with 1 at 2\% level. To be conservative, we assign
@@ -116,7 +116,7 @@ within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributio
 Overlaps between electron and jet candidates are resolved next, and finally, overlaps between remaining jet candidates 
 and muon candidates are removed. Energy clusters from identified electrons are not excluded during jet reconstruction. 
 In order to avoid double-counting of electrons as jets, the closest jet whose axis is within ${\Delta}R = 0.2$ of an electron 
-is discarded if the jet is not $b$-tagged, otherwise the electron is remived.
+is discarded if the jet is not $b$-tagged, otherwise the electron is removed.
 If the electron is within ${\Delta}R = 0.4$ of the axis of any jet after this initial removal, the jet is retained and  the electron is removed.
 The overlap removal procedure between the remaining jet candidates and muon candidates is designed to remove those muons 
 that are likely to have arisen in the decay of hadrons and to retain the overlapping jet instead. 
