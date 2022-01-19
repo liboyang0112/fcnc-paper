@@ -37,6 +37,7 @@
 %-------------------------------------------------------------------------------
 % Extra packages:
 \usepackage[block=none]{\ATLASLATEXPATH atlaspackage}
+%\usepackage{\ATLASLATEXPATH atlaspackage}
 % Commonly used options:
 %  biblatex=true|false   Use biblatex (default) or bibtex for the bibliography.
 %  backend=bibtex        Use the bibtex backend rather than biber.
@@ -50,6 +51,7 @@
 
 % Useful macros
 \usepackage{\ATLASLATEXPATH atlasphysics}
+
 \usepackage{multirow}
 \usepackage{FCNCPaths}
 \usepackage{FCNCsupport-defs}
@@ -70,6 +72,7 @@
 \addbibresource{bib/CMS.bib}
 \addbibresource{bib/ConfNotes.bib}
 \addbibresource{bib/PubNotes.bib}
+\addbibresource{bib/ATLAS-useful.bib}
 
 % Paths for figures - do not forget the / at the end of the directory name.
 \graphicspath{{logos/}{figures/}}
@@ -143,11 +146,13 @@
 %\url{https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PubComAcknowledgements}
 
 
+
 %-------------------------------------------------------------------------------
 \clearpage
 \appendix
-\part*{Appendix}
-\addcontentsline{toc}{part}{Appendix}
+\part*{Auxiliary Material}
+%\addcontentsline{toc}{part}{Appendix}
+\addcontentsline{toc}{part}{Auxiliary Material}
 %-------------------------------------------------------------------------------
 %In a paper, an appendix is used for technical details that would otherwise disturb the flow of the paper.
 %Such an appendix should be printed before the Bibliography.
@@ -177,3 +182,4 @@
 %%\clearpage \input{atlas_authlist} 
 
 \end{document}
+

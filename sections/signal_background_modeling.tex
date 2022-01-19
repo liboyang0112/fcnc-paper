@@ -98,6 +98,27 @@ was adopted for some of the samples used to estimate systematic uncertainties in
 Simulated events were processed through the same reconstruction software as the data, and corrections were applied so that the object identification 
 efficiencies, energy scales and energy resolutions match those determined from data control samples.
 
+
+\begin{table}
+\footnotesize
+\centering
+\caption{Overview of the MC generators used for the main signal and background samples}
+\begin{tabular}[h]{l|c|c|c|c|c|c}
+\hline \hline
+\multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
+        &  ME   &  PS    &  ME  & PS &   &  \\\hline
+\textit{TT} Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+\textit{ST} Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
+\ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Single top & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$t\bar{t}X$ & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline\hline
+\end{tabular}
+\label{mob}
+\end{table}
+
+
 %-------------------------------------------------------------------------------
 \subsection{Backgrounds with fake leptons}
 \label{sec:fakeleptons}
