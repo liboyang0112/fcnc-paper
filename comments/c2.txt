@@ -1,0 +1,165 @@
+Dear authors,
+I have read version 0.2 of your paper draft, posted on the 3rd of February. It is good to see the complete result reported in a good-quality write-up. The draft clearly needs a bit more work before we can circulate to ATLAS, but I trust that with the help of the EB this can be accomplished rapidly.
+
+The draft is well structured and the text reads well for most parts, but there are quite a few sentences that could do with a more precise formulation. A good example is one of the first sentences in the introduction: The presence of flavour-changing neutral-current (FCNC) interactions between the Higgs boson, the top quark, and a u- or c-quark, tqH (q = u, c) is still an active topic. -> I know what you are trying to say, but this sentence doesn't convey the message. I would avoid "the presence", as this is currently a pure conjecture, with no empirical confirmation. Also "active topic" is subjective. Maybe rephrase as: The ATLAS and CMS experiments at the LHC are actively searching for FCNC interactions of the top quark. More generally, it might be good to involve a senior scientist, with a good dominion of English and experience in writing, to polish the text.
+
+
+L25: Since the observation of Higgs boson by the ATLAS and CMS experiments [1, 2] at the Large Hadron Collider (LHC), a comprehensive programme of measurements of its properties have been conducted for nearly a decade, by which no significant sign of deviation from Standard Model (SM) was observed until today. However there are still chances to find new physics by improving the sensitivity of previous searches. -> This is a strange twist. There are still chances sounds a bit desperate. I would simply state that the LHC represents an opportunity to search for rare BSM processes, without discussing the successes and failures of other parts of the programme.
+
+
+References [6-25]. There are a lot of papers (none of your readers will go and read them all) and in the end the motivation is only half-convincing. Several of the first set of papers are rather old. It is doubtful that the concrete models they give numbers for have stood the tests at the LHC. It would be good to select a few key papers on FCNC top interactions, together with the other teams, and take those as benchmarks. Then you can add a few papers specifically on top-Higgs FCNC interactions.
+
+
+
+Line 43: On the other hand, if the tqH interaction exists, the single-top, Higgs associated production through this interaction should also be enhanced. -> The interaction through his interaction becomes non-zero, enhancing the total (SM+FNCN) rate for pp -> tH (enhanced assumes it was non-zero, but as you specifically talk about "production through this interaction" there was nothing to enhance).
+
+
+Line 45: The tH associated production in the SM is expected to have a small cross section at LHC centre of mass energy [26]. -> I would suggest to quote a number, rather than saying it's small. We're not too far from reaching SM sensitivity for this process, so it's not far beyond experimental sensitivity.
+
+
+Line 47-67: This is very tedious to read. A table summarizing all numbers in an ordered fashion would be much easier to digest. Is there really only one CMS search?
+
+L81-82: It's unclear why this last sentence is in a new paragraph.
+ 
+L388: Boosted decision trees are used in each SR to improve the separation between signal and background. In the training, All signal events, tt(qH) and tH are merged together, are used for tuH and tcH against the total SM background (including both real and fake τhad contributions). -> Sentence is garbled. Please, rephrase.
+
+L391: large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation"(measures the degree of overlap between background and signal shape) and "importance"(depicts the power of the variable to the classification of two distributions). -> Can you merge tables 4 and 5 into a single table. This is interesting, but not crucial information. Do we need both numbers? (they seem to be similar). If you present it in a more compact format, I am happy for you to keep the table. We need a better caption and a proper definition in the text separation and importance (with references, if possible). The bulleted list occupies nearly two pages, which is too long.
+
+Table 6 and 7: combine?
+
+L556: In the absence of signal -> I would leave this to after the presentation of the result. We don't know yet if there will be a signal.
+
+L570: The observed and predicted yields after fit to the data with background only are summarized in Table 8. There is an excess of data events above background with a significance of 2.6sigma in the tl tauhadtauhad channel in the hight BDT region. We have checked the kinematic distributions for these excess of events in the BDT> 0.8 region and found there are nothing unusual between data and expectation -> I agree that we should add something about the agreement, but the "nothing unusual" is too vague. Within the large statistical uncertainty, the observed distributions are compatible with the background shapes, but also with a small signal contribution.
+
+L574: No significant excess of data events above the background expectation is found, and observed (expected) 95% CL limits are set on B(t → cH) and B(t → uH): B(t → cH) < 9.9 × 10−4 (5.0 × 10−4), assuming  B(t → uH) = 0,and B(t → uH) < 7.2 × 10−4 (3.6 × 10−4),assuming B(t → cH) = 0. These results are575
+dominated by the leptonic channels, which has a sensitivity a factor of two better than that of the hadronic channels. -> This seems to contradict your sentence about a slight excess before.
+Table 8: can you merge the two tables? Can you order the entries in order decreasing yield?
+
+L578: The main contributions to the total systematic uncertainty arise from the uncertainties affecting the normalization and factorization scales,
+b-tagging, and the choice of parton shower and hadronization modelling, and the fake τhad background estimation in the hadronic channels. -> Please, specify to which process these modelling uncertainties refer.
+
+Section 10: You can use table 9, that gives a very structured overview of the results. If you refer back to that table, you avoid having to list all numbers in the the text (observed and expected, tcH and tuH, BR and EFT coefficients). Then you can highlight a few relevant numbers and discuss how they relate to previous analyses.
+
+
+
+
+
+Dear FCNC tqH (tautau) team, 
+Thanks for your first draft! Below please find some comments on version 0.2. 
+Cheers,
+     Nedaa-Alexandra 
+ 
+- General comment: 
+    - either use MC after you first define it or write out Monte Carlo
+ 
+- Detailed comments:
+- Remove the empty page 3
+- Line 10: remove “CERN”. I think it is enough to say “recorded with the ATLAS detector at the Large Hadron…”
+- Line 16-17: Perhaps say something like “XX, XX and event kinematics are used to separate signal from the background through a multivariate discriminant”
+- Line 25: Since the observation of Higgs boson by >> After the discovery of the Higgs boson [XX] in 2012 by the ATLAS [X] and CMS [X] collaborations, …
+- Line 36: Need a reference for 2HDM 
+- Line 54: 36.1~fb^{-1} should be all on the same line 
+- Line 61: space in “36.1fb^{-1}”
+- Line 68: This paper is focused on the decay mode … >> The analysis targets Higgs-boson decays to τ-leptons using the …
+- Line 70-72: The sentence is too long. Perhaps break it down into two sentences?
+- Line 73: space after lepton “lepton(electron”
+- Line 81: No need to have a separate paragraph. Consider merging this sentence with the above paragraph 
+- Line 105: No need for a new paragraph 
+- Line 108: Slightly unusual way to start this section. Here is a suggestion: “Events are selected from pp collisions at √s = 13 TeV recorded by the ATLAS detector during 2015-2018. Only events for which all relevant subsystems were operational are considered. Events are required to have at least one vertex with two or more tracks with transverse momentum …”
+- Line 125-127: Maybe this sentence is better after you describe the triggers. Maybe in section 4 
+- Line 134: based a trained >> based on a trained
+- Line 134: Are you using the correct PLIV dedicated scale factors? These Scale factors were recently provided and they are only available for FS samples. Is this okay for you?
+- Line 140: Rephrase the sentence “These scale factors are also checked applicable to the electron or muon” to be applicable? 
+- Line 141: Do not use “we”. Maybe you can say something like this: “An additional uncertainty of ±2% is considered ..”  
+- Line 159-160: You need a reference
+- Line 173: Perhaps start the paragraph with something like this: “To avoid counting a single detector response as more than one lepton or jet, an overlap removal procedure …” instead of “Overlaps between reconstructed objects are removed sequentially …”
+- Line 207: Avoid having short sentences in separate paragraphs 
+- Line 220 & 341: I find it strange to use “trailing” 
+- Table two : Did you define “TT Signal”, “ST Signal”, “ME”, and “PS” in the text? If not, you can explain them in the caption
+- Line 309: You need a reference after “proved by monte carlo studies” otherwise you need to rephrase this sentence. Also you can use MC or write out “Monte Carlo” 
+- Line 311: Maybe add a reference to the ABCD method if there is one
+- Line 312: remove “which is widely used in ATLAS physics analyses.”
+- Line 320: monte carlo >> Monte Carlo (and everywhere in the note)
+- Line 321: What do you mean by “double-btagged” ? 
+- Line 325: with an addition >> with an additional 
+- Line 344: You need a space after MC “Data-MC(real tau)”
+- Line 339: search regions are signal regions? Why not refer to them as Signal regions?
+- Lin3 366: Should it be “it” in “considering it’s from the decay chain” ?
+- Line 372: Rephrase this “So a Higgs resonance” … avoid startng a sentence with “So”
+- Line 383: Rephrase this “the flying direction is unknown.” 
+- Line 383: you need to motivate why a fit is no longer feasible in these channels
+- Table 4 & 5: remove “tqH(ττ) search” from the caption 
+- Line 388: Boosted decision trees > Boosted decision trees (BDT) 
+- Figure one: Fix “tt^{-}” the first “t” is not in math mode
+- Line 485: No need to re-explain h-damp. This was done earlier 
+- Line 491-495: You are using internal weights for the scale variations right? this description is incorrect. please up-date this
+- Line 499: space missing in “n scales(µF),jet-to” and in “uncertainty,resummation scale uncertainty,”
+- Line 504: why do you say “within approximately”. Isn’t it 30%? or does it vary and up to 30%? 
+- Line 523: “interfaced either” should be rephrased to say the nominal is compared to an alternative sample interfaced with XX
+- Line 560: channel >> channels 
+- Line 570: missing space “2.6σ”
+- Figure 2: comparision >> comparison
+- Line 591: cofficients >> coefficients  
+
+
+
+Dear authors,
+I still had some outstanding comments on draft 0.1. The line numbers, figure and tables refer to version 0.1.
+* Title is very long, remove "(q=u,c)"
+* l136: "l" is not defined. It should be light lepton l=e or \mu.
+* l137: e\mu 4\nu.
+* l167: missing space before \tauhad
+* Table 1: Also for the hadronic channel, you should write the final state: th tauhadtauhad.
+* l284: Is VH described in this section?
+* l298: I think that section 5.2 would be better placed after section 6.2
+* l298: "fake" is jargon. Here and thereafter use misidentified, then define fake, if you want to use it.
+* l301: than "for" electron...
+* l302: real -> prompt
+* l303: monte carlo -> Monte Carlo simulation
+* l304-305: The contribution from these events is estimated with a data-driven method called ABCD.
+* l305: remove "by cutting on ...". Leave the explanation of the method for later.
+* l308: use "multijet" or "multi-jet" consistently in all the text
+* l308: Studies based on simulation.
+* l313-340: This part is really poorly written, please review and improve it. I attached a pdf with my corrections, because they are many.
+* l346: ... Higgs boson, where the remaining top quark decays into $Wb$.
+* l348: or muon, together with a significant...
+* l348: smaller -> lowest pT
+* l350: "in some signal events..." is a confused sentence, can you reformulate?
+* l355: targets "either"
+* l366: b-jet -> $b$-jet. It should be changed here and in several other places. Use italic for particles.
+* l366: "So a Higgs resonance..." it should be rewritten with a more formal style.
+* l368: di-tau -> the two $\tau$-leptons
+* l371: taken -> assumed
+* l376: "..., the neutrino has a large momentum..."
+* l379: After the event reconstruction, a number of variables are used to discriminate the signal from the background using a multivariate analysis described in Section 6.2"
+* l382: "Boosted decision trees (BDT)" and add a reference for BDT
+* l383: All -> "all signal events from..."
+* l383: remove "are used" and "against".
+* l383: "All background sources from SM processes (...) are also used in the training."
+* l388: "in Tables 3 and 4.Te discriminating variables used are:
+* l389-428: Check the latex, superscripts and subscripts should be in roman, unless they are particle symbols. T for transverse is a subscript, not a superscript.
+* l389 and l411 and tables 3 and 4: E_T^miss (!)
+* l392: leading light lepton
+* l393: \Chi2 derived from the kinematic fit of the neutrino momentum.
+* Table 3 and 4: check the latex, subscripts and superscripts.
+* Table 3 caption: for the leptonic channel. The values represent the separation and importance of each variable.
+* Table 4 caption: for the hadronic channel. The values represent the separation and importance of each variable.
+* l399: explain how mW is reconstructed.
+* l405,417,418,419: b-jet -> $b$-jet
+* l406: Min(m_\tau\tau q-jet)
+* l409: Min(m_jj)
+* l410: "... of the $W$ candidate."
+* Eq2: add more space between x and y definition
+* l417,418,419: $bjet$ -> $b$-jet
+* l421: Max(\eta_\tau)
+* l424: $qjet$-> $q$-jet
+* l428: Ptmiss -> E_T^miss
+* l429: \tau_had \pt distribution
+* l430: Figure 1
+* l435: each SR
+* l436: show -> shows
+* Ref 104 is an internal note, use a public reference.
+
+
+
+
