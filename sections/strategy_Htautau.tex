@@ -101,7 +101,7 @@ Boosted decision trees are used in each SR to improve the separation between sig
 In the training, All signal events, $tt(qH)$ and $tH$ are merged together, are used for $tuH$ and $tcH$ against the total SM background (including both real and fake $\had$ contributions).
 
 A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation"(measures the degree of overlap between background and signal shape) and "importance"(depicts the power of the variable to the classification of two distributions) provided by the TMVA package~\cite{Hocker:2007ht}, and only those variables whose importance is large than 2\% were kept.
-The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance_tthML} and~\ref{tab:importance_xTFW} and defined in the following:
+The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance_xTFW} and~\ref{tab:importance_tthML}, as defined in the following:
 \begin{itemize}
 \item $\MET$ is the missing transverse momentum.
 \item $P_{\text{T,\tauhadvis}} $ is the transverse momentum of the leading tau candidate.
@@ -146,7 +146,7 @@ is shown in Figures~\ref{fig:taupt_prefit}.
 %each of the SRs considered is shown in Figures~\ref{fig:mva_input_hadhad} -~\ref{fig:mva_input_lhadhad}.
 %The comparison between the data and predicted background after preselection for the distributions of two of the most 
 %discriminating BDT input variables in the $\hadhad$ channel before the fit to data (``Pre-Fit'').
-The expected signals are also shown after scaled up for the shape comparison of the distributions.
+%The expected signals are also shown after scaled up for the shape comparison of the distributions.
 %by a large factor normalized to the total number of events in the predicted
 %background for the shape comparison.   
 %corresponding to $\BR(t\to Hq)=0.2\%$ is also shown.
@@ -191,13 +191,13 @@ The final observable used to extract signal events is defined as the BDT distrib
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l2tau1bnj_os/BDTG_test.pdf} &
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b1j_ss_vetobtagwp70_highmet/BDTG_test.pdf}&
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b2j_ss_vetobtagwp70_highmet/BDTG_test.pdf}\\
-% (a1) BDT dicriminant in $t_l\thadhad$ & (a2) BDT dicriminant in  $t_l\tauhad$-1j& (a3) BDT dicriminant in $t_l\tauhad$-2j\\
+% (a1) BDT discriminant in $t_l\thadhad$ & (a2) BDT discriminant in  $t_l\tauhad$-1j& (a3) BDT discriminant in $t_l\tauhad$-2j\\
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b2j_os_vetobtagwp70_highmet/BDTG_test.pdf} &
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b3j_os_vetobtagwp70_highmet/BDTG_test.pdf} &
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos_vetobtagwp70_highmet/BDTG_test.pdf} \\
-% (b1) BDT dicriminant in $t_h\tlhad$-2j & (b2) BDT dicriminant in  $t_h\tlhad$-3j & (b3) BDT dicriminant in $t_h\thadhad$-2j \\
+% (b1) BDT discriminant in $t_h\tlhad$-2j & (b2) BDT discriminant in  $t_h\tlhad$-3j & (b3) BDT discriminant in $t_h\thadhad$-2j \\
 % \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/BDTG_test.pdf} & \\
-% (c1) BDT dicriminant in$t_h\thadhad$-3j\\
+% (c1) BDT discriminant in$t_h\thadhad$-3j\\
 % \end{tabular}
 % \caption{ The BDT output distributions are compared between the expected background and $tqH$ signals in: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3),$t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1). Only statistical uncertainties are being shown (?). Underflow and overflow bins are included
 % respectively in the first and last bins. Empty data bins here are always blinded based on our strategy. The real tau contributions shown from $t\bar{t}$ and other MC including % diboson, single top, and V+jets.}

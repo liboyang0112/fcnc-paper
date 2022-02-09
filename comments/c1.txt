@@ -1,84 +1,106 @@
+Dear Luca,
+
+    Thank you so much for your valuable comments. We have addressed them below as "===>", which improves the paper significantly.
+     cheers
+     the tqHtautau analysis team. 
+
 Dear authors,
 
 thank for the first draft of the paper. I find it well structured and complete enough for a first draft.
 
 I will comment first on general aspects of the paper draft and I have detailed comments on the abstract and Introduction section. Detailed comments of the rest of sections will follow later in a separated mail.
 
+====> Thanks!
+
 
 * General: could you please start using the standard ATLAS paper cover, acknowledgments section, etc, in general all the standard parts of the ATLAS papers?
-====> will add
+====> Added 
+
 * Section 2: ATLAS requires now a sentence on the ATLAS software, such as:
 An extensive software suite [xx] is used in the reconstruction and analysis of real and simulated data, in detector operations, and in the trigger and data acquisition systems of the experiment.
 where the [xx] reference is ATL-SOFT-PUB-2021-001
-====> done
+====> Added the sentence and reference. 
 
 * Section 5.1: I think that the paper needs a summary table of the MC programs used. The information is there in the text, but it is much easier to digest if you add a table where, for each signal and background process you state at least: ME generator, Parton Showering program and PDF set.
-====> done
+====> Added a table as suggested
 
 * Section 6.2 and Tables 3-4: "separation" and "importance" should be defined in the text. Also check the typesetting of the latex, several characters are in italic, while they should be roman.
-====> done
+====> fixed 
+
 * Figures: the labels (a1), (a2), etc should appear below the figure and not inside it.
 ====>done
+
 * Figure 1: You should show the prefit syst. uncertainties in the figure.
 ====> done.
+
 * Figure 2: I would move this figure to aux material and add prefit syst. uncertainties. If I understand correctly, it is the same as figures 3 and 4, just prefit and with different binning.
-====> Yes,you are right. removed.
+====> Add the plots with the background only fits to the data and overlay with the different signal shapes, which could be useful in text or to the aux material.
 
 * Section 7: I find the systematic session a bit shallow, because it mainly focuses on the description of the systematics, but it is not very detailed on the uncertainties values. I recommend to add a table with the magnitude of the uncertainties (including statistical uncertainties) or, even better, with the impact of the systematics on the limit (in this section or in section 8).
-====> done.
+====> We add tables for their impact on the signal strength.
 
 * Section 9: The postfit yields table should be moved to the main body, here.
-===> add yields as a Auxiliary Material.
+===> Added a yield table in the result section.
+
 
 * Section 10: the Conclusion section cannot be a copy&paste of the abstract. It is OK if you want to keep the first couple of sentence, but please change the rest.
 In addition you should: mention the improvement wrt to the previous ATLAS result of 36 ifb; if it improves the previous state of the art; mention the EFT constraints set in the previous section.
-===> done.
+===> Rephased.
 
 * Appendix: for papers, appendix should be avoided, this section should be called "Auxiliary Material" and remove the text outside of the captions.
-===> done.
+===> Removed.
 
 * Tables 6-8: change 0+-0 with "-" and please use the PDG rounding.
-====> done
+====> Fixed
 
 More detailed comments:
 * l8: a Higgs boson
-====> done
+====> Fixed
+
 * l8: decays "into"
-====> done
+====> Fixed
+
 * l26: ... there are still chances to find new physics improving the sensitivity of previous searches.
-====> done
+====> Fixed
+
 * l29: would -> could
-====> done
+====> Fixed
 
 * l41: remove the sentence "but they ... difference"
 * l42: studies, "despite a likely suppression due to the t-H mass difference"
-===> ?
-
+===> Removed the sentence. 
 
 * l44: ... in the SM is expected to have a small cross section at LHC centre of mass energy.
-====> done
+====> Fixed
+
 * l45: Move the sentence "So..." to l44 after "be enhanced."
-====> done
+====> Fixed
 
 * l51: Around here you should mention that SM values for the ttbar cross section and for the top-quark branching ratios are assumed.
-====> ???
+====> Added "with a small B(t->Hq)", which means B(t->Wb) close to 100%. The ttbar cross section is quoted in Section 5.1. 
 
 * l57: change to tau+tau-
-====> done
+====> Fixed
+
 * l59: if -> assuming
-====> done
+====> Fixed
+
 * l62: performed a similar search
-====> done
+====> Fixed
+
 * l66: on the decay mode of the Higgs boson into \tau-leptons with the complete Run 2 dataset collected in 2015-2018.
-====> done
+====> Fixed
+
 * l71: \tau_{lep}, lep should be in roman.
-====> done
+====> Fixed
 
 * l590: interactions
-====> done
+====> Fixed
+
 * l591: to -> into
-====> done
+====> Fixed
+
 * l594: the Higgs -> a Higgs
-====> done
+====> Fixed 
 
 
