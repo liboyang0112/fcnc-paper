@@ -3,7 +3,7 @@
 \label{sec:result}
 %-------------------------------------------------------------------------------
 
-This section presents the results obtained from the individual channel, as well as their combination,
+This section presents the results obtained from the individual channels, as well as their combination,
 following the statistical analysis discussed in Section~\ref{sec:stat_analysis}.
 
 A binned likelihood fit under the signal-plus-background hypothesis is performed on the BDT discriminant distributions in the seven 
@@ -19,9 +19,11 @@ the $tcH$ and $tuH$ search separately.
 %A similar comparison for the leptonic channel is shown in Figure~\ref{fig:tthML_trexPrefit} and \ref{fig:tthML_trexPrefit_1}.
 The observed and predicted yields after fit to the data with background only are summarized in Table~\ref{tab:HtautauPostfitYieldsUnblind}.
 %pre-fit and post-fit yields can be found in Appendix~\ref{sec:prepostfit_yields_Htautau_appendix}.
-There is an excess of data events above background with a significance of 2.6$\sigma$ in the $t_l\thadhad$ channel in the hight BDT region.
+There is an excess of data events above background with a significance of 2.6 $\sigma$ in the $t_l\thadhad$ channel in the hight BDT region.
 We have checked the kinematic distributions for these excess of events in
-the BDT$>0.8$ region and found there are nothing unusual between data and expectation.
+the BDT$>0.8$ region. Within the large statistical uncertainty, the observed distributions are compatible with the background shapes, but also with a small signal
+contribution.
+%and found there are nothing unusual between data and expectation.
 
 \begin{figure}[H]
 \centering
@@ -49,7 +51,7 @@ the BDT$>0.8$ region and found there are nothing unusual between data and expect
 \end{tabular}
 \caption{ The BDT output distributions are fitted with background only to the data: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3),
   $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1).
-  Statistical and systematic uncertainties are being shown. The different type of signals are also shown for shape comparision. ({\textbf to be updated?})}
+  Statistical and systematic uncertainties are being shown. The different type of signals are also shown for shape comparison. ({\textbf to be updated?})}
 \label{fig:Bonlyfit_data}
 \end{figure}
 
@@ -192,12 +194,13 @@ the BDT$>0.8$ region and found there are nothing unusual between data and expect
 %prediction after the fit (``Pred''). 
 %The hashed area represents the total uncertainty of the background. 
 %In the case of the pre-fit background uncertainty, the normalisation uncertainty of the fake $\had$ background is not included.
-
-No significant excess of data events above the background expectation is found,
-and observed (expected) 95\% CL limits are set on $\BR(t\to cH)$ and $\BR(t\to uH)$:
+%The results are given in terms of exclusion limits despite a small excess of data events above the background expectation is found.
+Upper limits are derived using the CL$_{\textrm{s}}$ method~\cite{Junk:1999kv,Read:2002hq}, and  
+observed (expected) 95\% CL limits are set on $\BR(t\to cH)$ and $\BR(t\to uH)$:
 $\BR(t\to cH)<9.9 \times 10^{-4}\,(5.0 \times 10^{-4})$, assuming $\BR(t\to uH)=0$,and $\BR(t\to uH)<7.2 \times 10^{-4}\,(3.6 \times 10^{-4})$,assuming $\BR(t\to cH)=0$.
 These results are dominated by the leptonic channels, which has a sensitivity a factor of two better than that of the hadronic channels.
-
+The expected sensitivity has been improved upon the previous ATLAS result based on 36 fb$^{-1}$ of data using $H\to \tau\tau$ decay~\cite{fcnc36} by a factor of~5. A factor of~2 improvement in sensitivity comes from the larger dataset, and a further factor of~2.5 comes from including
+additional leptonic channels, $tH$ production, and improved the analysis techniques.
 
 %The best-fit branching ratio obtained is $\BR(t\to Hc)=[xxx^{+yy}_{-yy}\,(\mathrm{stat})^{+zz}_{-zz}\,(\mathrm{syst})] \times 10^{-4}$, assuming $\BR(t\to Hu)=0$. 
 %The best-fit normalisation factors for the fake $\had$ background are: $0.82 \pm 0.23$ in the ($\lephad$, 3j) region, $0.84^{+0.25}_{-0.28}$ in the ($\lephad$, $\geq$4j) region,
@@ -206,14 +209,14 @@ These results are dominated by the leptonic channels, which has a sensitivity a 
 %assuming $\BR(t\to Hc)=0$.
 %The obtained normalisation factors for the fake $\had$ background agree within 1\% with those obtained by the $\Hc$ search.
 In both cases, the results are dominated by the statistical uncertainty.
-The main contributions to the total systematic uncertainty arise from the uncertainties affecting the normalization and factorization scales, $b$-tagging, and the choice of parton shower and hadronization modelling, and the fake $\had$ background estimation in the hadronic channels. Their relative impacts on the signal strength are summarized in Table~\ref{tab:had_sys_impact}-~\ref{tab:lep_sys_impact}. 
+The main contributions to the total systematic uncertainty arise from the uncertainties on the measured $\BR(H\to \tautau)$ branching ratio,
+affecting the normalization and factorization scales, $b$-tagging, and the choice of parton shower and hadronization for $t\bar t$ modelling, and the fake $\had$ background estimation in the hadronic channels. Their relative impacts on the signal strength are summarized in Table~\ref{tab:had_sys_impact}-~\ref{tab:lep_sys_impact}.
 %the fake $\had$ background estimation in the hadronic channels and the uncertainty associated
 %with the different responses to quark-initiated and gluon-initiated jets. 
 %o significant excess of data events above the background expectation is found, 
 %nd observed (expected) 95\% CL limits are set on $\BR(t\to Hc)$ and $\BR(t\to Hu)$:
 %\BR(t\to Hc)<xxx \times 10^{-3}\,(yyy \times 10^{-3})$ and $\BR(t\to Hu)<xxx \times 10^{-3}\,(yyy \times 10^{-3})$.
 %hese results are dominated by the leptonic channels, which has a sensitivity a factor of two better than that of the hadronic channels.
-
 %\begin{figure*}[t!]
 %\begin{center}
 %\includegraphics[width=0.7\textwidth]{\FCNCFigures/tcH_combined_Limit.pdf}
@@ -233,7 +236,6 @@ The main contributions to the total systematic uncertainty arise from the uncert
 %\end{center}
 %\end{figure*}
 %%%%%%%%%%%%%%
-
 %The first set of combined results is obtained for each branching ratio separately, setting the other branching ratio to zero.
 %The best-fit combined branching ratios are $\BR(t\to Hc)=[3.0^{+3.0}_{-2.7}\,(\mathrm{stat})^{+2.6}_{-2.1}\,(\mathrm{syst})] \times 10^{-4}$ and 
 %$\BR(t\to Hu)=[4.2^{+3.2}_{-2.9}\,(\mathrm{stat})^{+2.6}_{-2.1}\,(\mathrm{syst})] \times 10^{-4}$.  
@@ -255,7 +257,7 @@ Upper limits on the branching ratios $\BR(t\to qH)$ ($q=u,c$) can be translated 
 \end{equation}
 %
 where the subscript i= 1,2 represents the generation of the light quark fields ($q=u,c$).
-The branching ratio $\BR(t\to qH)$ is estimated as the ratio of its partial width to the SM $t \to Wb$ partial width including next-to-leading-order QCD corrections and the coefficients can be extracted as $C_{q\phi} = \sqrt{1946.6~\BR(t\to qH)}$. The $C_{q\phi}$ coefficient corresponds to the sum in quadrature of the cofficients relative to the two possible chirality combinations of the quark fields,
+The branching ratio $\BR(t\to qH)$ is estimated as the ratio of its partial width to the SM $t \to Wb$ partial width including next-to-leading-order QCD corrections and the coefficients can be extracted as $C_{q\phi} = \sqrt{1946.6~\BR(t\to qH)}$. The $C_{q\phi}$ coefficient corresponds to the sum in quadrature of the coefficients relative to the two possible chirality combinations of the quark fields,
 $C_{q\phi} =\sqrt{(C^{i3}_{u\phi})^2 + (C^{3i}_{u\phi})^2}$~\cite{fcnc_production_theory}. The observed (expected) upper limits on the D6 Wilson coefficients from the combination of the searches are $C_{c\phi}<1.38\,(0.97)$ and $C_{u\phi}<1.18\,(0.83)$. 
 
 %Upper limits on the branching ratios $\BR(t\to Hq)$ ($q=u,c$) can be translated into upper limits on the non-flavour-diagonal Yukawa couplings $\lamHq$ 

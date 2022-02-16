@@ -1,0 +1,153 @@
+Dear FCNC tqH (tautau) team, 
+
+Thanks for your first draft! Below please find some comments on version 0.2. 
+
+Cheers,
+     Nedaa-Alexandra 
+
+==> Thank you so much for sending these detailed comments, which are very helpful. 
+ 
+
+- General comment: 
+    - either use MC after you first define it or write out Monte Carlo
+
+==> fixed  
+
+- Detailed comments:
+- Remove the empty page 3
+==> fixed 
+
+- Line 10: remove "CERN" I think it is enough to say "recorded with the ATLAS detector at the Large Hadron..."
+==> fixed 
+
+- Line 16-17: Perhaps say something like "XX, XX and event kinematics are used to separate signal from the background through a multivariate discriminant"
+==> fixed 
+
+- Line 25: Since the observation of Higgs boson by >> After the discovery of the Higgs boson [XX] in 2012 by the ATLAS [X] and CMS [X] collaborations,..."
+==> fixed
+
+- Line 36: Need a reference for 2HDM
+==> ?
+
+- Line 54: 36.1~fb^{-1} should be all on the same line
+==> fixed
+
+- Line 61: space in "36.1fb^{-1}"
+==> fixed
+
+- Line 68: This paper is focused on the decay mode ... >>The analysis targets Higgs-boson decays to -leptons using the...
+==> fixed
+
+- Line 70-72: The sentence is too long. Perhaps break it down into two sentences?
+==> fixed
+
+- Line 73: space after lepton "lepton(electron"
+==> fixed
+
+- Line 81: No need to have a separate paragraph. Consider merging this sentence with the above paragraph
+==> fixed 
+
+- Line 105: No need for a new paragraph
+==> fixed
+
+- Line 108: Slightly unusual way to start this section. Here is a suggestion: "Events are selected from pp collisions at sqrt(s)=13 TeV recorded by the ATLAS detector during 2015-2018. Only events for which all relevant subsystems were operational are considered. Events are required to have at least one vertex with two or more tracks with transverse momentum..."
+==> Thanks for the suggestion
+
+- Line 125-127: Maybe this sentence is better after you describe the triggers. Maybe in section 4
+==> moved to section 4
+
+- Line 134: based a trained >>based on a trained
+==> fixed 
+- Line 134: Are you using the correct PLIV dedicated scale factors? These Scale factors were recently provided and they are only available for FS samples. Is this okay for you?
+==> Yes, we have checked PLIV SF using Z->ll events from ttHWML samples, which agree with data.
+
+- Line 140: Rephrase the sentence "These scale factors are also checked applicable to the electron or muon"o be applicable? 
+==>rephased
+
+- Line 141: Do not use "we".Maybe you can say something like this: "An additional uncertainty of +-2% is considered.."
+==> fixed
+
+- Line 159-160: You need a reference
+==> add DL1r btag reference
+
+- Line 173: Perhaps start the paragraph with something like this: "To avoid counting a single detector response as more than one lepton or jet, an overlap removal procedure..." instead of "Overlaps between reconstructed objects are removed sequentially..."
+==> rephased
+
+- Line 207: Avoid having short sentences in separate paragraphs
+==> merged 
+
+- Line 220 & 341: I find it strange to use "trailing"
+==> replaced with "subleading"
+
+- Table two : Did you define "TT Signal", "ST Signal", "ME", and "PS" in the text? If not, you can explain them in the caption
+==> replaced "TT Signal" with tt(qH), "ST Signal " with tH. "ME" for Matrix-element and "PS" for parton shower 
+
+- Line 309: You need a reference after "proved by monte carlo studies" otherwise you need to rephrase this sentence. Also you can use MC or write out "Monte Carlo"
+==> rephased 
+
+- Line 311: Maybe add a reference to the ABCD method if there is one
+==> Add the explanation what ABCD method does and hopefully it's clear. 
+
+- Line 312: remove "which is widely used in ATLAS physics analyses."
+==> fixed
+- Line 320: monte carlo >> Monte Carlo (and everywhere in the note)
+==> fixed
+
+- Line 321: What do you mean by "double-btagged"?
+==> rephased
+
+- Line 325: with an addition >> with an additional
+==> fixed
+
+- Line 344: You need a space after MC "Data-MC(real tau)"
+==> fixed
+
+- Line 339: search regions are signal regions? Why not refer to them as Signal regions?
+==> fixed
+
+- Lin3 366: Should it be "it" in "considering it's from the decay chain"?
+==> rephased
+
+- Line 372: Rephrase this "So a Higgs resonance" ...avoid startng a sentence with "So"
+==>rephased
+
+- Line 383: Rephrase this "the flying direction is unknown."
+==> rephased
+
+- Line 383: you need to motivate why a fit is no longer feasible in these channels
+==> due to extra neutrino from $W$ decay.
+
+- Table 4 & 5: remove  "tqH(tautau) search"from the caption
+==> fixed
+
+- Line 388: Boosted decision trees > Boosted decision trees (BDT)
+==> fixed
+
+- Figure one: Fix "tt^{-}" the first "t" is not in math mode
+==> fixed
+
+- Line 485: No need to re-explain h-damp. This was done earlier
+==> this is first time mentioned, keep the explanation 
+
+- Line 491-495: You are using internal weights for the scale variations right? this description is incorrect. please up-date this
+==> fixed 
+
+- Line 499: space missing in "n scale(muF),jet-to" and in "uncertainty,resummation scale uncertainty,"
+==> fixed
+
+- Line 504: why do you say "within approximately". Isn't it 30%? or does it vary and up to 30%?
+==> it's approximately 30%.
+
+- Line 523:"nterfaced either" should be rephrased to say the nominal is compared to an alternative sample interfaced with XX
+==> fixed
+
+- Line 560: channel >> channels
+==> fixed 
+- Line 570: missing space "2.6 sigma"
+==> fixed
+
+- Figure 2: comparision >> comparison
+==> fixed
+
+- Line 591: cofficients >> coefficients  
+==> fixed 
