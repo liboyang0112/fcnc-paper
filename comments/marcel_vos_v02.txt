@@ -1,0 +1,81 @@
+Dear authors,
+
+I have read version 0.2 of your paper draft, posted on the 3rd of February. It is good to see the complete result reported in a good-quality write-up. The draft clearly needs a bit more work before we can circulate to ATLAS, but I trust that with the help of the EB this can be accomplished rapidly.
+
+The draft is well structured and the text reads well for most parts, but there are quite a few sentences that could do with a more precise formulation. A good example is one of the first sentences in the introduction: The presence of flavour-changing neutral-current (FCNC) interactions between the Higgs boson, the top quark, and a u- or c-quark, tqH (q = u, c) is still an active topic. -> I know what you are trying to say, but this sentence doesn't convey the message. I would avoid "the presence", as this is currently a pure conjecture, with no empirical confirmation. Also "active topic" is subjective. Maybe rephrase as: The ATLAS and CMS experiments at the LHC are actively searching for FCNC interactions of the top quark. More generally, it might be good to involve a senior scientist, with a good dominion of English and experience in writing, to polish the text.
+
+==> Thanks and rephased "The flavour-changing neutral-current (FCNC) interactions between the Higgs boson,
+    the top quark, and a $u$- or $c$-quark, $tqH$ ($q=u,c$) has been actively searched for by the ATLAS and CMS collaborations."
+
+L25: Since the observation of Higgs boson by the ATLAS and CMS experiments [1, 2] at the Large Hadron Collider (LHC), a comprehensive programme of measurements of its properties have been conducted for nearly a decade, by which no significant sign of deviation from Standard Model (SM) was observed until today. However there are still chances to find new physics by improving the sensitivity of previous searches. -> This is a strange twist. There are still chances sounds a bit desperate. I would simply state that the LHC represents an opportunity to search for rare BSM processes, without discussing the successes and failures of other parts of the programme.
+
+==> rephased as "After the discovery of the Higgs boson in 2012 by the ATLAS[1] and CMS[2] collaborations
+    at the Large Hadron Collider (LHC), a comprehensive programme of measurements has been conducted with
+    increased precision and proved to be consistent with the Standard Model (SM) predictions.
+    However the LHC still provides an excellent opportunity to search for rare new physics processes beyond the Standard Model (BSM)."
+
+References [6-25]. There are a lot of papers (none of your readers will go and read them all) and in the end the motivation is only half-convincing. Several of the first set of papers are rather old. It is doubtful that the concrete models they give numbers for have stood the tests at the LHC. It would be good to select a few key papers on FCNC top interactions, together with the other teams, and take those as benchmarks. Then you can add a few papers specifically on top-Higgs FCNC interactions.
+
+==> Yes, that would be good to have a consistent set of theory references quoted by different analyses.
+    These references provide some ideas that the new physics could appear from top decay,
+    but their predictions are in the ranges far from exclusion yet. 
+
+Line 43: On the other hand, if the tqH interaction exists, the single-top, Higgs associated production through this interaction should also be enhanced. -> The interaction through his interaction becomes non-zero, enhancing the total (SM+FNCN) rate for pp -> tH (enhanced assumes it was non-zero, but as you specifically talk about "production through this interaction" there was nothing to enhance).
+
+==> rephased "On the other hand, if the tqH interaction exists, the single-top, Higgs associated production
+              process through this interaction becomes non-zero, enhancing the total production cross-section of pp->tH."
+
+Line 45: The tH associated production in the SM is expected to have a small cross section at LHC centre of mass energy [26]. -> I would suggest to quote a number, rather than saying it's small. We're not too far from reaching SM sensitivity for this process, so it's not far beyond experimental sensitivity.
+
+==> added "have a small cross section of 92+7-12 fb
+
+Line 47-67: This is very tedious to read. A table summarizing all numbers in an ordered fashion would be much easier to digest. Is there really only one CMS search?
+
+==> Will add a table to summarise the existing limits as well as including the preliminary CMS FCNC H->gammagamma results. (?)  
+
+L81-82: It's unclear why this last sentence is in a new paragraph.
+
+==> fixed  
+
+L388: Boosted decision trees are used in each SR to improve the separation between signal and background. In the training, All signal events, tt(qH) and tH are merged together, are used for tuH and tcH against the total SM background (including both real and fake had contributions). -> Sentence is garbled. Please, rephrase.
+
+==>rephased "Boosted decision trees (BDT) [95] are used in each SR to improve the separation between
+             signal and background. In the training, all signal events from tt(qH) and tH are merged
+	     together for tuH and tcH. All background sources from SM processes (including both real
+	     and fake tau contributions) are also used in the training."
+
+L391: large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation"(measures the degree of overlap between background and signal shape) and "importance"(depicts the power of the variable to the classification of two distributions). -> Can you merge tables 4 and 5 into a single table. This is interesting, but not crucial information. Do we need both numbers? (they seem to be similar). If you present it in a more compact format, I am happy for you to keep the table. We need a better caption and a proper definition in the text separation and importance (with references, if possible). The bulleted list occupies nearly two pages, which is too long.
+
+==> will fix the table (?) with a rank for each variable instead of the actual number
+
+Table 6 and 7: combine?
+
+==> will combine (?)
+
+L556: In the absence of signal -> I would leave this to after the presentation of the result. We don't know yet if there will be a signal.
+
+==> rephased "Exclusion limits are set... "  
+
+L570: The observed and predicted yields after fit to the data with background only are summarized in Table 8. There is an excess of data events above background with a significance of 2.6sigma in the tl tauhadtauhad channel in the hight BDT region. We have checked the kinematic distributions for these excess of events in the BDT> 0.8 region and found there are nothing unusual between data and expectation -> I agree that we should add something about the agreement, but the "nothing unusual" is too vague. Within the large statistical uncertainty, the observed distributions are compatible with the background shapes, but also with a small signal contribution.
+
+==> rephased as suggested 
+
+L574: No significant excess of data events above the background expectation is found, and observed (expected) 95% CL limits are set on B(t->cH) and B(t->uH):B(t->cH)<9.9x10-4
+(5.0 x10-4), assuming B(t->uH)=0, and B(t->uH)<7.2x10-4(3.6x10-4), assuming B(t->cH)=0. These results are
+dominated by the leptonic channels, which has a sensitivity a factor of two better than that of the hadronic channels. -> This seems to contradict your sentence about a slight excess before.
+
+==> rephased "Upper limits are derived using the CLs method, and observed (expected)..."
+
+
+Table 8: can you merge the two tables? Can you order the entries in order decreasing yield?
+
+==> will fix (?)
+
+L578: The main contributions to the total systematic uncertainty arise from the uncertainties affecting the normalization and factorization scales,
+b-tagging, and the choice of parton shower and hadronization modelling, and the fake had background estimation in the hadronic channels. ->Please, specify to which process these modelling uncertainties refer.
+
+==> fixed, "mainly for the measured B(H->tautau) branching ratio, ttbar modelling, and the fake estimation in the hadronic channel."
+
+Section 10: You can use table 9, that gives a very structured overview of the results. If you refer back to that table, you avoid having to list all numbers in the the text (observed and expected, tcH and tuH, BR and EFT coefficients). Then you can highlight a few relevant numbers and discuss how they relate to previous analyses.
+
+==> added "These results improves significantly upon previous ATLAS and CMS limits on the $t\rightarrow Hq$ branching ratios."

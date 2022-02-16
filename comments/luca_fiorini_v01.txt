@@ -1,0 +1,131 @@
+Dear authors,
+
+I still had some outstanding comments on draft 0.1. The line numbers, figure and tables refer to version 0.1.
+==> Thank you so much for sending these detailed comments, which are very helpful. 
+
+* Title is very long, remove "(q=u,c)"
+==> fixed 
+
+* l136: "l" is not defined. It should be light lepton l=e or \mu.
+==> fixed
+
+* l137: e\mu 4\nu.
+==> fixed 
+
+* l167: missing space before \tauhad
+==> fixed 
+
+* Table 1: Also for the hadronic channel, you should write the final state: th tauhadtauhad.
+==> fixed 
+
+* l284: Is VH described in this section?
+==> added the VH description
+
+* l298: I think that section 5.2 would be better placed after section 6.2
+==> The fakes are part of background modeling. It would be good to discuss first before comparing to data in section 6.2. 
+
+* l298: "fake" is jargon. Here and thereafter use misidentified, then define fake, if you want to use it.
+==> fixed
+
+* l301: than "for" electron...
+==> fixed
+
+* l302: real -> prompt
+==> fixed
+
+* l303: monte carlo -> Monte Carlo simulation
+==> fixed
+
+* l304-305: The contribution from these events is estimated with a data-driven method called ABCD.
+==> fixed 
+* l305: remove "by cutting on ...". Leave the explanation of the method for later.
+==> fixed 
+* l308: use "multijet" or "multi-jet" consistently in all the text
+==> "multi-jet" is used in the paper
+* l308: Studies based on simulation.
+==> fixed 
+* l313-340: This part is really poorly written, please review and improve it. I attached a pdf with my corrections, because they are many.
+==> Thanks, that's helpful. The section is improved, but it may need other iteration.
+
+* l346: ... Higgs boson, where the remaining top quark decays into Wb.
+==> fixed 
+* l348: or muon, together with a significant...
+==> fixed 
+* l348: smaller -> lowest pT
+==>fixed
+
+* l350: "in some signal events..." is a confused sentence, can you reformulate?
+==> rephased
+
+* l355: targets "either"
+==> fixed 
+* l366: b-jet -> b-jet. It should be changed here and in several other places. Use italic for particles.
+==>fixed
+* l366: "So a Higgs resonance..." it should be rewritten with a more formal style.
+==> rephased
+
+* l368: di-tau -> the two -leptons
+==> fixed 
+
+* l371: taken -> assumed
+==> fixed
+
+* l376: "..., the neutrino has a large momentum..."
+==> fixed 
+
+* l379: After the event reconstruction, a number of variables are used to discriminate the signal from the background using a multivariate analysis described in Section 6.2"
+==> fixed 
+* l382: "Boosted decision trees (BDT)" and add a reference for BDT
+==> fixed 
+* l383: All -> "all signal events from..."
+==> fixed 
+* l383: remove "are used" and "against".
+==> fixed 
+* l383: "All background sources from SM processes (...) are also used in the training."
+==> fixed 
+* l388: "in Tables 3 and 4.Te discriminating variables used are:
+==> fixed 
+* l389-428: Check the latex, superscripts and subscripts should be in roman, unless they are particle symbols. T for transverse is a subscript, not a superscript.
+==> fixed  
+* l389 and l411 and tables 3 and 4: E_T^miss (!)
+==> fixed 
+* l392: leading light lepton
+==> fixed 
+* l393: \Chi2 derived from the kinematic fit of the neutrino momentum.
+==> fixed 
+* Table 3 and 4: check the latex, subscripts and superscripts.
+==> fixed 
+* Table 3 caption: for the leptonic channel. The values represent the separation and importance of each variable.
+==> fixed
+* Table 4 caption: for the hadronic channel. The values represent the separation and importance of each variable.
+==> fixed 
+* l399: explain how mW is reconstructed.
+==> fixed 
+* l405,417,418,419: b-jet -> b-jet
+==> fixed 
+* l406: Min(m_\tau\tau q-jet)
+==> fixed 
+* l409: Min(m_jj)
+==> fixed 
+* l410: "... of the W candidate."
+==> fixed 
+* Eq2: add more space between x and y definition
+==> fixed 
+* l417,418,419: bjet -> b-jet
+==> fixed 
+* l421: Max(\eta_\tau)
+==> fixed 
+* l424: qjet-> q-jet
+==> fixed
+* l428: Ptmiss -> E_T^miss
+==> fixed 
+* l429: \tau_had \pt distribution
+==> fixed 
+* l430: Figure 1
+==> fixed 
+* l435: each SR
+==> fixed 
+* l436: show -> shows
+==> fixed 
+* Ref 104 is an internal note, use a public reference.
+==> fixed  
