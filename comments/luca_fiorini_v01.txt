@@ -22,7 +22,7 @@ I still had some outstanding comments on draft 0.1. The line numbers, figure and
 ==> added the VH description
 
 * l298: I think that section 5.2 would be better placed after section 6.2
-==> The fakes are part of background modeling. It would be good to discuss first before comparing to data in section 6.2. 
+==> restructured, added a new "Background estimation" after the analysis strategy.
 
 * l298: "fake" is jargon. Here and thereafter use misidentified, then define fake, if you want to use it.
 ==> fixed

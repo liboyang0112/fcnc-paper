@@ -1,0 +1,94 @@
+﻿FCNC PAPER DRAFT 0.2 2022-02-03
+
+Thanks for the updated draft. I had a few additional comments on sections 7-10 of DRAFT 0.2 to post.
+For the next draft, please provide a latex-diff wrt v0.2 draft to reduce the iteration time.
+
+* Fig.1: Signal is invisible in the plot. Can you show as a line on the same canvas and rescale it 
+by a large factor and put it in the legend, e.g. tuH 10xB=0.1% (if BR is 0.1% and is scaled by a factor 10).
+==> 
+
+* Fig 1 caption: V → $V$, same for ttbar. You can remove (“Data”) and (“Bkg.”) and add a “.” at the 
+end of the text.
+==> done
+
+* l458: please use “l” or “\ell” consistently throughput the paper and define it in Section 4.
+
+* l465: pT → write in latex format.
+
+* l496: Twice m_top → m_t as for the rest of the paper
+
+* l504: This is not clear, is the uncertainty estimated with a 30% uncertainty or the value of 
+the uncertainty is about 30%? Clarify.
+
+* l512: Why VH samples are not discussed? Are you using VH samples in the analysis? If not, why?
+==> added 
+
+* Tab 6-7: they should be referenced in this section (they are referenced later). Please review the names of 
+the uncertainties in the tables carefully, comparing with other top group papers. The names of the 
+uncertainties should be improved. “Instrument” is not used elsewhere. Jet, Met, \tau are not uncertainties, 
+please write the uncertainties names correctly. Also fix the latex in several places. Put “Other” theory 
+uncertainties after ttbar. Also put Statistical Uncertainty after the Total Systematic Uncertainty.
+The uncertainties that are shown are prefit or postfit? Are they expected uncertainties or observed 
+uncertainties? Both clarifiations should be written. If it is from the fit, you should forward reference 
+that the uncertainties are derived from the statistical signal fit described in Section 8. Does it make 
+sense to show the impact as an impact on mu if there is no statistical excess? Why not impact on the limit? 
+Why are you not showing a single table with the uncertainties from the full combination?
+==> 
+
+* l526: I can’t find anywhere that the final discriminant is the MVA distribution. You should start by 
+saying that here, if not written previously.
+==> 
+
+* l542: mock → pseudo
+
+* l570: could also quote the combined significance? If we are looking for a tuH signal, then all 
+categories contribute.
+
+* l571: I would remove this sentence, because it is too vague.
+
+Fig2,3,4: I think that you should have only one of those figures in the paper, I suggest Fig4: postfit tHu. 
+The other two can go in aux material.
+Can you make the figure larger as Fig1? For signal, please use a continuous and thicker line. 
+I think you should mention for Fig2a that the last points in the ratio plots are outside the range 
+(you could also add arrows to point that the points are off scale). You could remove the grid from 
+fig2 bottom pad. The caption of the figures has to be expanded, like fig1. Clarify which signal 
+and scaling is used in figures 3 and 4.
+==>
+
+
+* Fig3,4 captions: remove “being” before shown.
+==> fixed 
+
+* l575: space between “, assuming”
+
+* l575: The sensitivity of the leptonic channels is a factor of two….
+==> fixed 
+
+* l578: This paragraph should be in the systematics section.
+
+* l582: “Tables” 6-7.
+
+* Eq 3 and l592: I think it should be C_q\phi everywhere and not C_u\phi.
+
+* l588: add space between “1, 2”.
+
+* Table 8: replace 0(0) with “--”. Please fix the latex of several samples. There are too many lines, 
+try to merge. Also Lep Fakes, Double fakes b Fakes are not well defined in the paper, so merge all of them.
+==>
+
+* Table9 and Fig 5 are repeating the same information, right? I recommend to put the table in backup and keep 
+the figure. I think you should also show the bestfit values. Can you please add those? Also, I definitely 
+think that you should have in both the figure and table the limits for each individual channel on the top, 
+then the Leptonic combined, Hadronic and finally all combined.
+==>
+
+
+* L603: space production mode (pp → …).
+
+* l607: jets. Multivariate.
+
+* l609: of “Run 2” data. Also add here the improvements with respect to the previous paper, both in terms of 
+analysis (additional channels, techniques, etc.) and in terms of sensitivity.
+
+Thanks!
+

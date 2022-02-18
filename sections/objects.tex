@@ -34,14 +34,14 @@ and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_
 To further reduce the background from non-prompt leptons, photon conversions and hadrons, lepton candidates are also required to be isolated 
 in the tracker and in the calorimeter.
 A track-based lepton isolation criterion is defined by calculating the quantity $I_R = \sum \pt^{\textrm{trk}}$ and $E_R = \sum E^{\textrm{clst}}$, where
-the scalar sum includes all tracks and energy deposit (excluding the lepton candidate itself) within the cone defined by $\Delta R<0.2 (0.3)$ around the %axis
-direction of the electron (muon). The electron (muon) candidates are required satisfy both $I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$.
+the scalar sum includes all tracks and energy deposits (excluding the lepton candidate itself) within the cone defined by $\Delta R<0.2 (0.3)$ around the %axis
+direction of the electron (muon). The electron (muon) candidates are required to satisfy both $I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$.
 
 Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based on a trained isolation boosted decision tree \texttt{PromptLeptonVeto}(PLIV), which is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged particle tracks inside the jet can be
-used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced non-prompt leptons.
+used to increase the precision for identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced non-prompt leptons.
 The tight working points are used for high $\pt$ lepton.
 The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method
-with $Z\rightarrow l^+l^-$ ($l=e$ or $\mu$) events. These scale factors are also checked for the electron or muon from the tau decay
+with $Z\rightarrow l^+l^-$ ($l=e$ or $\mu$) events. These scale factors have also been checked for the electron or muon from the tau decay
 using $Z\rightarrow\tau\tau\rightarrow e\mu4\nu$ samples, which is consistent at 2\% level. To be conservative, an
 additional uncertainty of $\pm 2\%$ is considered for the PLIV efficiency for the tau-lepton in the lepton+$\thad$ channels.
 %Additionally, the $\Htautau$ search requires leptons to
@@ -95,7 +95,7 @@ working point for the nominal selection.
 The medium working point has a combined reconstruction and identification efficiency of 75\% (60\%) for one-prong (three-prong) $\had$ 
 decays, and an expected rejection factor against light-jets of 35 (240)~\cite{ATL-PHYS-PUB-2019-033}. 
 Electrons that are reconstructed as one-prong $\had$ candidates are removed via a BDT trained to reject electrons.
-Events with $\had$ candidate that is $b$-tagged are rejected.
+Events with a $b$-tagged $\had$ candidate are rejected.
 %(TBD: check RNN description and update then numbers)
 
 %Overlaps between candidate objects are removed sequentially, following this order: muons, electrons,
@@ -117,10 +117,12 @@ Events with $\had$ candidate that is $b$-tagged are rejected.
 
 To avoid double counting reconstructed objects, an overlap removal procedure is applied.
 %Overlaps between reconstructed objects are removed sequentially.
-Firstly, electron candidates that lie 
+%Firstly,
+Electron candidates that lie 
 within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributions from muon bremsstrahlung. 
-Overlaps between electron and jet candidates are resolved next, and finally, overlaps between remaining jet candidates 
-and muon candidates are removed. Energy clusters from identified electrons are not excluded during jet reconstruction. 
+%Overlaps between electron and jet candidates are resolved next, and finally, overlaps between remaining jet candidates 
+%and muon candidates are removed.
+Energy clusters from identified electrons are not excluded during jet reconstruction. 
 In order to avoid double-counting of electrons as jets, the closest jet whose axis is within ${\Delta}R = 0.2$ of an electron 
 is discarded if the jet is not $b$-tagged, otherwise the electron is removed.
 If the electron is within ${\Delta}R = 0.4$ of the axis of any jet after this initial removal, the jet is retained and  the electron is removed.
