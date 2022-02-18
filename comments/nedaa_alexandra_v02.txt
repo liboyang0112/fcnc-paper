@@ -1,3 +1,10 @@
+Dear Nedaa-Alexandra,
+
+    Thank you so much for your valuable comments. We have addressed them below as "==>", which improves the paper significantly.
+     cheers
+     weiming for the tqHtautau analysis team. 
+
+
 Dear FCNC tqH (tautau) team, 
 
 Thanks for your first draft! Below please find some comments on version 0.2. 
@@ -57,7 +64,8 @@ Cheers,
 ==> moved to section 4
 
 - Line 134: based a trained >>based on a trained
-==> fixed 
+==> fixed
+
 - Line 134: Are you using the correct PLIV dedicated scale factors? These Scale factors were recently provided and they are only available for FS samples. Is this okay for you?
 ==> Yes, we have checked PLIV SF using Z->ll events from ttHWML samples, which agree with data.
 
@@ -90,6 +98,7 @@ Cheers,
 
 - Line 312: remove "which is widely used in ATLAS physics analyses."
 ==> fixed
+
 - Line 320: monte carlo >> Monte Carlo (and everywhere in the note)
 ==> fixed
 
@@ -142,7 +151,8 @@ Cheers,
 ==> fixed
 
 - Line 560: channel >> channels
-==> fixed 
+==> fixed
+
 - Line 570: missing space "2.6 sigma"
 ==> fixed
 

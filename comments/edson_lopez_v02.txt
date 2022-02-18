@@ -1,4 +1,11 @@
-﻿Dear FCNC tqH (tautau) team,
+﻿Dear Edson,
+
+    Thank you so much for your valuable comments. We have addressed them below as "==>", which improves the paper significantly.
+     cheers
+     weiming for the tqHtautau analysis team. 
+
+
+Dear FCNC tqH (tautau) team,
 Thanks for your first draft! Below please find some comments on version 0.2. (of 2nd of February)
 Cheers,
 Edson
@@ -6,7 +13,6 @@ Edson
 ==> Thanks for your excellent comments
 
 L 7-9.- A search for flavour-changing neutral currents (tqH) involving a top quark, an up-type quark q (with q = u,c), and a Standard Model Higgs boson decaying into a tau lepton pair (H->tau+tau-) is presented.
-
 ==> fixed 
 
 L13-14.- one of the top quarks decay into Wb and the other into qH through the FCNC tqH interaction…
@@ -150,11 +156,13 @@ L370.- ...closest to the W mass...
 ==>fixed
 
 Table 4.- Caption: Please indicate what the numbers mean in the table (variable importance in percent maybe?), what the second number means?
-==> will reformat (?)
+==> fixed
 
 Table 5.- Caption: “The description of each variable is provided in the text”, also please describe the meaning of these numbers.
+==> fixed
+
 L389.- ...“. Both signatures” tt(qH) and tH…and “are” used for “the” tuH and tcH “analyses” against…
-==> will reformat (?)
+==> fixed
 
 L395-396.- ...and are defined as follows:
 ==> rephased
@@ -190,7 +198,8 @@ L513.- statistical uncertainties “on” the fake...channel “are” applied..
 ==> fixed
 
 L514.- ...fake tau_had ”sources”...the “uncertainty”...
-==> fixed 
+==> fixed
+
 L515-L516.- ...considering both, its statistical
 ==>fixed
 
@@ -223,6 +232,7 @@ Figure 2.- Caption: For different “types”...shown for comparing their shapes
 
 Figure 3 and Figure 4.- ...uncertainties are shown.
 ==> fixed
+
 L573.- ...of data above...
 ==> rephased
 
@@ -233,10 +243,10 @@ L580.- b-tagging, the choice...
 ==> fixed
 
 Table 6-7 and Figure 5.- Could you double check the numbers, they don’t seem to match.
-==> will check (?)
+==> fixed
 
 Figure 5.- Update x-axis label to t->uH and t->cH to harmonize with the rest of the paper
-==> will fix (?)
+==> will fix 
 
 Equation 3.- Correct second term in eq. 3 to \bar{t}q_i
 ==> fixed

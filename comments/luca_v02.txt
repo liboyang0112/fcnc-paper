@@ -1,24 +1,36 @@
-﻿FCNC PAPER DRAFT 0.2 2022-02-03
+﻿Dear luca,
+
+    Thank you so much for your valuable comments. We have addressed them below as "==>", which improves the paper significantly.
+     cheers
+     weiming for the tqHtautau analysis team. 
+
+FCNC PAPER DRAFT 0.2 2022-02-03
 
 Thanks for the updated draft. I had a few additional comments on sections 7-10 of DRAFT 0.2 to post.
 For the next draft, please provide a latex-diff wrt v0.2 draft to reduce the iteration time.
 
+==> Thanks, there are major changes in V1.0 and a latex-diff may not help much, but we can provide if needed
+
 * Fig.1: Signal is invisible in the plot. Can you show as a line on the same canvas and rescale it 
 by a large factor and put it in the legend, e.g. tuH 10xB=0.1% (if BR is 0.1% and is scaled by a factor 10).
-==> 
+==> will remake the plot for B-only and overlay the signal shape.  
 
 * Fig 1 caption: V → $V$, same for ttbar. You can remove (“Data”) and (“Bkg.”) and add a “.” at the 
 end of the text.
 ==> done
 
 * l458: please use “l” or “\ell” consistently throughput the paper and define it in Section 4.
+==> fixed 
 
 * l465: pT → write in latex format.
+==> fixed
 
 * l496: Twice m_top → m_t as for the rest of the paper
+==> fixed
 
 * l504: This is not clear, is the uncertainty estimated with a 30% uncertainty or the value of 
 the uncertainty is about 30%? Clarify.
+==>rephased
 
 * l512: Why VH samples are not discussed? Are you using VH samples in the analysis? If not, why?
 ==> added 
@@ -33,18 +45,21 @@ uncertainties? Both clarifiations should be written. If it is from the fit, you 
 that the uncertainties are derived from the statistical signal fit described in Section 8. Does it make 
 sense to show the impact as an impact on mu if there is no statistical excess? Why not impact on the limit? 
 Why are you not showing a single table with the uncertainties from the full combination?
-==> 
+==> fixed  
 
 * l526: I can’t find anywhere that the final discriminant is the MVA distribution. You should start by 
 saying that here, if not written previously.
-==> 
+==> It mentioned in the end of strategy section, but rephased as "The final BDT discriminant distribution..."
 
 * l542: mock → pseudo
+==> fixed
 
 * l570: could also quote the combined significance? If we are looking for a tuH signal, then all 
 categories contribute.
+==> The combined significance is 2.6 sigma, which is mainly driven by the l2tau channel. Rephased to make it clear. 
 
 * l571: I would remove this sentence, because it is too vague.
+==> rephased
 
 Fig2,3,4: I think that you should have only one of those figures in the paper, I suggest Fig4: postfit tHu. 
 The other two can go in aux material.
@@ -53,42 +68,50 @@ I think you should mention for Fig2a that the last points in the ratio plots are
 (you could also add arrows to point that the points are off scale). You could remove the grid from 
 fig2 bottom pad. The caption of the figures has to be expanded, like fig1. Clarify which signal 
 and scaling is used in figures 3 and 4.
-==>
+==>Will improve
 
 
 * Fig3,4 captions: remove “being” before shown.
 ==> fixed 
 
 * l575: space between “, assuming”
+==> fixed
 
 * l575: The sensitivity of the leptonic channels is a factor of two….
 ==> fixed 
 
 * l578: This paragraph should be in the systematics section.
+==> OK to summarise both statistical and systematics.
 
 * l582: “Tables” 6-7.
+==> fixed
 
 * Eq 3 and l592: I think it should be C_q\phi everywhere and not C_u\phi.
+==> fixed 
 
 * l588: add space between “1, 2”.
+==> fixed
 
 * Table 8: replace 0(0) with “--”. Please fix the latex of several samples. There are too many lines, 
 try to merge. Also Lep Fakes, Double fakes b Fakes are not well defined in the paper, so merge all of them.
-==>
+==> fixed 
 
 * Table9 and Fig 5 are repeating the same information, right? I recommend to put the table in backup and keep 
 the figure. I think you should also show the bestfit values. Can you please add those? Also, I definitely 
 think that you should have in both the figure and table the limits for each individual channel on the top, 
 then the Leptonic combined, Hadronic and finally all combined.
-==>
-
+==>We can provide these as part of aux material.
 
 * L603: space production mode (pp → …).
+==> fixed
+
 
 * l607: jets. Multivariate.
+==> fixed 
 
 * l609: of “Run 2” data. Also add here the improvements with respect to the previous paper, both in terms of 
 analysis (additional channels, techniques, etc.) and in terms of sensitivity.
+==> rephased. 
 
 Thanks!
 
