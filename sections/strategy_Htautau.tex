@@ -88,20 +88,60 @@ in Section~\ref{sec:tmva}.
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
-  \caption{\small{Discriminating variables used in the training of the BDT for hadronic channel.
-      The values in percent (\%) represent the separation and importance of each variable.
-    The descriptions of each variable are provided in the following text.}}
-\label{tab:importance_xTFW}
-\input{tables/xTFW_Merged}
+\caption{\small{Discriminating variables used in the training of the BDT. The values represent the importance rankings of each variable and cross($\times$) denotes the variable is not used in the training. The descriptions of each variable are provided in the following text.}}
+\label{tab:importance}
+ \centering
+ \begin{tabular}{cccccccc} \toprule\toprule
+& $t_{l}\tauhad$-1j                                  &  $t_{h}\tlhad$-2j   &  $t_{l}\tauhad$-2j & $t_{h}\tlhad$-3j & $t_l\thadhad$     & $t_h\thadhad$-2j & $t_h\thadhad$-3j       \\\midrule 
+ $m_{\text{W}}$                                      & $\times$  &  $\times$           &  $\times$         & $9$      & $\times$      & $6$      & $7$\\
+ $\chi^{2}$                                          & $\times$  &  $\times$           &  $\times$         & $14$     & $\times$      & $\times$ & $\times$      \\
+ \text{max}($\eta_{\tau}$)                           & $4$       &  $\times$           &  $4$              & $\times$ & $10$          & $\times$ & $\times$       \\
+ $m^{\text{T}}_{\text{W}}$                           & $10$      &  $\times$           &  $8$              & $\times$ & $13$          & $\times$ & $\times$        \\
+ $m_{\tau,\tau}$                                     & $\times$  &  $2$                &  $\times$         & $3$      & $\times$      & $1$      & $1$          \\
+ $m_{\text{t},\text{SM}}$                            & $\times$  &  $1$                &  $\times$         & $2$      & $\times$      & $3$      & $4$          \\
+ $p_{\text{T},\ell}$                                 & $12$      &  $15$               &  $12$             & $17$     & $\times$      & $\times$ & $\times$        \\
+ $m_{\text{t},\text{FCNC}}$                          &  $\times$ &  $\times$           &  $\times$         & $\times$ & $\times$      & $10$     & $6$\\
+ $m_{\text{t},\text{SM},\text{vis}}$                 & $3$       &  $\times$           &  $5$              & $\times$ & $4$           & $\times$ & $\times$        \\
+ $p_{\text{T},\tau}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$   & $10$           \\
+ $\met$                                              & $5$       &  $11$               &  $10$             & $13$     & $6$           & $7$    & $13$          \\
+ $m_{\tau\tau,\text{vis}}$                           & $10$      &  $14$               &  $11$             & $6$      & $1$           & $2$    & $2$          \\
+ $E_{\text{vis}~\tau,1}/E_{\tau,1}$                  & $\times$  &  $10$               &  $\times$         & $12$     & $\times$      & $8$    & $8$          \\
+ $E_{\text{vis}~\tau,2}/E_{\tau,2}$                  & $\times$  &  $7$                &  $\times$         & $4$      & $\times$      & $9$    & $11$         \\
+ $P_{\text{T,\tauhadvis}} $                          & $\times$  &  $\times$           &  $\times$         & $\times$ & $9$           & $\times$ & $\times$        \\
+ $m_{\text{t},\text{FCNC},\text{vis}}$               & $\times$  &  $\times$           &  $\times$         & $\times$ & $3$           & $\times$ & $\times$       \\
+ $\Delta\phi(\tau\tau,\met)$                         & $\times$  &  $6$    			   &  $\times$         & $16$     & $\times$      & $13$   & $12$         \\
+ $\met\text{centrality}$                             & $\times$  &  $13$               &  $\times$         & $15$     & $\times$      & $12$   & $9$         \\
+ \text{Min}($m_{\tau\tau \text{q-jet}}$)             & $9$       &  $\times$           &  $3$              & $\times$ & $14$          & $\times$ & $\times$        \\
+ $\Delta R(\ell,\tau)$                               & $8$       &  $9$                &  $9$              & $10$     & $15$          & $\times$ & $\times$        \\
+ $\Delta R(\tau,\tau)$                               & $\times$  &  $\times$           &  $\times$         & $\times$ & $2$           & $4$    & $3$             \\
+ $\Delta R(\ell,\text{b-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$          & $\times$ & $\times$        \\
+ $\Delta R(\tau,\text{b-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$          & $\times$ & $\times$       \\
+ $\Delta R(\ell+\text{b-jet},\tau\tau )$             & $\times$  &  $\times$           &  $\times$         & $\times$ & $7$           & $\times$ & $\times$        \\
+ $\Delta R(\tau,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
+ \text{Min}($m_{\text{light-jet},\text{light-jet}}$) & $\times$  &  $12$               &  $\times$         & $11$     & $\times$      & $\times$ & $\times$        \\
+ \bottomrule\bottomrule\\
+ \end{tabular}
 \end{table*}
 
-\begin{table*}[t!]
-  \caption{\small{Discriminating variables used in the training of the BDT for leptonic channel.
-      The values in percent (\%) represent the separation and importance of each variable.
-    The descriptions of each variable are provided in the following text.}}
-\label{tab:importance_tthML}
-\input{tables/tthML_Merged}
-\end{table*}
+
+
+
+%%%%%%%%%%%%%%%
+%%%  \begin{table*}[t!]
+%%%    \caption{\small{Discriminating variables used in the training of the BDT for hadronic channel.
+%%%        The values in percent (\%) represent the separation and importance of each variable.
+%%%      The descriptions of each variable are provided in the following text.}}
+%%%  \label{tab:importance_xTFW}
+%%%  \input{tables/xTFW_Merged}
+%%%  \end{table*}
+%%%  
+%%%  \begin{table*}[t!]
+%%%    \caption{\small{Discriminating variables used in the training of the BDT for leptonic channel.
+%%%        The values in percent (\%) represent the separation and importance of each variable.
+%%%      The descriptions of each variable are provided in the following text.}}
+%%%  \label{tab:importance_tthML}
+%%%  \input{tables/tthML_Merged}
+%%%  \end{table*}
 
 Boosted decision trees (BDT)~\cite{Hocker:2007ht} are used in each SR to improve the separation between signal and background. 
 %The separate training exploits differences in event kinematics across SRs.  
@@ -110,7 +150,7 @@ In the training, all signal events from $tt(qH)$ and $tH$ are merged together fo
 (including both real and fake $\had$ contributions) are also used in the training.
 
 A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation"(measures the degree of overlap between background and signal shape) and "importance"(depicts the power of the variable to the classification of two distributions) provided by the TMVA package~\cite{Hocker:2007ht}, and only those variables whose importance is large than 2\% were kept.
-The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance_xTFW} and~\ref{tab:importance_tthML}. The discriminating variables used are:
+The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance}. The discriminating variables used are:
 \begin{itemize}
 \item $\met$ is the missing transverse momentum.
 \item $P_{\text{T,\tauhadvis}} $ is the transverse momentum of the leading tau candidate.
