@@ -1,0 +1,211 @@
+﻿Dear FCNC tqH (tautau) team,
+Thanks for your first draft! Below please find some comments on version 0.2. (of 2nd of February)
+Cheers,
+Edson
+
+==> Thanks for your excellent comments
+
+L 7-9.- A search for flavour-changing neutral currents (tqH) involving a top quark, an up-type quark q (with q = u,c), and a Standard Model Higgs boson decaying into a tau lepton pair (H->tau+tau-) is presented.
+
+==> fixed 
+
+L13-14.- one of the top quarks decay into Wb and the other into qH through the FCNC tqH interaction…
+==> fixed
+
+L25.- Observation of “the” Higgs boson…
+==> rephased
+
+L34.- exceedingly small “,” around 10-15…
+==>fixed
+
+L36.- with or without flavour violation
+==>fixed
+
+L44.- So the study “of” this process
+==>fixed
+
+L81.- which “multivariate technique” could you please elaborate a bit about this point?
+==>a multivariate technique, boosted decision trees, is used...
+
+L82.- different kinematics “distributions”.
+==> fixed
+
+L99-100.- ...2.5 “Tm” in the barrel and up to 6.0 “Tm in” the endcaps (Tm without spaces)
+==>fixed
+
+L130.- energy deposits
+==>fixed
+
+L132.- required “to” satisfy both
+==> fixed
+
+L134-135.- based “on an” isolation boosted decision tree …., which is trained to identify….
+==>fixed
+
+L137.- …the precision “for” identifying…
+==> fixed
+
+L140.- These scale factors ”have also been” checked…
+==> fixed
+
+L163.- Candidates are required to have “a” pT…
+==> OK as is
+
+L171.- Events with a b-tagged tau_had candidate are rejected
+==>fixed
+
+L175-176.- Do you need these lines? It seems you explain this in more detail in the upcoming lines
+==> removed
+
+L190.- for “the” momentum
+==> ok as is
+
+L191.- “of” soft particle
+==> ok as is
+
+L195.- “With 25 ns bunch spacing”, it is necessary to mention this?
+==> ok as is
+
+L304.- Section 5.2 should be part of the Analysis Strategy IMO, also you can change the name to “Estimation of backgrounds with misidentified final state particles” or shorter “Estimation of reducible background contributions”…
+==> The background estimation is restructured and moved into a a new section after the Analysis Strategy.
+
+L307-309.- Suggest to rewrite this subparagraph since not very clear what you want to explain.
+==>rephased
+
+L309.- However”,” the multi…
+==> rephased
+
+L310.- with any; electron, muon or tau_had faked…where the fake leptons dominate…
+==> rephased
+
+L312.- Maybe a good site to cite some analysis using PLIV?
+General for this section: No figures or tables are provided…
+==> rephased
+
+L315.- depending on the “”channels signatures”….based on simulation….
+==> ok as is
+
+L316.- In footnote 3 you included gluons in the light quark jet definition, please harmonize
+==> rephased
+
+L323.- …with opposite charge…
+==> fixed
+
+L324.- Type3) fake taus from b-jets…Type4) fake taus from other…
+==> fixed
+
+L325.- …additional b-jet…
+==> fixed
+
+L327.- are used to calibrate Type 3…
+==> fixed
+
+L328.- more the word “”regions” from previous line (delete of) to after …3jOS “regions” are calibrated…
+==>rephased
+
+L330.- which consist “in” total “of” 24…
+==> fixed
+
+L332.- with “a” single…
+==> fixed
+
+L339.- “Monte Carlo” capitalize
+==> fixed
+
+L343.- The templates are “produced”…
+==> fixed
+
+L345.- …to “those which fail” the medium tau…”in the” different…
+==>rephased
+
+L345-346.- “are treated as a systematic uncertainty”
+General: Please harmonize “search channels” with “signal regions” and SRs and “Control Regions” with CRs everywhere.
+==> fixed
+
+L351.- …signals being probed “are” characterized…
+==> fixed
+
+L354.- electron or muon “plus” significant...the “lower energy” jet...
+==> rephased
+
+L356.- with “the” production mode…
+==> rephased
+
+L362.- final “states”...reconstruction is “used” in the...
+==> fixed
+
+L366.- considering “it comes” from…
+==>rephased
+
+L367.- among which “the one” with the “smaller” angular distance...of the “di-tau , ”
+==> fixed
+
+L368.- is considered as “the” q-jet…
+==>fixed
+
+L369.- ...2 jets “besides the q and the b-jet”, ...
+==>fixed
+
+L370.- ...closest to the W mass...
+==>fixed
+
+Table 4.- Caption: Please indicate what the numbers mean in the table (variable importance in percent maybe?), what the second number means?
+==> will reformat (?)
+
+Table 5.- Caption: “The description of each variable is provided in the text”, also please describe the meaning of these numbers.
+L389.- ...“. Both signatures” tt(qH) and tH…and “are” used for “the” tuH and tcH “analyses” against…
+==> will reformat (?)
+L395-396.- ...and are defined as follows:
+==> rephased
+
+L407.- ...W boson from the top quark decay.
+==> rephased
+
+L411.- “visible” pt?
+==> fixed
+
+L412.- Maybe you meant mt,fcnc,vis?
+==> fitted mt mass including neutrinos
+
+L413.- reflects the visible top quark mass
+==> fixed
+
+L416.- ...an alternative “to” variable...
+==> fixed
+
+L418.- ...and alternative “to” mW.
+==> rephased
+
+L421.- carried by the “invisible” tau decay products ???
+==> these are visible fraction, OK as is
+
+L425,427,430,432,434. you may want to specify whether you are referring to the visible tau?
+==> yes, these are for tau candidates
+
+L501.- Are all of these PDF sets properly cited?
+
+L513.- statistical uncertainties “on” the fake…channel “are” applied…
+L514.- …fake tau_had ”sources”…the “uncertainty”…
+L515-L516.- …considering both, its statistical
+L517.- The uncertainties “in” the fake…
+L523.- …shower uncertainties “are” estimated…
+Table6.- Caption.- …combined fit in “the” hadronic channel.
+Table7.- Caption.- …combined fit in “the” leptonic channel.
+L580.- …obtained “for” the individual channels…
+L563.- ..of the fit “is” the signal…
+L571.- in the “high” BDT score region…distributions for the observed excess in the
+L572.- …and found that there “is” nothing….I think you need to elaborate a stronger argument to justify this point…
+Figure 2.- Caption: For different “types”…shown for comparing their shapes…
+Figure 3 and Figure 4.- …uncertainties are shown.
+L573.- …of data above…
+L576.- a factor of two->twice?
+L580.- b-tagging, the choice…
+Table 6-7 and Figure 5.- Could you double check the numbers, they don’t seem to match.
+Figure 5.- Update x-axis label to t->uH and t->cH to harmonize with the rest of the paper
+Equation 3.- Correct second term in eq. 3 to \bar{t}q_i
+L591.- “coefficients”
+L592.- C_iphi = sqrt(…) ?
+Table 8.- fit to data with background only -> a background only fit to data, also I don’t see “Other MC” listed in the table…
+L600.- neutral current “processes”
+L608.- on basis of their “particular” kinematics?
+L612.- …tqH “couplings”
