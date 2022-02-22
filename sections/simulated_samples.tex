@@ -90,24 +90,45 @@ Simulated events were processed through the same reconstruction software as the 
 efficiencies, energy scales and energy resolutions match those determined from data control samples.
 
 
+%  \begin{table}
+%  \footnotesize
+%  \centering
+%  \caption{Overview of the MC generators used for the main signal and background samples.}
+%  \begin{tabular}[h]{l|c|c|c|c|c|c}
+%  \hline \hline
+%  \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
+%          &  ME   &  PS    &   ME  & PS &   &  \\\hline
+%  $tt(qH)$ Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+%  $tH$ Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+%  $W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
+%  \ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+%  Single top & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+%  $t\bar{t}X$ & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+%  Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline\hline
+%  \end{tabular}
+%  \label{mob}
+%  \end{table}
+
 \begin{table}
 \footnotesize
 \centering
-\caption{Overview of the MC generators used for the main signal and background samples}
+\caption{Overview of the MC generators used for the main signal and background samples.}
 \begin{tabular}[h]{l|c|c|c|c|c|c}
 \hline \hline
 \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
-        &  ME   &  PS    &  ME  & PS &   &  \\\hline
-$tt(qH)$ Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-$tH$ Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-$W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
-\ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-Single top & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-$t\bar{t}X$ & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline\hline
+        &  ME   &  PS    &   ME  & PS &   &  \\\hline
+$tt(qH)$ Signal & \powheg & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$tH$ Signal & \amcatnlolong & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$W/Z$+jets & \multicolumn{2}{c|}{\sherpa~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & \sherpa & NLO/LO \\ \hline
+\ttbar & \powheg & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Single top & \powheg & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$t\bar{t}X$ & \amcatnlolong & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Diboson & \multicolumn{2}{c|}{\sherpa~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & \sherpa & NLO/LO \\ \hline\hline
 \end{tabular}
 \label{mob}
 \end{table}
+
+
 
 %This kind of event is modelled by data-driven ABCD method
 %by cutting on $\met$ and the tight lepton isolation using PLIV, which is widely used in ATLAS physics analyses.
