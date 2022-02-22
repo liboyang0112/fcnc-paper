@@ -19,22 +19,20 @@ To reduce the impact of the trigger efficiency uncertainty around the threshold,
 The signal final state including an electron or muon or $\lep$ are referred to as leptonic channel, otherwise hadronic channel.
 The events in the leptonic channel are recorded by single-electron or single-muon trigger, required to have exactly one electron or muon that matches, with $\Delta R < 0.15$, the lepton reconstructed by the trigger. Further requirements are defined targeting different signal decay modes:  
 \begin{itemize}
-\item $t_h\lephad$: Targeting $t_hH$ and $t_ht(qH)$ with $H\to\lephad$ decay. Exactly one $\had$ with opposite-side charge to $\tau_l$ is required, including at least three jets with exactly one $b$-tagged jet.
-\item $t_l\hadhad$: Targeting $t_lH$ and $t_lt(qH)$ with $H\to\hadhad$ decay. Exactly one lepton and two opposite-sign $\had$ are selected, including at least 1 jet with exactly one $b$-tagged jet.
+\item $t_h\lephad$: Targeting $t_hH$ and $t_ht(qH)$ with $H\to\lephad$ decay. Exactly one $\had$ with opposite-side charge to $\tau_l$ is required, including at least three jets with exactly one $b$-jet.
+\item $t_l\hadhad$: Targeting $t_lH$ and $t_lt(qH)$ with $H\to\hadhad$ decay. Exactly one lepton and two opposite-sign $\had$ are selected, including at least 1 jet with exactly one $b$-jet.
 \item $t_l\had$: Also targeting $t_lH$ and $t_lt(qH)$ with $H\to\hadhad$ decay when one of the $\had$ fails the tau reconstruction or identification so that there is only
-  one $\had$ candidate reconstructed. Exactly one $\had$ with same-sign charge to the lepton is required, including at least 2 jets with exactly one $b$-tagged jet.
+  one $\had$ candidate reconstructed. Exactly one $\had$ with same-sign charge to the lepton is required, including at least 2 jets with exactly one $b$-jet.
 \end{itemize}
 
 The events in the hadronic channel are recorded by di-tau trigger, required to have both leading and subleading $\had$ passed the trigger. Further requirements are defined targeting signal decay modes:
 \begin{itemize}
-\item $t_h\hadhad$: Targeting $t_hH$ and $t_ht(qH)$ with $H\to\hadhad$ decay. Exactly two $\had$ with opposite-sign charge are selected, including at least 3 jet with exactly one $b$-tagged jet.
+\item $t_h\hadhad$: Targeting $t_hH$ and $t_ht(qH)$ with $H\to\hadhad$ decay. Exactly two $\had$ with opposite-sign charge are selected, including at least 3 jet with exactly one $b$-jet.
 \end{itemize}
 
 The above requirements apply to the reconstructed objects defined in Section~\ref{sec:objects}.
 %, which are in general different between both searches. 
 These requirements are referred to as the preselection and are summarised in Table~\ref{tab:preselection}. 
-
-
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
@@ -44,6 +42,7 @@ The leading and subleading $\had$ candidates are denoted by $\tau_{\mathrm{had,1
 \begin{tabular}{c|ccc|c}
 \toprule\toprule
 \multirow{2}{*}{Requirement} &  \multicolumn{3}{c|}{leptonic channel}  & \multicolumn{1}{c}{hadronic channel} \\ 
+%\multirow{2}{*}{Requirement} &  \multicolumn{3}{c|}{leptonic channel}  & hadronic channel \\ 
 & $t_h\lephad$ & $t_l\hadhad$ &  $t_l\had$ & $t_h\hadhad$\\
 \midrule
 Trigger & \multicolumn{3}{c|}{single-lepton trigger} & di-$\tau$ trigger  \\

@@ -41,8 +41,7 @@ Samples corresponding to the $tW$- and $s$-channel production mechanisms were ge
 with {\powheg}~v2 using the five-flavour scheme. Overlaps between the $\ttbar$ and $tW$ final states were avoided by using 
 the diagram removal scheme~\cite{Frixione:2005vw}.
 The parton showers, hadronisation and the underlying event were modelled using {\pythia}~8.230~\cite{Sjostrand:2006za} using the A14 tune and the NNPDF2.3 LO PDF set.
-%with the CTEQ6L1~\cite{Pumplin:2002vw,Nadolsky:2008zw} PDF set 
-%in combination with the Perugia 2012 tune~\cite{Skands:2010ak}.
+%with the CTEQ6L1~\cite{Pumplin:2002vw,Nadolsky:2008zw} PDF set %in combination with the Perugia 2012 tune~\cite{Skands:2010ak}.
 The single-top-quark samples are normalised to the approximate NNLO theoretical cross 
 sections~\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}. 
 
@@ -112,18 +111,19 @@ efficiencies, energy scales and energy resolutions match those determined from d
 \begin{table}
 \footnotesize
 \centering
-\caption{Overview of the MC generators used for the main signal and background samples.}
+\caption{Overview of the MC generators at which the matrix-element calculation (ME) at the leading or the next-leading order (Order), 
+the parton shower model (PS), and the parton distribution function set (PDF) used for the main signal and background samples.}
 \begin{tabular}[h]{l|c|c|c|c|c|c}
 \hline \hline
 \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
-        &  ME   &  PS    &   ME  & PS &   &  \\\hline
-$tt(qH)$ Signal & \powheg & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-$tH$ Signal & \amcatnlolong & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-$W/Z$+jets & \multicolumn{2}{c|}{\sherpa~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & \sherpa & NLO/LO \\ \hline
-\ttbar & \powheg & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-Single top & \powheg & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-$t\bar{t}X$ & \amcatnlolong & \pythia~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-Diboson & \multicolumn{2}{c|}{\sherpa~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & \sherpa & NLO/LO \\ \hline\hline
+        &  ME   &  PS    &  ME  & PS &   &  \\\hline
+$tt(qH)$ Signal & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$tH$ Signal & {\amcatnlolong} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$W/Z$+jets & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & {\sherpa} & NLO/LO \\ \hline
+\ttbar & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Single top & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$t\bar{t}X$ & {\amcatnlolong} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Diboson & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & {\sherpa} & NLO/LO \\ \hline\hline
 \end{tabular}
 \label{mob}
 \end{table}
