@@ -21,20 +21,20 @@ $t_l\hadhad$, $t_l\had$-1j, $t_l\had$-2j, $t_h\lephad$-2j, $t_h\lephad$-3j, $t_h
 
 \begin{table}
 \centering
-\caption{Overview of the signal regions and the control regions used for fake tau scale factor derivation in leptonic channels.}
+\caption{Overview of the signal regions (SR) and the $t\bar{t}$ control regions (CRtt) used for fake tau scale factor derivation in leptonic channels. Leptons are required to have either same-sign (SS) or opposite-sign (OS) charges in each region.}
 \label{tab:srcr}
 \begin{tabular}[h]{c|c|c|c|c|c|c}
 \hline \hline
 \multicolumn{2}{c|}{Regions} & $b$-jet & light flavor jets        & lepton & hadronic taus & charge\\ \hline
-\multirow{7}{*}{SR}&$t_l\thadhad$     & 1     & any                                & 1      & 2             & $\thadhad$ OS\\ \cline{2-7}
+\multirow{7}{*}{SR}&$t_l\thadhad$     & 1     & $\ge0$                                & 1      & 2             & $\thadhad$ OS\\ \cline{2-7}
 &$t_l\tauhad$-1j  & 1     & 1                                   & 1      & 1                     & $t_l\tauhad$ SS\\ \cline{2-7}
 &$t_l\tauhad$-2j  & 1     & 2                                        & 1      & 1                     & $t_l\tauhad$ SS\\ \cline{2-7}
 &$t_h\tlhad$-2j   & 1     & 2                           & 1      & 1             & $\tlhad$ OS\\ \cline{2-7}
 &$t_h\tlhad$-3j   & 1     & $\ge3$                      & 1      & 1             & $\tlhad$ OS\\ \cline{2-7}
 &$t_h\thadhad$-2j & 1     & 2                            & 0      & 2             & $\thadhad$ OS\\ \cline{2-7}
 &$t_h\thadhad$-3j & 1     & $\ge3$                       & 0      & 2             & $\thadhad$ OS\\ \hline
-\multirow{6}{*}{CRtt}&$t_lt_l1b\tauhad$ & 1     & any                           & 2      & 1                     & $t_lt_l$ OS\\ \cline{2-7}
-&$t_lt_l2b\tauhad$      & 2     & any                           & 2      & 1                     & $t_lt_l$ OS\\ \cline{2-7}
+\multirow{6}{*}{CRtt}&$t_lt_l1b\tauhad$ & 1     & $\ge0$                            & 2      & 1                     & $t_lt_l$ OS\\ \cline{2-7}
+&$t_lt_l2b\tauhad$      & 2     & $\ge0$                            & 2      & 1                     & $t_lt_l$ OS\\ \cline{2-7}
 &$t_lt_h2b\tauhad$-2jSS & 2     & 2                             & 1      & 1             & $t_l\tauhad$ SS\\ \cline{2-7}
 &$t_lt_h2b\tauhad$-2jOS & 2     & 2                             & 1      & 1             & $t_l\tauhad$ OS\\ \cline{2-7}
 &$t_lt_h2b\tauhad$-3jSS & 2     & $\ge3$                        & 1      & 1             & $t_l\tauhad$ SS\\ \cline{2-7}
@@ -88,10 +88,13 @@ in Section~\ref{sec:tmva}.
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
-  \caption{\small{The number of discriminating variables (n) used in the training of BDT in each SR. Variables are ranked from highest (1) to lowest (n) relative to one another by their
-      importance in the training. Variables which do not have a ranking are not included in the training. 
-      %The values represent their ra importance rankings of each variable and cross($\times$) denotes the variable is not used in the training.
-      The descriptions of each variable are provided in the following text.}}
+  \caption{\small{The number of discriminating variables (n) used in the training of BDT in each SR. 
+The rank of the discriminating variables relative to one another according to their importance in the training is reported from highest (1) to 
+lowest (n). Variables whose ranking is missing are not included in the training of the corresponding SR. The description of each variable is provided in the text.}}
+%Variables are ranked from highest (1) to lowest (n) relative to one another by their
+%      importance in the training. Variables which do not have a ranking are not included in the training. 
+%The values represent their ra importance rankings of each variable and cross($\times$) denotes the variable is not used in the training.
+%      The descriptions of each variable are provided in the following text.}}
 \label{tab:importance}
  \centering
  \begin{tabular}{cccccccc} \toprule\toprule
@@ -103,25 +106,25 @@ in Section~\ref{sec:tmva}.
  $m^{\text{T}}_{\text{W}}$                           & $11$      &             &  $8$              &  & $13$          &  &         \\
  $m_{\tau,\tau}$                                     &   &  $2$                &           & $3$      &       & $1$      & $1$          \\
  $m_{\text{t},\text{SM}}$                            &   &  $1$                &           & $2$      &       & $3$      & $4$          \\
- $p_{\text{T},\ell}$                                 & $12$      &  $15$               &  $12$             & $17$     &       &  &         \\
+ ${\pt}_{\ell}$                                 & $12$      &  $15$               &  $12$             & $17$     &       &  &         \\
  $m_{\text{t},\text{FCNC}}$                          &   &             &           &  &       & $10$     & $6$\\
  $m_{\text{t},\text{SM},\text{vis}}$                 & $3$       &             &  $5$              &  & $4$           &  &         \\
- $p_{\text{T},\tau}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$   & $10$           \\
+ ${\pt}_{\tauhadvis}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$   & $10$           \\
  $\met$                                              & $5$       &  $11$               &  $10$             & $13$     & $6$           & $7$    & $13$          \\
  $m_{\tau\tau,\text{vis}}$                           & $10$      &  $14$               &  $11$             & $6$      & $1$           & $2$    & $2$          \\
- $E_{\text{vis}~\tau,1}/E_{\tau,1}$                  &   &  $10$               &           & $12$     &       & $8$    & $8$          \\
- $E_{\text{vis}~\tau,2}/E_{\tau,2}$                  &   &  $7$                &           & $4$      &       & $9$    & $11$         \\
+ $E_{\text{vis}~\tau1}/E_{\tau1}$                  &   &  $10$               &           & $12$     &       & $8$    & $8$          \\
+ $E_{\text{vis}~\tau2}/E_{\tau2}$                  &   &  $7$                &           & $4$      &       & $9$    & $11$         \\
  $P_{\text{T,\tauhadvis}} $                          &   &             &           &  & $9$           &  &         \\
  $m_{\text{t},\text{FCNC},\text{vis}}$               &   &             &           &  & $3$           &  &        \\
  $\Delta\phi(\tau\tau,\met)$                         &   &  $6$                            &           & $16$     &       & $13$   & $12$         \\
  $\met\text{centrality}$                             &   &  $13$               &           & $15$     &       & $12$   & $9$         \\
  \text{Min}($m_{\tau\tau \text{q-jet}}$)             & $9$       &             &  $3$              &  & $14$          &  &         \\
- $\Delta R(\ell,\tau)$                               & $8$       &  $9$                &  $9$              & $10$     & $15$          &  &         \\
+ \text{Min}($\Delta R(\ell,\tau)$)                               & $8$       &  $9$                &  $9$              & $10$     & $15$          &  &         \\
  $\Delta R(\tau,\tau)$                               &   &             &           &  & $2$           & $4$    & $3$             \\
  $\Delta R(\ell,\text{b-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$          &  &         \\
- $\Delta R(\tau,\text{b-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$          &  &        \\
+ $\Delta R(\tau1,\text{b-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$          &  &        \\
  $\Delta R(\ell+\text{b-jet},\tau\tau )$             &   &             &           &  & $7$           &  &         \\
- $\Delta R(\tau,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
+ $\Delta R(\tau1,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
  \text{Min}($m_{\text{light-jet},\text{light-jet}}$) &   &  $12$               &           & $11$     &       &  &         \\
 % $m_{\text{W}}$                                      & $\times$  &  $\times$           &  $\times$         & $9$      & $\times$      & $6$      & $7$\\
 % $\chi^{2}$                                          & $\times$  &  $\times$           &  $\times$         & $14$     & $\times$      & $\times$ & $\times$      \\
@@ -183,20 +186,21 @@ A large set of potential variables are investigated in each SR separately. The d
 The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance}. The discriminating variables used are:
 \begin{itemize}
 \item $\met$ is the missing transverse momentum.
-\item $P_{\text{T,\tauhadvis}} $ is the transverse momentum of the leading tau candidate.
-\item $P_{\text{T,sub}-\tau}$ is the transverse momentum of the sub-leading tau candidate.
-\item $P_{\text{T},\ell}$ is the transverse momentum of the leading light lepton.
+\item ${\pt}_{\tauhadvis} $ is the transverse momentum of the leading tau candidate.
+\item ${\pt}_{\text{sub}-\tau}$ is the transverse momentum of the sub-leading tau candidate.
+\item ${\pt}_{\ell}$ is the transverse momentum of the leading light lepton.
 \item $\chi^2$ derived from the kinematic fit of the neutrino momentum.
 \item $m_{t,\text{SM}}$ is the invariant mass of the $b$-jet and the two jets from the $W$ decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{T}_{\text{W}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
-m^{T}_{\text{W}} = \sqrt{2 P_{T,\ell} E_{\text{T}}^{\text{miss}} \left(1-\cos\Delta\phi_{\ell,\text{miss}} \right)}.  
+m^{T}_{\text{W}} = \sqrt{2 {\pt}_{\ell} E_{\text{T}}^{\text{miss}} \left(1-\cos\Delta\phi_{\ell,\text{miss}} \right)},  
 \end{equation}
+where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lepton and $\met$.  
 \item $m_{\tau,\tau}$ is the fitted invariant mass of the tau candidates and reconstructed neutrinos in the $t_hH$, $t_ht(qH)$ channels. 
 \item $m_{\text{W}}$ is the reconstructed invariant mass of two light-jets from the $W$ decay with the mass closet to the $W$ mass.
 \item $m_{\text{t},\text{FCNC}}$ is the fitted invariant mass of the FCNC-decaying top quark reconstructed from di-tau candidates, $q$-jet and reconstructed neutrinos.
 \item $m_{\tau\tau,\text{vis}}$ is the visible invariant mass of the di-tau candidates. %or the lepton and $\had$ candidate when there is only one $\had$.
-\item $P_{\text{T},\tau\tau,\text{vis}}$ is the visible $\pT$ of the di-tau candidates.
+\item ${\pt}_{\tau\tau,\text{vis}}$ is the visible $\pT$ of the di-tau candidates.
 \item $m_{\text{t},\text{FCNC},\text{vis}}$ is the reconstructed visible mass of the FCNC-decaying top quark.
 \item $m_{\text{t},\text{SM},\text{vis}}$ is the invariant mass of the lepton and the $b$-jet, which reflects the visible top quark mass.
 \item \text{Min}($M_{\tau\tau \text{q-jet}}$) is the visible mass of the di-tau candidates (include leptonic tau) and the light-flavor jet, minimized by choosing different jet, reflects the invariant masss of the visible FCNC top decaying product, an alternative to variable $m_{\text{t},\text{FCNC},\text{vis}}$.
@@ -210,16 +214,17 @@ m^{T}_{\text{W}} = \sqrt{2 P_{T,\ell} E_{\text{T}}^{\text{miss}} \left(1-\cos\De
 \end{array}
 \label{eq:eq3}
 \end{eqnarray}
-\item $E_{\nu,\text{i}}/E_{\tau,\text{i}},\text{i}=1,2$ is the momentum fraction carried by the visible decay products from the tau mother. It is based on the best-fit 4-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the tau energy since there is only a single neutrino in the final state.% which is evident in the excess around 1 in Figure \ref{fig:x12_fit}. 
-\item $\Delta R(\ell+\text{b-jet},\tau\tau)$ is the angular distance between the lepton+$b$-jet and di-tau candidates.
-\item $\Delta R(\ell,\text{b-jet})$ is the angular distance between the lepton and $b$-jet.
-\item $\Delta R(\tau,\text{b-jet})$ is the angular distance between the tau candidate and $b$-jet. If there are two taus in the event, the leading one is selected for the calculation.
-\item \text{Max}($\eta_{\tau}$) is the maximum $\eta$ value among the tau candidates.
-\item $\Delta R(\ell,\tau)$ is the angular distance between the lepton and the closest tau candidate in the leptonic channels.
-\item $\Delta R(\tau,\text{q-jet})$ is the angular distance between the tau candidate and the reconstructed $q$-jet. If there are two taus in the event, the leading one is used.
-\item $\Delta R(\tau,\tau)$ is the angular distance between two tau candidates, in case of $t_h\tlhad$ channels, the definition is the same as $\Delta R(\ell,\tau)$.
+\item $E_{\text{vis}~\tau\text{i}}/E_{\tau\text{i}},\text{i}=1,2$ is the momentum fraction carried by the visible decay products from the tau mother. It is based on the best-fit 4-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the tau energy since there is only a single neutrino in the final state.% which is evident in the excess around 1 in Figure \ref{fig:x12_fit}. 
+%\item $\Delta R(\ell+\text{b-jet},\tau\tau)$ is the angular distance between the lepton+$b$-jet and di-tau candidates.
+%\item $\Delta R(\ell,\text{b-jet})$ is the angular distance between the lepton and $b$-jet.
+%\item $\Delta R(\tau,\text{b-jet})$ is the angular distance between the tau candidate and $b$-jet. If there are two taus in the event, the leading one is selected for the calculation.
+%\item \text{Max}($\eta_{\tau}$) is the maximum $\eta$ value among the tau candidates.
+%\item $\Delta R(\ell,\tau)$ is the angular distance between the lepton and the closest tau candidate in the leptonic channels.
+%\item $\Delta R(\tau,\text{q-jet})$ is the angular distance between the tau candidate and the reconstructed $q$-jet. If there are two taus in the event, the leading one is used.
+%\item $\Delta R(\tau,\tau)$ is the angular distance between two tau candidates, in case of $t_h\tlhad$ channels, the definition is the same as $\Delta R(\ell,\tau)$.
 \item $\Delta\phi(\tau\tau,\met)$ is the azimuthal angle between the $\met$ and di-tau $\pT$.
-\item $\Delta R(\tau,\text{light-jet})$ is the minimum angle distance between the tau candidate and the light-jet. If there are two taus in the event, the leading one is used.
+\item $\Delta R(i,j)$ is the angular distance between \text{i} and \text{j} objects. 
+%\item $\Delta R(\tau1,\text{light-jet})$ is the minimum angle distance between the tau candidate and the light-jet. If there are two taus in the event, the leading one is used.
 \end{itemize}
 A comparison between data and the predicted background for the leading $\had$ $\pt$ distribution in the SRs 
 %some of these variables in three main decay final states($t_l\hadhad$, $t_h\hadhad$, and $t_h\lephad$)
@@ -257,7 +262,10 @@ The final observable used to extract signal events is defined as the BDT distrib
 \includegraphics[page=1,width=0.33\textwidth]{figures/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}&\\
 (c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3), $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1) before the fit to data ('Pre-Fit'). The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Underflow and overflow bins are included respectively in the first and last bins. Rare including single top, and $V$+jets and only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. The lower panels show the ratios of the data to the background prediction.}
+\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_l\thadhad$ (a1),  $t_l\tauhad$-1j (a2),  $t_l\tauhad$-2j (a3), $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1) before the fit to data ('Pre-Fit'). The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Overflow bins are included respectively in the last bin. Others (Rare) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) 
+channels. 
+%( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
+The lower panels show the ratios of the data to the background prediction.}
 \label{fig:taupt_prefit}
 \end{figure}
 

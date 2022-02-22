@@ -1,0 +1,35 @@
+﻿I had a look at abstract and intro of V1.0 from 18.2.2022.
+I will continue reading but decided to post what I have so far, see below. Thank you !
+10: and corresponds -> that corresponds
+11: I suggest: two production processes -> two processes
+12: with the Higgs -> with a Higgs
+13: one of top quarks -> one top quark OR of of the top quarks
+15: space between lepton and (e,mu)
+16: I suggest to split the sentence: ...multiple jets. Event kinematics…
+47–51: I tried to reformulate a little, see if you like it:
+        After the discovery of the Higgs boson in 2012 at the Large Hadron Collider (LHC) by the ATLAS [1] and CMS [2]     
+      collaborations, a comprehensive programme of measurements has been conducted to explore this new particle.   
+      Measurements so far proved to be consistent with the Standard Model (SM) predictions. However, the program is
+     ongoing and precision measurements as well as searches for rare new physics processes beyond the Standar Model  
+   (BSM) are underway. One such possibility are flavour-changing neutral-current (FCNC) interactions between …. WHICH 
+     HAVE been actively...
+57  B(t → qH) = 10E-15.
+64: an observation OF AN ENHANCED RATE of… ?
+65: I suggest replacing “On the other hand", with “Furthermore, …"
+65: the associated  single-top and Higgs production process through this interaction would enhance the...
+67   The study of this process will therefore also contribute
+68 remove ’small’
+68 LHC centre of mass energy -> 13 TeV centre of mass energy.
+72/73 I suggest not starting a new paragraph
+74 add “branching fraction before B(t->qH)
+74 yielding -> denoted as ?
+78: ...level (CL) for branching fractions of…
+82:  that THE BRANCHING FRACTION B(t → uH)  is null.
+84 (remove "the") upper limits at 95% CL on the branching fractions are set at B(t → cH) < 0.11% assuming  B(t→uH)=0, and B(t → uH) < 0.12% assuming B(t→cH)=0.
+94: this analysis -> the analysis reported here"
+96-99 The dataset is divided into several final states depending on the production mode and the W boson decay.
+Is the rest of lines 97 to 103 really needed here in the introduction ? While also being difficult to read I am not sure how much it add to list all the final states here and explain what they are called. I have started to reformulate [Pair production events where the W boson decays hadronically (leptonicall) are referred to as th (tl). The contribution of W → τν is included as τlep in tl when the τ decays into a light lepton (electron or muon) or as τhad in th when the τ decays hadronically.]… But I think that if can be dropped altogether.  And start again with “More signal regions were exploited here…"
+104 Run2 data. In addition, an improved treatment of misidentified tau leptons in simulation and data-driven…are implemented.
+106 a multivariate technique based on boosted...
+
+

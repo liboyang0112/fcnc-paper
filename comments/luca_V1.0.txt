@@ -1,0 +1,120 @@
+Dear Luca, 
+
+  Thank you so much for your comments and see the replies "==>" below. 
+    cheers 
+   -weiming for the team 
+
+FCNC PAPER DRAFT 1.0 2022-02-18: https://cds.cern.ch/record/2790622/
+
+ 
+
+Thanks for the latex-diff. I had a quick look at the paper draft starting from the tables, because figures are not up to date. Plus some typo I caught scrolling the text.
+
+I still need to review the text.
+
+Cheers, Luca.
+
+ 
+
+* Don’t use yet  v1.0 or above for the draft version. That is reserved for Draft 1 circulation to ATLAS.
+
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PubComPaperCheckList#Draft_1_Circulation_in_ATLAS
+
+==> Sorry, we will revise the next version to V0.5.   
+
+* Table 1: fonts are very small. I think there is enough space to use a larger font. Why 3 lines at the bottom and 2 at the top? I think you can use 2 at the bottom like for the rest of tables of the paper.
+
+==> will fix (?)
+ 
+
+* Table 1 and l89-91: Preliminary results from CMS should not be reported, only published ones. You can comment-out the latex for now, in case the result is published before this paper.
+
+==> will remove the CMS preliminary results for now. (?)
+
+* Table 1 caption: too short: “…. obtained from ATLAS and CMS Collaborations with Run 2 data”
+
+==> will fix (?) 
+
+* l88: Run-2 → Run 2
+
+==> fixed 
+ 
+
+* l130: sqrt{s} doesn’t need round brackets
+
+==>fixed 
+ 
+
+* Table 2: "hadronic channel” should be at the same height as “leptonic channel”
+
+==> fixed  
+
+* Table 2: better to write “=0 isolated e and \mu”
+
+==> fixed  
+
+* Table 2: You use both b
+-tagged jet and b-jets in the paper. I suggest to use only one, e.g. the latter.
+
+==> fixed 
+ 
+
+* Table 3: Explain ME and PS and Order in the caption. Also add “.” at the end of the senteces.
+
+==>fixed  
+
+
+* Table 3: Use the same font style for Pythia, Sherpa and Madgraph as in the text.
+
+==> fixed  
+
+* Table 4: “any" means any number of light jets? Ten better to write >=0 to be similar to the rest.
+
+==> fixed  
+
+* Section 6.2: Kinematic variables require still several latex fixes.
+
+==>fixed  
+
+* Table 5: Also here several latex fixes are required.
+
+==> fixed 
+
+* Table 5 caption: Variables are not ranked, but rather the rank is reported in the table. Also add how the ranking is obtained? I also rephrased this part: “…. The rank of the discriminating variables relative to one another according to their importance in the training is reported from highest (1) to lowest (n). Variables whose ranking is missing are not included in the training of the corresponding SR. The description of each variable is provided in the text.”
+
+==> fixed  
+
+* Figure 1: I know that figures update is still in progress, I would still point out a couple of things: 1) the text of the labels should not overlap with the figure. 2) Do you need to show 5 types of fakes in the figure for the lep channel? I suggest to merge them in a single fake component. 3) Remember to make the signal visible in the plot.
+
+==> will fix (?) 
+
+* Figure 1 caption: Do you really have underflow in the figure? In the had channel for subleading tau, I assume.
+I would rephrase this part: “Entries with values below and above the x-axis range are shown in the first and last bin of each distribution, respectively”.
+
+==> fixed, the underflow is not necessary. 
+
+This sentence is weird: “Rare including single top, and V+jets and only subtau real refers to ttbar MC with leading tau faked by other object, subleading tau from real contribution.” Maybe you want to say “ ‘Rare’ includes ….”. Please rephrase to be more clear.
+
+==> rephased 
+ 
+
+* Table 6 still needs to be improved with my comments from the previous round. I also would like to know why impact on mu makes sense for a search that sets limits rather than impact on the limit.
+
+==> rephased as "List of relative uncertainties on the upper limits of $\BR(t\to qH)$ ($q=u,c$) obtained from the combined fit". 
+    and will check the remaining ones (?)
+
+* Table 7-8 are also missing comments from previous round.
+
+==> will check (?)
+
+* l595-596: “A slight excess of data is observed above background with a significance of 2.6 sigma, which is mainly in the tl#had#had channel in the high BDT score region.”
+
+Is 2.6 \sigma the significance in the combination? It doesn’t seem to be the case from figure 5. In the previous draft, it was written that it was the significance of the individual SR. Perhaps you can quote both if you want so, but I think you should have at least the significance of the combination.
+
+
+==> will check (?)  
+
+* Are you planning to have auxiliary material?
+
+==> try to avoid if possible. 
+

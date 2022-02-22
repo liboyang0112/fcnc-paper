@@ -1,0 +1,53 @@
+Dear Marcel, 
+
+    Thanks so much for your comments, see the replies below "==>"
+     cheers 
+     -weiming for the team 
+
+Dear authors,
+
+I have read your version 1.0.
+
+The title needs an additional word ("interaction"?) after tqH. Spelling out the Higgs decay makes it somewhat long. I would propose
+
+Search for flavour-changing neutral current tqH interactions of the top quark and the Higgs boson which decays into a pair of τ-leptons in pp
+collisions at sqrt(s) = 13 TeV with the ATLAS detector
+
+==> rephased 
+
+The draft is in good shape. I think the general readability has improved a lot since the previous version. The abstract, results section and conclusion correctly reflect the slight excess. Thanks for the diligent editing.
+
+==> Thanks for all your inputs 
+
+L17 slight excess of data is observed above [THE EXPECTED STANDARD MODEL] background with a
+significance of 2.6sigma, and 95% CL upper limits on the t -> qH branching ratios are derived.
+
+==> fixed 
+
+Section 6.2 + Table 5: I am not too excited about the long bullet list of variables. Most of these are rather clear (i.e. Delta R (l, b-jet) is explained as the angular distance between lepton and b-jet, which does not add much beyond what we could already guess). Other variables do need some explanation. I would propose to explain only the ones that are not immediately clear.
+
+==> added Delta R (i,j) is the angular distance between i and j objects and removed the rest \Delta R, so it reads more clear. 
+ 
+L595: A slight excess of data is observed above background with a significance of 2.6 sigma, which is mainly in
+the tl tauhadtauhad channel in the high BDT score region. We have checked the kinematic distributions for the
+observed excess in the high BDT region. Within the large statistical uncertainty, the observed distributions
+are compatible with the background shapes, but also with a small signal contribution.
+
+> I wonder if we need to add some further information. The relative sensitivity of the region that concentrates most of the excess is a useful piece of information (i.e. it's not the same if you find an excess in the least sensitive region, that is essentially ruled out by the other regions). And if there is a compact way to present the resulf of the breakdown by years, that is quite helpful.
+
+==> rephased as "... which is mainly in the most sensitive tl tauhadtauhad channel in the high BDT score region..." and 
+    Will expand table 8 to include individual limits, p0 value and combined limits.  
+
+L611: a link to a table is broken in the draft.
+
+==> fixed 
+
+L619: if you have a reference to a paper that gives this relation, that would be very helpful.
+
+==> added 
+
+L640: I prefer the bounds as XX x 10^-4 over 0.0XX %.
+
+==> fixed 
+
+Regards, Marcel
