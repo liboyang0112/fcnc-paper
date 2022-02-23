@@ -1,0 +1,91 @@
+﻿Dear Johannes,
+
+    Thank you so much for your comments and see the replies below as "==>"
+    cheers
+    -weiming for the team
+
+
+Dear all,
+paper draft v1.0 is in good shape. I leave a couple of suggestions here and am looking forward to discussing tomorrow in the EB meeting.
+Best
+Johannes
+
+==> thank you so much
+
+Title suggestion: “Search for flavour-changing neutral current tqH of the top quark and the Higgs boson…” -> 
+“Search for flavour-changing neutral-current interactions of the top quark and the Higgs boson…” 
+(this avoid defining the symbol “tqH” in the title); to be discussed with the EB of course
+==> fixed 
+
+l.22: Often in FCNC searches, we don’t give the limits on the Wilson coefficients, because they depend 
+on the choice for Lambda. If you want to quote them, I suggest adding that this is for Lambda = 1 TeV.
+==> added as "for the new physics scale $\Lambda$ at 1~TeV,"
+
+l.52: I suggest to note quote the Snowmass ’13 report here. The idea for the t->qH decay 
+did not originate there. I think the sentence is ok w/o the reference.
+==> agreed, but it's still useful to quota the reference as a new beginning.   
+
+l.347-349: You say that the Higgs and top four-momentum resolutions are improved by the chi2 fit. 
+Does this refer to all 4 components of the four-momentum? Or just to the pT or just to the invariant mass? I suggest to spell this out explicitly.
+==> yes, it's pt after including the missing neutrinos from the fit.
+    rephased "...the Higgs boson pT as well as the pT of the parent top quark are..."
+    
+l.355: I suggest “Boosted decisions trees (BDT) *implemented in the TMVA framework* [96]”, 
+as otherwise it might look like that BDTs originate from TMVA.
+==> fixed
+
+Table 5: How did you order the variables? Could you order them (roughly) in importance?
+==> based on their improtance in each SR, and it would be difficult to order cross SRs.
+
+Figure 1: I believe that this figure would be better suited at the end of Section 7, i.e. 
+after all the different backgrounds are introduced and defined.
+==> It would be good to have BDT training and modeling issues discussed together. Maybe we need
+    to move section 6.2 after the background discussion. 
+    
+
+l.458: I suggest to stay in passive voice here for consistency: “FFs obtained from the …. were compared and the differences are 
+treated as a systematic uncertainty.”
+==>fixed 
+
+Table 6: As this table uses the fit to SRs already, it should go to the results section, I believe.
+==> Yes, the table 6 is introduced in results, but the table self is in a wrong place.
+    fixed
+    
+
+Table 6: “Met” -> “\MET”
+==>fixed 
+
+Table 6: I suggest to change the ordering a bit and group the different rows so that similar uncertainties are 
+close to each other. For example: First objects (lepton, MET, Jets, flavor tagging), then background modelling 
+(theoretical uncertainty in ttbar, theoretical uncertainty in other MC, misidentified tau) and theoretical 
+uncertainty in signal, hadronic tau decays and lumi+pileup.
+
+l.596: “We have checked…” -> “The kinematic distributions … were checked…”
+
+l.596: Maybe mention the split by years that you did, too, saying that there is no indication that the excess is from a specific data period?
+
+Fig. 2 b3 and c1: Please fix the layout of the figure (no overlapping legend with the histograms, in particular) and adjust the aspect ratio 
+and style to the one of the other figures.
+
+Figures 2-4: The information content of figures 3 and 4 is very similar to the content of figure 2. 
+Why not just keep Fig. 3 (or 4) and add Fig. 2 and 4 (or 3) to the aux. material?
+
+Figures 2-4: Out of curiosity: Why is the binning different in the leptonic channels in Fig. 2 
+compared to Fig. 3 & 4? The same binning is used in the two fits, isn’t it?
+
+l.611: There is an error in the reference “Tables 6-??” to be fixed.
+
+l.614-623: I think you need to specify somewhere here what value of Lambda you choose. I assume it’s 1 TeV. Is it?
+
+Fig. 5: I suggest to remove the grey vertical line (which is the previous limit, right?) from the plots.
+
+Fig. 5: The plots should say “95% CL limit” somewhere on the plot, maybe just on the x-axis label or directly on the plots as you do for Fig. 6.
+
+Table 7: Please verify if this table needs to be updated (as the caption says).
+
+l.631: “following SM processes” -> “according to the SM”
+
+l.638: Suggest to stay in passive voice here for consistency: “We set 95% CL uppes limits…” -> “95% CL upper limits are set…”
+
+l.634: I suggest to add here also that Lambda = 1 TeV (as in the abstract)
+

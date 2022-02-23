@@ -99,8 +99,8 @@ The four-momenta of the invisible decay products from the decay of the tau-lepto
 are estimated using a kinematics fit. The fit is done by minimising a $\chi^2$ function based on the Gaussian constraints on the Higgs boson mass and the
 measured $\met$ within their expected resolutions. The resolution on the Higgs boson mass is assumed to be $20~\gev$, respectively, while the resolution on the measured $\met$ is parameterised as a linear function of 
 $\sqrt{\sum E_T}$, where $\sum E_T$ is the scalar sum of the $\pt$ of all physics objects contributing to the $\met$ reconstruction~\cite{Aaboud:2018tkc}.
-After the $\chi^2$ minimisation, the Higgs boson four-momentum, and hence its invariant mass, as well as the 
-four-momentum of the parent top quarks, are determined with better resolution in the signal events. 
+After the $\chi^2$ minimisation, the Higgs boson $\pt$ as well as the 
+$\pt$ of the parent top quarks are determined with better resolution in the signal events. 
 
 For the  $t_lt(qH)$ and $t_lH$ events where the $W$ boson from $t\to W b$ decay decays leptonically,
 %has a large momentum and the flying direction is unknown.
@@ -127,7 +127,7 @@ lowest (n). Variables whose ranking is missing are not included in the training 
 \label{tab:importance}
  \centering
  \begin{tabular}{cccccccc} \toprule\toprule
-   & $t_{l}\tauhad$-1j                                  &  $t_{h}\tlhad$-2j   &  $t_{l}\tauhad$-2j & $t_{h}\tlhad$-3j & $t_l\thadhad$     & $t_h\thadhad$-2j & $t_h\thadhad$-3j       \\\midrule
+   & $t_{l}\tauhad$-1j                                  &  $t_{h}\tlhad$-2j   &  $t_{l}\tauhad$-2j & $t_{h}\tlhad$-3j & $t_l2\tauhad$     & $t_h2\tauhad$-2j & $t_h2\tauhad$-3j       \\\midrule
    Total variables~(n)                           & $12$ & $15$ & $12$ & $17$ & $15$ & $12$ & $12$ \\\midrule 
  $m_{\text{W}}$                                      &   &             &           & $9$      &       & $6$      & $7$\\
  $\chi^{2}$                                          &   &             &           & $14$     &       &  &       \\
@@ -205,7 +205,7 @@ lowest (n). Variables whose ranking is missing are not included in the training 
 %%%  \input{tables/tthML_Merged}
 %%%  \end{table*}
 
-Boosted decision trees (BDT)~\cite{Hocker:2007ht} are used in each SR to improve the separation between signal and background. 
+Boosted decision trees (BDT) implemented in the TMVA framework~\cite{Hocker:2007ht} are used in each SR to improve the separation between signal and background. 
 %The separate training exploits differences in event kinematics across SRs.  
 %draft 1 version
 In the training, all signal events from $tt(qH)$ and $tH$ are merged together for $tuH$ and $tcH$. All background sources from SM processes
@@ -265,7 +265,7 @@ is shown in Figure~\ref{fig:taupt_prefit}.
 %by a large factor normalized to the total number of events in the predicted
 %background for the shape comparison.   
 %corresponding to $\BR(t\to Hq)=0.2\%$ is also shown.
-The first and the last bins in the figures contain the underflow and overflow respectively.
+The last bin of each plot contains the overflow entries.
 The bottom panel displays the ratio of data to the background (``Bkg'') prediction as discussed in section~\ref{sec:background_model} below.
 The hashed area represents the total uncertainty of the background.
 A good description of the data by the background model is observed in all cases.
