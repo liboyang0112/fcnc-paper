@@ -3,7 +3,7 @@
 \label{sec:background_model}
 %-------------------------------------------------------------------------------
 
-Most background processes are modelled using Monte Carlo (MC) simulation.
+Most background processes are modelled using MC simulation.
 After the event preselection, the main background is $\ttbar$ production, often in association with jets, denoted by $\ttbar$+jets in the following.
 Small contributions arise from single-top-quark, $W/Z$+jets, multi-jet and diboson ($WW,WZ,ZZ$) production, as well as from the associated 
 production of a vector boson $V$ ($V=W,Z$) or a Higgs boson and a $\ttbar$ pair ($\ttbar V$ and $\ttbar H$). All backgrounds 
@@ -57,9 +57,9 @@ enriched in misidentified
 $\had$ candidates via loosened $\had$ requirements with proper fake factors and partially from MC~\cite{ATLAS-CONF-2021-044}.
 These CRs do not overlap with the main signal regions, discussed in Section~\ref{sec:strategy_Htautau}.
 The CR selection requirements are analogous to those used to define signal regions, except
-that the subleading $\had$ candidate is required to fail the medium $\had$ identification (Loose).
-The contribution of fakes with subleading $\had$ candidate can be calculated by rescaling the templates of Loose taus in the CR
-with proper fake factors (FF).
+that the subleading $\had$ candidate is required to fail the medium $\had$ identification, but it still passes a loose requirement.
+The contribution of fakes with subleading $\had$ candidate can be calculated by rescaling the templates of loose taus in the CR
+with fake factors (FF).
 The templates are produced by subtracting all MC background contributions with real sub-leading taus from data.
 The FFs are computed as
 the ratio of the Data-MC ($\mathrm{real~tau}$) yields in which the $\had$ candidate is passed or failed the medium tau ID selection
@@ -69,7 +69,7 @@ in the $W$+jets control region.
 FFs obtained from the $W$+jets and from the same-sign $\thadhad$ control regions are compared and the differences are treated as a systematic uncertainty.
 
 \subsection{Background with fake light leptons}
-The background originating from non-prompt or misidentified light leptons is primarily from the QCD multi-jet production.
+The background originating from non-prompt or misidentified light leptons is primarily from the multi-jet production.
 %Electrons and muons only appear in the leptonic channels where exactly one electron or muon and at least one $\had$ are required.
 %Since the rate of $\had$ candidate is much larger than for electron or muon, in the majority of the fake lepton events, the $\had$ candidate is misidentified and
 %the electron or muon is prompt based on MC studies.
@@ -79,4 +79,4 @@ The estimate is based on the number of tight and loose light-leptons that passed
 fake light leptons in the signal region is evaluated by scaling the number of loose leptons in the high $\met$ region by the ratio of tight and loose leptons in the
 low $\met$ region. The contributions of prompt leptons and calibrated $\had$ fakes in the number of tight and loose leptons are subtracted using MC simulation.
 A closure test is made for the background estimations in the signal depleted low BDT regions. The data are in good agreement with the background prediction in the
-$t_l\had$ channels where the fake light leptons are important while negligible in other leptonic channels. 
+$t_l\had$ channels where the fake light leptons are important, while they are negligible in other leptonic channels. 
