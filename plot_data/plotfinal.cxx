@@ -65,7 +65,7 @@ void plotfinal(){
   	TCanvas cv("cv","cv",600,800);
     std::string regionName="";
     std::string ouputName="";
-    std::string signalName="tcH";
+    std::string signalName="tuH";
 
 
 /*
@@ -168,13 +168,13 @@ TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
+signalName="tuH";
 
 */
 
 
 
 /*
-
 //3j tuH
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={328, 325, 112, 111, 81, 61, 21, 13};
@@ -275,13 +275,14 @@ setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 
 regionName="t_{h}#tau_{had}#tau_{had}-3j";
 ouputName="reg2mtau1b3jos";
+signalName="tuH";
 
 */
 
 
 
-/*
 
+/*
 // tcH 3j
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={328, 325, 112, 111, 81, 61, 21, 13};
@@ -382,10 +383,10 @@ TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 regionName="t_{h}#tau_{had}#tau_{had}-3j";
 ouputName="reg2mtau1b3jos";
+signalName="tcH";
+
 
 */
-
-
 
 
 
@@ -492,7 +493,7 @@ TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
-
+signalName="tcH";
 
 
 
@@ -611,7 +612,7 @@ lg1->SetTextSize(gStyle->GetTextSize()*0.8);
 cv.cd();
 
 padhi->Draw();
-padhi->SetBottomMargin(0.017);
+padhi->SetBottomMargin(0.);
 padhi->SetRightMargin(0.08);
 padhi->SetLeftMargin(0.12);
 padhi->cd();
@@ -619,7 +620,7 @@ padhi->cd();
 padhi->SetLogy();
 
 hsk->SetMinimum(5);
-hsk->SetMaximum(15000);
+hsk->SetMaximum(25000);
 hsk->Draw("hist");
 hsk->GetXaxis()->SetTitle("BDT Discriminant");
 hsk->GetXaxis()->SetLabelColor(kWhite);
@@ -664,7 +665,7 @@ h_data->Draw("E same");
 TLegend *lowlg =new TLegend(0.38,0.78,0.84,0.92,"");
 lowlg->SetNColumns(2);
 lowlg->AddEntry(&hdataR,"S+B fit","LP");
-lowlg->AddEntry(&hdataR_post,"Bonly Fit","LP");
+//lowlg->AddEntry(&hdataR_post,"Bonly Fit","LP");
 lowlg->SetBorderSize(0);
 lowlg->SetFillStyle(0);
 
@@ -673,7 +674,7 @@ lowlg->SetTextSize(gStyle->GetTextSize()*1.8);
 
 padlow->SetFillStyle(4000);
 //padlow->SetGrid(1,1);
-padlow->SetTopMargin(0.03);
+padlow->SetTopMargin(0.);
 padlow->SetBottomMargin(0.35);
 padlow->SetRightMargin(0.08);
 padlow->SetLeftMargin(0.12);
@@ -707,11 +708,11 @@ hdataR_post.SetMarkerSize(0.8);
 hdataR_post.SetMarkerColor(kBlue);
 hdataR_post.SetLineColor(kBlue);
 hdataR.Draw("E same");
-hdataR_post.Draw("E same");
+//hdataR_post.Draw("E same");
 
 std::cout<<hdataR.GetBinContent(8)<<std::endl;
 std::cout<<hdataR_post.GetBinContent(8)<<std::endl;
-lowlg->Draw("same");
+//lowlg->Draw("same");
 
 TLine line;
 line.SetLineColor(kBlack);
@@ -741,17 +742,21 @@ h_fcnc_prod_uh_overlay->SetFillColor(0);
 
 
 
-lg1->AddEntry(h_tuH_overlay,"tcH(x2)","L");
+lg1->AddEntry(h_tuH_overlay,signalName=="tuH"?"tuH(0.1%x2)":"tcH(0.1%x2)","L");
 h_tuH_overlay->Scale(2);
 h_tuH_overlay->Draw("hist same");
 
-lg1->AddEntry(h_fcnc_uh_overlay,signalName=="tuH"?"t#bar{t}#rightarrowWbHu(x2)":"t#bar{t}#rightarrowWbHc(x2)","L");
-h_fcnc_uh_overlay->Scale(2);
-h_fcnc_uh_overlay->Draw("hist same");
 
-lg1->AddEntry(h_fcnc_prod_uh_overlay,signalName=="tuH"?"ug#rightarrowtH(x2)":"cg#rightarrowtH(x2)","L");
+lg1->AddEntry(h_fcnc_prod_uh_overlay,signalName=="tuH"?"ug#rightarrowtH(0.1%x2)":"cg#rightarrowtH(0.1%x2)","L");
 h_fcnc_prod_uh_overlay->Scale(2);
 h_fcnc_prod_uh_overlay->Draw("hist same");
+
+TH1F* dummy = new TH1F();
+lg1->AddEntry(dummy ,"","");
+
+lg1->AddEntry(h_fcnc_uh_overlay,signalName=="tuH"?"t#bar{t}#rightarrowWbHu(0.1%x2)":"t#bar{t}#rightarrowWbHc(0.1%x2)","L");
+h_fcnc_uh_overlay->Scale(2);
+h_fcnc_uh_overlay->Draw("hist same");
 
 
 
