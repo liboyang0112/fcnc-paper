@@ -1,23 +1,46 @@
+Dear Luca,
+
+    Thank you so much for your comments and see the replies below with "==>"
+    cheers
+    -weiming for the team
+
+Dear authors,
+
+Now comments on the text on FCNC PAPER DRAFT 1.0
 *l92: in → into
 *l93: 139.0 → 139
 ===>done
+
 *l100 are named hadronic…
 ===>done
+
 *l101: are named leptonic...
 ===>done
+
 *l103: remove “QCD”
 ===>done
+
 *l130: \sqrt{s}
 ===>done
+
 *l153-l161 and also rest of the paper: \ell and “l” are both used without any apparent distinction. Use \ell or “l” and define it.
-*l207: to have a \pt of 1 GeV….
+==> fixed and use "\ell" for lepton in the rest paper.
+
+*l227: to have a \pt of 1 GeV….
+==>fixed
+
 * l232,234,236,242: t_hH and t_lH what are they? Final states, ..? Can you please clarify. They are also used later in the text.
+==> added "final states" 
 
 *l247: define here MC: ...Monte Carlo (MC)...
 ===>done
+
 *l339: and “is” not reconstructed
 ===>done
+
 *l339: fall into t_hH →? Same for “In the t_hH events”
+==> rephased
+
 *l341: H → $H$
 ===>done
 *l342: tau → \tau
@@ -29,38 +52,74 @@
 *l350: kinematics → kinematic
 ===>done
 *l351: ...“the” extra.... Also decide about the \ell symbol
+==>fixed
 
 *l357 and elsewhere: decide if you use fake tau, fake-tau, fake \tau_had
-
+==> use "fake tau" in general, but \tau_had is defined as hadronically decaying $\tau$-lepton.
+    
 *l361: in the classification of the events
 ===>done
 *l362: large → larger
 ===>done
 *l366: P →p, tau_had-vis is correct, but was not introduced nor used elsewhere.
+==> fixed, and fitted ones are labeled as "fit". 
+
 *l366,367: P → p and use \tau_1 and \tau_2 to define the leading, subleading? It is used so later.
+==> fixed 
+
 *l368: P → p and decide about \ell
+==> fixed
+
 *l370: Maybe use m_bjj
+==>fixed
+
 *l372, Eq1: m_T^W with T in roman and W in italic
+==> fixed
+
 *l373: “m_\tau\tau” and “neutrinos for the” and “channels”→ events.
+==>fixed 
+
 *l375: mW → mjj?
+==> fixed with mjj
+
 *l377: m_\tau\tau j or m_\tau\tau q?
+==>fixed as m_\tau\tau q
+
 *l379: Use m_\tau\tau^{vis}, candidates → system
+==>fixed
+
 *l380: p_{T,\tau\tau}^{vis}, candidates → system
+==> fixed
+
 *l381: m_{\tau\tau j/q}^{vis}
+==>rephased
+
 *l382: m_{bjj}^{vis}
+==>rephased
+
 *l383: min(m_\tau\tau j/q})
 ===>done
 *l386: min(m_jj)
 ===>done
 *l394: Decide about \ell or “l” and change b→$b$ and “candidates” → “systems”
+==> rephased
+
 *l395: Decide about \ell or “l” and change b→$b$
+==>rephased
+
 *l396: change b→$b$
 ===>done
 *l398: Max → max
 ===>done
 *l399: Decide about \ell or “l”
+==>rephased
+
 *l401: Decide about $q$ or $j$, use italic: q-jet → q in the formula.
+==> fixed
+
 *l405: di-tau system \pt
+==>fixed
+
 *l406: light-jet → “j” in the formula.
 ===>done
 *l411: remove “below”'
@@ -70,6 +129,7 @@
 *l415: MC already used several time, just use MC.
 ===>done
 *l427: Here it is not clear if you reference the statistical fit or the control regions. I assume the latter, so write “analysis regions described in Section 6”. Note that Section is singular.
+==> fixed
 
 *l454: Here the text is not clear. Do you mean that taus are still passing the loose requirement, right? Then say: “... identification, but it still passes a loose requirement”
 ===>done
@@ -80,12 +140,14 @@
 *l462: remove QCD
 ===>done
 *l467: decide about fake-tau
+==> fixed
 
 *l470: “, while the are negligible…”
 ===>done
 *l529: estimated to be
 ===>done
 *l539: decide about fake-tau
+==> fixed as "fake tau"
 
 *l551: “The final discriminant distributions are the BDT outputs of all the considered analysis regions. They are jointly analysed to test for…”
 ===>done
