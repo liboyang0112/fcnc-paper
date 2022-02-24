@@ -1,0 +1,27 @@
+Many thanks for the updated draft. It looks much better than before. I would have a few comments before circulation to avoid that people post multiple obvious corrections:
+ 
+* Maybe there is a misunderstanding about tau vs \tauhad, because I see that you substituted \tauhad with tau in several places. My suggestion was to use “tau” only when mentioning “fake tau”, as you do for “fake lepton”. But when you refer to real tau_had, it is OK to use \tauhad.
+In particular, I think you should use \tauhad in the following places:
+l205, l319, l434.
+====>done
+
+
+* Cover: Better to remove the \vspace after “ATLAS Collaboration” until the problem with the spurious symbols is understood.
+===> dont understand
+
+* Abstract: I think you don’t need to state the $Lambda$ scale in the abstract, but if you really want to state that, I recommend: “The corresponding combined observed (expected) upper limits on the dimension-6 operator Wilson coefficients in the effective tqH couplings for a new physics scale of 1 TeV…”
+====> remove 1TeV,done
+
+* l218: into “the” t_hH final state.
+====>done
+
+* Fig 2 and 3 caption: as discussed yesterday the wording is NOT BR of 0.2%, but rather:
+“compared using a normalisation of 2xB(…) of 0.1•%.
+====>please have a look, done?
+
+* l593: “for a new physics scale Λ=1 TeV.”
+====>done
+
+* l612: “upper limits on the dimension-6 operator Wilson coefficients in the effective tqH couplings for a new physics scale Λ of 1 TeV are….”
+====>done
+ 

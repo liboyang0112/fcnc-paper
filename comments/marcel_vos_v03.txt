@@ -1,0 +1,21 @@
+I have read your draft v0.5 and comment on the title, abstract, introduction and conclusions here.
+The title is a bit long as we write out FCNC and the interaction vertex and the Higgs decay. I am not so pleased with the "which decays into a pair of tau-leptons", as it is not so clear this refers to the Higgs boson (grammatically, I mean; most people in the field will figure out it's the Higgs boson and not the top quark, of course). I would suggest  Search for flavour-changing neutral current interactions of the top quark and the Higgs boson in events with a pair of tau-leptons in pp collisions at √s = 13 TeV with the ATLAS detector
+===> done
+
+Abstract: the excess is now consistently quoted as 2.3 sigma. This was 2.6 sigma at the closure meeting. Can you explain very clearly what changed?
+====> The 2.3 sigma is combined significance, 2.6 sigma is obtained from the tlhadhad channel only.
+
+Line 47-51: Furthermore, if the tqH interaction exists, the associated single-top and Higgs production process through this interaction would enhance the total production cross section of pp -> tH. This sentence comes rather late. I would move it before the discussion of SM and BSM rates, after line 36 (even if that discussion is in terms of the BR). Please, start a new paragraph before "In the SM, the FCNC interaction is forbidden" and make sure to also include tH production in line 46 (i.e. observation of the decay t->qH, or an enhanced pp -> tH production rate, would ....
+===> done?
+
+Line 56: footnote before the period
+====> dont understand.
+
+Line 69: Can you double-check that Ref.[35] is indeed the only CMS search so far? I had a look at the public pages and couldn't find anything (no papers, but also no preliminary results) on full run 2 or the tau tau final state.
+====>Have checked, the full run2 Hyy have not published yet.
+
+Line 71: Compare with previous searches -> I don't think we need that "comparison". I would simply state that the CMS search also considered signal (or if you want to emphasize that point, you can say it's the first search of this type to include production, and add a statement of how much it helped their sensitivity).
+====> done?
+
+Table 8: This is a very useful (if somewhat dense) table. It's not completely clear what is meant by the expected significance. It is not explained in the text that refers to this table. I guess it's the significance for Asimov with a signal injection corresponding to a branching ratio of 0.1%? I think we need to add a sentence in the text and/or the caption to make sure this is clear.
+====> done?

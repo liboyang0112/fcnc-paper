@@ -1,0 +1,7 @@
+Agree with Marcel that comparing Table 8 to Figure 4 can be confusing if the expected significance is not explained, at least in the caption.
+===>done?
+Minor:
+Abstract, maybe "for new physics at a scale of 1 Lambda ~ TeV" ? Same for cnclusion ?
+===>done
+50 at LHC 13 TeV -> at 13 TeV. 
+===>done
