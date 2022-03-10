@@ -97,7 +97,7 @@ Boosted decision trees (BDT) implemented in the TMVA framework~\cite{Hocker:2007
 In the training, all signal events from $tt(qH)$ and $tH$ are merged together for $tuH$ and $tcH$. All background sources from SM processes
 (including both real and fake tau contributions) are also used in the training.
 
-A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation"(measures the degree of overlap between background and signal shape) and "importance"(depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}, and only those variables whose importance is larger than 2\% were kept.
+A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (measures the degree of overlap between background and signal shape) and "importance" (depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}, and only those variables whose importance is larger than 2\% were kept.
 The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance}. The discriminating variables used are:
 \begin{itemize}
 \item $\met$ is the missing transverse momentum.
@@ -105,7 +105,7 @@ The BDT input variables in each SR and their importance are listed in Table~\ref
 \item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
 \item $\chi^2$ derived from the kinematic fit of the neutrino momentum.
-\item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
+\item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
 m^{W}_{\text{T}} = \sqrt{2 {\pt}_{\ell} E_{\text{T}}^{\text{miss}} \left(1-\cos\Delta\phi_{\ell,\text{miss}} \right)},  
@@ -142,7 +142,7 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lep
 %\item $\Delta R(\tau1,\text{light-jet})$ is the minimum angle distance between the tau candidate and the light-jet. If there are two taus in the event, the leading one is used.
 \end{itemize}
 
-A comparison between data and the predicted background for the leading $\had$ $\pt$ distribution in the SRs 
+A comparison after fake calibration between data and the predicted background for the leading $\had$ $\pt$ distribution in the SRs 
 %some of these variables in three main decay final states($t_{\ell}\hadhad$, $t_h\hadhad$, and $t_h\lephad$)
 is shown in Figure~\ref{fig:taupt_prefit}.
 %each of the SRs considered is shown in Figures~\ref{fig:mva_input_hadhad} -~\ref{fig:mva_input_{\ell}hadhad}.

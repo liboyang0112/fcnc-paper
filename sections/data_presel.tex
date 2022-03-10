@@ -4,7 +4,7 @@
 %-------------------------------------------------------------------------------
 
 The search is based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ with 25 ns bunch spacing collected from 2015 to 2018, corresponding to an integrated luminosity of $139~\ifb$.
-Only events recorded with a single-electron trigger, a single-muon trigger, or a di-tau trigger under stable beam conditions 
+Only events recorded with a single-electron trigger, a single-muon trigger, or a di-tau trigger~\cite{TRIG-2018-05,TRIG-2018-01,id_trigger,l1topo_trigger} under stable beam conditions 
 and for which all detector subsystems were operational are considered for analysis. While the events recorded by di-lepton triggers fall into the control regions used for fake tau background estimation.
 The number of $pp$ interactions per bunch crossing in this dataset ranges from about 8 to 45, with an average of 24.
 
@@ -13,14 +13,15 @@ with higher-threshold triggers but with a looser identification criterion and wi
 The lowest $\pt$ threshold used for muons is 20 (26)~\gev\ in 2015 (2016-2018), while for electrons the threshold is 24 (26)~\gev.
 %For ditau triggers, the $\pt$ threshold of the leading (trailing) $\tauhad$ candidate is 35 (25)~\gev\ with the medium identification required.
 For di-tau triggers, the $\pt$ threshold of the leading (subleading) $\had$ candidate is 35 (25)~\gev.
-Events satisfying the trigger selection are required to have at least one primary vertex candidate.
+%Events satisfying the trigger selection are required to have at least one primary vertex candidate.
 To reduce the impact of the trigger efficiency uncertainty around the threshold, the leptons are required to have a \pt of 1~GeV above the threshold. 
 
-The signal final state including a light lepton (electron or muon) or $\lep$ are referred to as leptonic channel, otherwise hadronic channel.
-The events in the leptonic channel are recorded by single-electron or single-muon trigger, required to have exactly one electron or muon that matches, with $\Delta R < 0.15$, the lepton reconstructed by the trigger. Further requirements are defined targeting different signal decay modes:  
+%The signal final state including a light lepton (electron or muon) or $\lep$ are referred to as leptonic channel, otherwise hadronic channel.
+%The events in the leptonic channel are recorded by single-electron or single-muon trigger, required to have exactly one electron or muon that matches, with $\Delta R < 0.15$, the lepton reconstructed by the trigger. Further requirements are defined targeting different signal decay modes:  
+The events in the leptonic channel are recorded by single-electron or single-muon trigger, required to have exactly one electron or muon that matches, with $\Delta R < 0.15$, the lepton reconstructed by at least one of the possible triggers. Further requirements are defined targeting different signal decay modes:  
 \begin{itemize}
 \item $t_h\lephad$: Targeting into the $t_hH$ and $t_ht(qH)$ final states with $H\to\lephad$ decay. Exactly one $\had$ with opposite-side charge to $\lep$ is required, including at least three jets with exactly one $b$-jet.
-\item $t_{\ell}\hadhad$: Targeting $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with $H\to\hadhad$ decay. Exactly a light lepton and two opposite-sign $\had$ are selected, including at least 1 jet with exactly one $b$-jet.
+\item $t_{\ell}\hadhad$: Targeting $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with $H\to\hadhad$ decay. Exactly one light lepton and two opposite-sign $\had$ are selected, including at least 1 jet with exactly one $b$-jet.
 \item $t_{\ell}\had$: Also targeting $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with $H\to\hadhad$ decay when one of the $\had$ fails the tau reconstruction or identification so that there is only
   one $\had$ candidate reconstructed. Exactly one $\had$ with same-sign charge to the light lepton is required, including at least 2 jets with exactly one $b$-jet.
 \end{itemize}

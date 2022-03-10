@@ -70,16 +70,19 @@ The $\ttbar V$ samples are normalised to the NLO cross section computed with {\a
 the NLO cross section recommended in Ref.~\cite{deFlorian:2016spz}.
 
 Samples of $WH$ and $ZH$, collectively referred to as $VH$ are generated using {\powheg}~v2 \cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd}
-and interfaced to {\pythia}~8.210 with the NNPDF2.3 LO PDF set and the A14 tune.
+and interfaced to {\pythia}~8.210 with the PDF4LHC15 PDF set and the AZNLO tune.
 The contribution of $tH$ associated production is also considered as part of SM Higgs background.
 The sample is generated using {\amcatnlolong}~2.6.2~\cite{Alwall:2014hca} and interfaced with {\pythia}~8.210 with CT10PDF
 and A14 tune. The MC predictions are normalised using the NLO cross section recommended in Ref.~\cite{deFlorian:2016spz}. 
 
 All generated samples, except those produced with the {\sherpa}~\cite{Gleisberg:2008ta} event generator, 
 utilise \textsc{EvtGen}~1.2.0~\cite{Lange:2001uf} to model the decays of heavy-flavour hadrons. 
-To model the effects of pile-up, events from minimum-bias interactions were generated using {\pythia}~8.186~\cite{Sjostrand:2007gs}  
-in combination with the A2 tune~\cite{ATL-PHYS-PUB-2011-014}, 
-and overlaid onto the simulated hard-scatter events according to the luminosity profile of the recorded data. 
+%To model the effects of pile-up, events from minimum-bias interactions were generated using {\pythia}~8.186~\cite{Sjostrand:2007gs}  
+%in combination with the A3 tune~\cite{ATL-PHYS-PUB-2011-014}, 
+The effects of multiple interactions in the same and nearby bunch crossings (pile-up) were modelled by overlaying minimum-bias events, simulated using the soft QCD processes of {\pythia}~8.186~\cite{Sjostrand:2006za} with the A3~\cite{ATL-PHYS-PUB-2016-017} set of tuned parameters and NNPDF2.3 LO PDF set~\cite{Ball:2012cx}.
+%parton distribution functions (PDF).
+
+%and overlaid onto the simulated hard-scatter events according to the luminosity profile of the recorded data. 
 The generated events were processed through a simulation~\cite{Aad:2010ah} of the ATLAS detector geometry and response 
 using \textsc{Geant4}~\cite{Agostinelli:2002hh}. A faster simulation, where the full \textsc{Geant4} simulation of
 the calorimeter response is replaced by a detailed parameterisation of the shower shapes~\cite{FastCaloSim},
@@ -122,6 +125,11 @@ $W/Z$+jets & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30N
 \ttbar & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 Single top & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 $t\bar{t}X$ & {\amcatnlolong} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+
+%$VH$ & {\powheg} & {\pythia}~8 & \multicolumn{2}{c|}{PDF4LHC15} & AZNLO & NLO \\ \hline
+$VH$ & {\powheg} & {\pythia}~8 & PDF4LHC15&CTEQ6L1 & AZNLO & NLO \\ \hline
+$tH$ & {\amcatnlolong} & {\pythia}~8 & \multicolumn{2}{c|}{CT10PDF} & A14 & NLO \\ \hline
+
 Diboson & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & {\sherpa} & NLO/LO \\ \hline\hline
 \end{tabular}
 \label{mob}
