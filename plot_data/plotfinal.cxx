@@ -68,7 +68,7 @@ void plotfinal(){
     std::string signalName="tuH";
 
 
-/*
+
 //tuH 2j
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={332, 325, 136, 128, 74, 29, 4, 5};
@@ -170,7 +170,7 @@ regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
 signalName="tuH";
 
-*/
+
 
 
 
@@ -385,11 +385,11 @@ regionName="t_{h}#tau_{had}#tau_{had}-3j";
 ouputName="reg2mtau1b3jos";
 signalName="tcH";
 
-
 */
 
 
 
+/*
 
 //2j tcH
 
@@ -496,7 +496,7 @@ ouputName="reg2mtau1b2jos";
 signalName="tcH";
 
 
-
+*/
 
 
 
@@ -665,7 +665,7 @@ h_data->Draw("E same");
 TLegend *lowlg =new TLegend(0.38,0.78,0.84,0.92,"");
 lowlg->SetNColumns(2);
 lowlg->AddEntry(&hdataR,"S+B fit","LP");
-//lowlg->AddEntry(&hdataR_post,"Bonly Fit","LP");
+lowlg->AddEntry(&hdataR_post,"Bonly Fit","LP");
 lowlg->SetBorderSize(0);
 lowlg->SetFillStyle(0);
 
@@ -683,8 +683,10 @@ hdataR.SetMarkerStyle(20);
 hdataR.SetMarkerSize(0.8);
 hmcR.SetMaximum(1.5);
 hmcR.SetMinimum(0.5);
-hmcR.GetYaxis()->SetRangeUser(0.5,1.55);
-hmcR.GetYaxis()->SetNdivisions(508,true);
+//hmcR.GetYaxis()->SetRangeUser(0.5,1.55);
+//hmcR.GetYaxis()->SetNdivisions(508,true);
+hmcR.GetYaxis()->SetRangeUser(0.2,1.8);
+hmcR.GetYaxis()->SetNdivisions(506,true);
 hmcR.GetYaxis()->SetTitle("Data/Pred");
 hmcR.GetYaxis()->SetTitleSize(0.08);
 hmcR.GetYaxis()->SetTitleFont(42);
@@ -708,11 +710,11 @@ hdataR_post.SetMarkerSize(0.8);
 hdataR_post.SetMarkerColor(kBlue);
 hdataR_post.SetLineColor(kBlue);
 hdataR.Draw("E same");
-//hdataR_post.Draw("E same");
+hdataR_post.Draw("E same");
 
 std::cout<<hdataR.GetBinContent(8)<<std::endl;
 std::cout<<hdataR_post.GetBinContent(8)<<std::endl;
-//lowlg->Draw("same");
+lowlg->Draw("same");
 
 TLine line;
 line.SetLineColor(kBlack);
