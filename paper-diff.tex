@@ -1277,15 +1277,19 @@ The final observable used to extract the signal contribution is the BDT distribu
 (a1) & (a2) & (a3) \\
 %(a1) \pT(\tauhad) in $t_{\ell}\thadhad$ & (a2) \pT(\tauhad) in  $t_{\ell}\tauhad$-1j& (a3) \pT(\tauhad) in $t_{\ell}\tauhad$-2j\\
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_os.pdf}&
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b3j_os.pdf}&
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b2jos_vetobtagwp70_highmet.pdf}\\
-(b1) & (b2) & (b3) \\
+\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b3j_os.pdf}\DIFdelbeginFL %DIFDELCMD < &
+%DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b2jos_vetobtagwp70_highmet.pdf}%%%
+\DIFdelendFL \\
+(b1) & (b2) \DIFdelbeginFL %DIFDELCMD < & %%%
+\DIFdelFL{(b3) }\DIFdelendFL \\
 %(b1) \pT(\tauhad) in $t_h\tlhad$-2j & (b2) \pT(\tauhad) in  $t_h\tlhad$-3j & (b3) \pT(\tauhad) in $t_h\thadhad$-2j \\
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}&\\
-(c1) \\
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b2jos_vetobtagwp70_highmet.pdf}\DIFaddendFL &
+\DIFaddbeginFL \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}\DIFaddendFL \\
+(c1) \DIFaddbeginFL & \DIFaddFL{(c2) }\DIFaddendFL \\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3), $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1) before the fit to data ('Pre-Fit'). The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Overflow bins are included respectively in the last bin. Others (Rare) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) 
+\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3), $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (\DIFdelbeginFL \DIFdelFL{b3}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{c1}\DIFaddendFL ), and $t_h\thadhad$-3j (\DIFdelbeginFL \DIFdelFL{c1}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{c2}\DIFaddendFL ) before the fit to data ('Pre-Fit'). The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Overflow bins are included respectively in the last bin. Others (Rare) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) 
 channels. 
 %( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
 The lower panels show the ratios of the data to the background prediction.}
@@ -1794,16 +1798,17 @@ the high BDT region are checked. Within the large statistical uncertainty, the o
 %(a1) BDT in $t_{\ell}\thadhad$ & (a2) BDT in  $t_{\ell}\tauhad$-1j& (a3) BDT in $t_{\ell}\tauhad$-2j\\
 (a1)  & (a2) & (a3) \\
 \includegraphics[width=0.3\textwidth]{figures/tuH_reg1l1tau1b2j_os.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tuH_reg1l1tau1b3j_os.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b2jos.pdf}\\
+\includegraphics[width=0.3\textwidth]{figures/tuH_reg1l1tau1b3j_os.pdf}&\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b2jos.pdf}%%%
+\DIFdelendFL \\
 %(b1) BDT in $t_h\tlhad$-2j & (b2) BDT in  $t_h\tlhad$-3j & (b3) BDT in $t_h\thadhad$-2j \\
-(b1) & (b2)  & (b3)  \\
-\includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b3jos.pdf}& \\
+(b1) & (b2)&   \DIFdelbeginFL \DIFdelFL{(b3)  }\DIFdelendFL \\
+\DIFaddbeginFL \includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b2jos.pdf}&
+\DIFaddendFL \includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b3jos.pdf}& \\
 %(c1) BDT in$t_h\thadhad$-3j\\
-(c1) \\
+(c1) \DIFaddbeginFL & \DIFaddFL{(c2)}& \DIFaddendFL \\
 \end{tabular}
 \caption{ The BDT output distributions are fitted with S+B to the data in $tuH$ search: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3),
-  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1). Statistical and systematic uncertainties are shown. The signal shapes
+  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (\DIFdelbeginFL \DIFdelFL{b3}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{c1}\DIFaddendFL ), and $t_h\thadhad$-3j (\DIFdelbeginFL \DIFdelFL{c1}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{c2}\DIFaddendFL ). Statistical and systematic uncertainties are shown. The signal shapes
   from $tt(uH)$, $tH$, and their sum are also compared using a normalisation of $2 \times\BR(t\to uH)$ of 0.1\%. 
 }
 \label{fig:asimov_postfitbdtHu}
@@ -1833,16 +1838,19 @@ the high BDT region are checked. Within the large statistical uncertainty, the o
 %(a1) BDT in $t_{\ell}\thadhad$ & (a2) BDT in  $t_{\ell}\tauhad$-1j& (a3) BDT in $t_{\ell}\tauhad$-2j\\
 (a1)  & (a2) & (a3) \\
 \includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b2j_os.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b3j_os.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b2jos.pdf}\\
-%(b1) BDT in $t_h\tlhad$-2j & (b2) BDT in  $t_h\tlhad$-3j & (b3) BDT in $t_h\thadhad$-2j \\
-(b1) & (b2)  & (b3)  \\
-\includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b3jos.pdf}& \\
+\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b3j_os.pdf}&\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b2jos.pdf}%%%
+\DIFdelendFL \\
+\DIFaddbeginFL 
+
+\DIFaddendFL %(b1) BDT in $t_h\tlhad$-2j & (b2) BDT in  $t_h\tlhad$-3j & (b3) BDT in $t_h\thadhad$-2j \\
+(b1) & (b2)  &  \DIFdelbeginFL \DIFdelFL{(b3)  }\DIFdelendFL \\
+\DIFaddbeginFL \includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b2jos.pdf}&
+\DIFaddendFL \includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b3jos.pdf}&\\
 %(c1) BDT in$t_h\thadhad$-3j\\
-(c1) \\
+(c1) \DIFaddbeginFL & \DIFaddFL{(c2)  }&  \DIFaddendFL \\
 \end{tabular}
 \caption{ The BDT output distributions are fitted with S+B to the data in $tcH$ search: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3),
-  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1). Statistical and systematic uncertainties are shown.
+  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (\DIFdelbeginFL \DIFdelFL{b3}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{c1}\DIFaddendFL ), and $t_h\thadhad$-3j (\DIFdelbeginFL \DIFdelFL{c1}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{c2}\DIFaddendFL ). Statistical and systematic uncertainties are shown.
   The signal shapes from $tt(cH)$, $tH$, and their sum are also compared using a normalisation of $2 \times\BR(t\to cH)$ of 0.1\%.
 }
 \label{fig:asimov_postfitbdtHc}
@@ -1973,7 +1981,7 @@ A summary of the upper limits\DIFaddbegin \DIFadd{, significance and best-fit va
 in Table~\ref{tab:limits_summary} and in Figures~\ref{fig:limits_combo_1D_hc}(a) and~\ref{fig:limits_combo_1D_hc}(b).
 
 \begin{table}[h!]
-\caption{List of relative uncertainties on $\BR(t\to qH)$ ($q=u,c$) obtained from the combined fit. The uncertainties are symmetrised for\
+\caption{List of \DIFdelbeginFL \DIFdelFL{relative }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{absolute }\DIFaddendFL uncertainties on $\BR(t\to qH)$ ($q=u,c$) obtained from the combined fit \DIFaddbeginFL \DIFaddFL{to data}\DIFaddendFL . The uncertainties are symmetrised for\
  presentation and grouped into the categories described in the text.}
 \label{tab:had_sys_impact}
 \begin{center}
@@ -1985,7 +1993,7 @@ in Table~\ref{tab:limits_summary} and in Figures~\ref{fig:limits_combo_1D_hc}(a)
     }
     \toprule\toprule
     \multirow{2}{*}{Source of uncertainty}      & \DIFdelbeginFL %DIFDELCMD < \multicolumn{2}{c}{$\Delta\BR/\BR [\%]$} %%%
-\DIFdelendFL \DIFaddbeginFL \multicolumn{2}{c}{$\Delta\mu$ [$10^{-2}$]} \DIFaddendFL \\
+\DIFdelendFL \DIFaddbeginFL \multicolumn{2}{c}{$\Delta\BR$ [$10^{-5}$]} \DIFaddendFL \\
     & \multicolumn{1}{c}{$t\rightarrow uH$} & \multicolumn{1}{c}{$t\rightarrow cH$} \\\midrule
     Lepton ID                               & 0.6           &1.0         \\
     $\met$                                  & 0.7           &0.8         \\
@@ -2064,15 +2072,42 @@ $C_{q\phi} =\sqrt{(C^{i3}_{q\phi})^2 + (C^{3i}_{q\phi})^2}$~\cite{fcnc_productio
 % %%%%%%%%%%%%%%%
 
 \begin{table}[t!]
-  \caption{\small{Summary of 95\% CL upper limits on $\BR(t \to cH)$ and $\BR(t \to uH)$, significance and fitted signal strength($\mu$) in signal regions with a
-  benchmark branching ratio of $\BR(t \to qH)=0.1\%$}. Expected significance is obtained from Asimov fit with a signal injection corresponding to a branching ratio of 0.1\%. }
+  \caption{\DIFdelbeginFL %DIFDELCMD < \small{Summary of 95\% CL upper limits on $\BR(t \to cH)$ and $\BR(t \to uH)$, significance and fitted signal strength($\mu$) in signal regions with a
+%DIFDELCMD <   benchmark branching ratio of $\BR(t \to qH)=0.1\%$}%%%
+\DIFdelendFL \DIFaddbeginFL \small{Summary of 95\% CL upper limits on $\BR(t \to cH)$ and $\BR(t \to uH)$, significance and best-fit branching ratio in signal regions with a
+  benchmark branching ratio of $\BR(t \to qH)=0.1\%$}\DIFaddendFL . Expected significance is obtained from Asimov fit with a signal injection corresponding to a branching ratio of 0.1\%. }
 \begin{center}
-\resizebox{\textwidth}{!}{
+\DIFdelbeginFL %DIFDELCMD < \resizebox{\textwidth}{!}{
+%DIFDELCMD < \begin{tabular}{lcccccc}
+%DIFDELCMD < \toprule\toprule
+%DIFDELCMD < 
+
+%DIFDELCMD < \multirow{3}{*}{Signal Regions} & \multicolumn{3}{c}{$t\to cH$}                                & \multicolumn{3}{c}{$t\to uH$}  \\
+%DIFDELCMD <                                 &  95\% CL upper limits[$10^{-3}$]  & Significance             &  $\mu$ &     95\% CL upper limits[$10^{-3}$]  & Significance   &  $\mu$  \\
+%DIFDELCMD <                                 &  \multicolumn{2}{c}{Observed (Expected)}                     &        &     \multicolumn{2}{c}{Observed (Expected)}& \\
+%DIFDELCMD < \midrule
+%DIFDELCMD < $t_h\thadhad$-2j                & $1.85$($2.80^{+1.30}_{-0.78}$)&$-0.96$($0.78$) & $-1.03^{+1.04}_{-1.04}$&$1.10$($1.65^{+0.79}_{-0.46}$)&$-0.90$($1.25$) &$-0.55^{+0.59}_{-0.59}$ \\
+%DIFDELCMD < $t_h\thadhad$-3j                & $1.18$($1.06^{+0.50}_{-0.30}$)&$0.34$($1.87$)  & $0.16^{+0.47}_{-0.47}$ &$1.00$($0.89^{+0.42}_{-0.25}$)&$0.36$($2.13$)  &$0.14^{+0.40}_{-0.40}$  \\
+%DIFDELCMD < Hadronic Combination            & $1.04$($0.98^{+0.46}_{-0.28}$)&$0.26$ ($1.99$) & $0.11^{+0.43}_{-0.43}$ &$0.78$($0.78^{+0.37}_{-0.22}$)&$0.11$($2.33$)  &$0.04^{+0.34}_{-0.34}$  \\
+%DIFDELCMD < \midrule
+%DIFDELCMD < $t_l\tauhad$-2j                 &$4.86$($4.32^{+1.89}_{-1.21}$) &$0.40$($0.48$)   &$0.81^{+2.04}_{-2.04}$  & $3.93$($3.55^{+1.56}_{-0.99}$) & $0.34$($0.58$)  &$0.57^{+1.66}_{-1.66}$\\
+%DIFDELCMD < $t_l\tauhad$-1j                 &$3.94$($3.67^{+1.66}_{-1.03}$) &$0.24$($0.57$)   &$0.40^{+1.70}_{-1.70}$  & $3.10$($2.87^{+1.29}_{-0.80}$) & $0.24$($0.73$)  &$0.31^{+1.33}_{-1.33}$\\
+%DIFDELCMD < $t_h\tlhad$-2j                  &$4.81$($5.85^{+2.90}_{-1.63}$) &$-0.52$($0.39$)  &$-1.36^{+2.56}_{-2.56}$ & $2.56$($3.05^{+1.38}_{-0.85}$) & $-0.48$($0.69$) &$-0.66^{+1.38}_{-1.38}$\\
+%DIFDELCMD < $t_h\tlhad$-3j                  &$2.78$($2.79^{+1.36}_{-0.78}$) &$-0.04$($0.76$)  &$-0.04^{+1.26}_{-1.26}$ & $2.07$($2.09^{+0.94}_{-0.58}$) & $-0.05$($0.98$) &$-0.04^{+0.98}_{-0.98}$\\
+%DIFDELCMD < $t_l\thadhad$                   &$1.41$($0.63^{+0.29}_{-0.18}$) &$2.64$($3.24$)   &$0.74^{+0.34}_{-0.34}$  & $1.01$($0.45^{+0.21}_{-0.13}$) & $2.64$($4.08$)  &$0.53^{+0.25}_{-0.25}$\\
+%DIFDELCMD < Leptonic Combination            &$1.29$($0.59^{+0.27}_{-0.17}$) &$2.59$($3.34$)   &$0.68^{+0.32}_{-0.32}$  & $0.92$($0.42^{+0.19}_{-0.12}$) & $2.59$($4.23$)  &$0.48^{+0.23}_{-0.23}$\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Combination                     &$0.99$ ($0.50^{+0.22}_{-0.14}$)&$2.34$($3.69$)   &$0.51^{+0.25}_{-0.25}$ & $0.72$ ($0.36^{+0.17}_{-0.10}$)& $2.31$($4.49$)&$0.37^{+0.18}_{-0.18}$  \\
+%DIFDELCMD < \bottomrule\bottomrule
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \resizebox{\textwidth}{!}{
 \begin{tabular}{lcccccc}
 \toprule\toprule
 
 \multirow{3}{*}{Signal Regions} & \multicolumn{3}{c}{$t\to cH$}                                & \multicolumn{3}{c}{$t\to uH$}  \\
-                                &  95\% CL upper limits[$10^{-3}$]  & Significance             &  $\mu$ &     95\% CL upper limits[$10^{-3}$]  & Significance   &  $\mu$  \\
+                                &  95\% CL upper limits[$10^{-3}$]  & Significance             &  $\BR[10^{-3}]$ &     95\% CL upper limits[$10^{-3}$]  & Significance   &  $\BR[10^{-3}]$  \\
                                 &  \multicolumn{2}{c}{Observed (Expected)}                     &        &     \multicolumn{2}{c}{Observed (Expected)}& \\
 \midrule
 $t_h\thadhad$-2j                & $1.85$($2.80^{+1.30}_{-0.78}$)&$-0.96$($0.78$) & $-1.03^{+1.04}_{-1.04}$&$1.10$($1.65^{+0.79}_{-0.46}$)&$-0.90$($1.25$) &$-0.55^{+0.59}_{-0.59}$ \\
@@ -2090,7 +2125,7 @@ Combination                     &$0.99$ ($0.50^{+0.22}_{-0.14}$)&$2.34$($3.69$) 
 \bottomrule\bottomrule
 \end{tabular}
 }
-\label{tab:limits_summary}
+\DIFaddendFL \label{tab:limits_summary}
 \end{center}
 \end{table}
 %%%%%%%%%%%%%%%
