@@ -97,14 +97,18 @@ Boosted decision trees (BDT) implemented in the TMVA framework~\cite{Hocker:2007
 In the training, all signal events from $tt(qH)$ and $tH$ are merged together for $tuH$ and $tcH$. All background sources from SM processes
 (including both real and fake tau contributions) are also used in the training.
 
-A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (measures the degree of overlap between background and signal shape) and "importance" (depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}, and only those variables whose importance is larger than 2\% were kept.
-The BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance}. The discriminating variables used are:
+A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (measures the degree of overlap between background and signal shape) and "importance" (depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}.
+The BDT discriminant is trained for each SR starting from a large list of variables. Then the variables are removed one at time and retraining until the receive operating characteristic (ROC)
+score drops more than 2\%.
+%The final variables used in SRs are shown in Table 5 with their ranking. 
+%and only those variables whose importance is larger than 2\% were kept.
+The final BDT input variables in each SR and their importances are listed in Table~\ref{tab:importance}. The discriminating variables used are:
 \begin{itemize}
 \item $\met$ is the missing transverse momentum.
 \item ${\pt}_{\tau1} $ is the transverse momentum of the leading tau candidate.
 \item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
-\item $\chi^2$ derived from the kinematic fit of the neutrino momentum.
+\item $\chi^2$ of the kinematic fit of the neutrino momentum.
 \item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
@@ -118,8 +122,8 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lep
 \item ${\pt}_{\tau\tau}$ is the visible $\pT$ of the di-tau system.
 \item $m_{\tau\tau,\text{q}}$ is the reconstructed visible mass of the FCNC-decaying top quark.
 \item $m_{\text{bjj}}$ is the invariant mass of the lepton and the $b$-jet, which reflects the visible top quark mass.
-\item \text{min}($m_{\tau\tau \text{j}}$) is the visible mass of the di-tau candidates (include leptonic tau) and the light-flavor jet, minimized by choosing different jet, reflects the invariant masss of the visible FCNC top decaying product, an alternative to variable $m_{\tau\tau\text{q}}$.
-\item \text{min}($m_{\text{jj}}$) is the invariant mass of two light-flavor jets, minimized by choosing different jets, reflects the invariant mass of the $W$ candidate.
+\item \text{min}($m_{\tau\tau \text{j}}$) is the visible mass of the di-tau candidates (include leptonic tau) and the light-flavour jet, minimized by choosing different jet, reflects the invariant masss of the visible FCNC top decaying product, an alternative to variable $m_{\tau\tau\text{q}}$.
+\item \text{min}($m_{\text{jj}}$) is the invariant mass of two light-flavour jets, minimized by choosing different jets, reflects the invariant mass of the $W$ candidate.
   %an alternative of $m_{\text{W}}$.
 \item $\met$ centrality is a measure of how central the $\met$ lies between the two tau candidates in the transverse plane, and is defined as
 \begin{eqnarray}
@@ -142,7 +146,7 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lep
 %\item $\Delta R(\tau1,\text{light-jet})$ is the minimum angle distance between the tau candidate and the light-jet. If there are two taus in the event, the leading one is used.
 \end{itemize}
 
-A comparison after fake calibration between data and the predicted background for the leading $\had$ $\pt$ distribution in the SRs 
+A comparison between data and the predicted background for the leading $\had$ $\pt$ distribution in the SRs, after applying fake factors, 
 %some of these variables in three main decay final states($t_{\ell}\hadhad$, $t_h\hadhad$, and $t_h\lephad$)
 is shown in Figure~\ref{fig:taupt_prefit}.
 %each of the SRs considered is shown in Figures~\ref{fig:mva_input_hadhad} -~\ref{fig:mva_input_{\ell}hadhad}.
@@ -171,19 +175,18 @@ The final observable used to extract the signal contribution is the BDT distribu
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l2tau1bnj_os.pdf} &
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b1j_ss.pdf}&
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_ss.pdf}\\
-(a1) & (a2) & (a3) \\
+(a) & (b) & (c) \\
 %(a1) \pT(\tauhad) in $t_{\ell}\thadhad$ & (a2) \pT(\tauhad) in  $t_{\ell}\tauhad$-1j& (a3) \pT(\tauhad) in $t_{\ell}\tauhad$-2j\\
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_os.pdf}&
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b3j_os.pdf}\\
-(b1) & (b2) \\
+(d) & (e) \\
 %(b1) \pT(\tauhad) in $t_h\tlhad$-2j & (b2) \pT(\tauhad) in  $t_h\tlhad$-3j & (b3) \pT(\tauhad) in $t_h\thadhad$-2j \\
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b2jos_vetobtagwp70_highmet.pdf}&
 \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}\\
-(c1) & (c2) \\
+(f) & (g) \\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3), $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (c1), and $t_h\thadhad$-3j (c2) before the fit to data ('Pre-Fit'). The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Overflow bins are included respectively in the last bin. Others (Rare) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) 
-channels. 
+\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_{\ell}\thadhad$ (a),  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_h\thadhad$-2j (f), and $t_h\thadhad$-3j (g) before the fit to data ('Pre-Fit') after applying fake factors. The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Overflow bins are included respectively in the last bin. Others (Rare) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) channels. The $tuH$ signal shapes are also compared using a normalization factor(2-50).   
 %( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
 The lower panels show the ratios of the data to the background prediction.}
 \label{fig:taupt_prefit}

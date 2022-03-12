@@ -89,8 +89,9 @@ variation in the choice of $\alpha_{S}$, alternative PDF variation evaluated com
 with MMHT2014nnlo68cl and CT14nnlo~\cite{Lai:2010vv,Gao:2013xoa} PDF sets.
 
 Uncertainties affecting the normalisation of the $V$+jets background are estimated separately for $V$+light-jets, $V$+$\geq$1$c$+jets,
-and $V$+$\geq$1$b$+jets subprocesses. The total normalisation uncertainty of $V$+jets processes is estimated to be approximately 30\% by comparing the
-data and total background prediction in the different analysis regions considered, but requiring exactly zero $b$-jet.
+and $V$+$\geq$1$b$+jets subprocesses. The total normalisation uncertainty of $V$+jets processes is estimated to be approximately 30\% by taking the maximum
+difference between the data and total background prediction in the different analysis regions considered, but requiring exactly zero, one, and two $b$-jets.
+This is mainly limited by the LO MC simulation in the $V$+jets high multiplicity regions.  
 %Agreement between data and predicted background 
 %in these modified regions, which are dominated by $V$+light-jets, is found to be within approximately 30\%. This bound is taken to 
 %be the normalisation uncertainty, correlated across all $V$+jets subprocesses. 
@@ -136,18 +137,21 @@ from the uncertainties of their respective NLO theoretical cross sections~\cite{
 
 
 
-The statistical uncertainties on the fake tau background calibration in the leptonic channel are applied with uncorrelated uncertainties for different fake tau sources and
-different $\pt$ slices. The uncertainty of the ABCD method is applied with a normalisation factor for muon and electron respectively considering both,
-its statistical fluctuation and the differences between signal regions.
-The uncertainties in the fake factor method applied in hadronic channel includes statistical uncertainties of each fake factor and different sets of fake factors derived from different signal depleted CRs.
+The statistical uncertainties on the fake tau background calibration in the leptonic channel are applied with uncorrelated uncertainties for
+different fake tau sources and different $\pt$ slices. The uncertainties on the MC modelling of the various processes that used for
+evaluating the fake factors in the CRs are considered and treated fully correlated.
+The uncertainty of the ABCD method is applied with a normalisation factor for muon and electron respectively considering both,
+its statistical fluctuation and the differences between the leptonic channels.
+The uncertainties in the fake factor method applied in hadronic channel includes statistical uncertainties of each fake factor and different sets of fake factors derived from different signal depleted CRs. The uncertainties on the MC modelling of the various processes that used for
+evaluating the fake factors in the CRs are treated fully correlated in the fit.
 
 \subsection{Signal modelling}
 \label{sec:syst_sigmodeling}
 
-Several normalisation and shape uncertainties are taken into account for the $\Hq$ and $pp\to tH$ signals.
+Several normalisation and shape uncertainties are taken into account and are treated fully correlated for the $\Hq$ and $pp\to tH$ signals.
 Uncertainties of the Higgs boson branching ratios are taken from the measured values in Ref.~\cite{Zyla:2020zbs}.
 %into account following the recommendation in Ref.~\cite{deFlorian:2016spz}.
-The uncertainty of ISR, FSR, scale and PDF are considered in all SRs. The parton shower uncertainties are estimated by comparing
+The uncertainty of ISR, FSR, scale and PDF are considered and are treated fully correlated in all SRs. The parton shower uncertainties are estimated by comparing
 the nominal to an alternative sample interfaced with {\herwig7}.
 %the predictions from {\powheg} interfaced either to {\pythiaeight} or {\herwig7}. 
 %treated correlatedly with $\ttbar$ samples. 
