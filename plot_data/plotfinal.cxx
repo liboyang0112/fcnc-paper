@@ -68,7 +68,7 @@ void plotfinal(){
     std::string signalName="tuH";
 
 
-
+/*
 //tuH 2j
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={332, 325, 136, 128, 74, 29, 4, 5};
@@ -127,7 +127,7 @@ TH1* h_ttV_postSB = new TH1D("h_ttV_postSB", "h_ttV_postSB", 8, BinEdges );
 setBins(h_ttV_postSB,ttV_postSB);
 h_ttV_postSB->SetLineWidth(1);
 h_ttV_postSB->SetLineColor(1);
-h_ttV_postSB->SetFillColor(4);
+h_ttV_postSB->SetFillColor(28);
 
 
 double rare_postSB[]={4.9362157688397872, 5.5418658623985824, 2.5719958756239496, 2.0336119701666626, 1.7489957071145434, 0.60136177158419679, 0.45724784519946932, 1.0139012754030424e-06};
@@ -143,7 +143,7 @@ TH1* h_smhiggs_postSB = new TH1D("h_smhiggs_postSB", "h_smhiggs_postSB", 8, BinE
 setBins(h_smhiggs_postSB,smhiggs_postSB);
 h_smhiggs_postSB->SetLineWidth(1);
 h_smhiggs_postSB->SetLineColor(1);
-h_smhiggs_postSB->SetFillColor(880);
+h_smhiggs_postSB->SetFillColor(kBlue);
 
 double   total_bkg_error[] = {15.832815438666247, 14.229449273465098, 7.6097657516696655, 7.3113089219154022, 4.6583797780766156, 3.7085233370378075, 1.8590287846377425, 0.96379015051544514};
 
@@ -169,12 +169,10 @@ setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
 signalName="tuH";
+*/
 
 
 
-
-
-/*
 //3j tuH
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={328, 325, 112, 111, 81, 61, 21, 13};
@@ -233,7 +231,7 @@ TH1* h_ttV_postSB = new TH1D("h_ttV_postSB", "h_ttV_postSB", 8, BinEdges );
 setBins(h_ttV_postSB,ttV_postSB);
 h_ttV_postSB->SetLineWidth(1);
 h_ttV_postSB->SetLineColor(1);
-h_ttV_postSB->SetFillColor(4);
+h_ttV_postSB->SetFillColor(28);
 
 
 double rare_postSB[]={3.2356034777807867, 2.190066337724204, 1.2837063779724731, 0.90787223520200566, 0.97119474442038567, 1.1310243388696739, 0.33963449657392997, 0.1472486765805921};
@@ -249,7 +247,7 @@ TH1* h_smhiggs_postSB = new TH1D("h_smhiggs_postSB", "h_smhiggs_postSB", 8, BinE
 setBins(h_smhiggs_postSB,smhiggs_postSB);
 h_smhiggs_postSB->SetLineWidth(1);
 h_smhiggs_postSB->SetLineColor(1);
-h_smhiggs_postSB->SetFillColor(880);
+h_smhiggs_postSB->SetFillColor(kBlue);
 
 double   total_bkg_error[] = {15.90441615151868, 14.01537784259461, 7.6598117118184579, 7.238371906569709, 6.0843531775344273, 4.8712116070388625, 2.91422326446463, 2.808784224471184};
 
@@ -277,7 +275,7 @@ regionName="t_{h}#tau_{had}#tau_{had}-3j";
 ouputName="reg2mtau1b3jos";
 signalName="tuH";
 
-*/
+
 
 
 
@@ -341,7 +339,7 @@ TH1* h_ttV_postSB = new TH1D("h_ttV_postSB", "h_ttV_postSB", 8, BinEdges );
 setBins(h_ttV_postSB,ttV_postSB);
 h_ttV_postSB->SetLineWidth(1);
 h_ttV_postSB->SetLineColor(1);
-h_ttV_postSB->SetFillColor(4);
+h_ttV_postSB->SetFillColor(28);
 
 
 double rare_postSB[]={3.2263391066283278, 2.1837810431403994, 1.2800473378776636, 0.90524979795257465, 0.96840462357047263, 1.1277675264283249, 0.33867277502765253, 0.1468264973238487};
@@ -357,7 +355,7 @@ TH1* h_smhiggs_postSB = new TH1D("h_smhiggs_postSB", "h_smhiggs_postSB", 8, BinE
 setBins(h_smhiggs_postSB,smhiggs_postSB);
 h_smhiggs_postSB->SetLineWidth(1);
 h_smhiggs_postSB->SetLineColor(1);
-h_smhiggs_postSB->SetFillColor(880);
+h_smhiggs_postSB->SetFillColor(kBlue);
 
 double   total_bkg_error[] = {15.897690067452709, 13.996365157031271, 7.6253922362948936, 7.2492129246503376, 6.0793109615294938, 4.8295646612334657, 3.0089948909344719, 3.0163572450871943};
 
@@ -389,8 +387,9 @@ signalName="tcH";
 
 
 
-/*
 
+
+/*
 //2j tcH
 
 
@@ -451,7 +450,7 @@ TH1* h_ttV_postSB = new TH1D("h_ttV_postSB", "h_ttV_postSB", 8, BinEdges );
 setBins(h_ttV_postSB,ttV_postSB);
 h_ttV_postSB->SetLineWidth(1);
 h_ttV_postSB->SetLineColor(1);
-h_ttV_postSB->SetFillColor(4);
+h_ttV_postSB->SetFillColor(28);
 
 
 double rare_postSB[]={4.9362157688397872, 5.5418658623985824, 2.5719958756239496, 2.0336119701666626, 1.7489957071145434, 0.60136177158419679, 0.45724784519946932, 1.0139012754030424e-06};
@@ -467,7 +466,7 @@ TH1* h_smhiggs_postSB = new TH1D("h_smhiggs_postSB", "h_smhiggs_postSB", 8, BinE
 setBins(h_smhiggs_postSB,smhiggs_postSB);
 h_smhiggs_postSB->SetLineWidth(1);
 h_smhiggs_postSB->SetLineColor(1);
-h_smhiggs_postSB->SetFillColor(880);
+h_smhiggs_postSB->SetFillColor(kBlue);
 
 double   total_bkg_error[] = {15.842690961502962, 14.238741266930198, 7.6008551832722731, 7.2858375364063273, 4.6576682202285866, 3.7002761623975333, 1.7690138996966598, 0.83977945500821205};
 
@@ -494,9 +493,9 @@ setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
 signalName="tcH";
-
-
 */
+
+
 
 
 
@@ -536,7 +535,7 @@ TH1D hdataR_post("hdataR_post","hdataR_post",8, BinEdges);
 hmc.Sumw2();
 THStack *hsk = new THStack("BDT","BDT");
 TLegend* lg1 = 0;
-lg1 = new TLegend(0.38,0.918/maxfactor,0.84,0.92,"");
+lg1 = new TLegend(0.55,0.918/maxfactor,0.84,0.92,"");
 lg1->SetNColumns(2);
 
 lg1->AddEntry(h_data,"data","LP");
@@ -603,7 +602,7 @@ lg1->SetBorderSize(0);
 lg1->SetFillStyle(0);
 
 lg1->SetTextFont(gStyle->GetTextFont());
-lg1->SetTextSize(gStyle->GetTextSize()*0.8);
+lg1->SetTextSize(gStyle->GetTextSize()*0.5);
 
 
 
@@ -619,8 +618,8 @@ padhi->cd();
 
 padhi->SetLogy();
 
-hsk->SetMinimum(5);
-hsk->SetMaximum(25000);
+hsk->SetMinimum(1); //2j:0.1       3j:1
+hsk->SetMaximum(40000);//2j:120000  3j:40000
 hsk->Draw("hist");
 hsk->GetXaxis()->SetTitle("BDT Discriminant");
 hsk->GetXaxis()->SetLabelColor(kWhite);
@@ -650,7 +649,7 @@ hmc.SetMarkerStyle(1);
 hmc.SetMarkerSize(0);
 hmc.SetMarkerColor(1);
 hmc.SetFillStyle(3004);
-ATLASLabel(0.15,0.900,"Internal",kBlack,"#sqrt{s}=13 TeV 139 fb^{-1}", "#it{FCNC tqH H#rightarrow#tau^{+}#tau^{-}}", "t_{h}#tau_{had}#tau_{had}-2j","Post-Fit");
+ATLASLabel(0.15,0.900,"Preliminary",kBlack,"#sqrt{s}=13 TeV,139 fb^{-1}", "#it{FCNC tqH H#rightarrow#tau^{+}#tau^{-}}", regionName.c_str(),"Post-Fit");
 
 
 lg1->AddEntry(&hmc,"Uncertainty","f");
@@ -662,7 +661,7 @@ hmc.Draw("E2same");
 h_data->Draw("E same");
 
 
-TLegend *lowlg =new TLegend(0.38,0.78,0.84,0.92,"");
+TLegend *lowlg =new TLegend(0.55,0.78,0.84,0.92,"");
 lowlg->SetNColumns(2);
 lowlg->AddEntry(&hdataR,"S+B fit","LP");
 lowlg->AddEntry(&hdataR_post,"Bonly Fit","LP");
@@ -685,7 +684,7 @@ hmcR.SetMaximum(1.5);
 hmcR.SetMinimum(0.5);
 //hmcR.GetYaxis()->SetRangeUser(0.5,1.55);
 //hmcR.GetYaxis()->SetNdivisions(508,true);
-hmcR.GetYaxis()->SetRangeUser(0.2,1.8);
+hmcR.GetYaxis()->SetRangeUser(0.5,1.5);
 hmcR.GetYaxis()->SetNdivisions(506,true);
 hmcR.GetYaxis()->SetTitle("Data/Pred");
 hmcR.GetYaxis()->SetTitleSize(0.08);
@@ -710,11 +709,11 @@ hdataR_post.SetMarkerSize(0.8);
 hdataR_post.SetMarkerColor(kBlue);
 hdataR_post.SetLineColor(kBlue);
 hdataR.Draw("E same");
-hdataR_post.Draw("E same");
+//hdataR_post.Draw("E same");
 
 std::cout<<hdataR.GetBinContent(8)<<std::endl;
 std::cout<<hdataR_post.GetBinContent(8)<<std::endl;
-lowlg->Draw("same");
+//lowlg->Draw("same");
 
 TLine line;
 line.SetLineColor(kBlack);
@@ -744,19 +743,19 @@ h_fcnc_prod_uh_overlay->SetFillColor(0);
 
 
 
-lg1->AddEntry(h_tuH_overlay,signalName=="tuH"?"tuH(0.1%x2)":"tcH(0.1%x2)","L");
+lg1->AddEntry(h_tuH_overlay,signalName=="tuH"?"tuH(0.1%)x2":"tcH(0.1%)x2","L");
 h_tuH_overlay->Scale(2);
 h_tuH_overlay->Draw("hist same");
 
 
-lg1->AddEntry(h_fcnc_prod_uh_overlay,signalName=="tuH"?"ug#rightarrowtH(0.1%x2)":"cg#rightarrowtH(0.1%x2)","L");
+lg1->AddEntry(h_fcnc_prod_uh_overlay,signalName=="tuH"?"ug#rightarrowtH(0.1%)x2":"cg#rightarrowtH(0.1%)x2","L");
 h_fcnc_prod_uh_overlay->Scale(2);
 h_fcnc_prod_uh_overlay->Draw("hist same");
 
 TH1F* dummy = new TH1F();
 lg1->AddEntry(dummy ,"","");
 
-lg1->AddEntry(h_fcnc_uh_overlay,signalName=="tuH"?"t#bar{t}#rightarrowWbHu(0.1%x2)":"t#bar{t}#rightarrowWbHc(0.1%x2)","L");
+lg1->AddEntry(h_fcnc_uh_overlay,signalName=="tuH"?"t#bar{t}#rightarrowWbHu(0.1%)x2":"t#bar{t}#rightarrowWbHc(0.1%)x2","L");
 h_fcnc_uh_overlay->Scale(2);
 h_fcnc_uh_overlay->Draw("hist same");
 
