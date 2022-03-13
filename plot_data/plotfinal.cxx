@@ -172,7 +172,7 @@ signalName="tuH";
 */
 
 
-
+/*
 //3j tuH
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={328, 325, 112, 111, 81, 61, 21, 13};
@@ -275,8 +275,7 @@ regionName="t_{h}#tau_{had}#tau_{had}-3j";
 ouputName="reg2mtau1b3jos";
 signalName="tuH";
 
-
-
+*/
 
 
 /*
@@ -389,7 +388,7 @@ signalName="tcH";
 
 
 
-/*
+
 //2j tcH
 
 
@@ -493,7 +492,7 @@ setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
 signalName="tcH";
-*/
+
 
 
 
@@ -618,8 +617,8 @@ padhi->cd();
 
 padhi->SetLogy();
 
-hsk->SetMinimum(1); //2j:0.1       3j:1
-hsk->SetMaximum(40000);//2j:120000  3j:40000
+hsk->SetMinimum(0.1); //2j:0.1       3j:1
+hsk->SetMaximum(120000);//2j:120000  3j:40000
 hsk->Draw("hist");
 hsk->GetXaxis()->SetTitle("BDT Discriminant");
 hsk->GetXaxis()->SetLabelColor(kWhite);
@@ -649,7 +648,9 @@ hmc.SetMarkerStyle(1);
 hmc.SetMarkerSize(0);
 hmc.SetMarkerColor(1);
 hmc.SetFillStyle(3004);
-ATLASLabel(0.15,0.900,"Preliminary",kBlack,"#sqrt{s}=13 TeV,139 fb^{-1}", "#it{FCNC tqH H#rightarrow#tau^{+}#tau^{-}}", regionName.c_str(),"Post-Fit");
+
+if(signalName=="tcH") ATLASLabel(0.15,0.900,"Preliminary",kBlack,"#sqrt{s}=13 TeV,139 fb^{-1}","#it{FCNC tcH H#rightarrow#tau^{+}#tau^{-}}", regionName.c_str(),"Post-Fit");
+if(signalName=="tuH") ATLASLabel(0.15,0.900,"Preliminary",kBlack,"#sqrt{s}=13 TeV,139 fb^{-1}","#it{FCNC tuH H#rightarrow#tau^{+}#tau^{-}}", regionName.c_str(),"Post-Fit");
 
 
 lg1->AddEntry(&hmc,"Uncertainty","f");
