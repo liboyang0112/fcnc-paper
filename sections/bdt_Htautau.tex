@@ -4,8 +4,8 @@
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
-  \caption{\small{The number of discriminating variables (n) used in the training of BDT in each SR. 
-The rank of the discriminating variables relative to one another according to their importance in the training is reported from highest (1) to 
+  \caption{\small{Discriminating variables (n) used in the training of the BDT of each SR. 
+The ranking of the input variables according to their importance in the training is reported from highest (1) to 
 lowest (n). Variables whose ranking is missing are not included in the training of the corresponding SR. The description of each variable is provided in the text.}}
 %Variables are ranked from highest (1) to lowest (n) relative to one another by their
 %      importance in the training. Variables which do not have a ranking are not included in the training. 
@@ -99,17 +99,17 @@ In the training, all signal events from $tt(qH)$ and $tH$ are merged together fo
 (including both real and fake tau contributions) are also used in the training.
 
 A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (measures the degree of overlap between background and signal shape) and "importance" (depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}.
-The BDT discriminant is trained for each SR starting from a large list of variables. Then the variables are removed one at time and retraining until the receive operating characteristic (ROC)
-score drops more than 2\%.
+The BDT discriminant is trained for each SR starting from a large list of variables. Then the variables are removed one at time and the BDT is retrained until the
+receive operating characteristic (ROC) score drops more than 2\%.
 %The final variables used in SRs are shown in Table 5 with their ranking. 
 %and only those variables whose importance is larger than 2\% were kept.
-The final BDT input variables in each SR and their importances are listed in Table~\ref{tab:importance}. The discriminating variables used are:
+The final BDT input variables in each SR and their importance are listed in Table~\ref{tab:importance}. The discriminating variables used are:
 \begin{itemize}
 \item $\met$ is the missing transverse momentum.
 \item ${\pt}_{\tau1} $ is the transverse momentum of the leading tau candidate.
 \item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
-\item $\chi^2$ of the kinematic fit of the neutrino momentum.
+\item $\chi^2$ of the kinematic fit of the invisible decay products of the tau leptons.
 \item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
@@ -187,9 +187,14 @@ The final observable used to extract the signal contribution is the BDT distribu
 (f) & (g) \\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{The leading $\thad$ $p_T$  distributions are compared between the expected background and $tuH$ signals in: $t_{\ell}\thadhad$ (a),  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_h\thadhad$-2j (f), and $t_h\thadhad$-3j (g) before the fit to data ('Pre-Fit') after applying fake factors. The uncertainty band includes both the statistical and systematic uncertainties in the background prediction. Overflow bins are included respectively in the last bin. Others (Rare) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) channels. The $tuH$ signal shapes are also compared using a normalization factor(2-50).   
+\caption{Leading $\thad$ $\pt$  distributions obtained before the fit to data ('Pre-Fit') showing 
+  the expected background and $tuH$ signals after applying fake factors in the following SRs: $t_{\ell}\thadhad$ (a),
+  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_h\thadhad$-2j (f), and $t_h\thadhad$-3j (g).
+ The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
+ %The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
+ Overflow events are included in the last bin. ``Other MC'' (``Rare'') includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) channel. The $tuH$ signal is scaled using a normalization factor of 2 to 50.   
 %( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
-The lower panels show the ratios of the data to the background prediction.}
+The lower panels show the data to prediction ratio.}
 \label{fig:taupt_prefit}
 \end{figure}
 

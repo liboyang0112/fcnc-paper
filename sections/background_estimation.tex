@@ -15,7 +15,7 @@ Backgrounds with non-prompt light leptons (electron or muon), with photons or je
 generically referred to as \texttt{fake} leptons, are estimated using data-driven methods. 
 The background prediction is further improved during the statistical analysis by performing a likelihood 
 fit to data using several signal-depleted control regions as shown in Table~\ref{tab:srcr}.
-The events with one light lepton, two same-sign $\had$, and one $b$-jet, are also selected as a validation region (VR) for the background estimation in the leptonic channels. 
+The events with one light lepton, two same-sign $\had$, and one $b$-jet, are also selected, enter in a validation region (VR) for the background estimation in the leptonic channels. 
 %-------------------------------------------------------------------------------
 %\subsection{Backgrounds with fake leptons}
 %\label{sec:fakeleptons}
@@ -62,9 +62,10 @@ that the subleading tau candidate is required to fail the medium tau identificat
 The contribution of fakes with subleading tau candidate can be calculated by rescaling the templates of loose taus in the CR
 with fake factors (FF).
 The templates are produced by subtracting all MC background contributions with real subleading taus from data.
-The FFs are computed as
-the ratio of the Data-MC ($\mathrm{real~tau}$) yields in which the tau candidate is passed or failed the medium tau ID selection
-in the $W$+jets samples~\cite{ATLAS-CONF-2021-044}.
+The FFs are computed as the ratio of misidentified $\thad$ candidate that either pass or fail the medium tau ID selection in the
+$W$+jets processes~\cite{ATLAS-CONF-2021-044}. 
+%the Data-MC ($\mathrm{real~tau}$) ratio of the yields of events in which the tau candidate is passing or failing the medium tau ID selection
+%in the $W$+jets samples~\cite{ATLAS-CONF-2021-044}.
 %passing to failing the medium tau ID in the $W$+jets control region.
 %We have compared
 FFs obtained from the $W$+jets and from the same-sign $\thadhad$ control regions are compared and the differences are treated as a systematic uncertainty.
@@ -80,6 +81,6 @@ The estimate is based on the number of tight and loose light-leptons that passed
 ($>25~\gev$) $\met$ regions. The number of
 fake light leptons in the signal region is evaluated by scaling the number of loose leptons in the high $\met$ region by the ratio of tight and loose leptons in the
 low $\met$ region. The contributions of prompt leptons and calibrated fake taus in the number of tight and loose leptons are subtracted using MC simulation.
-A closure test is made for the background estimations in the signal depleted low BDT ($<-0.6$) regions.
+A closure test is made for the background estimations in the signal depleted low BDT ($<-0.6$) regions, defined in Section~\ref{sec:tmva}.
 The data are in good agreement with the background prediction in the
-$t_{\ell}\had$ channels where the amount of fake light leptons is significant. However, this background is negligible in other leptonic channels. 
+$t_{\ell}\had$ channels, while the fake light leptons are negligible in other leptonic channels. 
