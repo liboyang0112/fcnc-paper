@@ -1,0 +1,1 @@
+Overview of the signal regions (SR), validation region (VR), and tt&#772; control regions (CRtt) used for the fake tau scale factor derivation in the leptonic channels. Leptons are required to have either same-sign (SS) or opposite-sign (OS) in each region.

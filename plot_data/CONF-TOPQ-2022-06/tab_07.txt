@@ -1,0 +1,1 @@
+Absolute uncertainties on mathscrB(t&rarr; qH) (q=u,c) obtained from the combined fit to data. The uncertainties are symmetrised for a presentation purpose and grouped into the categories described in the Section 9.

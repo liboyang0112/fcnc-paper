@@ -1,0 +1,1 @@
+Summary of 95% CL upper limits on mathscrB(t &rarr; cH) and mathscrB(t &rarr; uH), significance and best-fit branching ratio in signal regions with a benchmark branching ratio of mathscrB(t &rarr; qH)=0.1%. Expected significance is obtained from Asimov fit with a signal injection corresponding to a branching ratio of 0.1%.

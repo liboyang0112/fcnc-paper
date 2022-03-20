@@ -1,0 +1,1 @@
+Overview of the MC generators used for the main signal and background samples. including the matrix element (ME), parton shower (PS), parton distribution function set (PDF), and cross-section calculation order (Order).

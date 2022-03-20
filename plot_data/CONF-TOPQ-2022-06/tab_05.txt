@@ -1,0 +1,1 @@
+Discriminating variables (n) used in the training of the BDT of each SR. The ranking of the input variables according to their importance in the training is reported from highest (1) to lowest (n). Variables whose ranking is missing are not included in the training of the corresponding SR. The description of each variable is provided in the text.

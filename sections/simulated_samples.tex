@@ -94,31 +94,11 @@ Simulated events were processed through the same reconstruction software as the 
 efficiencies, energy scales and energy resolutions match those determined from data control samples.
 
 
-%  \begin{table}
-%  \footnotesize
-%  \centering
-%  \caption{Overview of the MC generators used for the main signal and background samples.}
-%  \begin{tabular}[h]{l|c|c|c|c|c|c}
-%  \hline \hline
-%  \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
-%          &  ME   &  PS    &   ME  & PS &   &  \\\hline
-%  $tt(qH)$ Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  $tH$ Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  $W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
-%  \ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  Single top & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  $t\bar{t}X$ & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline\hline
-%  \end{tabular}
-%  \label{mob}
-%  \end{table}
 
 \begin{table}
 \footnotesize
 \centering
-\caption{Overview of the MC generators used for the main signal and background samples. including the matrix element (ME),
-  %at the leading or the next-leading order (Order), 
-parton shower (PS), parton distribution function set (PDF), and cross-section calculation order (Order).}%  used for the main signal and background samples.}
+\caption{Overview of the MC generators used for the main signal and background samples. including the matrix element (ME), parton shower (PS), parton distribution function set (PDF), and cross-section calculation order (Order).}
 \begin{tabular}[h]{l|c|c|c|c|c|c}
 \hline \hline
 \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
@@ -129,11 +109,8 @@ $W/Z$+jets & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30N
 \ttbar & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 Single top & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 $t\bar{t}X$ & {\amcatnlolong} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-
-%$VH$ & {\powheg} & {\pythia}~8 & \multicolumn{2}{c|}{PDF4LHC15} & AZNLO & NLO \\ \hline
 $VH$ & {\powheg} & {\pythia}~8 & PDF4LHC15&CTEQ6L1 & AZNLO & NLO \\ \hline
 $tH$ & {\amcatnlolong} & {\pythia}~8 & \multicolumn{2}{c|}{CT10PDF} & A14 & NLO \\ \hline
-
 Diboson & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & {\sherpa} & NLO/LO \\ \hline\hline
 \end{tabular}
 \label{mob}
