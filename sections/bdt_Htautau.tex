@@ -99,7 +99,7 @@ In the training, all signal events from $tt(qH)$ and $tH$ are merged together fo
 (including both real and fake tau contributions) are also used in the training.
 
 A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (measures the degree of overlap between background and signal shape) and "importance" (depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}.
-The BDT discriminant is trained for each SR starting from a large list of variables. Then the variables are removed one at time and the BDT is retrained until the
+The BDT discriminant is trained for each SR starting from a large list of variables. Then the least important variable is removed one at a time and the BDT is retrained until the
 receive operating characteristic (ROC) score drops more than 2\%.
 %The final variables used in SRs are shown in Table 5 with their ranking. 
 %and only those variables whose importance is larger than 2\% were kept.
@@ -109,7 +109,7 @@ The final BDT input variables in each SR and their importance are listed in Tabl
 \item ${\pt}_{\tau1} $ is the transverse momentum of the leading tau candidate.
 \item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
-\item $\chi^2$ of the kinematic fit of the invisible decay products of the tau leptons.
+\item $\chi^2$ of the kinematic fit of the momentum of the invisible decay products of the tau leptons.
 \item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
