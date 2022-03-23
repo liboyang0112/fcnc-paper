@@ -1,1 +1,1 @@
-Summary of 95% CL upper limits on mathscrB(t &rarr; Hc) and mathscrB(t &rarr; Hu) obtained from ATLAS and CMS Collaborations with Run 2 data. Each limit is obtained assuming the other branching ratio is null.
+Summary of 95% CL upper limits on mathscrB(t &rarr; cH) and mathscrB(t &rarr; uH) obtained from ATLAS and CMS Collaborations with Run 2 data. Each limit is obtained assuming the other branching ratio is null.
