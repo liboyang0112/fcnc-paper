@@ -68,7 +68,7 @@ void plotfinal(){
     std::string signalName="tuH";
 
 
-/*
+
 //tuH 2j
 double BinEdges[] = {-1, -0.40000000000000002, 0.10000000000000002, 0.30000000000000004, 0.49999999999999994, 0.64999999999999991, 0.75, 0.85000000000000009, 1};
 double data_[]={332, 325, 136, 128, 74, 29, 4, 5};
@@ -166,10 +166,11 @@ setBins(h_fcnc_uh_overlay,fcnc_uh_prefit);
 double fcnc_prod_uh_prefit[]={0.30745747792296546, 0.64947353311961176, 0.61740559065690204, 1.1739741443445311, 1.3416558635463973, 1.7503250325765518, 1.4985254522229552, 1.2078161679959496};
 TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh_overlay", 8, BinEdges );
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
-regionName="t_{h}#tau_{had}#tau_{had}-2j";
+//regionName="t_{h}#tau_{had}#tau_{had}-2j";
+regionName="t_{h}\\tau_{\\text{had}}\\tau_{\\text{had}}\\text{-2j}";
 ouputName="reg2mtau1b2jos";
 signalName="tuH";
-*/
+
 
 
 /*
@@ -272,6 +273,7 @@ TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
 
 regionName="t_{h}#tau_{had}#tau_{had}-3j";
+//regionName="t_{h}\\tau_{\\text{had}}\\tau_{\\text{had}}\\text{-3j}";
 ouputName="reg2mtau1b3jos";
 signalName="tuH";
 
@@ -378,7 +380,8 @@ setBins(h_fcnc_uh_overlay,fcnc_uh_prefit);
 double fcnc_prod_uh_prefit[]={0.08187975184693444, 0.22846997355644771, 0.21304164079926902, 0.31730151400494649, 0.35559029597914593, 0.39704050589494866, 0.2757744174155225, 0.25762618509773222};
 TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh_overlay", 8, BinEdges );
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
-regionName="t_{h}#tau_{had}#tau_{had}-3j";
+regionName="t_{h}\\tau_{\\text{had}}\\tau_{\\text{had}}\\text{-3j}";
+//regionName="t_{h}#tau_{had}#tau_{had}-3j";
 ouputName="reg2mtau1b3jos";
 signalName="tcH";
 
@@ -388,7 +391,7 @@ signalName="tcH";
 
 
 
-
+/*
 //2j tcH
 
 
@@ -489,11 +492,12 @@ setBins(h_fcnc_uh_overlay,fcnc_uh_prefit);
 double fcnc_prod_uh_prefit[]={0.063753281440343687, 0.17624356010353445, 0.15628625904118418, 0.2431406439910585, 0.25201141495104362, 0.33036892038693555, 0.26103721202176983, 0.17441848604459886};
 TH1* h_fcnc_prod_uh_overlay = new TH1D("h_fcnc_prod_uh_overlay", "h_fcnc_prod_uh_overlay", 8, BinEdges );
 setBins(h_fcnc_prod_uh_overlay,fcnc_prod_uh_prefit);
-regionName="t_{h}#tau_{had}#tau_{had}-2j";
+regionName="t_{h}\\tau_{\\text{had}}\\tau_{\\text{had}}\\text{-2j}";
+//regionName="t_{h}#tau_{had}#tau_{had}-2j";
 ouputName="reg2mtau1b2jos";
 signalName="tcH";
 
-
+*/
 
 
 
@@ -768,7 +772,7 @@ lg1->SetBorderSize(0);
 lg1->SetFillStyle(0);
 lg1->Draw("same");
 //padhi->Update();
-cv.SaveAs((signalName+"_"+ouputName+".pdf").c_str());
+cv.SaveAs((signalName+"_"+ouputName+".eps").c_str());
 
 
 
