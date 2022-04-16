@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ../fcnc-paper_v1.1/ANA-TOPQ-2019-17-PAPER.tex   Fri Mar 18 21:18:24 2022
-%DIF ADD ANA-TOPQ-2019-17-PAPER.tex                      Fri Mar 18 21:20:21 2022
+%DIF ADD ANA-TOPQ-2019-17-PAPER.tex                      Tue Apr 12 22:27:29 2022
 % This file provides a skeleton ATLAS paper.
 %-------------------------------------------------------------------------------
 \pdfoutput=1
@@ -17,9 +17,17 @@
 % \newcommand*{\ATLASLATEXPATH}{}
 %-------------------------------------------------------------------------------
 %\documentclass[cernpreprint, PAPER, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
-\documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%DIF 17c17
+%DIF < \documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%DIF -------
+%\documentclass[PAPER, coverpage, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc} %DIF > 
+%DIF -------
 %\documentclass[PAPER, atlasdraft=true, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
-%\documentclass[CONF, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%DIF 19c19
+%DIF < %\documentclass[CONF, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc}
+%DIF -------
+\documentclass[CONF, atlasdraft=false, texlive=2016, UKenglish]{\ATLASLATEXPATH atlasdoc} %DIF > 
+%DIF -------
 % The language of the document must be set: usually UKenglish or USenglish.
 % british and american also work!
 % Commonly used options:
@@ -62,7 +70,11 @@
 \usepackage{float}
 %add line numbers in draft
 \usepackage{lineno}
-\linenumbers
+%DIF 62c62
+%DIF < \linenumbers
+%DIF -------
+%\linenumbers %DIF > 
+%DIF -------
 % See doc/atlas_physics.pdf for a list of the defined symbols.
 % Default options are:
 %   true:  journal, misc, particle, unit, xref
@@ -132,13 +144,14 @@ the effective $tqH$ couplings are $C_{c\phi} <1.38\, (0.97)$ and $C_{u\phi} <1.1
 %\author{The ATLAS Collaboration}
 
 % ATLAS reference code, to help ATLAS members to locate the paper
-%DIF 128c128-129
+%DIF 128-129c128-130
 %DIF < \AtlasRefCode{TOPQ-2019-17}
+%DIF < %\AtlasRefCode{ATLAS-CONF-2018-049}
 %DIF -------
-\AtlasRefCode{CONF-TOPQ-2022-06} %DIF > 
+%\AtlasRefCode{CONF-TOPQ-2022-06} %DIF > 
 %\AtlasRefCode{TOPQ-2019-17} %DIF > 
+\AtlasRefCode{ATLAS-CONF-2022-014} %DIF > 
 %DIF -------
-%\AtlasRefCode{ATLAS-CONF-2018-049}
 
 
 % ATLAS date - arXiv submission; usually filled in by the Physics Office
@@ -254,7 +267,9 @@ Boyang Li, Mingming Xia, Wei-Ming Yao, Xin Chen}
 
 \maketitle
 
-\tableofcontents
+\DIFdelbegin %DIFDELCMD < \tableofcontents
+%DIFDELCMD < %%%
+\DIFdelend %DIF > \tableofcontents
 
 %Introduction
 %-------------------------------------------------------------------------------
@@ -361,20 +376,22 @@ in upper limits of $\BR(t\to cH)<0.47\%$ and $\BR(t\to uH)<0.47\%$, in each case
 The search in Ref.~\cite{Sirunyan:2017uae} considers in addition the contribution to the signal from 
 $pp \to tH$ production~\cite{Greljo:2014dka}. 
 CMS recently updated their search for $tqH$ in the $H\to b\bar{b}$ channel using
-\DIFdelbegin \DIFdel{their }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend full Run 2 data\DIFdelbegin \DIFdel{and  set }\DIFdelend \DIFaddbegin \DIFadd{. The }\DIFaddend observed (expected) upper limits on  \DIFdelbegin \DIFdel{$\mathcal{B}(t\to Hu)$ of $7.9\times10^{-4}(1.1\times10^{-3})$ and $\mathcal{B}(t\to Hc)$ of }\DIFdelend \DIFaddbegin \DIFadd{$\BR(t\to cH)$ are }\DIFaddend $9.4\times10^{-4}(8.6\times10^{-4})$
+\DIFdelbegin \DIFdel{their }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend full Run 2 \DIFdelbegin \DIFdel{data and  set }\DIFdelend \DIFaddbegin \DIFadd{dataset. The }\DIFaddend observed (expected) upper limits on  \DIFdelbegin \DIFdel{$\mathcal{B}(t\to Hu)$ of $7.9\times10^{-4}(1.1\times10^{-3})$ and $\mathcal{B}(t\to Hc)$ of }\DIFdelend \DIFaddbegin \DIFadd{$\BR(t\to cH)$ are }\DIFaddend $9.4\times10^{-4}(8.6\times10^{-4})$
 \DIFaddbegin \DIFadd{and are $7.9\times10^{-4}(1.1\times10^{-3})$ for $\BR{B}(t\to uH)$}\DIFaddend ~\cite{CMS:2021gfa}.
 %CMS also recently reported a search for $tqH$ in the $H\rightarrow \gamma\gamma$ mode using the full Run-2 data and set observed(expected) upper limits on $\mathcal{B}(t\to Hu)$ of $1.9\times10^{-4}(3.1\times10^{-4})$ and $\mathcal{B}(t\to Hc)$ of $7.3\times10^{-4}(5.1\times10^{-4})$~\cite{CMS-PAS-TOP-20-007}.
 
 
 \begin{table}[t!]
 \caption{\DIFdelbeginFL %DIFDELCMD < \small{Summary of 95\% CL upper limits on $\BR(t \to Hc)$ and $\BR(t \to Hu)$ obtained from ATLAS and CMS Collaborations with Run 2 data. Each limit is obtained assuming the other branching ratio is 0}%%%
-\DIFdelendFL \DIFaddbeginFL \small{Summary of 95\% CL upper limits on $\BR(t \to Hc)$ and $\BR(t \to Hu)$ obtained from ATLAS and CMS Collaborations with Run 2 data. Each limit is obtained assuming the other branching ratio is null.}\DIFaddendFL }
+\DIFdelendFL \DIFaddbeginFL \small{Summary of 95\% CL upper limits on $\BR(t \to cH)$ and $\BR(t \to uH)$ obtained from ATLAS and CMS Collaborations with Run 2 data. Each limit is obtained assuming the other branching ratio is null.}\DIFaddendFL }
 \begin{center}
 \small 
 \begin{tabular}{ccccc}
 \toprule\toprule
 & &\multirow{2}{*}{$\mathcal{L}$ [fb$^{-1}$]} & \multicolumn{2}{c}{95\% CL observed upper limits}  \\
-& & 										    & \multicolumn{1}{c}{on $\BR(t \to Hc)$}            & \multicolumn{1}{c}{on $\BR(t \to Hu)$} \\
+& & 										    & \DIFdelbeginFL %DIFDELCMD < \multicolumn{1}{c}{on $\BR(t \to Hc)$}            %%%
+\DIFdelendFL \DIFaddbeginFL \multicolumn{1}{c}{on $\BR(t \to cH)$}            \DIFaddendFL & \DIFdelbeginFL %DIFDELCMD < \multicolumn{1}{c}{on $\BR(t \to Hu)$} %%%
+\DIFdelendFL \DIFaddbeginFL \multicolumn{1}{c}{on $\BR(t \to uH)$} \DIFaddendFL \\
 \midrule
 \multirow{5}{*}{ATLAS}
 & $H \to b\bar{b}$~\cite{fcnc36}                                          & 36.1         & $4.2 \times 10^{-3}$ & $5.2 \times 10^{-3}$ \\
@@ -439,7 +456,7 @@ The analysis reported here targets Higgs boson decays to
 %This paper is focused on the decay mode of the Higgs boson into
 $\tau$-leptons with the complete Run~2 dataset collected in 2015-2018. The corresponding integrated luminosity is 139 fb$^{-1}$. Both $\ttbar \to WbHq$ decay and $pp \to tH$ production are targeted. The dataset is divided into several final states depending on the production mode and
 the  $W$ \DIFdelbegin \DIFdel{decay}\DIFdelend \DIFaddbegin \DIFadd{and tau decays}\DIFaddend . Top quark pair production events where the $W$ boson decays hadronically (leptonically) are referred to as $t_h$ ($t_{\ell}$).
-The \DIFaddbegin \DIFadd{decays $\tau \to \ell \nu_{\ell} \nu_{\tau}$ are referred as $\lep$, while the decays $\tau \to hadrons \nu_{\tau}$ are referred as $\thad$.
+The \DIFaddbegin \DIFadd{decays $\tau \to \ell \nu_{\ell} \nu_{\tau}$ are referred as $\lep$, while the decays $\tau \to \text{hadrons} + \nu_{\tau}$ are referred as $\thad$.
 The }\DIFaddend contribution of 
 $W\rightarrow\tau\nu$ is included as $\lep$ in $t_{\ell}$ when the $\tau$ decays into a light lepton (electron or muon) or as $\thad$ 
 in $t_h$ when the $\tau$ decays hadronically.
@@ -818,31 +835,11 @@ Simulated events were processed through the same reconstruction software as the 
 efficiencies, energy scales and energy resolutions match those determined from data control samples.
 
 
-%  \begin{table}
-%  \footnotesize
-%  \centering
-%  \caption{Overview of the MC generators used for the main signal and background samples.}
-%  \begin{tabular}[h]{l|c|c|c|c|c|c}
-%  \hline \hline
-%  \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
-%          &  ME   &  PS    &   ME  & PS &   &  \\\hline
-%  $tt(qH)$ Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  $tH$ Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  $W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
-%  \ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  Single top & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  $t\bar{t}X$ & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-%  Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline\hline
-%  \end{tabular}
-%  \label{mob}
-%  \end{table}
 
 \begin{table}
 \footnotesize
 \centering
-\caption{Overview of the MC generators \DIFdelbeginFL \DIFdelFL{at which }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{used for }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{matrix-element calculation }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{main signal and background samples. including the matrix element }\DIFaddendFL (ME)\DIFdelbeginFL \DIFdelFL{at the leading or the next-leading order (Order)}\DIFdelendFL ,
-  \DIFdelbeginFL \DIFdelFL{the }\DIFdelendFL %DIF > at the leading or the next-leading order (Order), 
-parton shower \DIFdelbeginFL \DIFdelFL{model }\DIFdelendFL (PS), \DIFdelbeginFL \DIFdelFL{and the }\DIFdelendFL parton distribution function set (PDF)\DIFdelbeginFL \DIFdelFL{used for the main signal }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{background samples}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{cross-section calculation order (Order)}\DIFaddendFL .}%DIF >   used for the main signal and background samples.}
+\caption{Overview of the MC generators \DIFdelbeginFL \DIFdelFL{at which }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{used for }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{matrix-element calculation }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{main signal and background samples. including the matrix element }\DIFaddendFL (ME)\DIFdelbeginFL \DIFdelFL{at the leading or the next-leading order (Order)}\DIFdelendFL , \DIFdelbeginFL \DIFdelFL{the }\DIFdelendFL parton shower \DIFdelbeginFL \DIFdelFL{model }\DIFdelendFL (PS), \DIFdelbeginFL \DIFdelFL{and the }\DIFdelendFL parton distribution function set (PDF)\DIFdelbeginFL \DIFdelFL{used for the main signal }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{background samples}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{cross-section calculation order (Order)}\DIFaddendFL .}
 \begin{tabular}[h]{l|c|c|c|c|c|c}
 \hline \hline
 \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
@@ -853,12 +850,16 @@ $W/Z$+jets & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30N
 \ttbar & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 Single top & {\powheg} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 $t\bar{t}X$ & {\amcatnlolong} & {\pythia}~8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+\DIFdelbeginFL %DIFDELCMD < 
 
-%$VH$ & {\powheg} & {\pythia}~8 & \multicolumn{2}{c|}{PDF4LHC15} & AZNLO & NLO \\ \hline
-$VH$ & {\powheg} & {\pythia}~8 & PDF4LHC15&CTEQ6L1 & AZNLO & NLO \\ \hline
+%DIFDELCMD < %%%
+%DIF < $VH$ & {\powheg} & {\pythia}~8 & \multicolumn{2}{c|}{PDF4LHC15} & AZNLO & NLO \\ \hline
+\DIFdelendFL $VH$ & {\powheg} & {\pythia}~8 & PDF4LHC15&CTEQ6L1 & AZNLO & NLO \\ \hline
 $tH$ & {\amcatnlolong} & {\pythia}~8 & \multicolumn{2}{c|}{CT10PDF} & A14 & NLO \\ \hline
+\DIFdelbeginFL %DIFDELCMD < 
 
-Diboson & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & {\sherpa} & NLO/LO \\ \hline\hline
+%DIFDELCMD < %%%
+\DIFdelendFL Diboson & \multicolumn{2}{c|}{{\sherpa}~2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & {\sherpa} & NLO/LO \\ \hline\hline
 \end{tabular}
 \label{mob}
 \end{table}
@@ -963,7 +964,7 @@ VR &$t_{\ell}\thadhad$-SS     & 1     & $\ge0$                                & 
 This event categorisation is primarily motivated by optimizing the sensitivity in each signal region that targets either leptonic or hadronic top-quark
 decays as well as the Higgs decays into either $\lephad$ or $\hadhad$ final states.   
 %The event kinematic reconstruction is used in the $t_h\hadhad$ and $t_h\lephad$ channels to suppress the background by constraining the di-tau mass and the missing transverse energy in the event~\cite{Chen:2015nta}.
-The contribution of background to the signal regions of the $t_h\hadhad$ and $t_h\lephad$ channels is reduced by having a kinematic constraints on the di-tau mass and the missing transverse energy in the event~\cite{Chen:2015nta}.
+The contribution of background to the signal regions of the $t_h\hadhad$ and $t_h\lephad$ channels is reduced by having a kinematic constraints on the di-tau mass and the \DIFdelbegin \DIFdel{missing transverse energy }\DIFdelend \DIFaddbegin \DIFadd{$\met$ }\DIFaddend in the event~\cite{Chen:2015nta}.
 
 %based on the strategy used in Ref.~\cite{Chen:2015nta}, and is summarised below.
 
@@ -971,9 +972,9 @@ For the $t_ht(qH)$ events, the jet from $t\to qH$, denoted as the FCNC jet ($q$-
 decay chain $t\to qH\to q\tau\tau$, with taus reconstructed as $\lephad$ or $\hadhad$.
 %There should be at least four jets among which the one with the smaller angular distance to the visible decay of the di-tau,
 %is considered as the $q$-jet 
-Events should contain 4 jets, with the one \DIFdelbegin \DIFdel{at }\DIFdelend \DIFaddbegin \DIFadd{having }\DIFaddend the smallest angular \DIFdelbegin \DIFdel{distance }\DIFdelend \DIFaddbegin \DIFadd{separation with respect }\DIFaddend to the visible \DIFdelbegin \DIFdel{decay of the }\DIFdelend di-tau \DIFaddbegin \DIFadd{system }\DIFaddend being labelled as  \DIFdelbegin \DIFdel{the }\DIFdelend q-jet since the FCNC top decay products are likely boosted closer together\DIFdelbegin \DIFdel{than other jets}\DIFdelend . 
+Events should contain 4 jets, with the one \DIFdelbegin \DIFdel{at }\DIFdelend \DIFaddbegin \DIFadd{having }\DIFaddend the smallest angular \DIFdelbegin \DIFdel{distance }\DIFdelend \DIFaddbegin \DIFadd{separation with respect }\DIFaddend to the visible \DIFdelbegin \DIFdel{decay of the }\DIFdelend di-tau \DIFaddbegin \DIFadd{system }\DIFaddend being labelled as  \DIFdelbegin \DIFdel{the q-jet }\DIFdelend \DIFaddbegin \DIFadd{$q$-jet }\DIFaddend since the FCNC top decay products are likely boosted closer together\DIFdelbegin \DIFdel{than other jets}\DIFdelend . 
 If there are more than two jets besides the $q$- and $b$-jet, the jets from $W$ boson decay are chosen from the combination
-with the invariant mass closest to the $W$ boson mass. There is the chance that one of the jets fails the $\pt$ requirement and is not reconstructed.
+with the invariant mass closest to the $W$ boson mass. There is the \DIFdelbegin \DIFdel{chance }\DIFdelend \DIFaddbegin \DIFadd{possibility }\DIFaddend that one of the jets fails the $\pt$ requirement and is not reconstructed.
 These kinds of events will fall into \DIFaddbegin \DIFadd{the }\DIFaddend $t_hH$ final state.
 %while the FCNC top resonance is
 %still reconstructable that the missing jet is likely from the decay of $W$ boson.
@@ -1020,10 +1021,12 @@ are estimated using samples of simulated events and initially normalised to thei
 In the simulation, the top-quark and SM Higgs boson masses are set to $172.5~\gev$ and $125~\gev$, respectively,
 and the Higgs boson is forced to decay into $H\to \tau\tau$ with branching ratio calculated using \textsc{Hdecay}~\cite{Djouadi:1997yw}.  
 Backgrounds with non-prompt light leptons (electron or muon), with photons or jets misidentified as electrons, or with jets misidentified as tau candidates, 
-generically referred to as \texttt{fake} leptons, are estimated using data-driven methods. 
+generically referred to as \DIFdelbegin \texttt{\DIFdel{fake}} %DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{fake }\DIFaddend leptons, are estimated using data-driven methods. 
+%DIF > \texttt{fake} 
 The background prediction is further improved during the statistical analysis by performing a likelihood 
 fit to data using several signal-depleted control regions as shown in Table~\ref{tab:srcr}.
-The events with one light lepton, two same-sign $\had$, and one $b$-jet, are also selected\DIFdelbegin \DIFdel{as }\DIFdelend \DIFaddbegin \DIFadd{, enter in }\DIFaddend a validation region (VR) for the background estimation in the leptonic channels. 
+The events with one light lepton, two same-sign $\had$, and one $b$-jet, are also selected\DIFdelbegin \DIFdel{as }\DIFdelend \DIFaddbegin \DIFadd{, providing }\DIFaddend a validation region (VR) for the background estimation in the leptonic channels. 
 %-------------------------------------------------------------------------------
 %\subsection{Backgrounds with fake leptons}
 %\label{sec:fakeleptons}
@@ -1070,8 +1073,8 @@ that the subleading tau candidate is required to fail the medium tau identificat
 The contribution of fakes with subleading tau candidate can be calculated by rescaling the templates of loose taus in the CR
 with fake factors (FF).
 The templates are produced by subtracting all MC background contributions with real subleading taus from data.
-The FFs are computed as the ratio of \DIFaddbegin \DIFadd{misidentified $\thad$ candidate that either pass or fail }\DIFaddend the \DIFdelbegin \DIFdel{Data-MC ($\mathrm{real~tau}$) yields in which the tau candidate is passed or failed the }\DIFdelend medium tau ID selection in the
-$W$+jets \DIFdelbegin \DIFdel{samples}\DIFdelend \DIFaddbegin \DIFadd{processes}\DIFaddend ~\cite{ATLAS-CONF-2021-044}. 
+The FFs are computed as the ratio of \DIFaddbegin \DIFadd{misidentified $\thad$ candidates that either pass or fail }\DIFaddend the \DIFdelbegin \DIFdel{Data-MC ($\mathrm{real~tau}$) yields in which the tau candidate is passed or failed the }\DIFdelend medium tau ID selection in \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{regions enriched in events originating from 
+}\DIFaddend $W$+jets \DIFdelbegin \DIFdel{samples}\DIFdelend \DIFaddbegin \DIFadd{processes}\DIFaddend ~\cite{ATLAS-CONF-2021-044}. 
 %DIF > the Data-MC ($\mathrm{real~tau}$) ratio of the yields of events in which the tau candidate is passing or failing the medium tau ID selection
 %DIF > in the $W$+jets samples~\cite{ATLAS-CONF-2021-044}.
 %passing to failing the medium tau ID in the $W$+jets control region.
@@ -1097,7 +1100,6 @@ $t_{\ell}\had$ channels\DIFdelbegin \DIFdel{where }\DIFdelend \DIFaddbegin \DIFa
 % BDT
 \section{Multivariate discriminant}
 \label{sec:tmva}
-
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
@@ -1199,7 +1201,7 @@ In the training, all signal events from $tt(qH)$ and $tH$ are merged together fo
 (including both real and fake tau contributions) are also used in the training.
 
 A large set of potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (measures the degree of overlap between background and signal shape) and "importance" (depicts the power of the variable to the classification of the events) provided by the TMVA package~\cite{Hocker:2007ht}.
-The BDT discriminant is trained for each SR starting from a large list of variables. Then the variables are removed one at time and \DIFdelbegin \DIFdel{retraining }\DIFdelend \DIFaddbegin \DIFadd{the BDT is retrained }\DIFaddend until the
+The BDT discriminant is trained for each SR starting from a large list of variables. Then the \DIFdelbegin \DIFdel{variables are }\DIFdelend \DIFaddbegin \DIFadd{least important variable is }\DIFaddend removed one at \DIFdelbegin \DIFdel{time and retraining }\DIFdelend \DIFaddbegin \DIFadd{a time and the BDT is retrained }\DIFaddend until the
 receive operating characteristic (ROC) score drops more than 2\%.
 %The final variables used in SRs are shown in Table 5 with their ranking. 
 %and only those variables whose importance is larger than 2\% were kept.
@@ -1209,7 +1211,7 @@ The final BDT input variables in each SR and their \DIFdelbegin \DIFdel{importan
 \item ${\pt}_{\tau1} $ is the transverse momentum of the leading tau candidate.
 \item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
-\item $\chi^2$ of the kinematic fit of the \DIFdelbegin \DIFdel{neutrino momentum}\DIFdelend \DIFaddbegin \DIFadd{invisible decay products of the tau leptons}\DIFaddend .
+\item $\chi^2$ of the kinematic fit of the \DIFdelbegin \DIFdel{neutrino momentum }\DIFdelend \DIFaddbegin \DIFadd{momentum of the invisible decay products of the tau leptons}\DIFaddend .
 \item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
@@ -1247,9 +1249,9 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lep
 %\item $\Delta R(\tau1,\text{light-jet})$ is the minimum angle distance between the tau candidate and the light-jet. If there are two taus in the event, the leading one is used.
 \end{itemize}
 
-A comparison between data and the predicted background for the leading $\had$ $\pt$ distribution in the SRs, after applying fake factors, 
+A comparison between data and the predicted background for the leading $\had$ $\pt$  \DIFaddbegin \DIFadd{and visible di-tau mass }\DIFaddend distribution in the SRs, after applying fake factors, 
 %some of these variables in three main decay final states($t_{\ell}\hadhad$, $t_h\hadhad$, and $t_h\lephad$)
-is shown in Figure~\ref{fig:taupt_prefit}.
+is shown in Figure~\ref{fig:taupt_prefit} \DIFaddbegin \DIFadd{and Figure~\ref{fig:mtt}, respectively}\DIFaddend .
 %each of the SRs considered is shown in Figures~\ref{fig:mva_input_hadhad} -~\ref{fig:mva_input_{\ell}hadhad}.
 %The comparison between the data and predicted background after preselection for the distributions of two of the most 
 %discriminating BDT input variables in the $\hadhad$ channel before the fit to data (``Pre-Fit'').
@@ -1273,23 +1275,32 @@ The final observable used to extract the signal contribution is the BDT distribu
 %\includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l2tau1bnj_os/tau_pt_0.pdf} &
 %\includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b1j_ss_vetobtagwp70_highmet/tau_pt_0.pdf}&
 %\includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b2j_ss_vetobtagwp70_highmet/tau_pt_0.pdf}\\
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l2tau1bnj_os.pdf} &
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b1j_ss.pdf}&
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_ss.pdf}\\
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l2tau1bnj_os.pdf} %%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg1l2tau1bnj_os_log_.pdf} \DIFaddendFL &
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b1j_ss.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg1l1tau1b1j_ss_log_.pdf}\DIFaddendFL &
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_ss.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg1l1tau1b2j_ss_log_.pdf}\DIFaddendFL \\
 (a) & (b) & (c) \\
 %(a1) \pT(\tauhad) in $t_{\ell}\thadhad$ & (a2) \pT(\tauhad) in  $t_{\ell}\tauhad$-1j& (a3) \pT(\tauhad) in $t_{\ell}\tauhad$-2j\\
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_os.pdf}&
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b3j_os.pdf}\\
-(d) & (e) \\
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b2j_os.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg1l1tau1b2j_os_log_.pdf}\DIFaddendFL &
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg1l1tau1b3j_os.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg1l1tau1b3j_os_log_.pdf} &
+\includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg1l2tau1bnj_ss_log_.pdf} \DIFaddendFL \\
+(d) & (e) \DIFaddbeginFL & \DIFaddFL{(f)}\DIFaddendFL \\
 %(b1) \pT(\tauhad) in $t_h\tlhad$-2j & (b2) \pT(\tauhad) in  $t_h\tlhad$-3j & (b3) \pT(\tauhad) in $t_h\thadhad$-2j \\
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b2jos_vetobtagwp70_highmet.pdf}&
-\includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}\\
-(f) & (g) \\
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b2jos_vetobtagwp70_highmet.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg2mtau1b2jos_log_.pdf}\DIFaddendFL &
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[page=1,width=0.33\textwidth]{figures/new_pt/reg2mtau1b3jos_vetobtagwp70_highmet.pdf}%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg2mtau1b3jos_log_.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/new_pt/log_or_nolog/tuH_reg2mtau1b3jss_log_.pdf}\DIFaddendFL \\
+(\DIFdelbeginFL \DIFdelFL{f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{g}\DIFaddendFL ) & (\DIFdelbeginFL \DIFdelFL{g) }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{h) }& \DIFaddFL{(i)}\DIFaddendFL \\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
 \caption{\DIFdelbeginFL \DIFdelFL{The leading }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Leading }\DIFaddendFL $\thad$ \DIFdelbeginFL \DIFdelFL{$p_T$  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\pt$  }\DIFaddendFL distributions \DIFdelbeginFL \DIFdelFL{are compared between }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{obtained before }\DIFaddendFL the \DIFaddbeginFL \DIFaddFL{fit to data (``Pre-Fit'') showing 
   the }\DIFaddendFL expected background and $tuH$ signals \DIFaddbeginFL \DIFaddFL{after applying fake factors }\DIFaddendFL in \DIFaddbeginFL \DIFaddFL{the following SRs}\DIFaddendFL : $t_{\ell}\thadhad$ (a),
-  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_h\thadhad$-2j (f), and $t_h\thadhad$-3j (g)\DIFdelbeginFL \DIFdelFL{before the fit to data ('Pre-Fit') after applying fake factors}\DIFdelendFL .
+ $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), \DIFaddbeginFL \DIFaddFL{$t_{\ell}\thadhad$ same sign CR (f), }\DIFaddendFL $t_h\thadhad$-2j (\DIFdelbeginFL \DIFdelFL{f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{g}\DIFaddendFL ), \DIFdelbeginFL \DIFdelFL{and }\DIFdelendFL $t_h\thadhad$-3j (\DIFdelbeginFL \DIFdelFL{g}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{h}\DIFaddendFL ) \DIFdelbeginFL \DIFdelFL{before the fit to data }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{and $t_h\thadhad$-3j same sign CR }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{'Pre-Fit'}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{i}\DIFaddendFL )\DIFdelbeginFL \DIFdelFL{after applying fake factors}\DIFdelendFL .
  The \DIFdelbeginFL \DIFdelFL{uncertainty band includes both }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{total size of }\DIFaddendFL the statistical and systematic uncertainties \DIFdelbeginFL \DIFdelFL{in }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{of }\DIFaddendFL the background prediction \DIFaddbeginFL \DIFaddFL{is indicated by the hatched band}\DIFaddendFL .
  %DIF > The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
  Overflow \DIFdelbeginFL \DIFdelFL{bins }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{events }\DIFaddendFL are included \DIFdelbeginFL \DIFdelFL{respectively }\DIFdelendFL in the last bin. \DIFdelbeginFL \DIFdelFL{Others }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{``Other MC'' }\DIFaddendFL (\DIFaddbeginFL \DIFaddFL{``}\DIFaddendFL Rare\DIFaddbeginFL \DIFaddFL{''}\DIFaddendFL ) includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) \DIFdelbeginFL \DIFdelFL{channels}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{channel}\DIFaddendFL . The $tuH$ signal \DIFdelbeginFL \DIFdelFL{shapes are also compared }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{is scaled }\DIFaddendFL using a normalization factor \DIFdelbeginFL \DIFdelFL{(2-50).   
@@ -1298,11 +1309,6 @@ The final observable used to extract the signal contribution is the BDT distribu
 The lower panels show the \DIFdelbeginFL \DIFdelFL{ratios of the }\DIFdelendFL data to \DIFdelbeginFL \DIFdelFL{the background }\DIFdelendFL prediction \DIFaddbeginFL \DIFaddFL{ratio}\DIFaddendFL .}
 \label{fig:taupt_prefit}
 \end{figure}
-
-
-
-
-
 
 
 
@@ -1324,24 +1330,70 @@ The lower panels show the \DIFdelbeginFL \DIFdelFL{ratios of the }\DIFdelendFL d
 % \end{figure}
 
 
+\DIFaddbegin \begin{figure}[H]
+\centering
+\begin{tabular}{@{}ccc@{}}
+%DIF > \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l2tau1bnj_os/tau_pt_0.pdf} &
+%DIF > \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b1j_ss_vetobtagwp70_highmet/tau_pt_0.pdf}&
+%DIF > \includegraphics[page=7,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL_fancpaper/reg1l1tau1b2j_ss_vetobtagwp70_highmet/tau_pt_0.pdf}\\
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg1l2tau1bnj_os_log_mtt.pdf} &
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg1l1tau1b1j_ss_log_mtt.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg1l1tau1b2j_ss_log_mtt.pdf}\\
+\DIFaddFL{(a) }& \DIFaddFL{(b) }& \DIFaddFL{(c) }\\
+%DIF > (a1) \pT(\tauhad) in $t_{\ell}\thadhad$ & (a2) \pT(\tauhad) in  $t_{\ell}\tauhad$-1j& (a3) \pT(\tauhad) in $t_{\ell}\tauhad$-2j\\
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg1l1tau1b2j_os_log_mtt.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg1l1tau1b3j_os_log_mtt.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg1l2tau1bnj_ss_log_mtt.pdf}\\
+\DIFaddFL{(d) }& \DIFaddFL{(e) }& \DIFaddFL{(f)}\\
+%DIF > (b1) \pT(\tauhad) in $t_h\tlhad$-2j & (b2) \pT(\tauhad) in  $t_h\tlhad$-3j & (b3) \pT(\tauhad) in $t_h\thadhad$-2j \\
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg2mtau1b2jos_log_mtt.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg2mtau1b3jos_log_mtt.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/mtt/tuH_reg2mtau1b3jss_log_mtt.pdf}\\
+\DIFaddFL{(g) }& \DIFaddFL{(h) }& \DIFaddFL{(i)}\\
+%DIF > (c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
+\end{tabular}
+\caption{\DIFaddFL{Visible di-tau mass  distributions obtained before the fit to data (``Pre-Fit'') showing 
+  the expected background and $tuH$ signals after applying fake factors in the following SRs: $t_{\ell}\thadhad$ (a),
+ $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$ same sign CR (f), $t_h\thadhad$-2j (g), $t_h\thadhad$-3j (h) and $t_h\thadhad$-3j same sign CR (i).
+ The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
+ %DIF > The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
+ Overflow events are included in the last bin. ``Other MC'' (``Rare'') includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) channel. The $tuH$ signal is scaled using a normalization factor of 2 to 50.   
+%DIF > ( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
+The lower panels show the data to prediction ratio.}}
+\label{fig:mtt}
+\end{figure}
 
 
 
 
 
+\begin{figure}[H]
+\centering
+\begin{tabular}{@{}ccc@{}}
+\includegraphics[page=1,width=0.29\textwidth]{figures/ttCR/tuH_reg1l1tau2b2j_os_log_ttCR.pdf} &
+\includegraphics[page=1,width=0.29\textwidth]{figures/ttCR/tuH_reg1l1tau2b2j_ss_log_ttCR.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/ttCR/tuH_reg1l1tau2b3j_os_log_ttCR.pdf}\\
+\DIFaddFL{(a) }& \DIFaddFL{(b) }& \DIFaddFL{(c) }\\
+\includegraphics[page=1,width=0.29\textwidth]{figures/ttCR/tuH_reg1l1tau2b3j_ss_log_ttCR.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/ttCR/tuH_reg2l1tau1bnj_log_ttCR.pdf}&
+\includegraphics[page=1,width=0.29\textwidth]{figures/ttCR/tuH_reg2l1tau2bnj_log_ttCR.pdf}\\
+\DIFaddFL{(d) }& \DIFaddFL{(e) }& \DIFaddFL{(f)}\\
+%DIF > (c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
+\end{tabular}
+\caption{\DIFaddFL{Leading $\thad$ $\pt$  distributions obtained the fake $\thad$ calibration method after applying fake factors in the following CRs: 
+$t_{\ell}t_{h}$2b$\thad$-2j OS (a), $t_{\ell}t_{h}$2b$\thad$-2j SS (b), $t_{\ell}t_{h}$2b$\thad$-3j OS (c), $t_{\ell}t_{h}$2b$\thad$-3j SS (d), $t_{\ell}t_{\ell}$1b$\thad$-nj (e) and $t_{\ell}t_{\ell}$2b$\thad$-nj (f).
+ The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
+ %DIF > The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
+ Overflow events are included in the last bin. 
+%DIF > ( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
+The lower panels show the data to prediction ratio.}}
+\label{fig:ttCR_mtt}
+\end{figure}
 
 
 
 
-
-
-
-
-
-
-
-
-% %\input{\FCNCFigures/tex/BDT}
+\DIFaddend % %\input{\FCNCFigures/tex/BDT}
 % \begin{figure}[H]
 % \centering
 % \begin{tabular}{@{}ccc@{}}
@@ -1515,7 +1567,7 @@ evaluating }\DIFdelend \DIFaddbegin \DIFadd{used for
 evaluation of }\DIFaddend the fake factors in the \DIFdelbegin \DIFdel{CRs }\DIFdelend \DIFaddbegin \DIFadd{CRtt's }\DIFaddend are considered and treated \DIFdelbegin \DIFdel{fully correlated}\DIFdelend \DIFaddbegin \DIFadd{as fully correlated in the fit}\DIFaddend .
 The uncertainty of the ABCD method is applied with a normalisation factor for muon and electron respectively considering both,
 its statistical fluctuation and the differences between the leptonic channels.
-The uncertainties in the fake factor method applied in hadronic channel includes statistical uncertainties of each fake factor and different sets of fake \DIFdelbegin \DIFdel{factors derived }\DIFdelend \DIFaddbegin \DIFadd{factorsderived }\DIFaddend from different signal depleted CRs.
+The uncertainties in the fake factor method applied in hadronic channel includes statistical uncertainties of each fake factor and different sets of fake factors derived from different signal depleted CRs.
 \DIFdelbegin \DIFdel{The uncertainties on the MC modelling of the various processes that used for
 evaluating the fake factors in the CRs are treated fully correlated in the fit.
 }\DIFdelend %DIF > The uncertainties on the MC modelling of the various processes used for
@@ -1716,8 +1768,11 @@ The statistical analysis uses a binned likelihood function ${\cal L}(\mu,\theta)
 a product of Poisson probability terms over all bins considered in the search. This function depends
 on the signal-strength parameter $\mu$, defined as a factor multiplying the expected yield of $tH$ and $tt(qH)$ signal events
 normalised to a reference branching ratio $\BR_{\mathrm{ref}}(t\to qH)=0.1\%$,
-and $\theta$, a set of nuisance parameters that encode the effect of systematic uncertainties on the signal and background expectations. 
-Therefore, the expected total number of events in a given bin depends on $\mu$ and $\theta$. 
+and $\theta$, a set of nuisance parameters that encode the effect of systematic uncertainties on the signal and background expectations.
+\DIFaddbegin \DIFadd{The $pp\rightarrow tH$ production cross section is related to $\BR(t\rightarrow qH)$ based on their dimension-6 operators~\mbox{%DIFAUXCMD
+\cite{fcnc_production_theory}}\hspace{0pt}%DIFAUXCMD
+.
+}\DIFaddend Therefore, the expected total number of events in a given bin depends on $\mu$ and $\theta$. 
 All nuisance parameters are subject to Gaussian constraints in the likelihood.
 For a given value of $\mu$, the nuisance parameters $\theta$ allow variations of the expectations for signal and background
 according to the corresponding systematic uncertainties, and their fitted values result in the deviations from
@@ -1858,20 +1913,24 @@ In this VR the signal contribution is negligble in the highest BDT bins and the 
 %(a1) BDT in $t_{\ell}\thadhad$ & (a2) BDT in  $t_{\ell}\tauhad$-1j& (a3) BDT in $t_{\ell}\tauhad$-2j\\
 (a)  & (b) & (c) \\
 \includegraphics[width=0.3\textwidth]{figures/tuH_reg1l1tau1b2j_os.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tuH_reg1l1tau1b3j_os.pdf}&\\
+\includegraphics[width=0.3\textwidth]{figures/tuH_reg1l1tau1b3j_os.pdf}&
+\DIFaddbeginFL \includegraphics[width=0.3\textwidth]{figures/tuH_reg1l2tau1bnj_ss.pdf}\DIFaddendFL \\
 %\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l2tau1bnj_ss.pdf}\\
 %(b1) BDT in $t_h\tlhad$-2j & (b2) BDT in  $t_h\tlhad$-3j & (b3) BDT in $t_h\thadhad$-2j \\
-%(d) & (e)  & (f) \\
-(d) & (e)\\
+%DIF < (d) & (e)  & (f) \\
+(d) & (e)  \DIFaddbeginFL & \DIFaddFL{(f) }\DIFaddendFL \\
+%DIF > (d) & (e)\\
 \includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b2jos.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b3jos.pdf}&\\
+\includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b3jos.pdf}&
+\DIFaddbeginFL \includegraphics[width=0.3\textwidth]{figures/tuH_reg2mtau1b3jss.pdf}\DIFaddendFL \\
 %(c1) BDT in$t_h\thadhad$-3j\\
-%(g) & (h)  &  \\
-(f) & (g)  &  \\
+%DIF < (g) & (h)  &  \\
+\DIFdelbeginFL \DIFdelFL{(f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(g}\DIFaddendFL ) & (\DIFdelbeginFL \DIFdelFL{g}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{h}\DIFaddendFL )  & \DIFaddbeginFL \DIFaddFL{(i) }\DIFaddendFL \\
+%DIF > (f) & (g)  &  \\
 \end{tabular}
 \caption{ BDT output distributions obtained from a signal+background fit to the data for the $tuH$ search: 
 %$t_{\ell}\thadhad$ (a),  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$ SS (f), $t_h\thadhad$-2j (g), and $t_h\thadhad$-3j (h), where $t_{\ell}\thadhad$ SS is used for the background validation. 
-$t_{\ell}\thadhad$ (a),  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_h\thadhad$-2j (f), and $t_h\thadhad$-3j (g). 
+$t_{\ell}\thadhad$ (a),$t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), \DIFaddbeginFL \DIFaddFL{$t_{\ell}\thadhad$ same sign CR (f), }\DIFaddendFL $t_h\thadhad$-2j (\DIFdelbeginFL \DIFdelFL{f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{g}\DIFaddendFL ), \DIFaddbeginFL \DIFaddFL{$t_h\thadhad$-3j (h) }\DIFaddendFL and $t_h\thadhad$-3j \DIFaddbeginFL \DIFaddFL{same sign CR }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{g}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{i}\DIFaddendFL ).  
 The total size of the statistical and systematic uncertainties is indicated by the hatched band. The signal shapes of $tt(uH)$, $tH$, and their sum are also shown using a normalisation of $2 \times\BR(t\to uH)$ of 0.1\%. 
 }
 \label{fig:asimov_postfitbdtHu}
@@ -1882,41 +1941,47 @@ The total size of the statistical and systematic uncertainties is indicated by t
 \begin{figure}[H]
 \centering
 \begin{tabular}{@{}ccc@{}}
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l2tau1bnj_os_postFit.pdf}&
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b1j_ss_postFit.pdf}&
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b2j_ss_postFit.pdf}\\
-%(a1) BDT discriminant in $t_{\ell}\thadhad$ & (a2) BDT discriminant in  $t_{\ell}\tauhad$-1j& (a3) BDT discriminant in $t_{\ell}\tauhad$-2j\\
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b2j_os_postFit.pdf}&
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b3j_os_postFit.pdf}&
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b2jos_vetobtagwp70_highmet_postFit.pdf}\\
-%(b1) BDT discriminant in $t_h\tlhad$-2j & (b2) BDT discriminant in  $t_h\tlhad$-3j & (b3) BDT discriminant in $t_h\thadhad$-2j \\
-%\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b3jos_vetobtagwp70_highmet_postFit.pdf}&\\
-%(c1) BDT discriminant in$t_h\thadhad$-3j\\
-%\end{tabular}
-%\caption{ The BDT output distributions are fitted to the asimov data in $tHu$ search: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3),
-%  $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1). Statistical and systematic uncertainties are being shown.}
-%\label{fig:asimov_postfitbdtHu}
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l2tau1bnj_os_postFit.pdf}&
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b1j_ss_postFit.pdf}&
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b2j_ss_postFit.pdf}\\
+%DIF < (a1) BDT discriminant in $t_{\ell}\thadhad$ & (a2) BDT discriminant in  $t_{\ell}\tauhad$-1j& (a3) BDT discriminant in $t_{\ell}\tauhad$-2j\\
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b2j_os_postFit.pdf}&
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/Limit/tuH_reg1l1tau1b3j_os_postFit.pdf}&
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b2jos_vetobtagwp70_highmet_postFit.pdf}\\
+%DIF < (b1) BDT discriminant in $t_h\tlhad$-2j & (b2) BDT discriminant in  $t_h\tlhad$-3j & (b3) BDT discriminant in $t_h\thadhad$-2j \\
+%DIF < \includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/Limit/tuH_reg2mtau1b3jos_vetobtagwp70_highmet_postFit.pdf}&\\
+%DIF < (c1) BDT discriminant in$t_h\thadhad$-3j\\
+%DIF < \end{tabular}
+%DIF < \caption{ The BDT output distributions are fitted to the asimov data in $tHu$ search: $t_{\ell}\thadhad$ (a1),  $t_{\ell}\tauhad$-1j (a2),  $t_{\ell}\tauhad$-2j (a3),
+%DIF <   $t_h\tlhad$-2j (b1), $t_h\tlhad$-3j (b2), $t_h\thadhad$-2j (b3), and $t_h\thadhad$-3j (c1). Statistical and systematic uncertainties are being shown.}
+%DIF < \label{fig:asimov_postfitbdtHu}
+\DIFdelbeginFL %DIFDELCMD < 
 
-\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l2tau1bnj_os.pdf}&
+%DIFDELCMD < %%%
+\DIFdelendFL \includegraphics[width=0.3\textwidth]{figures/tcH_reg1l2tau1bnj_os.pdf}&
 \includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b1j_ss.pdf}&
 \includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b2j_ss.pdf}\\
 %(a1) BDT in $t_{\ell}\thadhad$ & (a2) BDT in  $t_{\ell}\tauhad$-1j& (a3) BDT in $t_{\ell}\tauhad$-2j\\
 (a)  & (b) & (c) \\
 \includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b2j_os.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b3j_os.pdf}&\\
+\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l1tau1b3j_os.pdf}&
+\DIFaddbeginFL \includegraphics[width=0.3\textwidth]{figures/tcH_reg1l2tau1bnj_ss.pdf}\DIFaddendFL \\
 %\includegraphics[width=0.3\textwidth]{figures/tcH_reg1l2tau1bnj_ss.pdf}\\
 %(b1) BDT in $t_h\tlhad$-2j & (b2) BDT in  $t_h\tlhad$-3j & (b3) BDT in $t_h\thadhad$-2j \\
-%(d) & (e)  & (f) \\
-(d) & (e)\\
+%DIF < (d) & (e)  & (f) \\
+(d) & (e)  \DIFaddbeginFL & \DIFaddFL{(f) }\DIFaddendFL \\
+%DIF > (d) & (e)\\
 \includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b2jos.pdf}&
-\includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b3jos.pdf}&\\
+\includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b3jos.pdf}&
+\DIFaddbeginFL \includegraphics[width=0.3\textwidth]{figures/tcH_reg2mtau1b3jss.pdf}\DIFaddendFL \\
 %(c1) BDT in$t_h\thadhad$-3j\\
-%(g) & (h)  &  \\
-(f) & (g)  &  \\
+%DIF < (g) & (h)  &  \\
+\DIFdelbeginFL \DIFdelFL{(f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(g}\DIFaddendFL ) & (\DIFdelbeginFL \DIFdelFL{g}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{h}\DIFaddendFL )  & \DIFaddbeginFL \DIFaddFL{(i) }\DIFaddendFL \\
+%DIF > (f) & (g)  &  \\
 \end{tabular}
 \caption{ BDT output distributions obtained from a signal+background fit to the data for the $tcH$ search: 
 %$t_{\ell}\thadhad$ (a),  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$ SS (f), $t_h\thadhad$-2j (g), and $t_h\thadhad$-3j (h), where $t_{\ell}\thadhad$ SS is used for the background validation.
-$t_{\ell}\thadhad$ (a),  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_h\thadhad$-2j (f), and $t_h\thadhad$-3j (g). 
+$t_{\ell}\thadhad$ (a),$t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), \DIFaddbeginFL \DIFaddFL{$t_{\ell}\thadhad$ same sign CR (f), }\DIFaddendFL $t_h\thadhad$-2j (\DIFdelbeginFL \DIFdelFL{f}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{g}\DIFaddendFL ), \DIFaddbeginFL \DIFaddFL{$t_h\thadhad$-3j (h) }\DIFaddendFL and $t_h\thadhad$-3j \DIFaddbeginFL \DIFaddFL{same sign CR }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{g}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{i}\DIFaddendFL ). 
 The total size of the statistical and systematic
 uncertainties is indicated by the hatched band. The signal shapes of $tt(cH)$, $tH$, and their sum are also shown using a normalisation of $2 \times\BR(t\to cH)$ of 0.1\%.
 }
@@ -1995,7 +2060,7 @@ uncertainties is indicated by the hatched band. The signal shapes of $tt(cH)$, $
 %The results are given in terms of exclusion limits despite a small excess of data events above the background expectation is found.
 Upper limits are derived using the CL$_{\textrm{s}}$ method~\cite{Junk:1999kv,Read:2002hq}, and  
 observed (expected) 95\% CL limits are set on $\BR(t\to cH)$ and $\BR(t\to uH)$:
-$\BR(t\to cH)<9.9 \times 10^{-4}\,(5.0 \times 10^{-4})$, assuming $\BR(t\to uH)=0$,and $\BR(t\to uH)<7.2 \times 10^{-4}\,(3.6 \times 10^{-4})$, assuming $\BR(t\to cH)=0$.
+\DIFdelbegin \DIFdel{$\BR(t\to cH)<9.9 \times 10^{-4}\,(5.0 \times 10^{-4})$}\DIFdelend \DIFaddbegin \DIFadd{$\BR(t\to cH)<9.9 \times 10^{-4}\,(5.0^{+2.2}_{-1.4}\times10^{-4})$}\DIFaddend , assuming $\BR(t\to uH)=0$,and \DIFdelbegin \DIFdel{$\BR(t\to uH)<7.2 \times 10^{-4}\,(3.6 \times 10^{-4})$}\DIFdelend \DIFaddbegin \DIFadd{$\BR(t\to uH)<7.2 \times 10^{-4}\,(3.6^{+1.7}_{-1.0}\times10^{-4})$}\DIFaddend , assuming $\BR(t\to cH)=0$.
 These results are dominated by the leptonic channels, which have a sensitivity a factor of two better than that of the hadronic channels.
 The expected sensitivity has been improved upon the previous ATLAS result based on 36 fb$^{-1}$ of data using $H\to \tau\tau$ decay~\cite{fcnc36} by a factor of~5. A factor of~2 improvement in sensitivity comes from the larger dataset, and a further factor of~2.5 comes from including
 additional leptonic channels, $tH$ production, and improved techniques.
@@ -2055,46 +2120,84 @@ in Table~\ref{tab:limits_summary} and in Figures~\ref{fig:limits_combo_1D_hc}(a)
      \DIFdelbeginFL \DIFdelFL{\
  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a }\DIFaddendFL presentation \DIFaddbeginFL \DIFaddFL{purpose }\DIFaddendFL and grouped into the categories described in the \DIFdelbeginFL \DIFdelFL{text}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Section~\ref{sec:systematics}}\DIFaddendFL .}
 \label{tab:had_sys_impact}
-\begin{center}
-  \begin{tabular}{%
-      @{}l%
-      S
-      S
-      @{}
-    }
-    \toprule\toprule
-    \multirow{2}{*}{Source of uncertainty}      & \multicolumn{2}{c}{$\Delta\BR$ [$10^{-5}$]} \\
-    & \multicolumn{1}{c}{$t\rightarrow uH$} & \multicolumn{1}{c}{$t\rightarrow cH$} \\\midrule
-    Lepton ID                               & 0.6           &1.0         \\
-    $\met$                                  & 0.7           &0.8         \\
-    Fake lepton  modeling                   & 0.9           &1.1         \\
-    JES and JER                             & 2.4           &3.2         \\
-    Flavour tagging                         & 2.7           &3.7         \\
-    $t\bar{t}$ modeling                     & 2.9           &4.3         \\
-    Other MC modeling                       & 2.1           &2.9         \\
-    Fake $\tau$ modeling                    & 3.2           &4.6         \\
-    Signal modeling including Br($H\to\tau\tau$)            &5.3           &7.0         \\
-    $\tau$ ID                               & 3.3           &4.4         \\
-    Luminosity and Pileup                   & 0.9           &1.3         \\    
-    MC statistics              & 5.1           &7.0         \\\midrule
-    %Other MC modeling                       & 2.1           &2.9         \\
-    %JES and JER                             & 2.4           &3.2         \\
-    %Flavour tagging                         & 2.7           &3.7         \\
-    %$t\bar{t}$ modeling                     & 2.9           &4.3         \\
-    %Fake $\tau$ modeling                    & 3.2           &4.6         \\
-    %$\tau$ ID                               & 3.3           &4.4         \\
-    %Signal modeling including Br($H\to\tau\tau$)       & 5.3           &7.0         \\\midrule
-    \DIFdelbeginFL \DIFdelFL{Sum systematics                           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Total systematic uncertainty                            }\DIFaddendFL & 11.2          &15.5        \\
-    Data \DIFdelbeginFL \DIFdelFL{statistics                           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{statistical uncertainty                           }\DIFaddendFL & 14.1          &19.6         \\\midrule
-    Total uncertainties                       & 18            &25        \\
-    %Total systematic  uncertainty            & 11.2          &15.5        \\
-    %Total statistical uncertainty            & 14.1          &19.6         \\\midrule
-    %Total                                    & 18            &25        \\
+%DIF >  \begin{center}
+%DIF >    \begin{tabular}{%
+%DIF >        @{}l%
+%DIF >        S
+%DIF >        S
+%DIF >        @{}
+%DIF >      }
+%DIF >      \toprule\toprule
+%DIF >      \multirow{2}{*}{Source of uncertainty}      & \multicolumn{2}{c}{$\Delta\BR$ [$10^{-5}$]} \\
+%DIF >      & \multicolumn{1}{c}{$t\rightarrow uH$} & \multicolumn{1}{c}{$t\rightarrow cH$} \\\midrule
+%DIF >      Lepton ID                               & 0.6           &1.0         \\
+%DIF >      $\met$                                  & 0.7           &0.8         \\
+%DIF >      Fake lepton  modeling                   & 0.9           &1.1         \\
+%DIF >      JES and JER                             & 2.4           &3.2         \\
+%DIF >      Flavour tagging                         & 2.7           &3.7         \\
+%DIF >      $t\bar{t}$ modeling                     & 2.9           &4.3         \\
+%DIF >      Other MC modeling                       & 2.1           &2.9         \\
+%DIF >      Fake $\tau$ modeling                    & 3.2           &4.6         \\
+%DIF >      Signal modeling including Br($H\to\tau\tau$)            &5.3           &7.0         \\
+%DIF >      $\tau$ ID                               & 3.3           &4.4         \\
+%DIF >      Luminosity and Pileup                   & 0.9           &1.3         \\    
+%DIF >      MC statistics              & 5.1           &7.0         \\\midrule
+%DIF >      %Other MC modeling                       & 2.1           &2.9         \\
+%DIF >      %JES and JER                             & 2.4           &3.2         \\
+%DIF >      %Flavour tagging                         & 2.7           &3.7         \\
+%DIF >      %$t\bar{t}$ modeling                     & 2.9           &4.3         \\
+%DIF >      %Fake $\tau$ modeling                    & 3.2           &4.6         \\
+%DIF >      %$\tau$ ID                               & 3.3           &4.4         \\
+%DIF >      %Signal modeling including Br($H\to\tau\tau$)       & 5.3           &7.0         \\\midrule
+%DIF >      Total systematic uncertainty                            & 11.2          &15.5        \\
+%DIF >      Data statistical uncertainty                           & 14.1          &19.6         \\\midrule
+%DIF >      Total uncertainties                       & 18            &25        \\
+%DIF >      %Total systematic  uncertainty            & 11.2          &15.5        \\
+%DIF >      %Total statistical uncertainty            & 14.1          &19.6         \\\midrule
+%DIF >      %Total                                    & 18            &25        \\
+%DIF >      \bottomrule\bottomrule
+%DIF >    \end{tabular}
+%DIF >  \end{center}
+%DIF >  \end{table}
+ \begin{center}
+   \begin{tabular}{%
+       @{}l%
+       S
+       S
+       @{}
+     }
+     \toprule\toprule
+     \multirow{2}{*}{Source of uncertainty}      & \multicolumn{2}{c}{$\Delta\BR$ [$10^{-5}$]} \\
+     & \multicolumn{1}{c}{$t\rightarrow uH$} & \multicolumn{1}{c}{$t\rightarrow cH$} \\\midrule
+     Lepton ID                               & 0.6           &\DIFdelbeginFL \DIFdelFL{1.0         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.8         }\DIFaddendFL \\
+     $\met$                                  & 0.7           &\DIFdelbeginFL \DIFdelFL{0.8         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.7         }\DIFaddendFL \\
+     Fake lepton  modeling                   & \DIFdelbeginFL \DIFdelFL{0.9           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{1.2           }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{1.1         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{1.7         }\DIFaddendFL \\
+     JES and JER                             & \DIFdelbeginFL \DIFdelFL{2.4           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2.5           }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{3.2         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{3.3         }\DIFaddendFL \\
+     Flavour tagging                         & 2.7           &3.7         \\
+     $t\bar{t}$ modeling                     & \DIFdelbeginFL \DIFdelFL{2.9           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2.6           }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{4.3         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{3.9         }\DIFaddendFL \\
+     Other MC modeling                       & 2.1           &\DIFdelbeginFL \DIFdelFL{2.9         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{3.0         }\DIFaddendFL \\
+     Fake $\tau$ modeling                    & \DIFdelbeginFL \DIFdelFL{3.2           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{3.3           }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{4.6         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{4.7         }\DIFaddendFL \\
+     Signal modeling including Br($H\to\tau\tau$)&\DIFdelbeginFL \DIFdelFL{5.3           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{1.8        }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{7.0         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{1.5         }\DIFaddendFL \\
+     $\tau$ ID                               & 3.3           &4.4         \\
+     Luminosity and Pileup                   & \DIFdelbeginFL \DIFdelFL{0.9           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{1.7           }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{1.3         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{2.4         }\DIFaddendFL \\    
+     MC statistics                           & 5.1           &\DIFdelbeginFL \DIFdelFL{7.0         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{7.1         }\DIFaddendFL \\\midrule
+     %DIF < Other MC modeling                       & 2.1           &2.9         \\
+    %DIF < JES and JER                             & 2.4           &3.2         \\
+    %DIF < Flavour tagging                         & 2.7           &3.7         \\
+    %DIF < $t\bar{t}$ modeling                     & 2.9           &4.3         \\
+    %DIF < Fake $\tau$ modeling                    & 3.2           &4.6         \\
+    %DIF < $\tau$ ID                               & 3.3           &4.4         \\
+    %DIF < Signal modeling including Br($H\to\tau\tau$)       & 5.3           &7.0         \\\midrule
+    \DIFdelbeginFL \DIFdelFL{Sum systematics                           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Total systematic uncertainty            }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{11.2          }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{10.1          }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{15.5        }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{14.1        }\DIFaddendFL \\
+     Data \DIFdelbeginFL \DIFdelFL{statistics                           }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{statistical uncertainty            }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{14.1          }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{14.9          }\DIFaddendFL &\DIFdelbeginFL \DIFdelFL{19.6         }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{19.4        }\DIFaddendFL \\\midrule
+     Total uncertainties                     & 18            &\DIFdelbeginFL \DIFdelFL{25        }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{24          }\DIFaddendFL \\
+     %DIF < Total systematic  uncertainty            & 11.2          &15.5        \\
+    %DIF < Total statistical uncertainty            & 14.1          &19.6         \\\midrule
+    %DIF < Total                                    & 18            &25        \\
     \bottomrule\bottomrule
-  \end{tabular}
-\end{center}
-\end{table}
-
+   \end{tabular}
+ \end{center}
+ \end{table}
 
 
 Upper limits on the branching ratios $\BR(t\to qH)$ ($q=u,c$) can be translated into upper limits on the dimension-6 (D6) operator Wilson coefficients appearing in the effective field theory Lagrangian for the $tqH$ interaction~\cite{fcnc_production_theory}:
@@ -2144,7 +2247,41 @@ $C_{q\phi} =\sqrt{(C^{i3}_{q\phi})^2 + (C^{3i}_{q\phi})^2}$~\cite{fcnc_productio
 % \end{table}
 % %%%%%%%%%%%%%%%
 
-\begin{table}[t!]
+%DIF >       \begin{table}[t!]
+%DIF >         \caption{\small{Summary of 95\% CL upper limits on $\BR(t \to cH)$ and $\BR(t \to uH)$, significance and best-fit branching ratio in signal regions with a
+%DIF >         benchmark branching ratio of $\BR(t \to qH)=0.1\%$}. Expected significance is obtained from Asimov fit with a signal injection corresponding to a branching ratio of 0.1\%. }
+%DIF >       \begin{center}
+%DIF >       \resizebox{\textwidth}{!}{
+%DIF >       \begin{tabular}{lcccccc}
+%DIF >       \toprule\toprule
+%DIF >       
+%DIF >       \multirow{3}{*}{Signal Regions} & \multicolumn{3}{c}{$t\to cH$}                                & \multicolumn{3}{c}{$t\to uH$}  \\
+%DIF >                                       &  95\% CL upper limits[$10^{-3}$]  & Significance             &  $\BR[10^{-3}]$ &     95\% CL upper limits[$10^{-3}$]  & Significance   &  $\BR%[10^{-      3}]$  \\
+%DIF >                                       &  \multicolumn{2}{c}{Observed (Expected)}                     &        &     \multicolumn{2}{c}{Observed (Expected)}& \\
+%DIF >       \midrule
+%DIF >       $t_h\thadhad$-2j                & $1.85$($2.80^{+1.30}_{-0.78}$)&$-0.96$($0.78$) & $-1.03^{+1.04}_{-1.04}$&$1.10$($1.65^{+0.79}_{-0.46}$)&$-0.90$($1.25$) &$-0.55^{+0.59}_{-0.59%}$ \\
+%DIF >       $t_h\thadhad$-3j                & $1.18$($1.06^{+0.50}_{-0.30}$)&$0.34$($1.87$)  & $0.16^{+0.47}_{-0.47}$ &$1.00$($0.89^{+0.42}_{-0.25}$)&$0.36$($2.13$)  &$0.14^{+0.40}_{-0.40}%$  \\       \midrule
+%DIF >       Hadronic Combination            & $1.04$($0.98^{+0.46}_{-0.28}$)&$0.26$ ($1.99$) & $0.11^{+0.43}_{-0.43}$ &$0.78$($0.78^{+0.37}_{-0.22}$)&$0.11$($2.33$)  &$0.04^{+0.34}_{-0.34}%$  \\
+%DIF >       \midrule
+%DIF >       $t_l\tauhad$-2j                 &$4.86$($4.32^{+1.89}_{-1.21}$) &$0.40$($0.48$)   &$0.81^{+2.04}_{-2.04}$  & $3.93$($3.55^{+1.56}_{-0.99}$) & $0.34$($0.58$)  &$0.57^{+1.66}_{-%1.66}$      \\
+%DIF >       $t_l\tauhad$-1j                 &$3.94$($3.67^{+1.66}_{-1.03}$) &$0.24$($0.57$)   &$0.40^{+1.70}_{-1.70}$  & $3.10$($2.87^{+1.29}_{-0.80}$) & $0.24$($0.73$)  &$0.31^{+1.33}_{-%1.33}$      \\
+%DIF >       $t_h\tlhad$-2j                  &$4.81$($5.85^{+2.90}_{-1.63}$) &$-0.52$($0.39$)  &$-1.36^{+2.56}_{-2.56}$ & $2.56$($3.05^{+1.38}_{-0.85}$) & $-0.48$($0.69$) &$-0.66^{+1.38}_{-%1.38}$      \\
+%DIF >       $t_h\tlhad$-3j                  &$2.78$($2.79^{+1.36}_{-0.78}$) &$-0.04$($0.76$)  &$-0.04^{+1.26}_{-1.26}$ & $2.07$($2.09^{+0.94}_{-0.58}$) & $-0.05$($0.98$) &$-0.04^{+0.98}_{-%0.98}$      \\
+%DIF >       $t_l\thadhad$                   &$1.41$($0.63^{+0.29}_{-0.18}$) &$2.64$($3.24$)   &$0.74^{+0.34}_{-0.34}$  & $1.01$($0.45^{+0.21}_{-0.13}$) & $2.64$($4.08$)  &$0.53^{+0.25}_{-%0.25}$      \\ \midrule
+%DIF >       Leptonic Combination            &$1.29$($0.59^{+0.27}_{-0.17}$) &$2.59$($3.34$)   &$0.68^{+0.32}_{-0.32}$  & $0.92$($0.42^{+0.19}_{-0.12}$) & $2.59$($4.23$)  &$0.48^{+0.23}_{-%0.23}$      \\
+%DIF >       \midrule
+%DIF >       Combination                     &$0.99$ ($0.50^{+0.22}_{-0.14}$)&$2.34$($3.69$)   &$0.51^{+0.25}_{-0.25}$ & $0.72$ ($0.36^{+0.17}_{-0.10}$)& $2.31$($4.49$)&$0.37^{+0.18}_{-0.18%}$  \\
+%DIF >       \bottomrule\bottomrule
+%DIF >       \end{tabular}
+%DIF >       }
+%DIF >       \label{tab:limits_summary}
+%DIF >       \end{center}
+%DIF >       \end{table}
+%DIF > %%%%%%%%%%%%%%
+\DIFaddbegin 
+
+
+\DIFaddend \begin{table}[t!]
   \caption{\small{Summary of 95\% CL upper limits on $\BR(t \to cH)$ and $\BR(t \to uH)$, significance and best-fit branching ratio in signal regions with a
   benchmark branching ratio of $\BR(t \to qH)=0.1\%$}. Expected significance is obtained from Asimov fit with a signal injection corresponding to a branching ratio of 0.1\%. }
 \begin{center}
@@ -2181,28 +2318,26 @@ $C_{q\phi} =\sqrt{(C^{i3}_{q\phi})^2 + (C^{3i}_{q\phi})^2}$~\cite{fcnc_productio
                                 &  95\% CL upper limits[$10^{-3}$]  & Significance             &  $\BR[10^{-3}]$ &     95\% CL upper limits[$10^{-3}$]  & Significance   &  $\BR[10^{-3}]$  \\
                                 &  \multicolumn{2}{c}{Observed (Expected)}                     &        &     \multicolumn{2}{c}{Observed (Expected)}& \\
 \midrule
-$t_h\thadhad$-2j                & $1.85$($2.80^{+1.30}_{-0.78}$)&$-0.96$($0.78$) & $-1.03^{+1.04}_{-1.04}$&$1.10$($1.65^{+0.79}_{-0.46}$)&$-0.90$($1.25$) &$-0.55^{+0.59}_{-0.59}$ \\
-$t_h\thadhad$-3j                & $1.18$($1.06^{+0.50}_{-0.30}$)&$0.34$($1.87$)  & $0.16^{+0.47}_{-0.47}$ &$1.00$($0.89^{+0.42}_{-0.25}$)&$0.36$($2.13$)  &$0.14^{+0.40}_{-0.40}$  \\ \midrule
-Hadronic Combination            & $1.04$($0.98^{+0.46}_{-0.28}$)&$0.26$ ($1.99$) & $0.11^{+0.43}_{-0.43}$ &$0.78$($0.78^{+0.37}_{-0.22}$)&$0.11$($2.33$)  &$0.04^{+0.34}_{-0.34}$  \\
+$t_h\thadhad$-2j                & $1.80$($2.72^{+1.18}_{-0.76}$)&$-0.96$($0.78$) & $-1.03^{+1.03}_{-1.03}$&$1.07$($1.60^{+0.71}_{-0.45}$)&$-0.90$($1.31$) &$-0.55^{+0.58}_{-0.58}$ \\
+$t_h\thadhad$-3j                & $1.14$($1.02^{+0.45}_{-0.29}$)&$0.34$($1.87$)  & $0.16^{+0.47}_{-0.47}$ &$0.97$($0.86^{+0.38}_{-0.24}$)&$0.36$($2.25$)  &$0.14^{+0.40}_{-0.40}$  \\ \midrule
+Hadronic Combination            & $1.00$($0.95^{+0.42}_{-0.27}$)&$0.26$ ($1.99$) & $0.11^{+0.43}_{-0.43}$ &$0.76$($0.76^{+0.33}_{-0.21}$)&$0.12$($2.52$)  &$0.04^{+0.34}_{-0.34}$  \\
+
 \midrule
-$t_l\tauhad$-2j                 &$4.86$($4.32^{+1.89}_{-1.21}$) &$0.40$($0.48$)   &$0.81^{+2.04}_{-2.04}$  & $3.93$($3.55^{+1.56}_{-0.99}$) & $0.34$($0.58$)  &$0.57^{+1.66}_{-1.66}$\\
-$t_l\tauhad$-1j                 &$3.94$($3.67^{+1.66}_{-1.03}$) &$0.24$($0.57$)   &$0.40^{+1.70}_{-1.70}$  & $3.10$($2.87^{+1.29}_{-0.80}$) & $0.24$($0.73$)  &$0.31^{+1.33}_{-1.33}$\\
-$t_h\tlhad$-2j                  &$4.81$($5.85^{+2.90}_{-1.63}$) &$-0.52$($0.39$)  &$-1.36^{+2.56}_{-2.56}$ & $2.56$($3.05^{+1.38}_{-0.85}$) & $-0.48$($0.69$) &$-0.66^{+1.38}_{-1.38}$\\
-$t_h\tlhad$-3j                  &$2.78$($2.79^{+1.36}_{-0.78}$) &$-0.04$($0.76$)  &$-0.04^{+1.26}_{-1.26}$ & $2.07$($2.09^{+0.94}_{-0.58}$) & $-0.05$($0.98$) &$-0.04^{+0.98}_{-0.98}$\\
-$t_l\thadhad$                   &$1.41$($0.63^{+0.29}_{-0.18}$) &$2.64$($3.24$)   &$0.74^{+0.34}_{-0.34}$  & $1.01$($0.45^{+0.21}_{-0.13}$) & $2.64$($4.08$)  &$0.53^{+0.25}_{-0.25}$\\ \midrule
-Leptonic Combination            &$1.29$($0.59^{+0.27}_{-0.17}$) &$2.59$($3.34$)   &$0.68^{+0.32}_{-0.32}$  & $0.92$($0.42^{+0.19}_{-0.12}$) & $2.59$($4.23$)  &$0.48^{+0.23}_{-0.23}$\\
+$t_l\tauhad$-2j                 &$4.77$($4.23^{+1.72}_{-1.18}$) &$0.41$($0.47$)   &$0.85^{+2.06}_{-2.06}$  & $3.84$($3.48^{+1.42}_{-0.97}$) & $0.36$($0.58$)  &$0.61^{+1.68}_{-1.68}$\\
+$t_l\tauhad$-1j                 &$3.80$($3.56^{+1.51}_{-0.99}$) &$0.22$($0.58$)   &$0.36^{+1.70}_{-1.70}$  & $2.98$($2.78^{+1.17}_{-0.78}$) & $0.22$($0.73$)  &$0.29^{+1.33}_{-1.33}$\\
+$t_h\tlhad$-2j                  &$4.71$($5.71^{+2.68}_{-1.60}$) &$-0.52$($0.38$)  &$-1.36^{+2.56}_{-2.56}$ & $2.50$($2.97^{+1.25}_{-0.83}$) & $-0.47$($0.70$) &$-0.66^{+1.38}_{-1.38}$\\
+$t_h\tlhad$-3j                  &$2.71$($2.71^{+1.25}_{-0.76}$) &$-0.03$($0.77$)  &$-0.03^{+1.26}_{-1.26}$ & $2.02$($2.03^{+0.86}_{-0.57}$) & $-0.05$($0.99$) &$-0.03^{+0.98}_{-0.98}$\\
+$t_l\thadhad$                   &$1.35$($0.61^{+0.27}_{-0.17}$) &$2.64$($3.31$)   &$0.74^{+0.33}_{-0.33}$  & $0.97$($0.44^{+0.19}_{-0.12}$) & $2.64$($4.38$)  &$0.53^{+0.24}_{-0.24}$\\ \midrule
+Leptonic Combination            &$1.25$($0.58^{+0.25}_{-0.16}$) &$2.61$($3.46$)   &$0.69^{+0.31}_{-0.31}$  & $0.88$($0.41^{+0.18}_{-0.11}$) & $2.60$($4.62$)  &$0.49^{+0.22}_{-0.22}$\\
 \midrule
-Combination                     &$0.99$ ($0.50^{+0.22}_{-0.14}$)&$2.34$($3.69$)   &$0.51^{+0.25}_{-0.25}$ & $0.72$ ($0.36^{+0.17}_{-0.10}$)& $2.31$($4.49$)&$0.37^{+0.18}_{-0.18}$  \\
+Combination                     &$0.94$($0.48^{+0.20}_{-0.14}$)&$2.34$($4.02$)   &$0.51^{+0.24}_{-0.24}$ & $0.69$($0.35^{+0.15}_{-0.10}$)& $2.31$($5.18$)&$0.37^{+0.18}_{-0.18}$  \\
 \bottomrule\bottomrule
 \end{tabular}
 }
 \DIFaddendFL \label{tab:limits_summary}
 \end{center}
 \end{table}
-%%%%%%%%%%%%%%%
-
-
-
+%DIF < %%%%%%%%%%%%%%
 
 
 
@@ -2267,17 +2402,92 @@ denoted by $\pm 1\sigma$ and $\pm 2\sigma$, respectively.}}
 
 
 
-\FloatBarrier
+%DIF > \begin{table}
+%DIF > \caption{ Summary of fake tau scale factors derived in ttCRs. The numbers are shown as: nominal values,statistical errors and systematics erros. }
+%DIF > \begin{center}
+%DIF > \begin{tabular}{lcccccc}
+%DIF > \toprule\toprule
+%DIF > 
+%DIF > \multirow{2}{*}{Fake Factor Types} & \multicolumn{3}{c}{1 prong}                                                        & \multicolumn{3}{c}{3 prong}  \\
+%DIF >                                 &  $25-35$ GeV  & $35-45$ GeV  &  $45-$ GeV                                             &  $25-35$ GeV  & $35-45$ GeV       &  $45-$ GeV  \\
+%DIF > \midrule
+%DIF > Type-1                          &$0.71 \pm 0.01 \pm 0.03 $ &$0.61 \pm 0.02 \pm 0.04 $ &$0.38 \pm 0.02 \pm 0.05 $        & $1.01 \pm 0.03 \pm 0.04 $ & $1.09 \pm 0.04 \pm 0.05 $ & $0.30 \pm 0.05 \pm 0.07 $ \\
+%DIF > % W fake OS       
+%DIF > Type-2                          &$0.76 \pm 0.06 \pm 0.04 $ & $0.37 \pm 0.08 \pm 0.02$ & $0.74 \pm 0.08 \pm 0.02 $       & $0.93 \pm 0.10 \pm 0.04 $ & $1.05 \pm 0.09 \pm 0.03 $ & $0.79 \pm 0.09 \pm 0.04 $ \\
+%DIF > % W fake SS          
+%DIF > Type-3                          &$0.62 \pm 0.10 \pm 0.03 $ &$0.83 \pm 0.09 \pm 0.03 $ &$0.94 \pm 0.07 \pm 0.02 $        & $1.07 \pm 0.13 \pm 0.03 $ &$1.39 \pm 0.12 \pm 0.03 $ &$1.26 \pm 0.10 \pm 0.04 $  \\
+%DIF > %  b fake       
+%DIF > Type-4                          &$1.20 \pm 0.02 \pm 0.01 $ & $1.01 \pm 0.04 \pm 0.02 $ &$0.76 \pm 0.03 \pm 0.03 $       &$1.28 \pm 0.07 \pm 0.02 $ &$0.66 \pm 0.08 \pm 0.01 $ & $0.71 \pm 0.07 \pm 0.02 $ \\
+%DIF > % other fake
+%DIF > \bottomrule\bottomrule
+%DIF > \end{tabular}
+%DIF > \label{tab:ff_summary}
+%DIF > \end{center}
+%DIF > \end{table}
+\DIFaddbegin 
+
+
+\begin{table}
+\caption{ \DIFaddFL{Summary of fake tau (1-prong) scale factors derived in ttCRs. The numbers are shown as: nominal values,statistical errors and systematics erros. }}
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule\toprule
+
+\multirow{2}{*}{Fake Factor Types} & \multicolumn{3}{c}{1 prong}  \\                                                
+                                   &  \DIFaddFL{$25-35$ GeV  }& \DIFaddFL{$35-45$ GeV  }&  \DIFaddFL{$45-$ GeV            }\\                           
+\midrule
+\DIFaddFL{Type-1                          }&\DIFaddFL{$0.71 \pm 0.01 \pm 0.03 $ }&\DIFaddFL{$0.61 \pm 0.02 \pm 0.04 $ }&\DIFaddFL{$0.38 \pm 0.02 \pm 0.05 $  }\\
+%DIF >  W fake OS       
+\DIFaddFL{Type-2                          }&\DIFaddFL{$0.76 \pm 0.06 \pm 0.04 $ }& \DIFaddFL{$0.37 \pm 0.08 \pm 0.02$ }& \DIFaddFL{$0.74 \pm 0.08 \pm 0.02 $ }\\
+%DIF >  W fake SS          
+\DIFaddFL{Type-3                          }&\DIFaddFL{$0.62 \pm 0.10 \pm 0.03 $ }&\DIFaddFL{$0.83 \pm 0.09 \pm 0.03 $ }&\DIFaddFL{$0.94 \pm 0.07 \pm 0.02 $  }\\
+%DIF >   b fake       
+\DIFaddFL{Type-4                          }&\DIFaddFL{$1.20 \pm 0.02 \pm 0.01 $ }& \DIFaddFL{$1.01 \pm 0.04 \pm 0.02 $ }&\DIFaddFL{$0.76 \pm 0.03 \pm 0.03 $  }\\
+%DIF >  other fake
+\bottomrule\bottomrule
+\end{tabular}
+\label{tab:ff1_summary}
+\end{center}
+\end{table}
+
+
+\begin{table}
+\caption{ \DIFaddFL{Summary of fake tau (3-prong) scale factors derived in ttCRs. The numbers are shown as: nominal values,statistical errors and systematics erros. }}
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule\toprule
+
+\multirow{2}{*}{Fake Factor Types}        & \multicolumn{3}{c}{3 prong}  \\
+                                          &  \DIFaddFL{$25-35$ GeV  }& \DIFaddFL{$35-45$ GeV       }&  \DIFaddFL{$45-$ GeV  }\\
+\midrule
+\DIFaddFL{Type-1                                    }& \DIFaddFL{$1.01 \pm 0.03 \pm 0.04 $ }& \DIFaddFL{$1.09 \pm 0.04 \pm 0.05 $ }& \DIFaddFL{$0.30 \pm 0.05 \pm 0.07 $ }\\
+%DIF >  W fake OS       
+\DIFaddFL{Type-2                                    }& \DIFaddFL{$0.93 \pm 0.10 \pm 0.04 $ }& \DIFaddFL{$1.05 \pm 0.09 \pm 0.03 $ }& \DIFaddFL{$0.79 \pm 0.09 \pm 0.04 $ }\\
+%DIF >  W fake SS          
+\DIFaddFL{Type-3                                    }& \DIFaddFL{$1.07 \pm 0.13 \pm 0.03 $ }&\DIFaddFL{$1.39 \pm 0.12 \pm 0.03 $ }&\DIFaddFL{$1.26 \pm 0.10 \pm 0.04 $  }\\
+%DIF >   b fake       
+\DIFaddFL{Type-4                                    }&\DIFaddFL{$1.28 \pm 0.07 \pm 0.02 $ }&\DIFaddFL{$0.66 \pm 0.08 \pm 0.01 $ }& \DIFaddFL{$0.71 \pm 0.07 \pm 0.02 $ }\\
+%DIF >  other fake
+\bottomrule\bottomrule
+\end{tabular}
+\label{tab:ff2_summary}
+\end{center}
+\end{table}
+
+
+
+
+\DIFaddend \FloatBarrier
 
 % Conclusion
 %-------------------------------------------------------------------------------
 \section{Conclusion}
 \label{sec:conclusion}
 %-------------------------------------------------------------------------------
-A search for flavour-changing neutral current processes involving a top quark, an up-type quark ($q=u, c$), and a SM Higgs boson is presented. FCNC $tqH$ interaction is searched for both in \DIFaddbegin \DIFadd{the }\DIFaddend $t\bar{t}$ decay mode, where one top quark decays according to the SM processes and the other one decays through $t\rightarrow Hq$, and in \DIFaddbegin \DIFadd{the }\DIFaddend production mode ($pp\rightarrow tH$) with a single top quark produced via FCNC interaction where $t\to Wb$. The search is based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ recorded with the ATLAS detector at the CERN Large Hadron Collider and corresponding to an integrated luminosity of 139 fb$^{-1}$. The search selects events with two hadronically decaying $\tau$-lepton candidates ($\tauhad$) or at least one $\tauhad$ with an additional lepton (e,$\mu$), a $b$-jet as well as multiple jets. Multivariate techniques based on BDT are used to distinguish the signal from the background on the basis of their different kinematics.
+A search for flavour-changing neutral current processes involving a top quark, an up-type quark ($q=u, c$), and a SM Higgs boson is presented. FCNC $tqH$ interaction is searched for both in \DIFaddbegin \DIFadd{the }\DIFaddend $t\bar{t}$ decay mode, where one top quark decays according to the SM processes and the other one decays through \DIFdelbegin \DIFdel{$t\rightarrow Hq$}\DIFdelend \DIFaddbegin \DIFadd{$t\rightarrow qH$}\DIFaddend , and in \DIFaddbegin \DIFadd{the }\DIFaddend production mode ($pp\rightarrow tH$) with a single top quark produced via FCNC interaction where $t\to Wb$. The search is based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ recorded with the ATLAS detector at the CERN Large Hadron Collider and corresponding to an integrated luminosity of 139 fb$^{-1}$. The search selects events with two hadronically decaying $\tau$-lepton candidates ($\tauhad$) or at least one $\tauhad$ with an additional lepton (e,$\mu$), a $b$-jet as well as multiple jets. Multivariate techniques based on BDT are used to distinguish the signal from the background on the basis of their different kinematics.
 %The search sensitivities have been improved significantly compared to the previous analysis using 36$^{-1}$ of run-2 data~\cite{Aaboud2019SearchFT}. No significant excess of events above the background expectation is found.
 A slight excess of data is observed above background with a significance of 2.3$\sigma$.  
-95\% CL upper limits are set on the $t\to Hq$ branching ratios and the corresponding
+95\% CL upper limits are set on the \DIFdelbegin \DIFdel{$t\to Hq$ }\DIFdelend \DIFaddbegin \DIFadd{$t\to qH$ }\DIFaddend branching ratios and the corresponding
 dimension-6 operator Wilson coefficients in the effective $tqH$ couplings. 
 %about a factor of 2 improvement to 95\% CL upper limits on the $t\to Hq$ branching ratios are reported in Table~\ref{tab:limits_summary}, along with the Wilson coefficients with respect to the previous partial run-2 results~\cite{Aaboud2019SearchFT}.
 Observed (expected) 95\% CL upper limits are set on the $t\to cH$ and $t\to uH$ branching ratios of $9.9\times10^{-4}$ ($5.0^{+2.2}_{-1.4}\times10^{-4}$) and $7.2\times10^{-4}$ ($3.6^{+1.7}_{-1.0}\times10^{-4}$).
@@ -2285,29 +2495,45 @@ Observed (expected) 95\% CL upper limits are set on the $t\to cH$ and $t\to uH$ 
 The corresponding combined observed (expected) upper limits on the dimension-6 operator Wilson coefficients in
 the effective $tqH$ couplings for a new physics scale $\Lambda$ of 1~TeV are $C_{c\phi} <1.38\, (0.97)$ and $C_{u\phi} <1.18\, (0.83)$, respectively.
 %DIF > These results improve significantly upon previous ATLAS and CMS limits on the $t\rightarrow Hq$ branching ratios.
-These results improve significantly \DIFdelbegin \DIFdel{upon previous ATLAS and CMS limits on the }\DIFdelend \DIFaddbegin \DIFadd{previously published ATLAS studies in this channel and provide more stringent limit than the ATLAS  }\DIFaddend $t\rightarrow Hq$ \DIFdelbegin \DIFdel{branching ratios}\DIFdelend \DIFaddbegin \DIFadd{combination~\mbox{%DIFAUXCMD
+These results improve significantly \DIFdelbegin \DIFdel{upon previous ATLAS and CMS limits on the $t\rightarrow Hq$ branching ratios.
+}\DIFdelend \DIFaddbegin \DIFadd{previously published ATLAS studies in this channel and provide more stringent limit than the ATLAS  $t\rightarrow qH$ combination~\mbox{%DIFAUXCMD
 \cite{fcnc36}}\hspace{0pt}%DIFAUXCMD
-}\DIFaddend .
+.
+}\DIFaddend 
 
 
 %-------------------------------------------------------------------------------
-\section*{Acknowledgements}
+\DIFdelbegin \section*{\DIFdel{Acknowledgements}}
+%DIFAUXCMD
+\DIFdelend %DIF > \section*{Acknowledgements}
 %-------------------------------------------------------------------------------
-% Acknowledgements for papers with collision data
-% Version 24-Oct-2018
+%DIF <  Acknowledgements for papers with collision data
+%DIF <  Version 24-Oct-2018
+\DIFdelbegin %DIFDELCMD < 
 
-% Standard acknowledgements start here
-%----------------------------------------------
-We thank CERN for the very successful operation of the LHC, as well as the
+%DIFDELCMD < %%%
+%DIF <  Standard acknowledgements start here
+%DIF < ----------------------------------------------
+\DIFdel{We thank CERN for the very successful operation of the LHC, as well as the
 support staff from our institutions without whom ATLAS could not be
 operated efficiently.
+}%DIFDELCMD < 
 
-We acknowledge the support of ANPCyT, Argentina; YerPhI, Armenia; ARC, Australia; BMWFW and FWF, Austria; ANAS, Azerbaijan; SSTC, Belarus; CNPq and FAPESP, Brazil; NSERC, NRC and CFI, Canada; CERN; CONICYT, Chile; CAS, MOST and NSFC, China; COLCIENCIAS, Colombia; MSMT CR, MPO CR and VSC CR, Czech Republic; DNRF and DNSRC, Denmark; IN2P3-CNRS, CEA-DRF/IRFU, France; SRNSFG, Georgia; BMBF, HGF, and MPG, Germany; GSRT, Greece; RGC, Hong Kong SAR, China; ISF and Benoziyo Center, Israel; INFN, Italy; MEXT and JSPS, Japan; CNRST, Morocco; NWO, Netherlands; RCN, Norway; MNiSW and NCN, Poland; FCT, Portugal; MNE/IFA, Romania; MES of Russia and NRC KI, Russian Federation; JINR; MESTD, Serbia; MSSR, Slovakia; ARRS and MIZ\v{S}, Slovenia; DST/NRF, South Africa; MINECO, Spain; SRC and Wallenberg Foundation, Sweden; SERI, SNSF and Cantons of Bern and Geneva, Switzerland; MOST, Taiwan; TAEK, Turkey; STFC, United Kingdom; DOE and NSF, United States of America. In addition, individual groups and members have received support from BCKDF, CANARIE, CRC and Compute Canada, Canada; COST, ERC, ERDF, Horizon 2020, and Marie Sk{\l}odowska-Curie Actions, European Union; Investissements d' Avenir Labex and Idex, ANR, France; DFG and AvH Foundation, Germany; Herakleitos, Thales and Aristeia programmes co-financed by EU-ESF and the Greek NSRF, Greece; BSF-NSF and GIF, Israel; CERCA Programme Generalitat de Catalunya, Spain; The Royal Society and Leverhulme Trust, United Kingdom. 
+%DIFDELCMD < %%%
+\DIFdel{We acknowledge the support of ANPCyT, Argentina; YerPhI, Armenia; ARC, Australia; BMWFW and FWF, Austria; ANAS, Azerbaijan; SSTC, Belarus; CNPq and FAPESP, Brazil; NSERC, NRC and CFI, Canada; CERN; CONICYT, Chile; CAS, MOST and NSFC, China; COLCIENCIAS, Colombia; MSMT CR, MPO CR and VSC CR, Czech Republic; DNRF and DNSRC, Denmark; IN2P3-CNRS, CEA-DRF/IRFU, France; SRNSFG, Georgia; BMBF, HGF, and MPG, Germany; GSRT, Greece; RGC, Hong Kong SAR, China; ISF and Benoziyo Center, Israel; INFN, Italy; MEXT and JSPS, Japan; CNRST, Morocco; NWO, Netherlands; RCN, Norway; MNiSW and NCN, Poland; FCT, Portugal; MNE/IFA, Romania; MES of Russia and NRC KI, Russian Federation; JINR; MESTD, Serbia; MSSR, Slovakia; ARRS and MIZ\v{S}, Slovenia; DST/NRF, South Africa; MINECO, Spain; SRC and Wallenberg Foundation, Sweden; SERI, SNSF and Cantons of Bern and Geneva, Switzerland; MOST, Taiwan; TAEK, Turkey; STFC, United Kingdom; DOE and NSF, United States of America. In addition, individual groups and members have received support from BCKDF, CANARIE, CRC and Compute Canada, Canada; COST, ERC, ERDF, Horizon 2020, and Marie Sk}%DIFDELCMD < {%%%
+\DIFdel{\l}%DIFDELCMD < }%%%
+\DIFdel{odowska-Curie Actions, European Union; Investissements d' Avenir Labex and Idex, ANR, France; DFG and AvH Foundation, Germany; Herakleitos, Thales and Aristeia programmes co-financed by EU-ESF and the Greek NSRF, Greece; BSF-NSF and GIF, Israel; CERCA Programme Generalitat de Catalunya, Spain; The Royal Society and Leverhulme Trust, United Kingdom. 
+}%DIFDELCMD < 
 
-The crucial computing support from all WLCG partners is acknowledged gratefully, in particular from CERN, the ATLAS Tier-1 facilities at TRIUMF (Canada), NDGF (Denmark, Norway, Sweden), CC-IN2P3 (France), KIT/GridKA (Germany), INFN-CNAF (Italy), NL-T1 (Netherlands), PIC (Spain), ASGC (Taiwan), RAL (UK) and BNL (USA), the Tier-2 facilities worldwide and large non-WLCG resource providers. Major contributors of computing resources are listed in Ref.~\cite{ATL-GEN-PUB-2016-002}.
-%----------------------------------------------
+%DIFDELCMD < %%%
+\DIFdel{The crucial computing support from all WLCG partners is acknowledged gratefully, in particular from CERN, the ATLAS Tier-1 facilities at TRIUMF (Canada), NDGF (Denmark, Norway, Sweden), CC-IN2P3 (France), KIT/GridKA (Germany), INFN-CNAF (Italy), NL-T1 (Netherlands), PIC (Spain), ASGC (Taiwan), RAL (UK) and BNL (USA), the Tier-2 facilities worldwide and large non-WLCG resource providers. Major contributors of computing resources are listed in Ref.~\mbox{%DIFAUXCMD
+\cite{ATL-GEN-PUB-2016-002}}\hspace{0pt}%DIFAUXCMD
+.
+%DIF < ----------------------------------------------
+}%DIFDELCMD < 
 
-
+%DIFDELCMD < %%%
+\DIFdelend %DIF > \input{acknowledgements/Acknowledgements}
 %The \texttt{atlaslatex} package contains the acknowledgements that were valid
 %at the time of the release you are using.
 %These can be found in the \texttt{acknowledgements} subdirectory.
