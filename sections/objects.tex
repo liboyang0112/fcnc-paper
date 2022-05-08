@@ -40,7 +40,7 @@ direction of the electron (muon). The electron (muon) candidates are required to
 $I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$ ($\ell=e$ or $\mu$).
 
 Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based on a trained isolation boosted decision tree \texttt{PromptLeptonVeto}(PLIV), which is used to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged particle tracks inside the jet can be
-used to increase the accuracy for identifying the displaced decay vertex of heavy flavour (b, c) hadrons that produced non-prompt leptons.
+used to increase the accuracy for identifying the displaced decay vertex of heavy flavour ($b$, $c$) hadrons that produced non-prompt leptons.
 The tight working points are used for high $\pt$ lepton ($>20~\GeV$).
 The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method
 with $Z\rightarrow \ell^+\ell^-$ events. These scale factors have also been checked for the electron or muon from the tau decay
@@ -67,7 +67,7 @@ a particle-flow algorithm~\cite{Aad:2017epj77}. %newref Eur. Phys. J. C 77 (2017
 The reconstructed jets are then calibrated to the particle level by the application of a jet energy scale 
 derived from simulation and in situ corrections based on $\sqrt{s}=13~\tev$ data~\cite{Aaboud:2017jcu}. %(TBD: check PFlow jets description)
 The calibrated jets used are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$.
-Jet four-momenta are corrected for pile-up effects using the jet-area method~\cite{Cacciari:2008gn}.
+The four-momentum of the jets is corrected for pile-up effects using the jet-area method~\cite{Cacciari:2008gn}.
 
 Quality criteria are imposed to reject events that contain any jets arising from non-collision sources
 or detector noise~\cite{ATLAS-CONF-2015-029}.  To reduce the contamination due to jets originating from pile-up interactions,
@@ -97,7 +97,8 @@ working point for the nominal selection.
 The medium working point has a combined reconstruction and identification efficiency of 75\% (60\%) for one-prong (three-prong) $\had$ 
 decays, and an expected rejection factor against light-jets of 35 (240)~\cite{ATL-PHYS-PUB-2019-033}. 
 Electrons that are reconstructed as one-prong $\had$ candidates are removed via a BDT trained to reject electrons.
-Events with a $b$-tagged $\had$ candidate are rejected.
+Events are rejected if the jet seeding the $\had$ candidate is $b$-tagged.
+%Events with a $b$-tagged  $\had$ candidate are rejected.
 %(TBD: check RNN description and update then numbers)
 %Overlaps between candidate objects are removed sequentially, following this order: muons, electrons,
 %$\tauhad$ (only for the $\Htautau$ search), and jets. In the $\Hbb$ search, firstly, electron candidates that lie 
