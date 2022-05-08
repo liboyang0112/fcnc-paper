@@ -40,7 +40,7 @@ lowest (n). Variables whose ranking is missing are not included in the training 
  $\Delta R(\tau1,\text{$b$-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$          &  &        \\
  $\Delta R(\ell+\text{$b$-jet},\tau\tau )$             &   &             &           &  & $7$           &  &         \\
  $\Delta R(\tau1,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
- \text{min}($m_{jj}$) &   &  $12$               &           & $11$     &       &  &         \\
+ \text{min}($m_{\text{jj}}$) &   &  $12$               &           & $11$     &       &  &         \\
 % $m_{\text{W}}$                                      & $\times$  &  $\times$           &  $\times$         & $9$      & $\times$      & $6$      & $7$\\
 % $\chi^{2}$                                          & $\times$  &  $\times$           &  $\times$         & $14$     & $\times$      & $\times$ & $\times$      \\
 % \text{max}($\eta_{\tau}$)                           & $4$       &  $\times$           &  $4$              & $\times$ & $10$          & $\times$ & $\times$       \\
@@ -108,7 +108,7 @@ The final BDT input variables in each SR and their importance ranking are listed
 \item ${\pt}_{\tau1} $ is the transverse momentum of the leading tau candidate.
 \item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
-\item $\chi^2$ of the kinematic fit of the momentum of the invisible decay products of the tau leptons.
+\item $\chi^2$ of the kinematic fit of the momentum of the invisible decay products of the tau leptons as defined in eq.~(\ref{eq:eq1}).
 \item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
 \begin{equation}
@@ -122,8 +122,8 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lep
 \item ${\pt}_{\tau\tau}$ is the visible $\pT$ of the di-tau system.
 \item $m_{\tau\tau,\text{q}}$ is the reconstructed visible mass of the FCNC-decaying top quark.
 \item $m_{\text{bjj}}$ is the invariant mass of the lepton and the $b$-jet, which reflects the visible top quark mass.
-\item \text{min}($m_{\tau\tau \text{j}}$) is the visible mass of the di-tau candidates (include leptonic tau) and the light-flavour jet, minimized by choosing different jet, reflects the invariant masss of the visible FCNC top decaying product, an alternative to variable $m_{\tau\tau\text{q}}$.
-\item \text{min}($m_{\text{jj}}$) is the invariant mass of two light-flavour jets, minimized by choosing different jets, reflects the invariant mass of the $W$ candidate.
+\item \text{min}($m_{\tau\tau \text{j}}$) is the minimum value of the visible mass of the di-tau candidates (include leptonic tau) and the light-flavour jet system, minimized by choosing different jet, reflecting the invariant masss of the visible FCNC top decaying products.
+\item \text{min}($m_{\text{jj}}$) is the minimum value of all the invariant mass of all the light-flavour jet pairs, reflecting the invariant mass of the $W$ boson candidate.
   %an alternative of $m_{\text{W}}$.
 \item $\met$ centrality is a measure of how central the $\met$ lies between the two tau candidates in the transverse plane, and is defined as
 \begin{eqnarray}
@@ -133,7 +133,7 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuth angle between the light-lep
 \end{array}
 \label{eq:eq3}
 \end{eqnarray}
-\item $E_{\tau\text{i}}/E_{\tau\text{i},\text{fit}}$ (\text{i}=1,2) is the momentum fraction carried by the visible decay products from the leading and subleading tau decays. It is based on the best-fit 4-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the tau energy since there is only a single neutrino in the final state.% which is evident in the excess around 1 in Figure \ref{fig:x12_fit}. 
+\item $E_{\tau\text{i}}/E_{\tau\text{i},\text{fit}}$ (\text{i}=1,2) is the momentum fraction carried by the visible decay products from the leading and subleading tau decays. It is based on the best-fit of the 4-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the tau energy since there is only a single neutrino in the final state.% which is evident in the excess around 1 in Figure \ref{fig:x12_fit}. 
 %\item $\Delta R(\ell+\text{b-jet},\tau\tau)$ is the angular distance between the lepton+$b$-jet and di-tau candidates.
 %\item $\Delta R(\ell,\text{b-jet})$ is the angular distance between the lepton and $b$-jet.
 %\item $\Delta R(\tau,\text{b-jet})$ is the angular distance between the tau candidate and $b$-jet. If there are two taus in the event, the leading one is selected for the calculation.
@@ -157,9 +157,9 @@ are shown in Figure~\ref{fig:taupt_prefit} and~\ref{fig:mtt}, respectively.
 %by a large factor normalized to the total number of events in the predicted
 %background for the shape comparison.   
 %corresponding to $\BR(t\to Hq)=0.2\%$ is also shown.
-The last bin of each plot contains the overflow entries.
-The bottom panel displays the ratio of data to the background (``Bkg'') prediction as discussed in section~\ref{sec:background_model}.
-The hashed area represents the total uncertainty of the background.
+%The last bin of each plot contains the overflow entries.
+%The bottom panel displays the ratio of data to the background (``Bkg'') prediction as discussed in section~\ref{sec:background_model}.
+%The hashed area represents the total uncertainty of the background.
 A good description of the data by the background model is observed in all cases.
 The final observable used to extract the signal contribution is the BDT distribution in each SR corresponding to either $tuH$ or $tcH$ signal.
 
@@ -190,7 +190,7 @@ The final observable used to extract the signal contribution is the BDT distribu
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
 \caption{Leading $\thad$ $\pt$  distributions obtained before the fit to data (``Pre-Fit'') showing 
-  the expected background and $tuH$ signals after applying fake factors in the following: $t_{\ell}\thadhad$ (a),
+  the expected background and $tuH$ signals after applying fake factors in the following regions: $t_{\ell}\thadhad$ (a),
  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$-SS  (f), $t_h\thadhad$-2j (g), $t_h\thadhad$-3j (h) and $t_h\thadhad$-3j SS (i).
  The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
  %The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
@@ -242,8 +242,8 @@ The lower panels show the data to prediction ratio.}
 (g) & (h) & (i)\\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{Visible invariant mass of di-tau system ($m_{\tau\tau}$) distributions obtained before the fit to data (``Pre-Fit'') showing 
-  the expected background and $tuH$ signals after applying fake factors in the following: $t_{\ell}\thadhad$ (a),
+\caption{Visible invariant mass of the di-tau system ($m_{\tau\tau}$) distributions obtained before the fit to data (``Pre-Fit'') showing 
+  the expected background and $tuH$ signals after applying fake factors in the following regions: $t_{\ell}\thadhad$ (a),
  $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$-SS (f), $t_h\thadhad$-2j (g), $t_h\thadhad$-3j (h) and $t_h\thadhad$-3j SS (i).
  The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
  %The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.

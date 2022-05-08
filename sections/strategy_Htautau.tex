@@ -3,7 +3,7 @@
 \label{sec:strategy_Htautau}
 %-------------------------------------------------------------------------------
 
-The analysis strategy adopted in this FCNC $\Htautau$ search is similar to the one used in Ref.~\cite{fcnc36,Chen:2015nta} but extended to more search channels.
+The analysis strategy adopted in this FCNC $\Htautau$ search is similar to the one used in Refs.~\cite{fcnc36,Chen:2015nta} but extended to more search channels.
 %\subsection{Event categorisation and kinematic reconstruction}
 %\label{sec:htautau_reco_cat}
 The $tt(qH)$ and $tH$ signal being probed are characterised by the presence of $\tau$-leptons from the decay of 
@@ -99,8 +99,19 @@ both $t_h$ and $H$ can be reconstructed.
 
 The four-momenta of the invisible decay products from the decay of the $\tau$-leptons 
 are estimated using a kinematic fit and assuming a collinear approximation for the tau decay products.
-The fit is done by minimising a $\chi^2$ function based on the Gaussian constraints on the Higgs boson mass and the
-measured $\met$ within their expected resolutions. The resolution on the Higgs boson mass is estimated to be $20~\gev$ from a fit of the mass
+The fit is done by minimising a $\chi^2$ function based on the Gaussian constraints on the Higgs boson mass ($m_{\text{H}}=125~\gev$) and the
+measured $E_{\text{x,y}}^{\text{miss}}$  within their expected resolutions ($\sigma_{E_{\text{x,y}}^{\text{miss}}}$), defined as
+\begin{eqnarray}
+\begin{array}{ll}
+\chi^2 =
+\left( \frac{m_{\tau\tau,\text{fit}} - m_{\text{H}}}{\sigma_{\tau\tau}} \right)^2 +
+\left( \frac{E_{\text{x,fit}}^{\text{miss}} - E_{\text{x}}^{\text{miss}}}{\sigma_{E_{\text{x}}^{\text{miss}}}} \right)^2
+  +\left( \frac{E_{\text{y,fit}}^{\text{miss}} - E_{\text{y}}^{\text{miss}}}{\sigma_{E_{\text{y}}^{\text{miss}}}} \right)^2.
+\end{array}
+\label{eq:eq1}
+\end{eqnarray}
+
+The resolution on the Higgs boson mass ($\sigma_{\tau\tau}$) is estimated to be $20~\gev$ from a fit of the mass
 distribution of the simulated  $tqH$ signal events, while the resolution on the measured $\met$ is parameterised as a linear function of 
 $\sqrt{\sum E_{\text{T}}}$, where $\sum E_{\text{T}}$ is the scalar sum of the $\pt$ of all physics objects contributing to the $\met$ reconstruction~\cite{Aaboud:2018tkc}.
 After the $\chi^2$ minimisation, the Higgs boson $\pt$ as well as the 
