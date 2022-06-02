@@ -31,20 +31,22 @@ Electron (muon) candidates are matched to the primary vertex by requiring that t
 satisfies $|d_0/\sigma(d_0)|<5\,(3)$, where $\sigma(d_0)$ is the measured uncertainty in $d_0$,
 and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_0 \sin\theta|<0.5$~mm.
 %To reduce the impact of the trigger efficiency uncertainty around the threshold, the leptons are required to have \pt 1~GeV above the threshold.
-To further reduce the background from non-prompt leptons, photon conversions and hadrons, lepton candidates are also required to be isolated 
-in the tracker and in the calorimeter.
-A track- and cluster-based lepton isolation criterion is defined by calculating the quantity $I_R = \sum \pt^{\textrm{trk}}$ and $E_R = \sum E^{\textrm{clst}}$, where
-the scalar sum includes all tracks and energy deposits (excluding the lepton candidate itself) within the cone defined by $\Delta R<0.2 (0.3)$ around the %axis
+To further reduce the background from non-prompt leptons mostly originating from heavy-flavour hadron decays, photon conversions and misidentified hadrons,
+lepton candidates are also required to be isolated in the tracker and in the calorimeter.
+A track- and cluster-based lepton isolation criterion is defined by calculating the quantities $I_R = \sum \pt^{\textrm{trk}}$ and $E_R = \sum E^{\textrm{clst}}$, where
+the scalar sum includes all tracks $\pt^{\textrm{trk}}$ and cluster energy deposits $E^{\textrm{clst}}$ (excluding the lepton candidate itself)
+within the cone defined by $\Delta R<0.2~(0.3)$ around the %axis
 direction of the electron (muon). The electron (muon) candidates are required to satisfy both
 %$I_R/\pt^l < 0.2~(0.3)$ and $E_R/\pt^l < 0.2~(0.3)$.
 $I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$ ($\ell=e$ or $\mu$).
 
-Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based on a trained isolation boosted decision tree \texttt{PromptLeptonVeto}(PLIV), which is used to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged particle tracks inside the jet can be
-used to increase the accuracy for identifying the displaced decay vertex of heavy flavour ($b$, $c$) hadrons that produced non-prompt leptons.
-The tight working points are used for high $\pt$ lepton ($>20~\GeV$).
-The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method
+Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based on a trained isolation boosted decision tree (BDT)
+\texttt{PromptLeptonVeto} (PLIV), which is used to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged particle tracks inside the jet can be
+used to increase the efficiency for identifying the displaced decay vertex of heavy flavour ($b$, $c$) hadrons that produced non-prompt leptons.
+The tight working points are used for high $\pt$ leptons ($>20~\GeV$).
+The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method~\cite{PERF-2016-01}
 with $Z\rightarrow \ell^+\ell^-$ events. These scale factors have also been checked for the electron or muon from the tau decay
-using $Z\rightarrow\tau\tau\rightarrow e\mu4\nu$ samples, which is consistent at 2\% level. To be conservative, an
+using $Z\rightarrow\tau\tau\rightarrow e\mu4\nu$ samples, which are consistent at the 2\% level. To be conservative, an
 additional uncertainty of $\pm 2\%$ is considered for the PLIV efficiency for the tau-lepton in the lepton+$\thad$ channels.
 %Additionally, the $\Htautau$ search requires leptons to
 %satisfy a calorimeter-based isolation criterion; a requirement is made on the sum of the transverse energy of
@@ -91,8 +93,8 @@ A Recurrent Neural Network (RNN)~\cite{Graves:2012SCI}
 %~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna}
 %A. Graves, Supervised Sequence Labelling with Recurrent Neural Networks, Studies in Computational Intelligence 385, Springer, 2012.
 using calorimeter- and tracking-based variables is used to identify $\had$ candidates and reject jet backgrounds.
-Three working points labelled loose, medium and tight are defined, and correspond to different $\had$ identification efficiency values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
-working point for the nominal selection.
+Three working points, labelled loose, medium and tight, are defined and correspond to different $\had$ identification efficiency values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
+working point for the $\had$ selection.
 %, while the loose working point is used for background estimation.
 The medium working point has a combined reconstruction and identification efficiency of 75\% (60\%) for one-prong (three-prong) $\had$ 
 decays, and an expected rejection factor against light-jets of 35 (240)~\cite{ATL-PHYS-PUB-2019-033}. 
@@ -126,17 +128,17 @@ within $\Delta R = 0.01$ of a muon candidate are removed to suppress contributio
 %and muon candidates are removed.
 Energy clusters from identified electrons are not excluded during jet reconstruction. 
 In order to avoid double-counting of electrons as jets, the closest jet whose axis is within ${\Delta}R = 0.2$ of an electron 
-is discarded if the jet is not $b$-tagged, otherwise the electron is removed.
+is discarded if the jet is not $b$-tagged; otherwise the electron is removed.
 If the electron is within ${\Delta}R = 0.4$ of the axis of any jet after this initial removal, the jet is retained and  the electron is removed.
 The overlap removal procedure between the remaining jet candidates and muon candidates is designed to remove those muons 
 that are likely to have arisen in the decay of hadrons and to retain the overlapping jet instead. 
 Jets and muons may also appear in close proximity when the jet results from high-$\pt$ muon bremsstrahlung, 
-and in such cases the jet should be removed and the muon retained. Such jets are characterised by having very 
+and in such cases the jet is removed and the muon retained. Such jets are characterised by having very 
 few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\textrm{jet}}) < 0.2$ are rejected
 if the jet is either $b$-tagged or has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
 The $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed.
 In order to avoid double-counting of $\tauhad$ as jets, the closest jet whose axis is
-within ${\Delta}R = 0.2$ of a $\tauhad$ is discarded if the jet is not $b$-tagged, otherwise the $\tauhad$ is removed. 
+within ${\Delta}R = 0.2$ of a $\tauhad$ is discarded if the jet is not $b$-tagged; otherwise the $\tauhad$ is removed. 
 % TEXT FROM BOYANG. NEED TO RECHECK WHAT WE HAVE ABOVE IS ACCURATE
 %In the $\Htautau$ search, the objects are removed with the following sequence: if two electrons have overlapping second-layer cluster, or shared tracks, the electron with lower $\pt$ is removed; $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed; if a muon sharing an ID track with an electron and the muon is calo-tagged, the muon is removed, otherwise the electron is removed; jets within a $\Delta R=0.2$ cone of an electron are removed; electrons within a $\Delta R=0.4$ cone of a jet are removed; when a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it has less than 3 tracks with $\pt>500$ MeV or has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]); muons within a $\Delta R=0.4$ cone of a jet are removed; jets within a $\Delta R=0.2$ cone of the leading $\tauhad$ ($\lephad$), or with the two leading $\tauhad$'s ($\hadhad$), are removed.
 
