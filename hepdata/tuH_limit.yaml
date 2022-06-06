@@ -1,0 +1,59 @@
+independent_variables:
+  - header:
+      name: process
+    values:
+      - value: leptonic 
+      - value: hadronic
+      - value: combination
+dependent_variables:
+  - header:
+      name: Expected limits, one standard deviation
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 0.41e-3
+        errors:
+          - asymerror: {plus: 0.18e-3, minus: -0.11e-3}
+      - value: 0.76e-3
+        errors:
+          - asymerror: {plus: 0.33e-3, minus: -0.21e-3}
+      - value: 0.35e-3
+        errors:
+          - asymerror: {plus: 0.15e-3, minus: -0.10e-3}
+  - header:
+      name: Expected limits, two standard deviations
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 0.41e-3
+        errors:
+          - asymerror: {plus: 0.42e-3, minus: -0.19e-3}
+      - value: 0.76e-3
+        errors:
+          - asymerror: {plus: 0.79e-3, minus: -0.35e-3}
+      - value: 0.35e-3
+        errors:
+          - asymerror: {plus: 0.35e-3, minus: -0.16e-3}
+  - header:
+      name: Observed limits
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 0.88e-3
+      - value: 0.76e-3
+      - value: 0.69e-3

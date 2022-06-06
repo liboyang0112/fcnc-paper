@@ -1,0 +1,155 @@
+independent_variables:
+  - header:
+      name: leading tau transverse momentum [GeV]
+    values:
+    - value: 25 - 35
+    - value: 35 - 45
+    - value: 45 - 55
+    - value: 55 - 65
+    - value: 65 - 75
+    - value: 75 - 85
+    - value: 85 - 95
+    - value: 95 - 105
+    - value: 105 - 115
+    - value: 115 - 125
+dependent_variables:
+  - header:
+      name: 'Fake' 
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 3667.88
+      - value: 1053.27
+      - value: 410.57
+      - value: 244.789
+      - value: 117.055
+      - value: 71.3469
+      - value: 40.3724
+      - value: 26.9955
+      - value: 21.1129
+      - value: 55.7026
+  - header:
+      name: 'Other MC'
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 25.0483
+      - value: 17.5069
+      - value: 10.6688
+      - value: 6.94459
+      - value: 5.26663
+      - value: 4.45457
+      - value: 2.56964
+      - value: 2.22325
+      - value: 1.7978
+      - value: 8.10333
+  - header:
+      name: '#bar{t}t'
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 101.246
+      - value: 60.2903
+      - value: 36.3838
+      - value: 22.9857
+      - value: 18.756
+      - value: 10.6754
+      - value: 8.77777
+      - value: 4.92255
+      - value: 3.88449
+      - value: 12.2184
+  - header:
+      name: Total
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 3794.17
+          errors:
+            - symerror: 445.449
+      - value: 1131.07
+          errors:
+            - symerror: 113.264
+      - value: 457.623
+          errors:
+            - symerror: 51.1246
+      - value: 274.719
+          errors:
+            - symerror: 31.9243
+      - value: 141.078
+          errors:
+            - symerror: 13.9345
+      - value: 86.4768
+          errors:
+            - symerror: 10.137
+      - value: 51.7198
+          errors:
+            - symerror: 6.61305
+      - value: 34.1413
+          errors:
+            - symerror: 5.20574
+      - value: 26.7952
+          errors:
+            - symerror: 4.91668
+      - value: 76.0244
+          errors:
+            - symerror: 13.4802
+  - header:
+      name: Data
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 3940
+      - value: 1212
+      - value: 509
+      - value: 272
+      - value: 167
+      - value: 74
+      - value: 58
+      - value: 28
+      - value: 29
+      - value: 64
+  - header: 
+      name: Signal scaled to Br=0.1% * 50
+  qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 349.274
+      - value: 311.918
+      - value: 262.275
+      - value: 210.344
+      - value: 169.365
+      - value: 126.024
+      - value: 97.6435
+      - value: 68.7083
+      - value: 52.3954
+      - value: 170.759

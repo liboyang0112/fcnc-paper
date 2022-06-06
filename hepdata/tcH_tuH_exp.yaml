@@ -1,0 +1,21 @@
+independent_variables:
+- header: {name: '$\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ (Expected)', units: '%'}
+  values:
+  - {value: 0}
+  - {value: 9.78523e-05}
+  - {value: 0.000211133}
+  - {value: 0.000342402}
+  - {value: 0.000499043}
+
+dependent_variables:
+- header: {name: '$\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ (Expected)', units: '%'}
+  qualifiers:
+  - {name: Limit, value: Expected}
+  - {name: SQRT(S), units: TeV, value: 13}
+  - {name: LUMINOSITY, units: 'fb$^{-1}$', value: 139}
+  values:
+  - {value: 0.000364968}
+  - {value: 0.000293557}
+  - {value: 0.000211133}
+  - {value: 0.000114134}
+  - {value: 0}

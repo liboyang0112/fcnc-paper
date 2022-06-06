@@ -1,0 +1,62 @@
+independent_variables:
+- header: {name: '$\C_{\mathrm{c\phi}}$ (Expected -2 std. dev.)'}
+  values:
+  - {value: 0      }
+  - {value: 0.165656}
+  - {value: 0.234273}
+  - {value: 0.286924}
+  - {value: 0.331312}
+  - {value: 0.370418}
+  - {value: 0.405772}
+  - {value: 0.438284}
+  - {value: 0.468545}
+  - {value: 0.496967}
+  - {value: 0.52385}
+  - {value: 0.549418}
+  - {value: 0.573848}
+  - {value: 0.59728}
+  - {value: 0.619827}
+  - {value: 0.641582}
+  - {value: 0.662623}
+  - {value: 0.683016}
+  - {value: 0.702818}
+  - {value: 0.722077}
+dependent_variables:
+- header: {name: '$\C_{\mathrm{u\phi}}$ (Expected -2 std. dev.)'}
+  qualifiers:
+  - {name: Limit, value: Expected}
+  - {name: SQRT(S), units: TeV, value: 13}
+  - {name: LUMINOSITY, units: 'fb$^{-1}$', value: 139}
+  values:
+  - {value: 0.617508}
+  - {value: 0.601179}
+  - {value: 0.584238}
+  - {value: 0.56679}
+  - {value: 0.548787}
+  - {value: 0.530174}
+  - {value: 0.510883}
+  - {value: 0.490834}
+  - {value: 0.469931}
+  - {value: 0.448054}
+  - {value: 0.425052}
+  - {value: 0.400732}
+  - {value: 0.374838}
+  - {value: 0.347016}
+  - {value: 0.31676}
+  - {value: 0.283292}
+  - {value: 0.245298}
+  - {value: 0.20022}
+  - {value: 0.141439}
+  - {value: 0}
+
+
+
+
+
+
+
+
+
+
+
+
