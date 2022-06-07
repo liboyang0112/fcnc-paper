@@ -1,0 +1,566 @@
+---
+additional_resources:
+  - {location: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/TOPQ-2018-22/", description: "web page with auxiliary material"}
+comment:
+  Search for flavour-changing neutral current interactions of the top quark and the Higgs boson in events with a pair of $\tau$-leptons in pp collisions at $\sqrt{s}=13~\tev$ with the ATLAS detector
+
+  A search for flavour-changing neutral current (FCNC) $tqH$ interactions involving a top quark, another up-type quark ($q=u, c$), and a
+  Standard Model (SM) Higgs boson decaying into a $\tau$-lepton pair ($H\rightarrow \tau^+\tau^-$) is presented.
+  The search is based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ that corresponds to an integrated luminosity of 139 fb$^{-1}$ recorded with the ATLAS detector at the 
+  Large Hadron Collider.
+  Two processes are considered,single top quark FCNC production in association with a Higgs boson ($pp\rightarrow tH$), and top quark pair production in
+  which one of top quarks decays into $Wb$ and the other decays into $qH$ through the FCNC interactions.
+  The search selects events with two hadronically decaying $\tau$-lepton candidates ($\tauhad$) or at least one $\tauhad$ 
+  with an additional lepton (e,$\mu$), as well as multiple jets. Event kinematics are used to separate signal from the background through a multivariate discriminant.  
+  A slight excess of data is observed with a significance of 2.3$\sigma$ above the expected SM background,
+  and 95\% CL upper limits on the $t\to qH$ branching ratios are derived.
+  Observed (expected) 95\% CL upper limits are set on the $t\to cH$ and $t\to uH$ branching ratios of $9.4 \times 10^{-4}\, (4.8^{+2.2}_{-1.4}\times 10^{-4})$
+  and $6.9\times 10^{-4}\, (3.5^{+1.5}_{-1.0}\times 10^{-4})$, respectively. 
+  The corresponding combined observed (expected) upper limits on the dimension-6 operator Wilson coefficients in
+  the effective $tqH$ couplings are $C_{c\phi} <1.35\, (0.97)$ and $C_{u\phi} <1.16\, (0.82)$, respectively.
+
+---
+additional_resources:
+- {description: Image file, location: reg1l2tau1bnj_os_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg1l2tau1bnj_os_pt_prefit.png}
+data_file: reg1l2tau1bnj_os_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the tlhadhad region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (a)
+name: Figure 1a
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b1j_ss_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b1j_ss_pt_prefit.png}
+data_file: reg1l1tau1b1j_ss_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the tlhad1j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (b)
+name: Figure 1b
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b2j_ss_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b2j_ss_pt_prefit.png}
+data_file: reg1l1tau1b2j_ss_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the tlhad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (c)
+name: Figure 1c
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b2j_os_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b2j_os_pt_prefit.png}
+data_file: reg1l1tau1b2j_os_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the thlephad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (d)
+name: Figure 1d
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b3j_os_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b3j_os_pt_prefit.png}
+data_file: reg1l1tau1b3j_os_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the thlephad3j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (e)
+name: Figure 1e
+---
+additional_resources:
+- {description: Image file, location: reg1l2tau1bnj_ss_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg1l2tau1bnj_ss_pt_prefit.png}
+data_file: reg1l2tau1bnj_ss_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the tlhadhadSS region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (f)
+name: Figure 1f
+---
+additional_resources:
+- {description: Image file, location: reg2mtau1b2jos_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg2mtau1b2jos_pt_prefit.png}
+data_file: reg2mtau1b2jos_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the thhadhad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (g)
+name: Figure 1g
+---
+additional_resources:
+- {description: Image file, location: reg2mtau1b3jos_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_rreg2mtau1b3jos_pt_prefit.png}
+data_file: reg2mtau1b3jos_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the thhadhad3j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (h)
+name: Figure 1h
+---
+additional_resources:
+- {description: Image file, location: reg2mtau1b3jss_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg2mtau1b3jss_pt_prefit.png}
+data_file: reg2mtau1b3jss_pt_prefit.yaml
+description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the thhadhad3jSS region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 1 (i)
+name: Figure 1i
+---
+additional_resources:
+- {description: Image file, location: reg1l2tau1bnj_os_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg1l2tau1bnj_os_BDT_post.png}
+data_file: reg1l2tau1bnj_os_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the tlhadhad region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (a)
+name: Figure 3a
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b1j_ss_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b1j_ss_BDT_post.png}
+data_file: reg1l1tau1b1j_ss_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the tlhad1j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (b)
+name: Figure 3b
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b2j_ss_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b2j_ss_BDT_post.png}
+data_file: reg1l1tau1b2j_ss_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the tlhad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (c)
+name: Figure 3c
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b2j_os_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b2j_os_BDT_post.png}
+data_file: reg1l1tau1b2j_os_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the thlephad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (d)
+name: Figure 3d
+---
+additional_resources:
+- {description: Image file, location: reg1l1tau1b3j_os_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg1l1tau1b3j_os_BDT_post.png}
+data_file: reg1l1tau1b3j_os_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the thlephad3j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (e)
+name: Figure 3e
+---
+additional_resources:
+- {description: Image file, location: reg1l2tau1bnj_ss_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg1l2tau1bnj_ss_BDT_post.png}
+data_file: reg1l2tau1bnj_ss_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the tlhadhadSS region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (f)
+name: Figure 3f
+---
+additional_resources:
+- {description: Image file, location: reg2mtau1b2jos_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg2mtau1b2jos_BDT_post.png}
+data_file: reg2mtau1b2jos_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the thhadhad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (g)
+name: Figure 3g
+---
+additional_resources:
+- {description: Image file, location: reg2mtau1b3jos_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_rreg2mtau1b3jos_BDT_post.png}
+data_file: reg2mtau1b3jos_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the thhadhad3j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (h)
+name: Figure 3h
+---
+additional_resources:
+- {description: Image file, location: reg2mtau1b3jss_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg2mtau1b3jss_BDT_post.png}
+data_file: reg2mtau1b3jss_BDT_post.yaml
+description: BDT output distributions obtained from a signal+background fit to the data in the thhadhad3jSS region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 3 (i)
+name: Figure 3i
+---
+additional_resources:
+- {description: Image file, location: tcH_limit.png}
+- {description: Thumbnail image file, location: thumb_tcH_limit.png}
+data_file: tcH_limit.yaml
+description: 95%CL upper limits on Br(tcH) for the individual searches as well as their combination. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 5 (a)
+name: Figure 5a
+---
+additional_resources:
+- {description: Image file, location: tuH_limit.png}
+- {description: Thumbnail image file, location: thumb_tuH_limit.png}
+data_file: tuH_limit.yaml
+description: 95%CL upper limits on Br(tuH) for the individual searches as well as their combination.  
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 5 (b)
+name: Figure 5b
+---
+additional_resources:
+- {description: Image file, location: tcH_tuH.png}
+- {description: Thumbnail image file, location: thumb_tcH_tuH.png}
+data_file: tcH_tuH_exp.yaml
+description: 'Expected upper limits on the branching fractions $\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ and $\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Branching fraction]
+location: Data from Figure 6 (a)
+name: 'Figure 6a (Branching fraction) - Expected'
+---
+additional_resources:
+- {description: Image file, location: tcH_tuH.png}
+- {description: Thumbnail image file, location: thumb_tcH_tuH.png}
+data_file: tcH_tuH_obs.yaml
+description: 'Observed upper limits on the branching fractions $\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ and $\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Branching fraction]
+location: Data from Figure 6 (a)
+name: 'Figure 6a (Branching fraction) - Observed'
+---
+additional_resources:
+- {description: Image file, location: tcH_tuH.png}
+- {description: Thumbnail image file, location: thumb_tcH_tuH.png}
+data_file: tcH_tuH_1up.yaml
+description: 'Expected +1 std. dev upper limits on the branching fractions $\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ and $\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Branching fraction]
+location: Data from Figure 6 (a)
+name: 'Figure 6a (Branching fraction) - Expected 1up'
+---
+additional_resources:
+- {description: Image file, location: tcH_tuH.png}
+- {description: Thumbnail image file, location: thumb_tcH_tuH.png}
+data_file: tcH_tuH_1down.yaml
+description: 'Expected -1 std. dev upper limits on the branching fractions $\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ and $\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Branching fraction]
+location: Data from Figure 6 (a)
+name: 'Figure 6a (Branching fraction) - Expected 1down'
+---
+additional_resources:
+- {description: Image file, location: tcH_tuH.png}
+- {description: Thumbnail image file, location: thumb_tcH_tuH.png}
+data_file: tcH_tuH_2up.yaml
+description: 'Expected +2 std. dev upper limits on the branching fractions $\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ and $\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Branching fraction]
+location: Data from Figure 6 (a)
+name: 'Figure 6a (Branching fraction) - Expected 2up' 
+---
+additional_resources:
+- {description: Image file, location: tcH_tuH.png}
+- {description: Thumbnail image file, location: thumb_tcH_tuH.png}
+data_file: tcH_tuH_2down.yaml
+description: 'Expected -2 std. dev upper limits on the branching fractions $\mathcal{B}(\mathrm{t}\to\mathrm{Hu})$ and $\mathcal{B}(\mathrm{t}\to\mathrm{Hc})$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Branching fraction]
+location: Data from Figure 6 (a)
+name: 'Figure 6a (Branching fraction) - Expected 2down'
+---
+additional_resources:
+- {description: Image file, location: Wilson.png}
+- {description: Thumbnail image file, location: thumb_Wilson.png}
+data_file: Wilson_exp.yaml
+description: 'Expected upper limits on the anomalous couplings $C_{\mathrm{c\phi}}$ and $\C_{\mathrm{u\phi}}$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Anomalous couplings]
+location: Data from Figure 6 (b)
+name: 'Figure 6b (Anomalous couplings) - Expected'
+---
+additional_resources:
+- {description: Image file, location: Wilson.png}
+- {description: Thumbnail image file, location: thumb_Wilson.png}
+data_file: Wilson_obs.yaml
+description: 'Observed upper limits on the anomalous couplings $C_{\mathrm{c\phi}}$ and $\C_{\mathrm{u\phi}}$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Anomalous couplings]
+location: Data from Figure 6 (b)
+name: 'Figure 6b (Anomalous couplings) - Observed'
+---
+additional_resources:
+- {description: Image file, location: Wilson.png}
+- {description: Thumbnail image file, location: thumb_Wilson.png}
+data_file: Wilson_1up.yaml
+description: 'Expected +1 std. dev upper limits on the anomalous couplings $C_{\mathrm{c\phi}}$ and $\C_{\mathrm{u\phi}}$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Anomalous couplings]
+location: Data from Figure 6 (b)
+name: 'Figure 6b (Anomalous couplings) - Expected 1up'
+---
+additional_resources:
+- {description: Image file, location: Wilson.png}
+- {description: Thumbnail image file, location: thumb_Wilson.png}
+data_file: Wilson_1down.yaml
+description: 'Expected -1 std. dev upper limits on the anomalous couplings $C_{\mathrm{c\phi}}$ and $\C_{\mathrm{u\phi}}$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Anomalous couplings]
+location: Data from Figure 6 (b)
+name: 'Figure 6b (Anomalous couplings) - Expected 1down'
+---
+additional_resources:
+- {description: Image file, location: Wilson.png}
+- {description: Thumbnail image file, location: thumb_Wilson.png}
+data_file: Wilson_2up.yaml
+description: 'Expected +2 std. dev upper limits on the anomalous couplings $C_{\mathrm{c\phi}}$ and $\C_{\mathrm{u\phi}}$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Anomalous couplings]
+location: Data from Figure 6 (b)
+name: 'Figure 6b (Anomalous couplings) - Expected 2up'
+---
+additional_resources:
+- {description: Image file, location: Wilson.png}
+- {description: Thumbnail image file, location: thumb_Wilson.png}
+data_file: Wilson_2down.yaml
+description: 'Expected -2 std. dev upper limits on the anomalous couplings $C_{\mathrm{c\phi}}$ and $\C_{\mathrm{u\phi}}$ at $95\%$ CL.'
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [Anomalous couplings]
+location: Data from Figure 6 (b)
+name: 'Figure 6b (Anomalous couplings) - Expected 2down'
+

@@ -2,14 +2,30 @@ independent_variables:
   - header:
       name: BDT Discriminant
     values:
-    - value: -1 - -0.4
-    - value: -0.4 - 0.1
-    - value: 0.1 - 0.3
-    - value: 0.3 - 0.5
-    - value: 0.5 - 0.65
-    - value: 0.65 - 0.75
-    - value: 0.75 - 0.85
-    - value: 0.85 - 1
+      - high: -0.4
+        low:  -1.0
+        value: -0.7
+      - high: 0.1
+        low:  -0.4
+        value: -0.15
+      - high: 0.3
+        low:  0.1
+        value: 0.2
+      - high: 0.5
+        low:  0.3
+        value: 0.4
+      - high: 0.65
+        low:  0.5
+        value: 0.575
+      - high: 0.75
+        low:  0.65
+        value: 0.7
+      - high: 0.85
+        low:  0.75
+        value: 0.8
+      - high: 1.0
+        low:  0.85
+        value: 0.925
 dependent_variables:
   - header:
       name: 'Fake' 
@@ -76,29 +92,29 @@ dependent_variables:
         value: 139
     values:
       - value: 182.79
-          errors:
-            - symerror: 22.8917
+        errors:
+          - symerror: 22.8917
       - value: 73.6469
-          errors:
-            - symerror: 7.22117
+        errors:
+          - symerror: 7.22117
       - value: 26.5302
-          errors:
-            - symerror: 2.60002
+        errors:
+          - symerror: 2.60002
       - value: 26.3619
-          errors:
-            - symerror: 3.12079
+        errors:
+          - symerror: 3.12079
       - value: 18.0964
-          errors:
-            - symerror: 1.97109
+        errors:
+          - symerror: 1.97109
       - value: 12.654
-          errors:
-            - symerror: 1.87951
+        errors:
+          - symerror: 1.87951
       - value: 7.28599
-          errors:
-            - symerror: 1.37122
+        errors:
+          - symerror: 1.37122
       - value: 4.16037
-          errors:
-            - symerror: 1.1785
+        errors:
+          - symerror: 1.1785
   - header:
       name: Data
     qualifiers:
@@ -119,7 +135,7 @@ dependent_variables:
       - value: 5
   - header: 
       name: Signal tuH scaled to Br=0.1% * 2
-  qualifiers:
+    qualifiers:
       - name: SQRT(s)
         units: GeV
         value: 13000
@@ -137,7 +153,7 @@ dependent_variables:
       - value: 10.5061
   - header: 
       name: Signal tuH decay scaled to Br=0.1% * 2
-  qualifiers:
+    qualifiers:
       - name: SQRT(s)
         units: GeV
         value: 13000
@@ -155,7 +171,7 @@ dependent_variables:
       - value: 7.5862
   - header: 
       name: Signal tuH production scaled to Br=0.1% * 2
-  qualifiers:
+    qualifiers:
       - name: SQRT(s)
         units: GeV
         value: 13000

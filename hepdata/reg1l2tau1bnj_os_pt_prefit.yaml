@@ -2,16 +2,36 @@ independent_variables:
   - header:
       name: leading tau transverse momentum [GeV]
     values:
-    - value: 25 - 35
-    - value: 35 - 45
-    - value: 45 - 55
-    - value: 55 - 65
-    - value: 65 - 75
-    - value: 75 - 85
-    - value: 85 - 95
-    - value: 95 - 105
-    - value: 105 - 115
-    - value: 115 - 125
+      - high: 35
+        low:  25
+        value: 30
+      - high: 45
+        low:  35
+        value: 40
+      - high: 55
+        low:  45
+        value: 50
+      - high: 65
+        low:  55
+        value: 60
+      - high: 75
+        low:  65
+        value: 70
+      - high: 85
+        low:  75
+        value: 80
+      - high: 95
+        low:  85
+        value: 90
+      - high: 105
+        low:  95
+        value: 100
+      - high: 115
+        low:  105
+        value: 110
+      - high: 125
+        low:  115
+        value: 120
 dependent_variables:
   - header:
       name: 'Fake' 
@@ -84,35 +104,35 @@ dependent_variables:
         value: 139
     values:
       - value: 67.1867
-          errors:
-            - symerror: 19.8309
+        errors:
+          - symerror: 19.8309
       - value: 88.6258
-          errors:
-            - symerror: 13.7019
+        errors:
+          - symerror: 13.7019
       - value: 62.4828
-          errors:
-            - symerror: 9.91419
+        errors:
+          - symerror: 9.91419
       - value: 36.2962
-          errors:
-            - symerror: 5.71959
+        errors:
+          - symerror: 5.71959
       - value: 26.3242
-          errors:
-            - symerror: 3.7916
+        errors:
+          - symerror: 3.7916
       - value: 17.3476
-          errors:
-            - symerror: 1.97466
+        errors:
+          - symerror: 1.97466
       - value: 12.3979
-          errors:
-            - symerror: 2.16934
+        errors:
+          - symerror: 2.16934
       - value: 8.91285
-          errors:
-            - symerror: 1.43438
+        errors:
+          - symerror: 1.43438
       - value: 6.10331
-          errors:
-            - symerror: 1.07362
+        errors:
+          - symerror: 1.07362
       - value: 22.7462
-          errors:
-            - symerror: 3.26534
+        errors:
+          - symerror: 3.26534
   - header:
       name: Data
     qualifiers:
@@ -135,7 +155,7 @@ dependent_variables:
       - value: 19
   - header: 
       name: Signal scaled to Br=0.1% * 2
-  qualifiers:
+    qualifiers:
       - name: SQRT(s)
         units: GeV
         value: 13000
