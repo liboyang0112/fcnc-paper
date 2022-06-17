@@ -1,0 +1,98 @@
+independent_variables:
+- header: {name: 'Signal Regions'}
+  values:
+    - { value: 'thhadhad-2j' }
+    - { value: 'thhadhad-3j' }
+    - { value: 'Hadronic Combination' }
+    - { value: 'tlhad-2j' }
+    - { value: 'tlhad-1j' }
+    - { value: 'thlephad-2j' }
+    - { value: 'thlephad-3j' }
+    - { value: 'tlhadhad' }
+    - { value: 'Leptonic Combination' }    
+    - { value: 'Combination' }
+dependent_variables:
+- header: {name: 'tcH upper limit'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+    - { value: '1.80(2.72+1.18-0.76)'}
+    - { value: '1.14(1.02+0.45-0.29)'}
+    - { value: '1.00(0.95+0.42-0.27)'}
+    - { value: '4.77(4.23+1.72-1.18)'}
+    - { value: '3.80(3.56+1.51-0.99)'}
+    - { value: '4.71(5.71+2.68-1.60)'}
+    - { value: '2.71(2.71+1.25-0.76)'}
+    - { value: '1.35(0.61+0.27-0.17)'}
+    - { value: '1.25(0.58+0.25-0.16)'}
+    - { value: '0.94(0.48+0.20-0.14)'}
+- header: {name: 'tcH significance'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+    - { value: '-0.96(0.78)'}
+    - { value: '0.34(1.87)'}
+    - { value: '0.26(1.99)'}
+    - { value: '0.41(0.47)'}
+    - { value: '0.22(0.58)'}
+    - { value: '-0.52(0.38)'}
+    - { value: '-0.03(0.77)'}
+    - { value: '2.64(3.31)'}
+    - { value: '2.61(3.46)'}
+    - { value: '2.34(4.02)'}
+- header: {name: 'Br(tcH)'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+    - { value: '-1.03+1.03-1.03'}
+    - { value: '0.16+0.47-0.47$'}
+    - { value: '0.11+0.43-0.43'}
+    - { value: '0.85+2.06-2.06'}
+    - { value: '0.36+1.70-1.70'}
+    - { value: '-1.36+2.56-2.56'}
+    - { value: '-0.03+1.26-1.26'}
+    - { value: '0.74+0.33-0.33'}
+    - { value: '0.69+0.31-0.31'}
+    - { value: '0.51+0.24-0.24'}
+- header: {name: 'tuH upper limit'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+    - { value: '$1.07(1.60+0.71-0.45)'}
+    - { value: '$0.97(0.86+0.38-0.24)'}
+    - { value: '$0.76(0.76+0.33-0.21)'}
+    - { value: '3.84(3.48+1.42-0.97)'}
+    - { value: '2.98(2.78+1.17-0.78)'}
+    - { value: '2.50(2.97+1.25-0.83)'}
+    - { value: '2.02(2.03+0.86-0.57)'}
+    - { value: '0.97(0.44+0.19-0.12)'}
+    - { value: '0.88(0.41+0.18-0.11)'}
+    - { value: '0.69(0.35+0.15-0.10)'}
+- header: {name: 'tuH significance'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+    - { value: '-0.90(1.31)'}
+    - { value: '0.36(2.25)'}
+    - { value: '0.12(2.52)'}
+    - { value: '0.36(0.58)'}
+    - { value: '0.22(0.73)'}
+    - { value: '-0.47(0.70)'}
+    - { value: '-0.05(0.99)'}
+    - { value: '2.64(4.38)'}
+    - { value: '2.60(4.62)'}
+    - { value: '2.31(5.18)'}
+- header: {name: 'Br(tuH)'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+    - { value: '-0.55+0.58-0.58'}
+    - { value: '0.14+0.40-0.40'}
+    - { value: '0.04+0.34-0.34'}
+    - { value: '0.61+1.68-1.68'}
+    - { value: '0.29+1.33-1.33'}
+    - { value: '-0.66+1.38-1.38'}
+    - { value: '-0.03+0.98-0.98'}
+    - { value: '0.53+0.24-0.24'}
+    - { value: '0.49+0.22-0.22'}
+    - { value: '0.37+0.18-0.18'}              

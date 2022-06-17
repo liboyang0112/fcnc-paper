@@ -1,22 +1,9 @@
-cp Wilson.png				             thumb_Wilson.png				                                        
-cp reg1l1tau1b2j_ss_BDT_post.png		 thumb_reg1l1tau1b2j_ss_BDT_post.png		                            
-cp reg1l2tau1bnj_os_pt_prefit.png		 thumb_reg1l2tau1bnj_os_pt_prefit.png		                            
-cp reg2mtau1b3jos_BDT_post.png		     thumb_reg2mtau1b3jos_BDT_post.png		                        
-cp tcH_tuH.png                           thumb_tcH_tuH.png  
-cp reg1l1tau1b1j_ss_BDT_post.png		 thumb_reg1l1tau1b1j_ss_BDT_post.png		                            
-cp reg1l1tau1b2j_ss_pt_prefit.png		 thumb_reg1l1tau1b2j_ss_pt_prefit.png		                            
-cp reg1l2tau1bnj_ss_BDT_post.png		 thumb_reg1l2tau1bnj_ss_BDT_post.png		                            
-cp reg2mtau1b3jos_pt_prefit.png		     thumb_reg2mtau1b3jos_pt_prefit.png		                                                 
-cp reg1l1tau1b1j_ss_pt_prefit.png		 thumb_reg1l1tau1b1j_ss_pt_prefit.png		                            
-cp reg1l1tau1b3j_os_BDT_post.png		 thumb_reg1l1tau1b3j_os_BDT_post.png		                            
-cp reg1l2tau1bnj_ss_pt_prefit.png		 thumb_reg1l2tau1bnj_ss_pt_prefit.png		                            
-cp reg2mtau1b3jss_BDT_post.png		     thumb_reg2mtau1b3jss_BDT_post.png		                        
-cp tuH_limit.png                         thumb_tuH_limit.png    
-cp reg1l1tau1b2j_os_BDT_post.png		 thumb_reg1l1tau1b2j_os_BDT_post.png		                            
-cp reg1l1tau1b3j_os_pt_prefit.png		 thumb_reg1l1tau1b3j_os_pt_prefit.png		                            
-cp reg2mtau1b2jos_BDT_post.png		     thumb_reg2mtau1b2jos_BDT_post.png		                        
-cp reg2mtau1b3jss_pt_prefit.png          thumb_reg2mtau1b3jss_pt_prefit.png                   
-cp reg1l1tau1b2j_os_pt_prefit.png		 thumb_reg1l1tau1b2j_os_pt_prefit.png		                            
-cp reg1l2tau1bnj_os_BDT_post.png		 thumb_reg1l2tau1bnj_os_BDT_post.png		                            
-cp reg2mtau1b2jos_pt_prefit.png		     thumb_reg2mtau1b2jos_pt_prefit.png		                        
-cp tcH_limit.png                         thumb_tcH_limit.png    
+ cp    thumb_tcH_reg1l1tau1b2j_os.png	tcH_reg1l1tau1b2j_os.png	
+ cp    thumb_tcH_reg1l1tau1b3j_os.png	tcH_reg1l1tau1b3j_os.png	
+ cp    thumb_tcH_reg1l2tau1bnj_ss.png	tcH_reg1l2tau1bnj_ss.png	
+ cp    thumb_tcH_reg2mtau1b3jos.png	    tcH_reg2mtau1b3jos.png	
+ cp    thumb_tcH_reg1l1tau1b1j_ss.png	tcH_reg1l1tau1b1j_ss.png	
+ cp    thumb_tcH_reg1l1tau1b2j_ss.png	tcH_reg1l1tau1b2j_ss.png	
+ cp    thumb_tcH_reg1l2tau1bnj_os.png	tcH_reg1l2tau1bnj_os.png	
+ cp    thumb_tcH_reg2mtau1b2jos.png	    tcH_reg2mtau1b2jos.png	
+ cp    thumb_tcH_reg2mtau1b3jss.png     tcH_reg2mtau1b3jss.png

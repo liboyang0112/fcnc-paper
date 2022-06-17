@@ -1,0 +1,189 @@
+independent_variables:
+  - header:
+      name: BDT Discriminant
+    values:
+      - high: -0.4
+        low:  -1.0
+        value: -0.7
+      - high: 0.1
+        low:  -0.4
+        value: -0.15
+      - high: 0.3
+        low:  0.1
+        value: 0.2
+      - high: 0.5
+        low:  0.3
+        value: 0.4
+      - high: 0.65
+        low:  0.5
+        value: 0.575
+      - high: 0.75
+        low:  0.65
+        value: 0.7
+      - high: 0.85
+        low:  0.75
+        value: 0.8
+      - high: 1.0
+        low:  0.85
+        value: 0.925
+dependent_variables:
+  - header:
+      name: 'Fake' 
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 3360.51
+      - value: 1476.42
+      - value: 320.191
+      - value: 281.892
+      - value: 174.545
+      - value: 118.721
+      - value: 61.8613
+      - value: 36.3302
+  - header:
+      name: 'Other MC'
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 27.2517
+      - value: 22.3445
+      - value: 6.73988
+      - value: 7.75226
+      - value: 6.24145
+      - value: 5.86938
+      - value: 3.39436
+      - value: 2.41651
+  - header:
+      name: '#bar{t}t'
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 82.663
+      - value: 78.4978
+      - value: 28.2363
+      - value: 23.9627
+      - value: 20.8676
+      - value: 20.7089
+      - value: 12.4701
+      - value: 10.117
+  - header:
+      name: Total
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 3472.02
+        errors:
+          - symerror: 136.067
+      - value: 1580.5
+        errors:
+        - symerror: 72.5441
+      - value: 356.859
+        errors:
+          - symerror: 16.2444
+      - value: 315.75
+        errors:
+          - symerror: 14.8365
+      - value: 203.761
+        errors:
+          - symerror: 10.4144
+      - value: 147.842
+        errors:
+          - symerror: 8.04603
+      - value: 79.9649
+        errors:
+          - symerror: 5.63522
+      - value: 51.4155
+        errors:
+          - symerror: 3.59318
+  - header:
+      name: Data
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 3465
+      - value: 1733
+      - value: 372
+      - value: 318
+      - value: 200
+      - value: 130
+      - value: 79
+      - value: 56
+  - header: 
+      name: Signal tcH scaled to Br=0.1% * 2
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 6.05471
+      - value: 11.2526
+      - value: 5.30394
+      - value: 7.57994
+      - value: 6.64327
+      - value: 8.21436
+      - value: 7.07459
+      - value: 8.023
+  - header: 
+      name: Signal tcH decay scaled to Br=0.1% * 2
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 5.79308
+      - value: 10.753
+      - value: 5.05958
+      - value: 7.28569
+      - value: 6.35618
+      - value: 7.87596
+      - value: 6.761
+      - value: 7.70873
+  - header: 
+      name: Signal tcH production scaled to Br=0.1% * 2
+    qualifiers:
+      - name: SQRT(s)
+        units: GeV
+        value: 13000
+      - name: LUMINOSITY
+        units: fb$^{-1}$
+        value: 139
+    values:
+      - value: 0.26163
+      - value: 0.499564
+      - value: 0.244355
+      - value: 0.29425
+      - value: 0.287094
+      - value: 0.338394
+      - value: 0.313597
+      - value: 0.314268

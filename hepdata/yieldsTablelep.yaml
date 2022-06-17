@@ -1,0 +1,121 @@
+independent_variables:
+- header: {name: 'Sample'}
+  values:
+    - { value: 'Double Fake' }
+    - { value: 'ttbarV' }
+    - { value: 'SM Higgs' }
+    - { value: 'Diboson' }
+    - { value: 'Other MC' }
+    - { value: 'Ztautau' }
+    - { value: 'Lep Fake' }
+    - { value: 'QCD Fake' }
+    - { value: 'b Fake' }
+    - { value: 'Wjet Fake' }
+    - { value: 'Other Fake' }
+    - { value: 'ttbar' }
+    - { value: 'Total Background' }
+    - { value: 'tcH' }
+    - { value: 'tuH' }
+    - { value: 'Data' }
+dependent_variables:
+- header: {name: 'tlhad-1j'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '--       ' }
+  - { value: '9.3+-1.2 ' }
+  - { value: '5.8+-0.8 ' }
+  - { value: '32.6+-3.4' }
+  - { value: '35.6+-3.1' }
+  - { value: '0+-6     ' }
+  - { value: '212+-30  ' }
+  - { value: '670+-200 ' }
+  - { value: '960+-140 ' }
+  - { value: '970+-200 ' }
+  - { value: '3020+-260' }
+  - { value: '281+-14  ' }
+  - { value: '6200+-170' }
+  - { value: '30+-5    ' }
+  - { value: '36+-8    ' }
+  - { value: '6353     ' }
+- header: {name: 'tlhad-2j'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '--       ' }
+  - { value: '22.6+-2.8' }
+  - { value: '13.7+-1.7' }
+  - { value: '19.9+-2.1' }
+  - { value: '15.9+-1.7' }
+  - { value: '9.1+-2.2 ' }
+  - { value: '80+-10   ' }
+  - { value: '310+-90  ' }
+  - { value: '1250+-230' }
+  - { value: '1090+-240' }
+  - { value: '2470+-160' }
+  - { value: '195+-24  ' }
+  - { value: '5480+-100' }
+  - { value: '27+-4    ' }
+  - { value: '32+-5    ' }
+  - { value: '5410    ' }
+- header: {name: 'thlephad-3j'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '--          ' }
+  - { value: '23.5+-3.0' }
+  - { value: '32.8+-3.5' }
+  - { value: '36+-4    ' }
+  - { value: '226+-21  ' }
+  - { value: '500+-60  ' }
+  - { value: '292+-26  ' }
+  - { value: '180+-70  ' }
+  - { value: '710+-140 ' }
+  - { value: '3300+-500' }
+  - { value: '1420+-220' }
+  - { value: '7100+-400' }
+  - { value: '13820+-140' }
+  - { value: '51+-8' }
+  - { value: '63+-10' }
+  - { value: '13804    ' }
+- header: {name: 'thlephad-2j'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '--'           }
+  - { value: '13.7+-1.7' }
+  - { value: '13.5+-2.5' }
+  - { value: '46+-5' }
+  - { value: '620+-40' }
+  - { value: '880+-90' }
+  - { value: '490+-70' }
+  - { value: '330+-110'   }
+  - { value: '710+-130'   }
+  - { value: '3800+-600'  }
+  - { value: '1320+-320'  }
+  - { value: '11800+-500' }
+  - { value: '20000+-170' }
+  - { value: '34+-6'      }
+  - { value: '45+-7'      }
+  - { value: '20000'      }
+- header: {name: 'tlhadhad'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '73+-24' }
+  - { value: '2.57+-0.35'}
+  - { value: '16.7+-1.9' }
+  - { value: '13.2+-1.4' }
+  - { value: '6.7+-0.6'  }
+  - { value: '2.1+-0.7'  }
+  - { value: '0.9+-0.4'  }
+  - { value: '-- '       }
+  - { value: '82+-13' }
+  - { value: '5.5+-1.8' }
+  - { value: '129+-14' }
+  - { value: '7.7+-2.7' }
+  - { value: '339+-27' }
+  - { value: '36+-5' }
+  - { value: '48+-7' }
+  - { value: '351'}
+

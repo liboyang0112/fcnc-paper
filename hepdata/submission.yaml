@@ -141,7 +141,7 @@ name: Figure 1g
 ---
 additional_resources:
 - {description: Image file, location: reg2mtau1b3jos_pt_prefit.png}
-- {description: Thumbnail image file, location: thumb_rreg2mtau1b3jos_pt_prefit.png}
+- {description: Thumbnail image file, location: thumb_reg2mtau1b3jos_pt_prefit.png}
 data_file: reg2mtau1b3jos_pt_prefit.yaml
 description: Leading tau Pt distributions obtained before the fit to data (Pre-Fit) showing the expected background and $tuH$ signals after applying fake factors in the thhadhad3j region. 
 keywords:
@@ -177,7 +177,7 @@ additional_resources:
 - {description: Image file, location: reg1l2tau1bnj_os_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg1l2tau1bnj_os_BDT_post.png}
 data_file: reg1l2tau1bnj_os_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the tlhadhad region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the tlhadhad region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -194,7 +194,7 @@ additional_resources:
 - {description: Image file, location: reg1l1tau1b1j_ss_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg1l1tau1b1j_ss_BDT_post.png}
 data_file: reg1l1tau1b1j_ss_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the tlhad1j region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the tlhad1j region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -211,7 +211,7 @@ additional_resources:
 - {description: Image file, location: reg1l1tau1b2j_ss_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg1l1tau1b2j_ss_BDT_post.png}
 data_file: reg1l1tau1b2j_ss_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the tlhad2j region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the tlhad2j region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -228,7 +228,7 @@ additional_resources:
 - {description: Image file, location: reg1l1tau1b2j_os_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg1l1tau1b2j_os_BDT_post.png}
 data_file: reg1l1tau1b2j_os_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the thlephad2j region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the thlephad2j region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -245,7 +245,7 @@ additional_resources:
 - {description: Image file, location: reg1l1tau1b3j_os_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg1l1tau1b3j_os_BDT_post.png}
 data_file: reg1l1tau1b3j_os_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the thlephad3j region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the thlephad3j region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -262,7 +262,7 @@ additional_resources:
 - {description: Image file, location: reg1l2tau1bnj_ss_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg1l2tau1bnj_ss_BDT_post.png}
 data_file: reg1l2tau1bnj_ss_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the tlhadhadSS region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the tlhadhadSS region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -279,7 +279,7 @@ additional_resources:
 - {description: Image file, location: reg2mtau1b2jos_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg2mtau1b2jos_BDT_post.png}
 data_file: reg2mtau1b2jos_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the thhadhad2j region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the thhadhad2j region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -294,9 +294,9 @@ name: Figure 3g
 ---
 additional_resources:
 - {description: Image file, location: reg2mtau1b3jos_BDT_post.png}
-- {description: Thumbnail image file, location: thumb_rreg2mtau1b3jos_BDT_post.png}
+- {description: Thumbnail image file, location: thumb_reg2mtau1b3jos_BDT_post.png}
 data_file: reg2mtau1b3jos_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the thhadhad3j region. 
+description: BDT output distributions obtained from a signal(tuH)+background fit to the data in the thhadhad3j region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -313,7 +313,7 @@ additional_resources:
 - {description: Image file, location: reg2mtau1b3jss_BDT_post.png}
 - {description: Thumbnail image file, location: thumb_reg2mtau1b3jss_BDT_post.png}
 data_file: reg2mtau1b3jss_BDT_post.yaml
-description: BDT output distributions obtained from a signal+background fit to the data in the thhadhad3jSS region. 
+description: BDT output distributions obtained from a signal(tuH)++background fit to the data in the thhadhad3jSS region. 
 keywords:
   - name: reactions
     values: [P P --> TOP Higgs]
@@ -325,6 +325,163 @@ keywords:
     values: [leading tau Pt]
 location: Data from Figure 3 (i)
 name: Figure 3i
+
+
+
+---
+additional_resources:
+- {description: Image file, location: tcH_reg1l2tau1bnj_os.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg1l2tau1bnj_os.png}
+data_file: reg1l2tau1bnj_os_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the tlhadhad region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (a)
+name: Figure 4a
+---
+additional_resources:
+- {description: Image file, location: tcH_reg1l1tau1b1j_ss.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg1l1tau1b1j_ss.png}
+data_file: reg1l1tau1b1j_ss_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the tlhad1j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (b)
+name: Figure 4b
+---
+additional_resources:
+- {description: Image file, location: tcH_reg1l1tau1b2j_ss.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg1l1tau1b2j_ss.png}
+data_file: reg1l1tau1b2j_ss_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the tlhad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (c)
+name: Figure 4c
+---
+additional_resources:
+- {description: Image file, location: tcH_reg1l1tau1b2j_os.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg1l1tau1b2j_os.png}
+data_file: reg1l1tau1b2j_os_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the thlephad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (d)
+name: Figure 4d
+---
+additional_resources:
+- {description: Image file, location: tcH_reg1l1tau1b3j_os.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg1l1tau1b3j_os.png}
+data_file: reg1l1tau1b3j_os_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the thlephad3j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (e)
+name: Figure 4e
+---
+additional_resources:
+- {description: Image file, location: tcH_reg1l2tau1bnj_ss.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg1l2tau1bnj_ss.png}
+data_file: reg1l2tau1bnj_ss_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the tlhadhadSS region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (f)
+name: Figure 4f
+---
+additional_resources:
+- {description: Image file, location: tcH_reg2mtau1b2jos.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg2mtau1b2jos.png}
+data_file: reg2mtau1b2jos_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the thhadhad2j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (g)
+name: Figure 4g
+---
+additional_resources:
+- {description: Image file, location: tcH_reg2mtau1b3jos.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg2mtau1b3jos.png}
+data_file: reg2mtau1b3jos_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the thhadhad3j region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (h)
+name: Figure 4h
+---
+additional_resources:
+- {description: Image file, location: tcH_reg2mtau1b3jss.png}
+- {description: Thumbnail image file, location: thumb_tcH_reg2mtau1b3jss.png}
+data_file: reg2mtau1b3jss_BDT_post_tcH.yaml
+description: BDT output distributions obtained from a signal(tcH)+background fit to the data in the thhadhad3jSS region. 
+keywords:
+  - name: reactions
+    values: [P P --> TOP Higgs]
+  - name: phrases
+    values: [FCNC, top quark, Higgs]
+  - name: cmenergies
+    values: [13000]
+  - name: observables
+    values: [leading tau Pt]
+location: Data from Figure 4 (i)
+name: Figure 4i
+
 ---
 additional_resources:
 - {description: Image file, location: tcH_limit.png}
@@ -564,3 +721,50 @@ keywords:
 location: Data from Figure 6 (b)
 name: 'Figure 6b (Anomalous couplings) - Expected 2down'
 
+---
+data_file: yieldsTablelep.yaml
+description: "Predicted and observed yields in each of the analysis regions considered in leptonic channel"
+keywords:
+- name: cmenergies
+  values: [13000.0]
+- name: observables
+  values: [ N ]
+- name: phrases
+  values: [FCNC, Top]
+location: Table 6
+name: Yields, FCNC(lep)
+
+---
+data_file: yieldsTablehad.yaml 
+description: "Predicted and observed yields in each of the analysis regions considered in hadronic channel"
+keywords:
+- name: cmenergies
+  values: [13000.0]
+- name: observables
+  values: [ N ]
+- name: phrases
+  values: [FCNC, Top]
+location: Table 6
+name: Yields, FCNC(had)
+
+---
+data_file: sysimpact.yaml
+description: "Absolute uncertainties on B(tqH) obtained from the combined fit to the data."
+keywords:
+- name: cmenergies
+  values: [13000.0]
+- name: phrases
+  values: [FCNC, Top]
+location: Table 7
+name: Systematics, FCNC
+
+---
+data_file: finalfit.yaml 
+description: "Summary of 95% CL upper limits on B(tqH), significance and best-fit branching ratio in the signal regions."
+keywords:
+- name: cmenergies
+  values: [13000.0]
+- name: phrases
+  values: [FCNC, Top]
+location: Table 8
+name: Fit, FCNC

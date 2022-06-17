@@ -1,0 +1,48 @@
+independent_variables:
+- header: {name: 'Sample'}
+  values:
+    - { value: 'ttbarV' }
+    - { value: 'Diboson' }
+    - { value: 'Rare' }
+    - { value: 'SM Higgs' }
+    - { value: 'only sub tau real' }
+    - { value: 'ttbar' }
+    - { value: 'Fake tau' }
+    - { value: 'Ztautau' }    
+    - { value: 'Total Background' }
+    - { value: 'tcH' }
+    - { value: 'tuH' }
+    - { value: 'Data' }
+dependent_variables:
+- header: {name: 'thhadhad-2j'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '0.7+-0.4 '}
+  - { value: '8.4+-1.6 '}
+  - { value: '17.9+-3.1'}
+  - { value: '17.4+-2.5'}
+  - { value: '56+-30   '}
+  - { value: '221+-28  '}
+  - { value: '220+-70  '}
+  - { value: '490+-50  '}
+  - { value: '1040+-35 '}
+  - { value: '15.6+-2.5'}
+  - { value: '23+-4    '}
+  - { value: '1033      '}
+- header: {name: 'thhadhad-3j'}
+  qualifiers:
+  - {name: 'Model', value: 'tqH(H->tautau)'}
+  values:
+  - { value: '5.5+-1.0'}
+  - { value: '10.8+-1.5'}
+  - { value: '10.2+-2.6'}
+  - { value: '25.9+-3.1'}
+  - { value: '80+-50'}
+  - { value: '220+-40'}
+  - { value: '270+-70'}
+  - { value: '420+-50'}
+  - { value: '1040+-40'}
+  - { value: '42+-8'}
+  - { value: '52+-10'}
+  - { value: '1052'}

@@ -233,11 +233,11 @@ dependent_variables:
         units: fb$^{-1}$
         value: 139
     values:
-      - value: 2.08128
-      - value: 1.97942
-      - value: 1.15468
-      - value: 1.47296
-      - value: 1.46469
-      - value: 1.34023
-      - value: 0.574515
-      - value: 0.878072
+      - value: 1.68853
+      - value: 1.94915
+      - value: 1.00112
+      - value: 1.34987
+      - value: 1.29511
+      - value: 1.17782
+      - value: 0.35774
+      - value: 0.333144
