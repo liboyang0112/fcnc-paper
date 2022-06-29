@@ -4,36 +4,36 @@
 %-------------------------------------------------------------------------------
 
 The search is based on a dataset of $pp$ collisions at $\sqrt{s}=13~\tev$ with 25 ns bunch spacing collected from 2015 to 2018, corresponding to an integrated luminosity of $139~\ifb$.
-Only events recorded with a single-electron trigger, a single-muon trigger, or a di-tau trigger~\cite{TRIG-2018-05,TRIG-2018-01,id_trigger,l1topo_trigger} under stable beam conditions 
-and for which all detector subsystems were operational are considered for analysis. The events recorded by di-lepton triggers that fall into the control regions are used for fake tau background
+Only events recorded with a single-electron trigger, a single-muon trigger, or a di-$\tau$-lepton trigger~\cite{TRIG-2018-05,TRIG-2018-01,id_trigger,l1topo_trigger} under stable beam conditions 
+and for which all detector subsystems were operational are considered for analysis. The events recorded by dilepton triggers that fall into the control regions are used for fake-$\tau$-lepton background
 estimation as discussed in Section~\ref{sec:background_model}. The number of $pp$ interactions per bunch crossing in this dataset ranges from about 8 to 45, with an average of 24.
 
 Single-electron and single-muon triggers with low $\pt$ thresholds and lepton isolation requirements are combined in a logical OR 
-with higher-threshold triggers but with a looser identification criterion and without any isolation requirement.
-The lowest $\pt$ threshold used for muons is 20 (26)~\gev\ in 2015 (2016-2018), while for electrons the threshold is 24 (26)~\gev.
+with higher-threshold triggers that have a looser identification criterion and no isolation requirement.
+The lowest $\pt$ threshold used for muons is 20 (26)~\gev\ in 2015 (2016--2018), while for electrons the threshold is 24 (26)~\gev.
 %For ditau triggers, the $\pt$ threshold of the leading (trailing) $\tauhad$ candidate is 35 (25)~\gev\ with the medium identification required.
-For di-tau triggers, the $\pt$ threshold of the leading (subleading) $\had$ candidate is 35 (25)~\gev.
+For di-$\tau$ triggers, the $\pt$ threshold for the leading (subleading) $\had$ candidate is 35 (25)~\gev.
 %Events satisfying the trigger selection are required to have at least one primary vertex candidate.
-To reduce the impact of the trigger efficiency uncertainty around the threshold, the leptons are required to have a \pt of 1~GeV above the threshold. 
-The reconstructed taus are required to have a \pt of 5 GeV higher than the trigger threshold, and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
+To reduce the impact of the trigger efficiency uncertainty around the threshold, the leptons are required to have a \pt that is at least 1~\GeV\ above the threshold. 
+The reconstructed $\tau$-leptons are required to have a \pt at least 5~\GeV\ higher than the trigger threshold, and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
 %The signal final state including a light lepton (electron or muon) or $\lep$ are referred to as leptonic channel, otherwise hadronic channel.
 %The events in the leptonic channel are recorded by single-electron or single-muon trigger, required to have exactly one electron or muon that matches, with $\Delta R < 0.15$, the lepton reconstructed by the trigger. Further requirements are defined targeting different signal decay modes:  
-The events in the leptonic channel are recorded by a single-electron or single-muon trigger, and are required to have exactly one electron or muon that matches, within $\Delta R < 0.15$, the lepton reconstructed by at least one of the possible triggers. Requirements are placed on the following additional quantities.
+The events in the leptonic channels are recorded by a single-electron or single-muon trigger, and are required to have exactly one electron or muon that matches, within $\Delta R < 0.15$, the lepton reconstructed by at least one of the possible triggers. Requirements are placed on the following additional quantities.
 %Further requirements are defined targeting different signal decay modes:  
 \begin{itemize}
-\item $t_h\lephad$: To enhance selection of the $t_hH$ and $t_ht(qH)$ final states with a $H\to\lephad$ decay, exactly one $\had$ with opposite-side charge to $\lep$ is required, including at least three jets with exactly one $b$-jet.
-\item $t_{\ell}\hadhad$: To enhance selection of $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with a $H\to\hadhad$ decay, exactly one light lepton and two opposite-sign $\had$ are selected,
-  including jets with exactly one $b$-jet.
-\item $t_{\ell}\had$: This channel is also to enhance $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with a $H\to\hadhad$ decay where one $\had$ fails the tau reconstruction or identification
+\item $t_h\lephad$: To enhance selection of the $t_hH$ and $t_ht(qH)$ final states with a $H\to\lephad$ decay, exactly one $\had$ with opposite-sign charge to $\lep$ is required, plus at least three jets with exactly one $b$-jet.
+\item $t_{\ell}\hadhad$: To enhance selection of $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with a $H\to\hadhad$ decay, exactly one light lepton and two opposite-sign $\had$ are required,
+  plus jets with exactly one $b$-jet.
+\item $t_{\ell}\had$: This channel enhances the selection of $t_{\ell}H$ and $t_{\ell}t(qH)$ final states with a $H\to\hadhad$ decay where one $\had$ fails the applied reconstruction or identification
   criterion so that there is only one reconstructed $\had$ candidate.
-  To reduce the SM backgrounds and avoid overlaps with the final states of other ATLAS searches, exactly one $\had$ with charge the same as that assigned to the light lepton is required.
+  To reduce the SM backgrounds and avoid overlaps with the final states used in other ATLAS searches, exactly one $\had$ with the same charge as that assigned to the light lepton is required.
   In addition, at least two jets including exactly one $b$-jet are required.
 \end{itemize}
 
-The events in the hadronic channel are selected by a di-tau trigger. Further requirements are:
+The events in the hadronic channel are selected by a di-$\tau$ trigger. Further requirements are:
 %recorded by di-tau trigger, required to have both leading and subleading $\had$ passed the trigger. Further requirements are defined targeting signal decay modes:
 \begin{itemize}
-\item $t_h\hadhad$: Targeting the $t_hH$ and $t_ht(qH)$ final states with $H\to\hadhad$ decay. Exactly two $\had$ with opposite-sign charge and at least three jets, including exactly one $b$-jet, are required.
+\item $t_h\hadhad$: The $t_hH$ and $t_ht(qH)$ final states with $H\to\hadhad$ decay are targeted. Exactly two $\had$ with opposite-sign charge and at least three jets, including exactly one $b$-jet, are required.
   %are selected, including at least 3 jet with exactly one $b$-jet.
 \end{itemize}
 
@@ -43,20 +43,20 @@ These requirements are referred to as the preselection and are summarised in Tab
 
 %%%%%%%%%%%%%%%
 \begin{table*}[t!]
-\caption{\small{Summary of preselection requirements. 
+\caption{\small{Summary of the preselection requirements. 
 The leading and subleading $\had$ candidates are denoted by $\tau_{\mathrm{had1}}$ and $\tau_{\mathrm{had2}}$ respectively.}}
 \begin{center}
 \begin{tabular}{c|ccc|c}
 \toprule\toprule
-\multirow{2}{*}{Requirement} &  \multicolumn{3}{c|}{leptonic channel}  & \multicolumn{1}{c}{hadronic channel} \\ 
+\multirow{2}{*}{Requirement} &  \multicolumn{3}{c|}{Leptonic channels}  & \multicolumn{1}{c}{Hadronic channel} \\ 
 %\multirow{2}{*}{Requirement} &  \multicolumn{3}{c|}{leptonic channel}  & hadronic channel \\ 
 & $t_h\lephad$ & $t_{\ell}\hadhad$ &  $t_{\ell}\had$ & $t_h\hadhad$\\
 \midrule
 Trigger & \multicolumn{3}{c|}{single-lepton trigger} & di-$\tau$ trigger  \\
 Leptons  & \multicolumn{3}{c|}{=1 isolated $e$ or $\mu$}  & =0 isolated $e$ or $\mu$ \\
-$\had$  & $=$1 $\had$ & $\geq$2 $\had$ & $=$1 $\had$ & $\geq$2 $\had$ \\
-Electric charge ($Q$) & $Q_\ell \times Q_{\tau_{\mathrm{had1}}} < 0$ & $Q_{\tau_{\mathrm{had1}}} \times Q_{\tau_{\mathrm{had2}}} < 0$ & $Q_\ell \times Q_{\tau_{\mathrm{had1}}} > 0$ & $Q_{\tau_{\mathrm{had1}}} \times Q_{\tau_{\mathrm{had2}}} < 0$ \\
-Jets  &   $\geq$ 3 jets & $\geq$1 jets & $\geq$2 jets & $\geq$3 jets \\
+$\had$  & $=$1 $\had$ & $=$2 $\had$ & $=$1 $\had$ & $=$2 $\had$ \\
+Electric charge ($Q$) & $Q_\ell \times Q_{\tau_{\mathrm{had1}}} = -1$ & $Q_{\tau_{\mathrm{had1}}} \times Q_{\tau_{\mathrm{had2}}} = -1$ & $Q_\ell \times Q_{\tau_{\mathrm{had1}}} = 1$ & $Q_{\tau_{\mathrm{had1}}} \times Q_{\tau_{\mathrm{had2}}} = -1$ \\
+Jets  &   $\geq$3 jets & $\geq$1 jets & $\geq$2 jets & $\geq$3 jets \\
 $b$-tagging & \multicolumn{3}{c|}{=1 $b$-jets} & =1 $b$-jets\\
 \bottomrule\bottomrule
 \end{tabular}
