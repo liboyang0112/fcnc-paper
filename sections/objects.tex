@@ -3,7 +3,7 @@
 \label{sec:objects}
 %-------------------------------------------------------------------------------
 
-Events are selected from $pp$ collisions at $\sqrt{s}$=13 TeV recorded by the ATLAS detector during 2015-2018~\cite{DAPR-2018-01}.
+Events are selected from $pp$ collisions at $\sqrt{s}=13$~\TeV\ recorded by the ATLAS detector during 2015--2018~\cite{DAPR-2018-01}.
 Only events for which all relevant subsystems were operational are considered.
 Events are required to have at least one primary vertex with two or more tracks with transverse momentum
 %The event reconstruction is affected by multiple $pp$ collisions in a single bunch crossing and by collisions
@@ -18,36 +18,36 @@ Electron candidates~\cite{EGAM-2018-01} are reconstructed from energy
 clusters in the EM calorimeter that are matched to reconstructed tracks in the inner detector;
 electron candidates in the transition region between the EM barrel and endcap calorimeters 
 ($1.37 < |\eta_{\textrm{cluster}}| < 1.52$) are excluded.
-Electron candidates are required to have $|\eta_{\textrm{cluster}}| < 2.47$, and to satisfy tight likelihood-based identification 
+Electron candidates are required to have $|\eta_{\textrm{cluster}}| < 2.47$, and to satisfy `tight' likelihood-based identification 
 criteria~\cite{ATLAS-CONF-2016-024} based on calorimeter, tracking and combined variables that provide 
 separation between electrons and jets. 
 
 Muon candidates~\cite{MUON-2018-03} are reconstructed by matching track segments in %the various
 different layers of the muon spectrometer to tracks found in the inner detector;
 the resulting muon candidates are re-fitted using the complete track information from both detector systems.
-Muon candidates are required to satisfy medium identification criteria~\cite{Aad:2016jkr}. 
+Muon candidates are required to satisfy `medium' identification criteria~\cite{Aad:2016jkr}. 
 
 Electron (muon) candidates are matched to the primary vertex by requiring that the significance of their transverse impact parameter, $d_0$, 
 satisfies $|d_0/\sigma(d_0)|<5\,(3)$, where $\sigma(d_0)$ is the measured uncertainty in $d_0$,
 and by requiring that their longitudinal impact parameter, $z_0$, satisfies $|z_0 \sin\theta|<0.5$~mm.
 %To reduce the impact of the trigger efficiency uncertainty around the threshold, the leptons are required to have \pt 1~GeV above the threshold.
-To further reduce the background from non-prompt leptons mostly originating from heavy-flavour hadron decays, photon conversions and misidentified hadrons,
+To further reduce the background from non-prompt leptons, which originate mostly from heavy-flavour hadron decays, photon conversions and misidentified hadrons,
 lepton candidates are also required to be isolated in the tracker and in the calorimeter.
-A track- and cluster-based lepton isolation criterion is defined by calculating the quantities $I_R = \sum \pt^{\textrm{trk}}$ and $E_R = \sum E^{\textrm{clst}}$, where
-the scalar sum includes all tracks $\pt^{\textrm{trk}}$ and cluster energy deposits $E^{\textrm{clst}}$ (excluding the lepton candidate itself)
+A track- and cluster-based lepton isolation criterion is defined by placing requirements on the quantities $I_R = \sum \pt^{\textrm{trk}}$ and $E_R = \sum E^{\textrm{clst}}$, where
+the scalar sum includes all tracks' $\pt^{\textrm{trk}}$ or cluster energy deposits $E^{\textrm{clst}}$ (excluding the lepton candidate itself)
 within the cone defined by $\Delta R<0.2~(0.3)$ around the %axis
 direction of the electron (muon). The electron (muon) candidates are required to satisfy both
 %$I_R/\pt^l < 0.2~(0.3)$ and $E_R/\pt^l < 0.2~(0.3)$.
-$I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$ ($\ell=e$ or $\mu$).
+$I_R/\pt^\ell < 0.2~(0.3)$ and $E_R/\pt^\ell < 0.2~(0.3)$, where $\ell=e$ or $\mu$.
 
-Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based on a trained isolation boosted decision tree (BDT)
-\texttt{PromptLeptonVeto} (PLIV), which is used to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged particle tracks inside the jet can be
-used to increase the efficiency for identifying the displaced decay vertex of heavy flavour ($b$, $c$) hadrons that produced non-prompt leptons.
-The tight working points are used for high $\pt$ leptons ($>20~\GeV$).
-The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method~\cite{PERF-2016-01}
-with $Z\rightarrow \ell^+\ell^-$ events. These scale factors have also been checked for the electron or muon from the tau decay
-using $Z\rightarrow\tau\tau\rightarrow e\mu4\nu$ samples, which are consistent at the 2\% level. To be conservative, an
-additional uncertainty of $\pm 2\%$ is considered for the PLIV efficiency for the tau-lepton in the lepton+$\thad$ channels.
+`Tight' isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions by using a trained isolation boosted decision tree (BDT)
+\texttt{PromptLeptonVeto} (PLIV), which identifies non-prompt light leptons by using lifetime information associated with a track-jet that matches the selected light lepton~\cite{ATLAS-CONF-2019-045}. These additional reconstructed charged-particle tracks inside the jet can be
+used to increase the efficiency for identifying the displaced decay vertices of heavy-flavour ($b$, $c$) hadrons that produced non-prompt leptons.
+The `tight' working points are used for leptons with high $\pt$ ($>20~\GeV$).
+Simulation-to-data scale factors for the efficiencies of the `tight' PLIV working points are measured using the tag-and-probe method~\cite{PERF-2016-01}
+with $Z\rightarrow \ell^+\ell^-$ events. These scale factors were checked for electrons or muons from the $\tau$-lepton decays
+using $Z\rightarrow\tau\tau\rightarrow e\mu4\nu$ samples, and are consistent at the 2\% level. To be conservative, an
+additional uncertainty of $\pm 2\%$ is considered for the PLIV efficiency for the $\tau$-lepton in the lepton+$\thad$ channels.
 %Additionally, the $\Htautau$ search requires leptons to
 %satisfy a calorimeter-based isolation criterion; a requirement is made on the sum of the transverse energy of
 %topological clusters within the cone defined by $\Delta R<0.2$ around the lepton, after subtracting the contribution
@@ -68,36 +68,36 @@ a particle-flow algorithm~\cite{Aad:2017epj77}. %newref Eur. Phys. J. C 77 (2017
 %Jet reconstruction in the calorimeter starts from topological clustering~\cite{Aad:2016upy} of individual calorimeter cells calibrated to the electromagnetic energy scale. 
 The reconstructed jets are then calibrated to the particle level by the application of a jet energy scale 
 derived from simulation and in situ corrections based on $\sqrt{s}=13~\tev$ data~\cite{Aaboud:2017jcu}. %(TBD: check PFlow jets description)
-The calibrated jets used are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$.
-The four-momentum of the jets is corrected for pile-up effects using the jet-area method~\cite{Cacciari:2008gn}.
+After being calibrated, the jets are required to have $\pt > 25~\gev$ and $|\eta| < 2.5$.
+The four-momentum of each jet is corrected for pile-up effects using the jet-area method~\cite{Cacciari:2008gn}.
 
 Quality criteria are imposed to reject events that contain any jets arising from non-collision sources
 or detector noise~\cite{ATLAS-CONF-2015-029}.  To reduce the contamination due to jets originating from pile-up interactions,
 additional requirements are imposed on the jet vertex tagger (JVT)~\cite{Aad:2015ina} output for jets with $\pt<60~\gev$ and $|\eta| < 2.4$.
 
-Jets containing $b$-hadrons are identified ($b$-tagged) via the DL1r tagger~\cite{Aad:2019epj79,ATL-PHYS-PUB-2017-013} %newref
+Jets containing $b$-hadrons are identified ($b$-tagged) via the DL1r tagger~\cite{Aad:2019epj79,ATL-PHYS-PUB-2017-013}, %newref
 %\cite{Aad:2015ydr,ATL-PHYS-PUB-2016-012} 
-that uses multivariate techniques to combine information about the impact parameters of displaced tracks and the  topological properties 
+which uses multivariate techniques to combine information about the impact parameters of displaced tracks and the  topological properties 
 of secondary and tertiary decay vertices reconstructed within the jet. For each jet, a value for the multivariate $b$-tagging discriminant is 
 calculated. A jet is considered $b$-tagged if this value is above the threshold corresponding to
-an average 70\% efficiency to tag a $b$-quark jet, with a light-jet\footnote{Light-jet refers to a jet originating from the hadronisation of a light quark ($u$, $d$, $s$) or a gluon.} rejection factor of about 385 and a charm-jet rejection factor of about 12, as determined for jets with
+an average 70\% efficiency to tag a $b$-quark jet, with a light-jet\footnote{A `light jet' refers to a jet originating from the hadronisation of a light quark ($u$, $d$, $s$) or a gluon.} rejection factor of about 385 and a charm-jet rejection factor of about 12, as determined for jets with
 $\pt >20~\gev$ and $|\eta|<2.5$ in simulated $\ttbar$ events~\cite{Aad:2019epj79}.
 
-Hadronically decaying $\tau$-lepton ($\had$) candidates are reconstructed from energy clusters in the calorimeters and
+Hadronically decaying $\tau$-lepton ($\had$) candidates are reconstructed from calorimeter energy clusters and
 associated inner-detector tracks~\cite{ATL-PHYS-PUB-2019-033}. %newref
 %~\cite{ATL-PHYS-PUB-2015-045}.
 Candidates are required to have either one or three associated tracks,
 with a total charge of $\pm 1$.
 %Candidates are required to have \pt 5 GeV higher than the trigger threshold, and $|\eta|<2.5$, excluding the EM calorimeter's transition region.
-A Recurrent Neural Network (RNN)~\cite{Graves:2012SCI}
+A recurrent neural network (RNN)~\cite{Graves:2012SCI}
 %~\cite{Breiman:1984jka,Friedman:2002we,Freund:1997xna}
 %A. Graves, Supervised Sequence Labelling with Recurrent Neural Networks, Studies in Computational Intelligence 385, Springer, 2012.
 using calorimeter- and tracking-based variables is used to identify $\had$ candidates and reject jet backgrounds.
-Three working points, labelled loose, medium and tight, are defined and correspond to different $\had$ identification efficiency values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the medium
+Three working points, labelled `loose', `medium' and `tight', are defined and correspond to different $\had$ identification efficiency values, with the efficiency designed to be independent of $\pt$. The $\Htautau$ search uses the `medium'
 working point for the $\had$ selection.
 %, while the loose working point is used for background estimation.
-The medium working point has a combined reconstruction and identification efficiency of 75\% (60\%) for one-prong (three-prong) $\had$ 
-decays, and an expected rejection factor against light-jets of 35 (240)~\cite{ATL-PHYS-PUB-2019-033}. 
+The `medium' working point has a combined reconstruction and identification efficiency of 75\% (60\%) for one-prong (three-prong) $\had$ 
+decays, and an expected rejection factor of 35 (240) against light jets~\cite{ATL-PHYS-PUB-2019-033}. 
 Electrons that are reconstructed as one-prong $\had$ candidates are removed via a BDT trained to reject electrons.
 Events are rejected if the jet seeding the $\had$ candidate is $b$-tagged.
 %Events with a $b$-tagged  $\had$ candidate are rejected.
@@ -119,7 +119,7 @@ Events are rejected if the jet seeding the $\had$ candidate is $b$-tagged.
 %candidate objects, and only the highest-$\pt$ (leading) or the two leading $\tauhad$ candidates (depending on the
 %analysis channel, see Section~\ref{sec:data_presel}) are considered to resolve their overlap with jets.
 
-To avoid double counting reconstructed objects, an overlap removal procedure is applied.
+To avoid double-counting of reconstructed objects, an overlap removal procedure is applied.
 %Overlaps between reconstructed objects are removed sequentially.
 %Firstly,
 Electron candidates that lie 
@@ -136,7 +136,7 @@ Jets and muons may also appear in close proximity when the jet results from high
 and in such cases the jet is removed and the muon retained. Such jets are characterised by having very 
 few matching inner-detector tracks. Selected muons that satisfy $\Delta R(\mu,{\textrm{jet}}) < 0.2$ are rejected
 if the jet is either $b$-tagged or has at least three tracks originating from the primary vertex; otherwise the jet is removed and the muon is kept.
-The $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed.
+The $\tauhad$ within a $\Delta R=0.2$ cone around an electron or muon are removed.
 In order to avoid double-counting of $\tauhad$ as jets, the closest jet whose axis is
 within ${\Delta}R = 0.2$ of a $\tauhad$ is discarded if the jet is not $b$-tagged; otherwise the $\tauhad$ is removed. 
 % TEXT FROM BOYANG. NEED TO RECHECK WHAT WE HAVE ABOVE IS ACCURATE

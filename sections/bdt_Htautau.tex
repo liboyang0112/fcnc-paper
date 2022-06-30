@@ -5,42 +5,43 @@
 \begin{table*}[t!]
   \caption{\small{Discriminating variables (n) used in the training of the BDT of each SR. 
 The ranking of the input variables according to their importance in the training is reported from highest (1) to 
-lowest (n). Variables whose ranking is missing are not included in the training of the corresponding SR. The description of each variable is provided in the text.}}
+lowest (n). Variables whose ranking is missing are not included in the training of that SR. The description of each variable is provided in the text.}}
 %Variables are ranked from highest (1) to lowest (n) relative to one another by their
 %      importance in the training. Variables which do not have a ranking are not included in the training. 
 %The values represent their ra importance rankings of each variable and cross($\times$) denotes the variable is not used in the training.
 %      The descriptions of each variable are provided in the following text.}}
 \label{tab:importance}
  \centering
+ \vspace{0.2cm}
  \begin{tabular}{cccccccc} \toprule\toprule
-   & $t_{l}\tauhad$-1j                                  &  $t_{h}\tlhad$-2j   &  $t_{l}\tauhad$-2j & $t_{h}\tlhad$-3j & $t_{\ell}2\tauhad$     & $t_h2\tauhad$-2j & $t_h2\tauhad$-3j       \\\midrule
-   Total variables~(n)                           & $12$ & $15$ & $12$ & $17$ & $15$ & $12$ & $12$ \\\midrule 
+   & $t_{\ell}\tauhad$-1j                                  &  $t_{h}\tlhad$-2j   &  $t_{\ell}\tauhad$-2j & $t_{h}\tlhad$-3j & $t_{\ell}2\tauhad$     & $t_h2\tauhad$-2j & $t_h2\tauhad$-3j       \\\midrule
+   Total variables~(n)                           & $12$~~ & $15$~~ & $12$~~ & $17$~~ & $15$~~ & $12$~~ & $12$~~ \\\midrule 
  $m_{\text{jj}}$                                      &   &             &           & $9$      &       & $6$      & $7$\\
- $\chi^{2}$                                          &   &             &           & $14$     &       &  &       \\
- \text{max}($\eta_{\tau}$)                           & $4$       &             &  $4$              &  & $10$          &  &        \\
- $m^{W}_{\text{T}}$                           & $11$      &             &  $8$              &  & $13$          &  &         \\
+ $\chi^{2}$                                          &   &             &           & $14$~~     &       &  &       \\
+ \text{max}($\eta_{\tau}$)                           & $4$       &             &  $4$              &  & $10$~~          &  &        \\
+ $m^{W}_{\text{T}}$                           & $11$~~      &             &  $8$              &  & $13$~~          &  &         \\
  $m_{\tau\tau,\text{fit}}$                                     &   &  $2$                &           & $3$      &       & $1$      & $1$          \\
- $m_{\text{bjj},\text{fit}}$                            &   &  $1$                &           & $2$      &       & $3$      & $4$          \\
- ${\pt}^{\ell}$                                 & $12$      &  $15$               &  $12$             & $17$     &       &  &         \\
- $m_{\tau\tau\text{q},\text{fit}}$                          &   &             &           &  &       & $10$     & $6$\\
- $m_{\text{bjj}}$                 & $3$       &             &  $5$              &  & $4$           &  &         \\
- ${\pt}_{\tau1}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$   & $10$           \\
- $\met$                                              & $5$       &  $11$               &  $10$             & $13$     & $6$           & $7$    & $13$          \\
- $m_{\tau\tau}$                           & $10$      &  $14$               &  $11$             & $6$      & $1$           & $2$    & $2$          \\
- $E_{\tau1}/E_{\tau1,\text{fit}}$                  &   &  $10$               &           & $12$     &       & $8$    & $8$          \\
- $E_{\tau2}/E_{\tau2,\text{fit}}$                  &   &  $7$                &           & $4$      &       & $9$    & $11$         \\
+ $m_{\text{bjj}}$                            &   &  $1$                &           & $2$      &       & $3$      & $4$          \\
+ ${\pt}^{\ell}$                                 & $12$~~      &  $15$~~               &  $12$~~             & $17$~~     &       &  &         \\
+ $m_{\tau\tau\text{q},\text{fit}}$                          &   &             &           &  &       & $10$~~     & $6$\\
+ $m_{\ell \text{b}}$                 & $3$       &             &  $5$              &  & $4$           &  &         \\
+ ${\pt}_{\tau1}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$~~   & $10$~~           \\
+ $\met$                                              & $5$       &  $11$~~               &  $10$~~             & $13$~~     & $6$           & $7$    & $13$~~          \\
+ $m_{\tau\tau}$                           & $10$~~      &  $14$~~               &  $11$~~             & $6$      & $1$           & $2$    & $2$          \\
+ $E_{\tau1}/E_{\tau1,\text{fit}}$                  &   &  $10$~~               &           & $12$~~     &       & $8$    & $8$          \\
+ $E_{\tau2}/E_{\tau2,\text{fit}}$                  &   &  $7$                &           & $4$      &       & $9$    & $11$~~         \\
  ${\pt}_{\tautau} $                          &   &             &           &  & $9$           &  &         \\
  $m_{\tau\tau\text{q}}$               &   &             &           &  & $3$           &  &        \\
- $\Delta\phi(\tau\tau,\met)$                         &   &  $6$                            &           & $16$     &       & $13$   & $12$         \\
- $\met\text{centrality}$                             &   &  $13$               &           & $15$     &       & $12$   & $9$         \\
- \text{min}($m_{\tau\tau \text{j}}$)             & $9$       &             &  $3$              &  & $14$          &  &         \\
- \text{min}($\Delta R(\ell,\tau)$)                               & $8$       &  $9$                &  $9$              & $10$     & $15$          &  &         \\
+ $\Delta\phi(\tau\tau,\met)$                         &   &  $6$                            &           & $16$~~     &       & $13$~~   & $12$~~         \\
+ $\met\text{\,centrality}$                             &   &  $13$~~               &           & $15$~~     &       & $12$~~   & $9$         \\
+ \text{min}($m_{\tau\tau \text{j}}$)             & $9$       &             &  $3$              &  & $14$~~          &  &         \\
+ \text{min}($\Delta R(\ell,\tau)$)                               & $8$       &  $9$                &  $9$              & $10$~~     & $15$~~          &  &         \\
  $\Delta R(\tau,\tau)$                               &   &             &           &  & $2$           & $4$    & $3$             \\
- $\Delta R(\ell,\text{$b$-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$          &  &         \\
- $\Delta R(\tau1,\text{$b$-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$          &  &        \\
+ $\Delta R(\ell,\text{$b$-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$~~          &  &         \\
+ $\Delta R(\tau1,\text{$b$-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$~~          &  &        \\
  $\Delta R(\ell+\text{$b$-jet},\tau\tau )$             &   &             &           &  & $7$           &  &         \\
  $\Delta R(\tau1,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
- \text{min}($m_{\text{jj}}$) &   &  $12$               &           & $11$     &       &  &         \\
+ \text{min}($m_{\text{jj}}$) &   &  $12$~~               &           & $11$~~     &       &  &         \\
 % $m_{\text{W}}$                                      & $\times$  &  $\times$           &  $\times$         & $9$      & $\times$      & $6$      & $7$\\
 % $\chi^{2}$                                          & $\times$  &  $\times$           &  $\times$         & $14$     & $\times$      & $\times$ & $\times$      \\
 % \text{max}($\eta_{\tau}$)                           & $4$       &  $\times$           &  $4$              & $\times$ & $10$          & $\times$ & $\times$       \\
@@ -94,47 +95,48 @@ lowest (n). Variables whose ranking is missing are not included in the training 
 Boosted decision trees implemented in the TMVA framework~\cite{Hocker:2007ht} are used in each SR to improve the separation between signal and background. 
 %The separate training exploits differences in event kinematics across SRs.  
 %draft 1 version
-In the training process, all signal events from $tt(qH)$ and $tH$ are merged together for $tuH$ and $tcH$. All background sources from SM processes
-(including both real and fake tau contributions) are also used in the training.
+In the training process, all signal events from $tt(qH)$ and $tH$ are combined for $tuH$ and $tcH$. All background sources from SM processes
+(including both the real and fake $\tau$ contributions) are also used in the training.
 
-Many potential variables are investigated in each SR separately. The discrimination of a given variable is quantified by the "separation" (which measures the degree of overlap between background and signal shape) and "importance" (which depicts the power of the variable in the classification of the events) provided by the TMVA package.%~\cite{Hocker:2007ht}.
+Many potential variables were investigated in each SR separately. The discrimination of a given variable is quantified by the `separation' (which measures the degree of overlap between background and signal distribution shape) and `importance' (which ranks the power of the variable in the classification of the events) provided by the TMVA package. %~\cite{Hocker:2007ht}.
 The BDT discriminant is trained for each SR starting from a large list of variables; then the least important variables are removed sequentially, and the BDT is retrained until the
 receiver operating characteristic (ROC) score drops by more than 2\%.
 %The final variables used in SRs are shown in Table 5 with their ranking. 
 %and only those variables whose importance is larger than 2\% were kept.
-The final BDT input variables in each SR and their importance ranking are listed in Table~\ref{tab:importance}. The discriminating variables are as follows.
+The final BDT input variables in each SR and their importance ranking are listed in Table~\ref{tab:importance}. The discriminating variables are as follows:
 \begin{itemize}
 \item $\met$ is the missing transverse momentum.
-\item ${\pt}_{\tau1} $ is the transverse momentum of the leading tau candidate.
-\item ${\pt}_{\tau2}$ is the transverse momentum of the subleading tau candidate.
+\item ${\pt}_{\tau1} $ is the transverse momentum of the leading $\tau$-lepton candidate.
+\item \text{max}($\eta_{\tau}$) is the maximum $\eta$ of the $\tauhad$ candidate(s). 
+%\item ${\pt}_{\tau2}$ is the transverse momentum of the subleading $\tau$-lepton candidate.
 \item ${\pt}^{\ell}$ is the transverse momentum of the leading light lepton.
-\item $\chi^2$ of the kinematic fit of the momentum of the invisible decay products of the tau leptons as defined in Eq.~(\ref{eq:eq1}).
-\item $m_{\text{bjj},\text{fit}}$ is the fitted invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
+\item $\chi^2$ of the kinematic fit of the momentum of the invisible decay products of the $\tau$-leptons as defined in Eq.~(\ref{eq:eq1}).
+\item $m_{\text{bjj}}$ is the invariant mass of the $b$-jet and the two jets from the $W$ boson decay, and reflects the top-quark mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet $t_hH$ and $t_ht(qH)$ events.
 \item $m^{W}_{\text{T}}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
-\begin{equation}
+\begin{equation*}
 m^{W}_{\text{T}} = \sqrt{2 {\pt}_{\ell} E_{\text{T}}^{\text{miss}} \left(1-\cos\Delta\phi_{\ell,\text{miss}} \right)},  
-\end{equation}
-where $\Delta\phi_{\ell,\text{miss}}$ is the azimuthal angle between the light-lepton and $\met$.  
-\item $m_{\tau\tau,\text{fit}}$ is the fitted invariant mass of the tau candidates and reconstructed neutrinos for the $t_hH$ and $t_ht(qH)$ events. 
-\item $m_{\text{jj}}$ is the reconstructed invariant mass of two light-jets from the $W$ decay with the mass closest to the $W$ mass.
-\item $m_{\tau\tau\text{q},\text{fit}}$ is the fitted invariant mass of the FCNC-decaying top quark reconstructed from the di-tau candidates, $q$-jet and reconstructed neutrinos.
-\item $m_{\tau\tau}$ is the visible invariant mass of the di-tau system. %or the lepton and $\had$ candidate when there is only one $\had$.
-\item ${\pt}_{\tau\tau}$ is the visible $\pT$ of the di-tau system.
+\end{equation*}
+where $\Delta\phi_{\ell,\text{miss}}$ is the azimuthal angle between the light lepton and $\met$.  
+\item $m_{\tau\tau,\text{fit}}$ is the fitted invariant mass of the $\tau$ candidates and reconstructed neutrinos for the $t_hH$ and $t_ht(qH)$ events. 
+\item $m_{\text{jj}}$ is the reconstructed invariant mass of two light jets from the $W$ decay with a mass closest to the known $W$ boson mass.
+\item $m_{\tau\tau\text{q},\text{fit}}$ is the fitted invariant mass of the FCNC-decaying top quark reconstructed from the di-$\tau$ candidates, $q$-jet and reconstructed neutrinos.
+\item $m_{\tau\tau}$ is the visible invariant mass of the di-$\tau$ system (including the light lepton when there is only one $\had$ candidate).
+\item ${\pt}_{\tau\tau}$ is the visible $\pT$ of the di-$\tau$ system.
 \item $m_{\tau\tau,\text{q}}$ is the reconstructed visible mass of the FCNC-decaying top quark.
-\item $m_{\text{bjj}}$ is the invariant mass of the lepton and the $b$-jet, which reflects the visible top quark mass.
-\item \text{min}($m_{\tau\tau \text{j}}$) is the minimum value of the visible mass of the di-tau candidates (including leptonically decaying tau) and the light-flavour jet system,
-  reflecting the invariant mass of the visible FCNC top decaying products.
+\item $m_{\ell \text{b}}$ is the invariant mass of the lepton and the $b$-jet, which reflects the visible top-quark mass.
+\item \text{min}($m_{\tau\tau \text{j}}$) is the minimum value of the visible mass of the di-$\tau$ candidates (including leptonically decaying $\tau$ candidates) and the light-flavour jet,
+  reflecting the invariant mass of the visible FCNC top-quark decay products.
 \item \text{min}($m_{\text{jj}}$) is the minimum value of the invariant mass of all the light-flavour jet pairs, reflecting the invariant mass of the $W$ boson candidate.
   %an alternative of $m_{\text{W}}$.
-\item $\met$ centrality is a measure of how centrally the $\met$ lies between the two tau candidates in the transverse plane, and is defined as
-\begin{eqnarray}
+\item $\met$ centrality is a measure of how centrally the $\met$ lies between the two $\tau$ candidates in the transverse plane, and is defined as
+\begin{eqnarray*}
 \begin{array}{l}
 \met~\text{centrality} = {(x+y)}/{\sqrt{x^2+y^2}}, \\
 \text{with}~x=\frac{\sin(\phi_{\text{miss}}-\phi_{\tau_1})}{\sin(\phi_{\tau_2}-\phi_{\tau_1})}, \quad  y=\frac{\sin(\phi_{\tau_2}-\phi_{\text{miss}})}{\sin(\phi_{\tau_2}-\phi_{\tau_1})} ,
 \end{array}
 \label{eq:eq3}
-\end{eqnarray}
-\item $E_{\tau\text{i}}/E_{\tau\text{i},\text{fit}}$ (\text{i}=1,2) is the momentum fraction carried by the visible decay products from the leading and subleading tau decays. It is based on the best-fit of the 4-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the tau energy since there is only a single neutrino in the final state.% which is evident in the excess around 1 in Figure \ref{fig:x12_fit}. 
+\end{eqnarray*}
+\item $E_{\tau {i}}/E_{\tau {i},\text{fit}}$ $({i}=1,2)$ is the momentum fraction carried by the visible decay products from the leading and subleading $\tau$ decays. It is based on the best fit of the four-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the $\tau$-lepton's energy since there is only a single neutrino in the final state.% which is evident in the excess around 1 in Figure \ref{fig:x12_fit}. 
 %\item $\Delta R(\ell+\text{b-jet},\tau\tau)$ is the angular distance between the lepton+$b$-jet and di-tau candidates.
 %\item $\Delta R(\ell,\text{b-jet})$ is the angular distance between the lepton and $b$-jet.
 %\item $\Delta R(\tau,\text{b-jet})$ is the angular distance between the tau candidate and $b$-jet. If there are two taus in the event, the leading one is selected for the calculation.
@@ -142,13 +144,13 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuthal angle between the light-l
 %\item $\Delta R(\ell,\tau)$ is the angular distance between the lepton and the closest tau candidate in the leptonic channels.
 %\item $\Delta R(\tau,\text{q-jet})$ is the angular distance between the tau candidate and the reconstructed $q$-jet. If there are two taus in the event, the leading one is used.
 %\item $\Delta R(\tau,\tau)$ is the angular distance between two tau candidates, in case of $t_h\tlhad$ channels, the definition is the same as $\Delta R(\ell,\tau)$.
-\item $\Delta\phi(\tau\tau,\met)$ is the azimuthal angle between the $\met$ and di-tau system $\pT$.
-\item $\Delta R(a,b)$ is the angular distance between the \text{a} and \text{b} objects in the event. 
+\item $\Delta\phi(\tau\tau,\met)$ is the azimuthal angle between the $\met$ and di-$\tau$ system's $\pT$.
+\item $\Delta R(a,b)$ is the angular distance between the $a$ and $b$ objects in the event. 
 %\item $\Delta R(\tau1,\text{light-jet})$ is the minimum angle distance between the tau candidate and the light-jet. If there are two taus in the event, the leading one is used.
 \end{itemize}
 
-Comparisons between the data and the predicted background for the leading $\had$ $\pt$  and the visible invariant mass of the di-tau system ($m_{\tau\tau}$)
-distributions in SRs and VRs, after applying fake factors, 
+Comparisons between the data and the predicted background for the distributions of leading $\had$ $\pt$  and visible invariant mass of the di-$\tau$ system ($m_{\tau\tau}$)
+in SRs and VRs, after applying fake factors, 
 %some of these variables in three main decay final states($t_{\ell}\hadhad$, $t_h\hadhad$, and $t_h\lephad$)
 are shown in Figures~\ref{fig:taupt_prefit} and~\ref{fig:mtt}, respectively.
 %each of the SRs considered is shown in Figures~\ref{fig:mva_input_hadhad} -~\ref{fig:mva_input_{\ell}hadhad}.
@@ -161,8 +163,8 @@ are shown in Figures~\ref{fig:taupt_prefit} and~\ref{fig:mtt}, respectively.
 %The last bin of each plot contains the overflow entries.
 %The bottom panel displays the ratio of data to the background (``Bkg'') prediction as discussed in section~\ref{sec:background_model}.
 %The hashed area represents the total uncertainty of the background.
-A good description of the data by the background model is observed in all cases.
-The final observable used to extract the signal contribution is the BDT distribution in each SR corresponding to either the $tuH$ or the $tcH$ signal.
+The data are well described by the background model in all cases.
+The final observable used to extract the signal contribution is the BDT distribution in each SR corresponding to either the $tuH$ or $tcH$ signal.
 
 %Figure~\ref{fig:asimov_prefitbdt} show the postfits to the data of BDT observable in each SRs with all background processes constrained to the SM expectation.
 %The level of discrimination between signal and background achieved by the BDTs is illustrated in Figure~\ref{fig:overtrain_hadhad}-~\ref{fig:overtrain_lhadhad}.
@@ -190,15 +192,15 @@ The final observable used to extract the signal contribution is the BDT distribu
 (g) & (h) & (i)\\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{Leading $\thad$ $\pt$  distributions obtained before the fit to data (``Pre-Fit'') showing 
-  the expected background and $tuH$ signals after applying fake factors in the following regions: $t_{\ell}\thadhad$ (a),
- $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$-SS  (f), $t_h\thadhad$-2j (g), $t_h\thadhad$-3j (h) and $t_h\thadhad$-3j SS (i).
- The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
+\caption{Leading $\thad$ $\pt$  distributions obtained before the fit to data (`Pre-Fit') showing 
+  the expected background and $tuH$ signals after applying fake factors in the following regions: (a) $t_{\ell}\thadhad$,
+ (b) $t_{\ell}\tauhad$-1j,  (c) $t_{\ell}\tauhad$-2j, (d) $t_h\tlhad$-2j, (e) $t_h\tlhad$-3j, (f) $t_{\ell}\thadhad$-SS, (g) $t_h\thadhad$-2j, (h) $t_h\thadhad$-3j and (i) $t_h\thadhad$-3j SS.
+ The total statistical and systematic uncertainty of the background prediction is indicated by the hatched band.
  %The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
- Overflow events are included in the last bin. ``Other MC'' (``Rare'') includes single top, $V$+jets, and other small backgrounds in the leptonic (hadronic) channel. The $tuH$ signals are scaled using
- normalization factors of 2 to 50.   
+ Overflow events are included in the last bin. `Other MC' (`Rare') includes single-top, $V$+jets, and other small backgrounds in the leptonic (hadronic) channel. The $tuH$ signal is scaled by a
+ normalisation factor of either 2, 10, or 50.   
 %( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
-The lower panels show the data to prediction ratio.}
+The lower panels show the ratio of data to prediction.}
 \label{fig:taupt_prefit}
 \end{figure}
 
@@ -244,14 +246,14 @@ The lower panels show the data to prediction ratio.}
 (g) & (h) & (i)\\
 %(c1) \pT(\tauhad) in $t_h\thadhad$-3j\\
 \end{tabular}
-\caption{Visible invariant mass of the di-tau system ($m_{\tau\tau}$) distributions obtained before the fit to data (``Pre-Fit'') showing 
-  the expected background and $tuH$ signals after applying fake factors in the following regions: $t_{\ell}\thadhad$ (a),
- $t_{\ell}\tauhad$-1j (b),  $t_{\ell}\tauhad$-2j (c), $t_h\tlhad$-2j (d), $t_h\tlhad$-3j (e), $t_{\ell}\thadhad$-SS (f), $t_h\thadhad$-2j (g), $t_h\thadhad$-3j (h) and $t_h\thadhad$-3j SS (i).
- The total size of the statistical and systematic uncertainties of the background prediction is indicated by the hatched band.
+\caption{Distributions of the visible invariant mass of the di-$\tau$ system ($m_{\tau\tau}$) obtained before the fit to data (`Pre-Fit') showing 
+  the expected background and $tuH$ signals after applying fake factors in the following regions: (a) $t_{\ell}\thadhad$,
+ (b) $t_{\ell}\tauhad$-1j,  (c) $t_{\ell}\tauhad$-2j, (d) $t_h\tlhad$-2j, (e) $t_h\tlhad$-3j, (f) $t_{\ell}\thadhad$-SS, (g) $t_h\thadhad$-2j, (h) $t_h\thadhad$-3j and (i) $t_h\thadhad$-3j SS.
+ The total statistical and systematic uncertainty of the background prediction is indicated by the hatched band.
  %The uncertainty band includes both the statistical and systematic uncertainties in the background prediction.
- Overflow events are included in the last bin. ``Other MC'' (``Rare'') includes single top, and $V$+jets and other small backgrounds in the leptonic (hadronic) channel. The $tuH$ signal is scaled using a normalization factor of 2 to 50.   
+ Overflow events are included in the last bin. `Other MC' (`Rare') includes single-top, and $V$+jets and other small backgrounds in the leptonic (hadronic) channel. The $tuH$ signal is scaled by a normalisation factor of either 2, 10, or 50.   
 %( only subtau real refers to $t\bar{t}$ MC with leading tau faked by other object, subleading tau from real contribution. 
-The lower panels show the data to prediction ratio.}
+The lower panels show the ratio of data to prediction.}
 \label{fig:mtt}
 \end{figure}
 

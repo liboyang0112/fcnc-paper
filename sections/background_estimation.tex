@@ -10,81 +10,81 @@ production of a vector boson $V$ ($V=W,Z$) or a Higgs boson and a $\ttbar$ pair 
 with prompt leptons, i.e.\ those originating from the decay of a $W$ boson, a $Z$ boson, or a $\tau$-lepton,
 are estimated using samples of simulated events and are initially normalised to their theoretical cross sections.
 In the simulation, the top-quark and SM Higgs boson masses are set to $172.5~\gev$ and $125~\gev$, respectively,
-and the Higgs boson is forced to decay via $H\to \tau\tau$ with branching ratio calculated using \textsc{Hdecay}~\cite{Djouadi:1997yw}.  
-Backgrounds with non-prompt light leptons (electron or muon), with photons or jets misidentified as electrons, or with jets misidentified as tau candidates, 
+and the Higgs boson is forced to decay via $H\to \tau\tau$ with a branching ratio calculated using \textsc{Hdecay}~\cite{Djouadi:1997yw}.  
+Backgrounds with non-prompt light leptons (electron or muon), with photons or jets misidentified as electrons, or with jets misidentified as $\tau$-lepton candidates, 
 generically referred to as fake leptons, are estimated using data-driven methods. 
 %\texttt{fake} 
-The background prediction is further improved during the statistical analysis by performing a likelihood 
+The background prediction is improved during the statistical analysis by performing a likelihood 
 fit to data using several signal-depleted control regions as shown in Table~\ref{tab:srcr}.
 The events with one light lepton, two same-sign $\had$, and one $b$-jet, are also selected, providing a validation region (VR) for the background estimation in the leptonic channels. 
 %-------------------------------------------------------------------------------
 %\subsection{Backgrounds with fake leptons}
 %\label{sec:fakeleptons}
 %-------------------------------------------------------------------------------
-\subsection{Backgrounds with fake tau leptons}
+\subsection{Backgrounds with fake $\tau$-leptons}
 \label{sec:faketaus}
-The background with one or more fake tau candidates mainly arises from $\ttbar$ or
-multi-jet production, depending on the search channels.
-Studies based on simulation show that, for all the above processes, fake tau candidates primarily result from the
+The background with one or more fake $\tau$ candidates arises mainly from $\ttbar$ or
+multi-jet production, depending on the search channel.
+Studies based on simulation show that, for all the above processes, fake $\tau$ candidates primarily result from the
 misidentification of light jets and $b$-quark jets.
-It is also found that the fake rate decreases for all jet flavours as the tau candidate $\pt$ increases.
+It is also found that the fake rate decreases for all jet flavours as the $\tau$ candidate's $\pt$ increases.
 
-In the leptonic channels, the events with a prompt electron or muon and fake taus are modelled by calibrating the MC with scale factors (SF)
+In the leptonic channels, the events with a prompt electron or muon and fake $\tau$-leptons are modelled by calibrating the MC samples with scale factors (SF)
 derived from the dedicated $t\bar t$
-control regions (CRtt) using dileptonic decays of $t\bar t$ events and semileptonic decays of $t\bar t$ events with two
-$b$-jets, as is summarized in Table~\ref{tab:srcr}. The control regions are defined similarly to the signal regions but with an additional $b$-jet or light lepton. 	
+control regions (CRtt) using dileptonic decays of $t\bar t$ pairs and semileptonic decays of $t\bar t$ pairs with two
+$b$-jets, as is summarised in Table~\ref{tab:srcr}. The control regions are defined similarly to the signal regions but with an additional $b$-jet or light lepton. 	
 %the SM $t\bar t$ decay of dilepton events and semileptonically double-btagged lepton-jet events, summarized in Table~\ref{tab:srcr},
 %aimed at fake taus from different origins.
-There are four kinds of fake taus that need to be calibrated: Type-1 fake taus from hadronic $W$ boson decay ($\tau_{W}$) %$W$-jets ($\tau_{W}$)
+There are four kinds of fake $\tau$-leptons that need to be calibrated: Type-1 fake $\tau$-leptons from hadronic $W$ boson decay ($\tau_{W}$) %$W$-jets ($\tau_{W}$)
 with opposite-sign (OS) charge relative to the light lepton;
-Type-2 $\tau_{W}$'s with same-sign (SS) charge relative to the light lepton; Type-3 fake taus originating from $b$-hadron decays; Type-4 fake taus from light-flavour hadron decays.
+Type-2 $\tau_{W}$'s with same-sign (SS) charge relative to the light lepton; Type-3 fake $\tau$-leptons originating from $b$-hadron decays; and Type-4 fake $\tau$-leptons from light-flavour hadron decays.
 %The control regions are defined similar to the signal regions but with an additional $b$-jet or light lepton.
 %$t_{\ell}t_{\ell}1b\thad$, $t_{\ell}t_{\ell}2b\thad$, $t_{\ell}t_h2b\thad$-2jSS, $t_{\ell}t_h2b\thad$-2jOS, $t_{\ell}t_h2b\thad$-3jSS, and $t_{\ell}t_h2b\thad$-3jOS.
-The dilepton regions ($t_{\ell}t_{\ell}1b\thad$ and $t_{\ell}t_{\ell}2b\thad$) are used to calibrate Type-3 and Type-4 fake taus. The semileptonic
-regions ($t_{\ell}t_h2b\thad$-2jOS and $t_{\ell}t_h2b\thad$-3jOS), where the $\thad$ and light lepton have opposite charges, are used to calibrate Type-1 fake taus.
+The dilepton regions ($t_{\ell}t_{\ell}1b\thad$ and $t_{\ell}t_{\ell}2b\thad$) are used to calibrate Type-3 and Type-4 fake $\tau$-leptons. The semileptonic
+regions ($t_{\ell}t_h2b\thad$-2jOS and $t_{\ell}t_h2b\thad$-3jOS), where the $\thad$ and light lepton have opposite charges, are used to calibrate Type-1 fake $\tau$-leptons.
 Similarly for Type-2, the semileptonic regions ($t_{\ell}t_h2b\thad$-2jSS and $t_{\ell}t_h2b\thad$-3jSS), where the $\thad$ and light lepton have same charges, are used.
-A simultaneous fit to data is made to derive the scale factors for fake taus in the MC. These consist of a total of 24 parameters
-depending on four types of fake taus, three $\pt$ bins, and two bins for 1- and 3-prong taus separately. The post-fit distributions of the
-leading $\thad$ $\pt$ and measured tau scale factors are presented in Appendix~\ref{sec:tauFF_appendix}. 
-The values of these scale factors range from 0.3 to 1.28 and are then used to correct the MC-estimated fakes in the corresponding  signal regions with a single $b$-jet.
-In the $t_{\ell}\thadhad$ channel, both taus can be misidentified, so the calibration is applied to each tau separately, following the same procedure used in the $\tlhad$ channel.
+A simultaneous fit to data is made to derive the scale factors for fake $\tau$-leptons in the MC samples. These consist of a total of 24 parameters
+depending on four types of fake $\tau$-leptons, three $\pt$ bins, and two bins for 1- and 3-prong $\tau$ decays separately. The post-fit distributions of the
+leading $\thad$ $\pt$ and measured $\tau$ scale factors are presented in Appendix~\ref{sec:tauFF_appendix}. 
+The values of these scale factors range from 0.3 to 1.28 and are used to correct the MC-estimated fakes in the corresponding  signal regions with a single $b$-jet.
+In the $t_{\ell}\thadhad$ channel, both $\tau$ candidates can be misidentified, so the calibration is applied to each $\tau$ candidate separately, following the same procedure used in the $\tlhad$ channel.
 %using the lepton and fake tau charges, then the scale factors are multiplied together.
-The central value of scale factors vary according to their uncertainties in the final fit. A closure test is made for the fake tau estimates using the same procedure
+The central values of the scale factors vary according to their uncertainties in the final fit. A closure test is made for the fake-$\tau$ estimates, using the same procedure as
 in the $t_{\ell}\thadhad$-SS validation region, and it shows good agreement between data and the background prediction. 
 %In the control regions with single lepton, $\met > 20$GeV and at least 2 light jets and 2 b-tagged jets are required to ensure that QCD contribution is negligible.
 %The calibration is done depending on different source of the fake taus and \pt. The calibration factor are derived in the dedicated
 %control regions discussed in Section~\ref{sec:strategy_Htautau}.
 
-In the hadronic channels, the contribution of fakes is estimated from data using the fake-factor (FF) method to derive the transfer functions from the background enriched control
+In the hadronic channels, the contribution of fakes is estimated from data using the fake-factor (FF) method to derive the transfer functions from the background-enriched control
 regions (CR) to the SR~\cite{ATLAS-CONF-2021-044}.
 %by defining control regions (CR)
 %enriched in misidentified
 %tau candidates via loosened tau requirements with fake factors and partially from MC~\cite{ATLAS-CONF-2021-044}.
 These CRs do not overlap with the main signal regions discussed in Section~\ref{sec:strategy_Htautau}.
 The CR selection requirements are analogous to those used to define signal regions, except
-that the subleading tau candidate is required to fail the medium tau identification while still passing a loose requirement.
-The contribution of fakes with subleading tau candidates can be calculated by rescaling the templates of loose taus in the CR
+that the subleading $\tau$ candidate is required to fail the `medium' $\tau$ identification while still passing a loose requirement.
+The contribution of fakes with subleading $\tau$ candidates can be calculated by rescaling the templates for `loose' $\tau$ candidates in the CR
 with the FFs.
-The templates are produced by subtracting all MC background contributions with real subleading taus from the data.
-The FFs are computed as the ratio of misidentified $\thad$ candidates that either pass or fail the medium tau ID selection in regions enriched in events originating from 
+The templates are produced by subtracting all MC background contributions with real subleading $\tau$-leptons from the data.
+The FFs are computed as the ratio of misidentified $\thad$ candidates that either pass or fail the `medium' $\tau$ ID selection in regions enriched in events originating from 
 $W$+jets processes~\cite{ATLAS-CONF-2021-044}. 
 %the Data-MC ($\mathrm{real~tau}$) ratio of the yields of events in which the tau candidate is passing or failing the medium tau ID selection
 %in the $W$+jets samples~\cite{ATLAS-CONF-2021-044}.
 %passing to failing the medium tau ID in the $W$+jets control region.
 %We have compared
-FFs obtained from the $W$+jets and from the same-sign $\thadhad$ control regions are compared and the difference is treated as a systematic uncertainty.
+FFs obtained from the $W$+jets events are compared with those from the same-sign $\thadhad$ control regions and the differences are treated as systematic uncertainties.
 
 \subsection{Background with fake light leptons}
-The background originating from non-prompt or misidentified light leptons is primarily from the multi-jet production.
+The background originating from non-prompt or misidentified light leptons is primarily from multi-jet production.
 %Electrons and muons only appear in the leptonic channels where exactly one electron or muon and at least one $\had$ are required.
 %Since the rate of $\had$ candidate is much larger than for electron or muon, in the majority of the fake lepton events, the $\had$ candidate is misidentified and
 %the electron or muon is prompt based on MC studies.
 %However the multi-jet background has large event rate and can contribute with both electron or muon and $\had$ faked, especially to $t_{\ell}\had$ where the fake-lepton dominates. and the jet multiplicity is low.
 The contribution from these events is estimated with a data-driven method called ABCD.
-The estimate is based on the number of tight and loose light-leptons that passed and failed the PLIV cut in the low ($<25~\gev$) and high
+The estimate is based on the numbers of `tight' and `loose' light leptons that passed and failed the PLIV cut in the low ($<25~\gev$) and high
 ($>25~\gev$) $\met$ regions. The number of
-fake light leptons in the signal region is evaluated by scaling the number of loose leptons in the high $\met$ region by the ratio of tight and loose leptons in the
-low $\met$ region. The contributions of prompt leptons and calibrated fake taus to the number of tight and loose leptons are subtracted using MC simulation.
-A closure test is made for the background estimates in the signal depleted low BDT ($<-0.6$) regions, defined in Section~\ref{sec:tmva}.
+fake light leptons in the signal region is evaluated by scaling the number of `loose' leptons in the high $\met$ region by the ratio of `tight' leptons to `loose' leptons in the
+low $\met$ region. The contributions of prompt leptons and calibrated fake $\tau$-leptons to the numbers of `tight' and `loose' leptons are subtracted using MC simulation.
+A closure test is made for the background estimates in the signal-depleted low-BDT-score ($<-0.6$) regions, defined in Section~\ref{sec:tmva}.
 The data are in good agreement with the background prediction in the
 $t_{\ell}\had$ channels, while the fake light leptons are negligible in other leptonic channels. 
