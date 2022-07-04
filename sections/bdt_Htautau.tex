@@ -6,68 +6,38 @@
   \caption{\small{Discriminating variables (n) used in the training of the BDT of each SR. 
 The ranking of the input variables according to their importance in the training is reported from highest (1) to 
 lowest (n). Variables whose ranking is missing are not included in the training of that SR. The description of each variable is provided in the text.}}
-%Variables are ranked from highest (1) to lowest (n) relative to one another by their
-%      importance in the training. Variables which do not have a ranking are not included in the training. 
-%The values represent their ra importance rankings of each variable and cross($\times$) denotes the variable is not used in the training.
-%      The descriptions of each variable are provided in the following text.}}
 \label{tab:importance}
  \centering
  \vspace{0.2cm}
  \begin{tabular}{cccccccc} \toprule\toprule
    & $t_{\ell}\tauhad$-1j                                  &  $t_{h}\tlhad$-2j   &  $t_{\ell}\tauhad$-2j & $t_{h}\tlhad$-3j & $t_{\ell}2\tauhad$     & $t_h2\tauhad$-2j & $t_h2\tauhad$-3j       \\\midrule
-   Total variables~(n)                           & $12$~~ & $15$~~ & $12$~~ & $17$~~ & $15$~~ & $12$~~ & $12$~~ \\\midrule 
- $m_{\text{jj}}$                                      &   &             &           & $9$      &       & $6$      & $7$\\
- $\chi^{2}$                                          &   &             &           & $14$~~     &       &  &       \\
- \text{max}($\eta_{\tau}$)                           & $4$       &             &  $4$              &  & $10$~~          &  &        \\
- $m^{W}_{\text{T}}$                           & $11$~~      &             &  $8$              &  & $13$~~          &  &         \\
- $m_{\tau\tau,\text{fit}}$                                     &   &  $2$                &           & $3$      &       & $1$      & $1$          \\
- $m_{\text{bjj}}$                            &   &  $1$                &           & $2$      &       & $3$      & $4$          \\
- ${\pt}^{\ell}$                                 & $12$~~      &  $15$~~               &  $12$~~             & $17$~~     &       &  &         \\
- $m_{\tau\tau\text{q},\text{fit}}$                          &   &             &           &  &       & $10$~~     & $6$\\
- $m_{\ell \text{b}}$                 & $3$       &             &  $5$              &  & $4$           &  &         \\
- ${\pt}_{\tau1}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$~~   & $10$~~           \\
- $\met$                                              & $5$       &  $11$~~               &  $10$~~             & $13$~~     & $6$           & $7$    & $13$~~          \\
- $m_{\tau\tau}$                           & $10$~~      &  $14$~~               &  $11$~~             & $6$      & $1$           & $2$    & $2$          \\
- $E_{\tau1}/E_{\tau1,\text{fit}}$                  &   &  $10$~~               &           & $12$~~     &       & $8$    & $8$          \\
- $E_{\tau2}/E_{\tau2,\text{fit}}$                  &   &  $7$                &           & $4$      &       & $9$    & $11$~~         \\
- ${\pt}_{\tautau} $                          &   &             &           &  & $9$           &  &         \\
- $m_{\tau\tau\text{q}}$               &   &             &           &  & $3$           &  &        \\
- $\Delta\phi(\tau\tau,\met)$                         &   &  $6$                            &           & $16$~~     &       & $13$~~   & $12$~~         \\
- $\met\text{\,centrality}$                             &   &  $13$~~               &           & $15$~~     &       & $12$~~   & $9$         \\
- \text{min}($m_{\tau\tau \text{j}}$)             & $9$       &             &  $3$              &  & $14$~~          &  &         \\
- \text{min}($\Delta R(\ell,\tau)$)                               & $8$       &  $9$                &  $9$              & $10$~~     & $15$~~          &  &         \\
- $\Delta R(\tau,\tau)$                               &   &             &           &  & $2$           & $4$    & $3$             \\
- $\Delta R(\ell,\text{$b$-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$~~          &  &         \\
- $\Delta R(\tau1,\text{$b$-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$~~          &  &        \\
- $\Delta R(\ell+\text{$b$-jet},\tau\tau )$             &   &             &           &  & $7$           &  &         \\
- $\Delta R(\tau1,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
- \text{min}($m_{\text{jj}}$) &   &  $12$~~               &           & $11$~~     &       &  &         \\
-% $m_{\text{W}}$                                      & $\times$  &  $\times$           &  $\times$         & $9$      & $\times$      & $6$      & $7$\\
-% $\chi^{2}$                                          & $\times$  &  $\times$           &  $\times$         & $14$     & $\times$      & $\times$ & $\times$      \\
-% \text{max}($\eta_{\tau}$)                           & $4$       &  $\times$           &  $4$              & $\times$ & $10$          & $\times$ & $\times$       \\
-% $m^{\text{T}}_{\text{W}}$                           & $10$      &  $\times$           &  $8$              & $\times$ & $13$          & $\times$ & $\times$        \\
-% $m_{\tau,\tau}$                                     & $\times$  &  $2$                &  $\times$         & $3$      & $\times$      & $1$      & $1$          \\
-% $m_{\text{t},\text{SM}}$                            & $\times$  &  $1$                &  $\times$         & $2$      & $\times$      & $3$      & $4$          \\
-% $p_{\text{T},\ell}$                                 & $12$      &  $15$               &  $12$             & $17$     & $\times$      & $\times$ & $\times$        \\
-% $m_{\text{t},\text{FCNC}}$                          &  $\times$ &  $\times$           &  $\times$         & $\times$ & $\times$      & $10$     & $6$\\
-% $m_{\text{t},\text{SM},\text{vis}}$                 & $3$       &  $\times$           &  $5$              & $\times$ & $4$           & $\times$ & $\times$        \\
-% $p_{\text{T},\tau}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$   & $10$           \\
-% $\met$                                              & $5$       &  $11$               &  $10$             & $13$     & $6$           & $7$    & $13$          \\
-% $m_{\tau\tau,\text{vis}}$                           & $10$      &  $14$               &  $11$             & $6$      & $1$           & $2$    & $2$          \\
-% $E_{\text{vis}~\tau,1}/E_{\tau,1}$                  & $\times$  &  $10$               &  $\times$         & $12$     & $\times$      & $8$    & $8$          \\
-% $E_{\text{vis}~\tau,2}/E_{\tau,2}$                  & $\times$  &  $7$                &  $\times$         & $4$      & $\times$      & $9$    & $11$         \\
-% $P_{\text{T,\tauhadvis}} $                          & $\times$  &  $\times$           &  $\times$         & $\times$ & $9$           & $\times$ & $\times$        \\
-% $m_{\text{t},\text{FCNC},\text{vis}}$               & $\times$  &  $\times$           &  $\times$         & $\times$ & $3$           & $\times$ & $\times$       \\
-% $\Delta\phi(\tau\tau,\met)$                         & $\times$  &  $6$    			   &  $\times$         & $16$     & $\times$      & $13$   & $12$         \\
-% $\met\text{centrality}$                             & $\times$  &  $13$               &  $\times$         & $15$     & $\times$      & $12$   & $9$         \\
-% \text{Min}($m_{\tau\tau \text{q-jet}}$)             & $9$       &  $\times$           &  $3$              & $\times$ & $14$          & $\times$ & $\times$        \\
-% $\Delta R(\ell,\tau)$                               & $8$       &  $9$                &  $9$              & $10$     & $15$          & $\times$ & $\times$        \\
-% $\Delta R(\tau,\tau)$                               & $\times$  &  $\times$           &  $\times$         & $\times$ & $2$           & $4$    & $3$             \\
-% $\Delta R(\ell,\text{b-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$          & $\times$ & $\times$        \\
-% $\Delta R(\tau,\text{b-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$          & $\times$ & $\times$       \\
-% $\Delta R(\ell+\text{b-jet},\tau\tau )$             & $\times$  &  $\times$           &  $\times$         & $\times$ & $7$           & $\times$ & $\times$        \\
-% $\Delta R(\tau,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
-% \text{Min}($m_{\text{light-jet},\text{light-jet}}$) & $\times$  &  $12$               &  $\times$         & $11$     & $\times$      & $\times$ & $\times$        \\
+   Total variables~(n)                           & $12$~~ & $15$~~ & $12$~~ & $17$~~ & $15$~~ & $12$~~ & $12$~~ \\\midrule
+   $\met$                                              & $5$       &  $11$~~               &  $10$~~             & $13$~~     & $6$           & $7$    & $13$~~          \\
+   ${\pt}_{\tau1}$                                 & $1$       &  $4$                &  $1$              & $1$      & $5$           & $11$~~   & $10$~~           \\
+   \text{max}($\eta_{\tau}$)                           & $4$       &             &  $4$              &  & $10$~~          &  &        \\
+   ${\pt}^{\ell}$                                 & $12$~~      &  $15$~~               &  $12$~~             & $17$~~     &       &  &         \\
+   $\chi^{2}$                                          &   &             &           & $14$~~     &       &  &       \\
+   $m_{\text{bjj}}$                            &   &  $1$                &           & $2$      &       & $3$      & $4$          \\
+   $m^{W}_{\text{T}}$                           & $11$~~      &             &  $8$              &  & $13$~~          &  &         \\
+   $m_{\tau\tau,\text{fit}}$                                     &   &  $2$                &           & $3$      &       & $1$      & $1$          \\  
+   $m_{\text{jj}}$                                      &   &             &           & $9$      &       & $6$      & $7$\\
+   $m_{\tau\tau\text{q},\text{fit}}$                          &   &             &           &  &       & $10$~~     & $6$\\
+   $m_{\tau\tau}$                           & $10$~~      &  $14$~~               &  $11$~~             & $6$      & $1$           & $2$    & $2$          \\
+   ${\pt}_{\tautau} $                          &   &             &           &  & $9$           &  &         \\
+   $m_{\tau\tau\text{q}}$               &   &             &           &  & $3$           &  &        \\   
+   $m_{\ell \text{b}}$                 & $3$       &             &  $5$              &  & $4$           &  &         \\
+   \text{min}($m_{\tau\tau \text{j}}$)             & $9$       &             &  $3$              &  & $14$~~          &  &         \\   
+   \text{min}($m_{\text{jj}}$) &   &  $12$~~               &           & $11$~~     &       &  &         \\
+   $\met\text{\,centrality}$                             &   &  $13$~~               &           & $15$~~     &       & $12$~~   & $9$         \\
+   $E_{\tau1}/E_{\tau1,\text{fit}}$                  &   &  $10$~~               &           & $12$~~     &       & $8$    & $8$          \\
+   $E_{\tau2}/E_{\tau2,\text{fit}}$                  &   &  $7$                &           & $4$      &       & $9$    & $11$~~         \\
+   $\Delta\phi(\tau\tau,\met)$                         &   &  $6$                            &           & $16$~~     &       & $13$~~   & $12$~~         \\
+   \text{min}($\Delta R(\ell,\tau)$)                               & $8$       &  $9$                &  $9$              & $10$~~     & $15$~~          &  &         \\
+   $\Delta R(\tau,\tau)$                               &   &             &           &  & $2$           & $4$    & $3$             \\
+   $\Delta R(\ell,\text{$b$-jet})$                       & $2$       &  $3$                &  $2$              & $8$      & $12$~~          &  &         \\
+   $\Delta R(\tau1,\text{$b$-jet})$                       & $6$       &  $5$                &  $6$              & $7$      & $11$~~          &  &        \\
+   $\Delta R(\ell+\text{$b$-jet},\tau\tau )$             &   &             &           &  & $7$           &  &         \\
+   $\Delta R(\tau1,\text{light-jet})$                   & $7$       &  $8$                &  $7$              & $5$      & $8$           & $5$    & $5$    \\
  \bottomrule\bottomrule\\
  \end{tabular}
 \end{table*}
@@ -122,7 +92,7 @@ where $\Delta\phi_{\ell,\text{miss}}$ is the azimuthal angle between the light l
 \item $m_{\tau\tau\text{q},\text{fit}}$ is the fitted invariant mass of the FCNC-decaying top quark reconstructed from the di-$\tau$ candidates, $q$-jet and reconstructed neutrinos.
 \item $m_{\tau\tau}$ is the visible invariant mass of the di-$\tau$ system (including the light lepton when there is only one $\had$ candidate).
 \item ${\pt}_{\tau\tau}$ is the visible $\pT$ of the di-$\tau$ system.
-\item $m_{\tau\tau,\text{q}}$ is the reconstructed visible mass of the FCNC-decaying top quark.
+\item $m_{\tau\tau\text{q}}$ is the reconstructed visible mass of the FCNC-decaying top quark.
 \item $m_{\ell \text{b}}$ is the invariant mass of the lepton and the $b$-jet, which reflects the visible top-quark mass.
 \item \text{min}($m_{\tau\tau \text{j}}$) is the minimum value of the visible mass of the di-$\tau$ candidates (including leptonically decaying $\tau$ candidates) and the light-flavour jet,
   reflecting the invariant mass of the visible FCNC top-quark decay products.
