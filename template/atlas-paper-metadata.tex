@@ -8,9 +8,9 @@
 
 % Draft version:
 % Should be 1.0 for the first circulation, and 2.0 for the second circulation.
-% If given, adds draft version on front page, a 'DRAFT' box on top of each other page, 
+% If given, adds draft version on front page, a 'DRAFT' box on top of every other page, 
 % and line numbers.
-% Comment or remove in final version.
+% Comment or remove in the final version.
 \AtlasVersion{0.1}
 
 % Abstract - % directly after { is important for correct indentation
@@ -20,13 +20,15 @@
 
 % Author - this does not work with revtex (add it after \begin{document})
 % This has to be commented out for TDR etc.
+% For PUB notes, add package authblk and use \thanks if an ACE/STA should be added.
+% See Section 4.2 of ATLAS LaTeX guide for more details.
 % \author{The ATLAS Collaboration}
 
 % ATLAS reference code, to help ATLAS members to locate the paper
-\AtlasRefCode{GROUP-2017-XX}
+\AtlasRefCode{GROUP-2021-XX}
 
 % CERN preprint number
-% \PreprintIdNumber{CERN-EP-2017-XX}
+% \PreprintIdNumber{CERN-EP-2021-XX}
 
 % ATLAS date - arXiv submission; usually filled in by the Physics Office
 % \AtlasDate{\today}
@@ -35,14 +37,14 @@
 % \AtlasHeading{ATLAS ABC TDR}
 
 % arXiv identifier
-% \arXivId{14XX.YYYY}
+% \arXivId{21XX.YYYY}
 
 % HepData record
 % \HepDataRecord{ZZZZZZZZ}
 
 % Submission journal and final reference
 % \AtlasJournal{Phys.\ Lett.\ B.}
-% \AtlasJournalRef{\PLB 789 (2017) 123}
+% \AtlasJournalRef{\PLB 789 (2021) 123}
 % \AtlasDOI{}
 
 %-------------------------------------------------------------------------------
@@ -60,7 +62,7 @@
 % \AtlasCoverTwikiURL{https://twiki.cern.ch/twiki/bin/view/Atlas/WebHome}
 
 % Comment deadline
-% \AtlasCoverCommentsDeadline{DD Month 2017}
+% \AtlasCoverCommentsDeadline{DD Month 2021}
 
 % Analysis team members - contact editors should no longer be specified
 % as there is a generic email list name for the editors
@@ -77,11 +79,10 @@
 % A PUB note has readers and not an EdBoard -- give their names here (one line or several entries)
 % \AtlasCoverReaderMember{Reader~1, Reader~2}
 % \AtlasCoverReaderMember{Reader~1}
-% \AtlasCoverEdBoardMember{Reader~2}
+% \AtlasCoverReaderMember{Reader~2}
 
 % Editors egroup
-% \AtlasCoverEgroupEditors{atlas-GROUP-2016-XX-editors@cern.ch}
+% \AtlasCoverEgroupEditors{atlas-GROUP-2021-XX-editors@cern.ch}
 
 % EdBoard egroup
-% \AtlasCoverEgroupEdBoard{atlas-GROUP-2016-XX-editorial-board@cern.ch}
-
+% \AtlasCoverEgroupEdBoard{atlas-GROUP-2021-XX-editorial-board@cern.ch}

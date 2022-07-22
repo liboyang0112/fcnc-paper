@@ -3,14 +3,12 @@
 #------------------------------------------------------------------------------
 
 BASENAME = atlas_tables
-TEXLIVE = 2016
+TEXLIVE = 2020
 
 .PHONY: clean cleanpdf
 
 atlas_tables:
-	if [ $(TEXLIVE) -ge 2011 ]; then \
-		make -f ../Makefile run_latexmk BASENAME=$(BASENAME); \
-	fi
+	make -f ../Makefile run_latexmk BASENAME=$(BASENAME); \
 
 texlive:
 	make -f ../Makefile texlive BASENAME=$(BASENAME) TEXLIVE=$(TEXLIVE)

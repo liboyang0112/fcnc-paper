@@ -1,21 +1,21 @@
 %-------------------------------------------------------------------------------
-% Useful particle definitions - include with hepparticle option in atlasphysics.sty
-% Not included by default
+% Useful particle definitions - include with hepparticle option in atlasphysics.sty.
+% Not included by default.
 % Use particle definitions from the heppparticle/heppennames package.
 % Note that atlasparticle and atlashepparticle are mutually exclusive!
 %
 % Note that this file can be overwritten when atlaslatex is updated.
 %
-% Copyright (C) 2002-2018 CERN for the benefit of the ATLAS collaboration
+% Copyright (C) 2002-2022 CERN for the benefit of the ATLAS collaboration.
 %-------------------------------------------------------------------------------
 %\let\sst=\scriptscriptstyle
 
 % Make sure heppennames is loaded.
-\ifAPHY@hepitalic
+\ifthenelse{\boolean{APHY@hepitalic}}{%
   \RequirePackage[italic]{heppennames}
-\else
+}{%
   \RequirePackage{heppennames}
-\fi
+}
 
 % Adjust the kerning for bar over particles with narrow glyphs (from Andy Buckley)
 \def\@shiftlen@anti@gen@bar{0mu}

@@ -1,22 +1,24 @@
 %-------------------------------------------------------------------------------
-% Template class for ATLAS documents
+% Template class for ATLAS documents.
 %
-% See ChangeLog or Git log for history of changes.
+% See CHANGELOG.md or Git log for history of changes.
 % Responsible: Ian Brock (ian.brock@cern.ch)
 %
 % Note that this file can be overwritten when atlaslatex is updated.
+% If TeX Live 2014 is used and xpatch is needed, have to load mhchem first.
 %
-% Copyright (C) 2002-2018 CERN for the benefit of the ATLAS collaboration
+% Copyright (C) 2002-2022 CERN for the benefit of the ATLAS collaboration.
 %-------------------------------------------------------------------------------
-\def\ATPackageVersion{06-00-00}
-
-\ProvidesClass{latex/atlasdoc}[2018/11/30 v.06-00-00 ATLAS document class]
-% Needs 2009 TeX Live or later
-\NeedsTeXFormat{LaTeX2e}[2009/01/01]
+\newcommand*{\ATPackageVersion}{13.5.0}
+\ProvidesClass{latex/atlasdoc}[2022/07/20 v13.5.0 ATLAS document class]
+% Needs 2013 TeX Live or later
+\NeedsTeXFormat{LaTeX2e}[2013/01/01]
 
 %-------------------------------------------------------------------------------
 % More advanced if syntax
 \RequirePackage{ifthen}
+% More advanced command definition
+\RequirePackage{xparse}
 % Process options. Use kvoptions package.
 \RequirePackage{kvoptions}
 %\RequirePackage[debugshow]{kvoptions}
@@ -34,281 +36,342 @@
 \DeclareBoolOption[false]{CONF}
 \DeclareBoolOption[false]{PUB}
 \DeclareBoolOption[false]{BOOK}
+\DeclareBoolOption[true]{REPORT}
 \DeclareBoolOption[false]{HEPDATA}
 \DeclareBoolOption[false]{LANGEDIT}
 \DeclareBoolOption[true]{LANGSHOW}
-\DeclareStringOption[2016]{texlive}
-\DeclareStringOption{paper}
+\DeclareStringOption[2020]{texlive}
+\DeclareStringOption[a4]{paper}
 \DeclareStringOption[normal]{titlesize}
+\DeclareStringOption[\subsectiontocdepth]{tocdepth}
 \DeclareBoolOption[true]{floatopt}
-\DeclareBoolOption[false]{texmf}
+\DeclareBoolOption[true]{tableheading}
+\DeclareBoolOption[true]{mathlines}
+\DeclareBoolOption[true]{linenofix}
+\DeclareBoolOption[true]{texmf}
 \DeclareBoolOption[true]{newtx}
 \DeclareBoolOption[false]{txfonts}
 \DeclareBoolOption[false]{libertine}
 \DeclareBoolOption[false]{palatino}
 \DeclareBoolOption[false]{mhchem}
 \DeclareBoolOption[true]{abstract}
+\DeclareBoolOption[true]{atlaslogo}
+\DeclareBoolOption[true]{cernlogo}
 \DeclareBoolOption[true]{datetop}
 \DeclareBoolOption[false]{showframe}
+\DeclareBoolOption[false]{shownote}
+\DeclareBoolOption[false]{cmslogo}
+\DeclareStringOption[]{extralogo}
 \DeclareStringOption[0pt]{titleextraheight}
 \DeclareStringOption[0pt]{copyrightoffset}
 \ProcessKeyvalOptions{ADOC}
 
-% Standard LaTeX options for paper size
-%\newif\ifADOC@aivpaper
-%\ADOC@aivpapertrue
-%\DeclareOption{a4paper}{\PassOptionsToClass{\CurrentOption}{\ADOC@mainclass}} % \ADOC@aivpapertrue} %\def\ADOC@paperstring{a4paper}}
-%\DeclareOption{letterpaper}{\PassOptionsToClass{\CurrentOption}{\ADOC@mainclass}} % \ADOC@aivpaperfalse} %\def\ADOC@paperstring{letterpaper}}
-%\ProcessOptions\relax
-\newcommand*{\ATTeXLiveVersion}{\ADOC@texlive}
-
 \newif\ifADOC@CONFnote
 \newif\ifADOC@PUBnote
+\newif\ifADOC@notenumber
 
-% CERN preprint or auxiliary material
-\ifADOC@cernpreprint
+% CERN preprint or auxiliary material.
+\ifthenelse{\boolean{ADOC@cernpreprint}}{%
   \ADOC@HEPDATAfalse
-\else
-  \ifADOC@preprint
+  \ADOC@atlasdraftfalse
+}{%
+  \ifthenelse{\boolean{ADOC@preprint}}{%
     \ADOC@cernpreprinttrue
     \ADOC@HEPDATAfalse
-  \else
-    \ifADOC@HEPDATA
-      \ADOC@cernpreprintfalse
-    \fi
-  \fi
-\fi
+  }{%
+    \ifthenelse{\boolean{ADOC@HEPDATA}}{\ADOC@cernpreprintfalse}{}
+  }
+}
 
 % Directory for style files
-\ifADOC@texmf
-  \providecommand*{\ATLASLATEXPATH}{}
-\else
-  \providecommand*{\ATLASLATEXPATH}{latex/}
-\fi
+% \ifADOC@texmf
+%   \providecommand*{\ATLASLATEXPATH}{}
+% \else
+%   \providecommand*{\ATLASLATEXPATH}{latex/}
+% \fi
+
+% Macros without @ for draft status and TeX Live version.
+\newif\ifAtlasDraft
+\ifthenelse{\boolean{ADOC@atlasdraft}}{\AtlasDrafttrue}{\AtlasDraftfalse}
+\newcommand*{\AtlasTeXLiveVersion}{\ADOC@texlive}
 
 % Type of document
 \newcommand*{\ADOC@docheadingdefault}{}
-\ifADOC@PAPER
-  \typeout{atlasdoc: ATLAS paper}
+% Add ability to change draft document heading
+\newcommand*{\ADOC@docheading}{}
+\newcommand*{\AtlasHeading}[1]{\renewcommand*{\ADOC@docheading}{#1}}
+
+% Turn off backref in atlasbiblatex for CERN preprint
+\newcommand*{\ADOC@atlasbiblatex}{atlasbiblatex}
+\newcommand*{\ADOC@atlasphysics}{atlasphysics}
+
+% CERN preprint
+\ifthenelse{\boolean{ADOC@cernpreprint}}{%
+  \typeout{atlasdoc: ATLAS CERN preprint}
   \renewcommand*{\ADOC@docheadingdefault}{ATLAS Paper}
   \ADOC@PAPERtrue
   \ADOC@NOTEfalse
   \ADOC@CONFnotefalse
   \ADOC@PUBnotefalse
   \ADOC@BOOKfalse
-\else
-  \ifADOC@CONF
-    \typeout{atlasdoc: ATLAS CONF note}
-    \renewcommand*{\ADOC@docheadingdefault}{ATLAS CONF Note}
-    \ADOC@PAPERfalse
+  \ADOC@REPORTfalse
+  \typeout{atlasdoc: turning off backref for a CERN preprint}
+  \PassOptionsToPackage{backref=false}{\ADOC@atlasbiblatex}
+}{%
+  % ATLAS paper
+  \ifthenelse{\boolean{ADOC@PAPER}}{%
+    \typeout{atlasdoc: ATLAS paper}
+    \renewcommand*{\ADOC@docheadingdefault}{ATLAS Paper}
+    \ADOC@PAPERtrue
     \ADOC@NOTEfalse
-    \ADOC@CONFnotetrue
+    \ADOC@CONFnotefalse
     \ADOC@PUBnotefalse
     \ADOC@BOOKfalse
-  \else
-    \ifADOC@PUB
-      \typeout{atlasdoc: ATLAS PUB note}
-      \renewcommand*{\ADOC@docheadingdefault}{ATLAS PUB Note}
+    \ADOC@REPORTfalse
+  }{%
+    % ATLAS CONF note
+    \ifthenelse{\boolean{ADOC@CONF}}{%
+      \typeout{atlasdoc: ATLAS CONF note}
+      \renewcommand*{\ADOC@docheadingdefault}{ATLAS CONF Note}
       \ADOC@PAPERfalse
       \ADOC@NOTEfalse
-      \ADOC@CONFnotefalse
-      \ADOC@PUBnotetrue
+      \ADOC@CONFnotetrue
+      \ADOC@PUBnotefalse
       \ADOC@BOOKfalse
-    \else
-      \ifADOC@BOOK
-        \typeout{atlasdoc: ATLAS BOOK}
+      \ADOC@REPORTfalse
+    }{%
+      % ATLAS PUB note
+      \ifthenelse{\boolean{ADOC@PUB}}{%
+        \typeout{atlasdoc: ATLAS PUB note}
+        \renewcommand*{\ADOC@docheadingdefault}{ATLAS PUB Note}
         \ADOC@PAPERfalse
         \ADOC@NOTEfalse
         \ADOC@CONFnotefalse
-        \ADOC@PUBnotefalse
-        \ADOC@BOOKtrue
-      \else
-        \typeout{atlasdoc: ATLAS Note}
-        \renewcommand*{\ADOC@docheadingdefault}{ATLAS Note}
-      \fi
-    \fi
-  \fi
-\fi
+        \ADOC@PUBnotetrue
+        \ADOC@BOOKfalse
+        \ADOC@REPORTfalse
+      }{%
+        % ATLAS TDR etc.
+        \ifthenelse{\boolean{ADOC@BOOK}}{%
+          \typeout{atlasdoc: ATLAS BOOK}
+          \ADOC@PAPERfalse
+          \ADOC@NOTEfalse
+          \ADOC@CONFnotefalse
+          \ADOC@PUBnotefalse
+          \ADOC@BOOKtrue
+          \ADOC@REPORTfalse
+        }{%
+          \typeout{atlasdoc: ATLAS Note}
+          \renewcommand*{\ADOC@docheadingdefault}{ATLAS Note}
+        }
+      }
+    }
+  }
+}
 
-% Decide on the main class
-\ifADOC@BOOK
-  \typeout{atlasdoc: use KOMA-script scrbook class}
-  \def\ADOC@mainclass{scrbook}
-\else
-  \typeout{atlasdoc: use KOMA-script scrartcl class}
-  \def\ADOC@mainclass{scrartcl}
-\fi
+% Decide on the main class.
+% Default class for ATLAS notes is scrreprt.
+\ifthenelse{\boolean{ADOC@BOOK}}{%
+  \typeout{atlasdoc: use KOMA-Script scrbook class}
+  \newcommand*{\ADOC@mainclass}{scrbook}
+}{%
+  \ifthenelse{\boolean{ADOC@REPORT}}{%
+    \typeout{atlasdoc: use KOMA-Script scrreprt class}
+    \newcommand*{\ADOC@mainclass}{scrreprt}
+  }{%
+    \typeout{atlasdoc: use KOMA-Script scrartcl class}
+    \newcommand*{\ADOC@mainclass}{scrartcl}
+  }
+}
 
 % Set paper size
-\ifx\ADOC@paper\@empty
-  \def\ADOC@paperstring{a4paper}
-  \PassOptionsToClass{a4paper}{\ADOC@mainclass}
-  \typeout{atlasdoc: paper size set to default A4}
-\else
-  \def\ADOC@paperstring{\ADOC@paper paper}
-  \PassOptionsToClass{\ADOC@paperstring}{\ADOC@mainclass}
-  \typeout{atlasdoc: paper is \ADOC@paper, string for class is \ADOC@paperstring}
-\fi
+% \ifthenelse{\equal{\ADOC@paper}{}}{%
+%   \newcommand*{\ADOC@paperstring}{paper=a4}
+%   \PassOptionsToClass{a4paper}{\ADOC@mainclass}
+%   \typeout{atlasdoc: paper size set to default A4}
+% }{%
+%   \newcommand*{\ADOC@paperstring}{paper=\ADOC@paper}
+%   \PassOptionsToClass{\ADOC@paper}{\ADOC@mainclass}
+%   \typeout{atlasdoc: paper size is \ADOC@paper, string for class is \ADOC@paperstring}
+% }
 
-% Set font sizes for title page
-%\ifthenelse{\ADOC@texlive < 2013}{%
-%    \typeout{*** atlasdoc: reduced font sizes not available for TeX Live < 2013}
-%    \newcommand*{\ADOC@abstractsize}{\normalsize}
-%}{%
-  \ifthenelse{\equal{\ADOC@titlesize}{small}}{%
-    \newcommand*{\ADOC@maintitlesize}{\LARGE}
-    \newcommand*{\ADOC@authorsize}{\large}
-    \newcommand*{\ADOC@abstractsize}{\small}
-  }{%
-    \newcommand*{\ADOC@maintitlesize}{\huge}
-    \newcommand*{\ADOC@authorsize}{\Large}
-    \newcommand*{\ADOC@abstractsize}{\normalsize}
-  }
-%}
-
-% Switch to txfonts for TeX Live <= 2012
-% Need to pass this option to atlaspackage as well
-\ifthenelse{\ADOC@texlive < 2012 \AND \boolean{ADOC@newtx}}{%
-  \typeout{*** atlasdoc: use txfonts instead of newtx}
-  \ADOC@newtxfalse
-  \ADOC@txfontstrue
-  \PassOptionsToPackage{txfonts}{\ATLASLATEXPATH atlaspackage}
+% Option to reduce font sizes on title page
+\ifthenelse{\equal{\ADOC@titlesize}{small}}{%
+  \newcommand*{\ADOC@maintitlesize}{\LARGE}
+  \newcommand*{\ADOC@authorsize}{\large}
+  \newcommand*{\ADOC@abstractsize}{\small}
 }{%
+  \newcommand*{\ADOC@maintitlesize}{\huge}
+  \newcommand*{\ADOC@authorsize}{\Large}
+  \newcommand*{\ADOC@abstractsize}{\normalsize}
+}
+
+% ATLAS draft heading text
+\newcommand*{\ADOC@draftheading}{ATLAS DRAFT}
+\newcommand*{\AtlasDraftHeading}[1]{\renewcommand*{\ADOC@draftheading}{#1}}
+
+% Set up command for authors and ORCID
+\NewDocumentCommand \AtlasOrcid { o m } {%
+  \IfNoValueTF {#1} {%
+    #2%
+  }{%
+    \href{https://orcid.org/#1}{#2}%
+  }%
+}
+
+% For final version turn off output of ToDo notes.
+% This does not work properly, as output=true|false is usually passed directly to atlastodo.
+% \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+%   \typeout{atlasdoc: no change to atlastodo options.}
+% }{%
+%   \typeout{atlasdoc: turning off todo note output for final version of document.}
+%   \typeout{atlasdoc: pass option to \ADOC@atlastodo.}
+%   \PassOptionsToPackage{shift=false,output=false}{\ADOC@atlastodo}
+% }
+
+% For final version of PUB notes turn off the note number by default
+\ifthenelse{\boolean{ADOC@PUBnote}}{%
+  \ifthenelse{\boolean{ADOC@atlasdraft} \OR \boolean{ADOC@shownote}}{%
+    \ADOC@notenumbertrue
+  }{%
+    \typeout{atlasdoc: turning off note number of final version of PUB note}
+    \ADOC@notenumberfalse
+  }
+}{%
+  \ADOC@notenumbertrue
 }
 
 %-------------------------------------------------------------------------------
 % Defaults for title page
-\newdimen\ADOC@skipbeforetitle
-\ADOC@skipbeforetitle=60\p@
-\newcommand{\skipbeforetitle}[1]{\ADOC@skipbeforetitle=#1}
+
+% If statements for checking if things are defined.
+\newif\ifADOC@abstract
+\newif\ifACOV@support
 
 % Any additions here that affect the cover page should also be added to atlascover.sty
-\def\@title{Dummy title in atlasdoc\\ Use \textbackslash AtlasTitle to set it}
-\newcommand{\AtlasTitleText}{Dummy AtlasTitleText in atlasdoc\\ Use \textbackslash AtlasTitle to set it}
+% and to atlasmetadefs.sty.
+\renewcommand{\@title}{Dummy title in atlasdoc\\ Use \textbackslash AtlasTitle to set it}
+\newcommand{\AtlasTitleText}{Dummy AtlasTitle in atlasdoc\\ Use \textbackslash AtlasTitle to set it}
 \newcommand{\AtlasTitle}[1]{%
-  % \def\@title{#1}%
   \title{#1}%
   \renewcommand{\AtlasTitleText}{#1}%
 }
-\author{The ATLAS Collaboration}
+\ifthenelse{\boolean{ADOC@cmslogo}}{%
+  \author{The ATLAS and CMS Collaborations}
+}{%
+  \author{The ATLAS Collaboration}
+}
 \date{\today}
 
 % Draft version
-\def\ADOC@draftversion{}
-\newcommand*{\draftversion}[1]{\def\ADOC@draftversion{#1}}
-\newcommand*{\AtlasVersion}[1]{\def\ADOC@draftversion{#1}}
+\newcommand*{\ADOC@draftversion}{}
+\newcommand*{\draftversion}[1]{\renewcommand*{\ADOC@draftversion}{#1}}
+\newcommand*{\AtlasVersion}[1]{\renewcommand*{\ADOC@draftversion}{#1}}
 
 % ATLAS reference code - empty by default
 % Also create variable with web page
-\def\ADOC@refcode{}
-\newcommand*{\AtlasRefCode}[1]{\def\ADOC@refcode{#1}}
+\newcommand*{\ADOC@refcode}{}
+\newcommand*{\AtlasRefCode}[1]{\renewcommand*{\ADOC@refcode}{#1}}
 \newcommand*{\AtlasPaperWebpage}{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/\ADOC@refcode}
 
 % ATLAS note number
-\def\ADOC@atlasnote{}
-\newcommand*{\AtlasNote}[1]{\def\ADOC@atlasnote{#1}}
+\newcommand*{\ADOC@atlasnote}{}
+\newcommand*{\AtlasNote}[1]{\renewcommand*{\ADOC@atlasnote}{#1}}
 
 % ATLAS date - arXiv submission; to be filled in by the Physics Office
-\def\ADOC@atlasdate{\today}
-\newcommand*{\AtlasDate}[1]{\def\ADOC@atlasdate{#1}}
+\newcommand*{\ADOC@atlasdate}{\today}
+\newcommand*{\AtlasDate}[1]{\renewcommand*{\ADOC@atlasdate}{#1}}
 
 % Journal
-\def\ADOC@journal{}
-\newcommand*{\journal}[1]{\def\ADOC@journal{#1}}
-\newcommand*{\AtlasJournal}[1]{\def\ADOC@journal{#1}}
+\newcommand*{\ADOC@journal}{}
+\newcommand*{\AtlasJournal}[1]{\renewcommand*{\ADOC@journal}{#1}}
+\newcommand*{\journal}[1]{\renewcommand*{\ADOC@journal}{#1}}
 
 % Preprint
-\def\ADOC@preprintnumber{}
-\newcommand*{\PreprintIdNumber}[1]{\def\ADOC@preprintnumber{#1}}
+\newcommand*{\ADOC@preprintnumber}{}
+\newcommand*{\PreprintIdNumber}[1]{\renewcommand*{\ADOC@preprintnumber}{#1}}
 
-% Journal
-\def\ADOC@journalref{}
-\newcommand*{\AtlasJournalRef}[1]{\def\ADOC@journalref{#1}}
+% Journal reference
+\newcommand*{\ADOC@journalref}{}
+\newcommand*{\AtlasJournalRef}[1]{\renewcommand*{\ADOC@journalref}{#1}}
 
 % DOI
-\def\ADOC@doi{}
-\newcommand*{\AtlasDOI}[1]{\def\ADOC@doi{#1}}
-
-% ATLAS document heading
-\def\ADOC@docheading{}
-\newcommand*{\AtlasHeading}[1]{\def\ADOC@docheading{#1}}
+\newcommand*{\ADOC@doi}{}
+\newcommand*{\AtlasDOI}[1]{\renewcommand*{\ADOC@doi}{#1}}
 
 % arXiv
-\def\AtlasArXivId{}
-\def\AtlasArXivURL{}
-\newcommand*{\arXivId}[1]{\def\AtlasArXivId{#1}\def\AtlasArXivURL{http://arXiv.org/abs/#1}}
+\newcommand*{\AtlasArXivId}{}
+\newcommand*{\AtlasArXivURL}{}
+\newcommand*{\arXivId}[1]{\renewcommand*{\AtlasArXivId}{#1}\renewcommand*{\AtlasArXivURL}{http://arXiv.org/abs/#1}}
 \newcommand*{\AtlasArXivCat}{[hep-ex]}
 
 % HEP Data
-\def\AtlasHepDataRecord{}
-\newcommand*{\HepDataRecord}[1]{\def\AtlasHepDataRecord{http://hepdata.cedar.ac.uk/view/ins#1}}
+\newcommand*{\AtlasHepDataRecord}{}
+\newcommand*{\HepDataRecord}[1]{\renewcommand*{\AtlasHepDataRecord}{http://hepdata.cedar.ac.uk/view/ins#1}}
 
 % Submission details
-\def\ADOC@subprepend{To be submitted to:}
-\newcommand*{\subprepend}[1]{\def\ADOC@subprepend{#1}}
+\newcommand*{\ADOC@subprepend}{Journal:}
+\newcommand*{\subprepend}[1]{\renewcommand*{\ADOC@subprepend}{#1}}
 
 % Abstract text
-% \newif\ifADOC@abstract
-% \ADOC@abstractfalse
-\def\AtlasAbstractText{}
-\newcommand{\AtlasAbstract}[1]{\def\AtlasAbstractText{#1}}
-\newcommand{\abstracttext}[1]{\def\AtlasAbstractText{#1}}
-% \newcommand{\AtlasAbstract}[1]{\ADOC@abstracttrue\def\AtlasAbstractText{#1}}
-% \newcommand{\abstracttext}[1]{\ADOC@abstracttrue\def\AtlasAbstractText{#1}}
+\newcommand{\AtlasAbstractText}{}
+\newcommand{\AtlasAbstract}[1]{\ADOC@abstracttrue\renewcommand{\AtlasAbstractText}{#1}}
+\newcommand{\abstracttext}[1]{\ADOC@abstracttrue\renewcommand{\AtlasAbstractText}{#1}}
 
 % Extra macros needs for the cover page - define them here to avoid need for atlasmetadefs.sty
 % This also avoids problems wth automatically generated metadata files
-\def\ACOV@CommentsDeadline{Comments deadline}
-\newcommand{\AtlasCoverCommentsDeadline}[1]{\def\ACOV@CommentsDeadline{#1}}
+\newcommand*{\ACOV@CommentsDeadline}{Comments deadline}
+\newcommand{\AtlasCoverCommentsDeadline}[1]{\renewcommand*{\ACOV@CommentsDeadline}{#1}}
 
-\def\ACOV@AnalysisTeam{Analysis team}
-\newcommand{\AtlasCoverAnalysisTeam}[1]{\def\ACOV@AnalysisTeam{#1}}
+\newcommand*{\ACOV@AnalysisTeam}{Analysis team}
+\newcommand{\AtlasCoverAnalysisTeam}[1]{\renewcommand*{\ACOV@AnalysisTeam}{#1}}
 
-\def\ACOV@EgroupEditors{Editor egroup}
-\newcommand{\AtlasCoverEgroupEditors}[1]{\def\ACOV@EgroupEditors{#1}}
+\newcommand*{\ACOV@EgroupEditors}{Editor egroup}
+\newcommand{\AtlasCoverEgroupEditors}[1]{\renewcommand*{\ACOV@EgroupEditors}{#1}}
 
-\def\ACOV@EgroupEdBoard{EdBoard egroup}
-\newcommand{\AtlasCoverEgroupEdBoard}[1]{\def\ACOV@EgroupEdBoard{#1}}
+\newcommand*{\ACOV@EgroupEdBoard}{EdBoard egroup}
+\newcommand{\AtlasCoverEgroupEdBoard}[1]{\renewcommand*{\ACOV@EgroupEdBoard}{#1}}
 
 % Multiple corresponding editors
-\def\ACOV@Editors{} % Corresponding editor name & corresponding.editor@email \\ }
-\newcommand{\AtlasCoverEditor}[2]{%
-  \g@addto@macro\ACOV@Editors{%
-    #1 & (\texttt{#2}) \\
-  }%
-}
+% \newcommand{\ACOV@Editors}{}
+% \newcommand{\AtlasCoverEditor}[2]{%
+%   \g@addto@macro\ACOV@Editors{%
+%     #1 & (\texttt{#2}) \\
+%   }%
+% }
 
-\def\ACOV@EdBoardMembers{}
+% EdBoard members
+\newcommand{\ACOV@EdBoardMembers}{}
 \newcommand{\AtlasCoverEdBoardMember}[1]{%
   \g@addto@macro\ACOV@EdBoardMembers{%
-    #1 \\
+    #1\par
   }%
 }
 
-\def\ACOV@ReaderMembers{}
+% Readers (for PUB notes)
+\newcommand{\ACOV@ReaderMembers}{}
 \newcommand{\AtlasCoverReaderMember}[1]{%
   \g@addto@macro\ACOV@ReaderMembers{%
-    #1 \\
+    #1\par
   }%
 }
 
-\def\ACOV@LangEditor{language editor contact}
-\newcommand{\LEcontact}[1]{\def\ACOV@LangEditor{#1}}
+% Language editor
+\newcommand*{\ACOV@LangEditor}{language editor contact}
+\newcommand{\LEcontact}[1]{\renewcommand*{\ACOV@LangEditor}{#1}}
 
-\newif\ifACOV@support
 \ACOV@supportfalse
-\def\ACOV@TwikiURL{}
-%\newcommand{\AtlasCoverTwikiURL}[1]{\def\ACOV@TwikiURL{\url{#1}}}
-\newcommand{\AtlasCoverTwikiURL}[1]{\ACOV@supporttrue\def\ACOV@TwikiURL{\url{#1}}}
+\newcommand*{\ACOV@TwikiURL}{}
+\newcommand{\AtlasCoverTwikiURL}[1]{\ACOV@supporttrue\renewcommand*{\ACOV@TwikiURL}{\url{#1}}}
 
 % Supporting note list
-\def\ACOV@Notes{}
+\newcommand{\ACOV@Notes}{}
 \newcommand{\AtlasCoverSupportingNote}[2]{\ACOV@supporttrue%
 %  \ifx\ACOV@Notes\@empty
 %    \g@addto@macro\ACOV@Notes{\begin{tabular}{ll}}
 %  \fi
   \g@addto@macro\ACOV@Notes{%
-    #1: \url{#2} \\
+    #1: \url{#2}\newline
   }%
 }
 
@@ -316,139 +379,113 @@
 %-------------------------------------------------------------------------------
 % Invoke main class
 % Note that \KOMAoptions is not available in versions of KOMA-Script older than 3.0
-\ifADOC@BOOK
-  \LoadClass[titlepage,11pt]{scrbook}
-  %\LoadClass[titlepage,11pt,twoside=semi]{scrbook}
-\else
-  \LoadClass[titlepage,11pt]{scrartcl}
-  %\LoadClass[titlepage,11pt,twoside=semi]{scrartcl}
-\fi
+\LoadClass[titlepage, 11pt]{\ADOC@mainclass}
+\typeout{atlasdoc: paper size is \ADOC@paper}
+\KOMAoptions{paper=\ADOC@paper}
+
+% Required packages
+\RequirePackage{graphicx}
+\RequirePackage[svgnames]{xcolor}
+\RequirePackage{babel}
 
 % Turn on bold math when using \bfseries
 \def\bfseries{\fontseries\bfdefault\selectfont\boldmath}
 
-% Set KOMA-script options for ATLAS style
-\ifADOC@atlasstyle
-  \KOMAoptions{headinclude=true, footinclude=false}
-  % Put less text on the pages of BOOKs etc.
-  \ifADOC@BOOK
-    \KOMAoptions{DIV=12, BCOR=5mm, twoside}
-  \else
-    \KOMAoptions{DIV=14, BCOR=5mm}
-  \fi
+% Page setup - independnet of ATLAS style.
+\KOMAoptions{headinclude=true, footinclude=false}
+% Put less text on the pages of BOOKs etc.
+\ifthenelse{\boolean{ADOC@BOOK}}{%
+  \KOMAoptions{DIV=12, BCOR=5mm, twoside}
+}{%
+  \KOMAoptions{DIV=14, BCOR=5mm}
+}
+\KOMAoptions{pagesize}
+
+% Set KOMA-Script options for ATLAS style
+\ifthenelse{\boolean{ADOC@atlasstyle}}{%
   % Do not put a dot after Section/Chapter, nor in the figure caption.
   \KOMAoptions{numbers=noendperiod}
   % Paragraph spacing is half a line
   \KOMAoptions{parskip=half}
   \addtokomafont{disposition}{\rmfamily}
-  \ifthenelse{\ADOC@texlive < 2013}{%
-    \relax
-  }{%
-    \addtokomafont{author}{\ADOC@authorsize}
-  }
+  % Set font size for author. URLs in authors (such as orcid) will be black.
+  \addtokomafont{author}{\ADOC@authorsize\hypersetup{urlcolor=black}}
   \addtokomafont{part}{\LARGE}
   \addtokomafont{descriptionlabel}{\rmfamily}
   %\setkomafont{pageheadfoot}{\normalsize\sffamily}
   \setkomafont{pagehead}{\normalsize\rmfamily}
   %\setkomafont{publishers}{\normalsize\rmfamily}
+  % Keep default table of contents for BOOK and REPORT.
+  % Remove dotted lines for other documents.
+  \ifthenelse{\boolean{ADOC@REPORT} \OR \boolean{ADOC@BOOK}}{%
+    \typeout{atlasdoc: keep default table of contents style.}
+  }{%
+    \typeout{atlasdoc: remove dots in table of contents style.}
+    \ifthenelse{\ADOC@texlive < 2016}{%
+      \RequirePackage{tocstyle}
+      \usetocstyle{noonewithdot}
+    }{%
+      \DeclareTOCStyleEntry[beforeskip=0pt plus .2pt,linefill=\hfill]{tocline}{subsection}
+      \DeclareTOCStyleEntry[beforeskip=0pt plus .2pt,linefill=\hfill]{tocline}{subsubsection}
+    }
+  }
+  % Table of contents down to \ADOC@tocdepth which is 1 by default
+  \ifthenelse{\ADOC@texlive < 2014}{%
+    \setcounter{tocdepth}{2}
+  }{%
+    \setcounter{tocdepth}{\ADOC@tocdepth}
+  }
+  % Figure and table captions
+  \ifthenelse{\boolean{ADOC@tableheading}}{\KOMAoption{captions}{tableheading}}{}
   \setkomafont{caption}{\normalfont\small}
   \setcapindent{0pt}
   \deffootnote[1em]{1em}{1em}{\textsuperscript{\thefootnotemark}\ }
-\fi
-
-% Adjust font size for title
-% For recent TeX Live version use xpatch. Have to use etoolbox for older versions.
-\ifthenelse{\ADOC@texlive < 2013}{%
-  \RequirePackage{etoolbox}
-  \tracingpatches
-  \expandafter\patchcmd\csname\string\maketitle\endcsname{\huge \@title \par}{\ADOC@maintitlesize \@title \par}{\typeout{atlasdoc etoolbox: OK! Title size changed!}}{\typeout{atlasdoc etoolbox: Oh no! Title still huge!}}
-}{%
-  % mhchem has to come before xpatch for TeX Live 2014
-  \ifthenelse{\ADOC@texlive = 2014}{%
-    \ifADOC@mhchem
-      \RequirePackage[version=3]{mhchem}
-    \fi
-  }{}
-  \RequirePackage{xpatch}
-  % \xshowcmd\maketitle
-  \xpatchcmd{\maketitle}{\usekomafont{title}{\huge \@title \par}}{\usekomafont{title}{\ADOC@maintitlesize \@title \par}}{\typeout{atlasdoc xpatch: OK! Title size changed!}}{\typeout{atlasdoc xpatch: Oh no! Title size is still huge!}}
-}
-
-% Some tweaks to remove the date from \maketitle
-%\expandafter\show\csname\string\maketitle\endcsname
-%\expandafter\show\csname\string\maketitle\space\endcsname
-\ifADOC@datetop
-  \ifthenelse{\ADOC@texlive < 2013}{%
-    % Remove \@date and spacing following it from \@maketitle
-    \expandafter\patchcmd\csname\string\maketitle\endcsname{{\Large \@date \par}\vskip \z@ \@plus 3fill}{}{\typeout{atlasdoc etoolbox: OK! Date removed!}}{\typeout{atlasdoc etoolbox: Oh no! Date is still there!}}
-  }{% \xshowcmd\maketitle
-    % Remove \@date and spacing following it from \@maketitle
-    \xpatchcmd{\maketitle}{{\usekomafont{date}{\@date \par}}\vskip \z@ \@plus 3fill}{}{\typeout{atlasdoc xpatch: OK! Date font adjusted!}}{\typeout{atlasdoc xpatch: Oh no! Date font unchanged!}}
-    % \xshowcmd\maketitle
-  }
-\fi
-
-% Make the title flush left for the BOOK option
-\ifADOC@BOOK
-  \ifthenelse{\ADOC@texlive < 2013}{%
-    \relax
-  }{%
-    % \xshowcmd\maketitle
-    \xpatchcmd{\maketitle}{\begin{center}}{\begin{flushleft}}{\typeout{atlasdoc xpatch: OK! title flushleft!}}{\typeout{atlasdoc xpatch: Oh no! title position unchanged!}}
-    \xpatchcmd{\maketitle}{\end{center}}{\end{flushleft}}{\typeout{atlasdoc xpatch: OK! title flushleft!}}{\typeout{atlasdoc xpatch: Oh no! title position unchanged!}}
-    % \xpatchcmd{\maketitle}{\begin{tabular}[t]{c}}{\begin{tabular}[t]{@{}l@{}}}{}{}
-    % \xshowcmd\maketitle
-  }
-\fi
+}{}
 
 % ATLAS draft cover pages for papers, PUB and CONF notes
-\def\ADOC@atlascover{\ATLASLATEXPATH atlascover}
-\ifADOC@coverpage
+\newcommand*{\ADOC@atlascover}{atlascover}
+\ifthenelse{\boolean{ADOC@coverpage}}{%
   \typeout{atlasdoc: load atlascover package}
-  \ifADOC@CONFnote
+  \ifthenelse{\boolean{ADOC@CONFnote}}{%
     \PassOptionsToPackage{CONF,atlasdoc}{\ADOC@atlascover}
-  \else
-    \ifADOC@PUBnote
+  }{%
+    \ifthenelse{\boolean{ADOC@PUBnote}}{%
       \PassOptionsToPackage{PUB,atlasdoc}{\ADOC@atlascover}
-    \else
+    }{%
       \PassOptionsToPackage{atlasdoc}{\ADOC@atlascover}
-    \fi
-  \fi
+    }
+  }
   % Pass language editor option to cover pages
-  \ifADOC@LANGEDIT
+  \ifthenelse{\boolean{ADOC@LANGEDIT}}{%
     \PassOptionsToPackage{LANGEDIT}{\ADOC@atlascover}
-  \fi
+  }{}
   \RequirePackage{\ADOC@atlascover}
-\fi
+}{}
 
 % Remove the numbers from all the headings (\section, \subsection, etc.)
-%\setcounter{secnumdepth}{-1}
+% \setcounter{secnumdepth}{-1}
 
-% Required packages
-\RequirePackage{graphicx}
-\RequirePackage{xcolor}
-\RequirePackage{babel}
 % hyperref is needed in many places, so include it here
 \RequirePackage{hyperref}
 
 % Font(s)
-\ifADOC@txfonts
+\ifthenelse{\boolean{ADOC@txfonts}}{%
   % Needs special amsmath code in atlaspackage
   \typeout{atlasdoc: using txfonts}
   \RequirePackage[varg]{txfonts}
   \RequirePackage[T1]{fontenc}
   % Pass eVkern option to atlaspackage for siunitx
-  \def\ADOC@atlaspackage{\ATLASLATEXPATH atlaspackage}
+  \newcommand*{\ADOC@atlaspackage}{atlaspackage}
   \PassOptionsToPackage{eVkern}{\ADOC@atlaspackage}
-\else
-  \ifADOC@libertine
+}{%
+  \ifthenelse{\boolean{ADOC@libertine}}{%
     \typeout{atlasdoc: using Libertine fonts}
     \RequirePackage{libertine}
     \RequirePackage[T1]{fontenc}
     % \RequirePackage[libertine, defaultsups]{newtxmath}
     \RequirePackage[libertine]{newtxmath}
-    \else
-    \ifADOC@palatino
+  }{%
+    \ifthenelse{\boolean{ADOC@palatino}}{%
       \typeout{atlasdoc: using Palatino fonts}
       % Palatino for rm and math | Helvetica for ss | Courier for tt
       \RequirePackage{mathpazo} % math & rm
@@ -457,24 +494,18 @@
       \RequirePackage{courier} % tt
       \normalfont
       \RequirePackage[T1]{fontenc}
-    \else
+    }{%
       \typeout{atlasdoc: using newtx fonts package}
-      \ifthenelse{\ADOC@texlive < 2013}{%
-        \RequirePackage{newtxtext}
-        \typeout{*** atlasdoc: include amsmath before newtxmath}
-        \RequirePackage{amsmath}
-      }{%
-      % \RequirePackage[defaultsups]{newtxtext}
+      \RequirePackage[T1]{fontenc}
       \RequirePackage{newtxtext}
-      }
       \RequirePackage{newtxmath}
-    \fi
-  \fi
-\fi
+    }
+  }
+}
 
 % Adjust float settings to try to avoid problems.
 % These follow the UK FAQ - see also P.199-200 of the LaTeX Book
-\ifADOC@floatopt
+\ifthenelse{\boolean{ADOC@floatopt}}{%
   \renewcommand{\topfraction}{0.85}
   \renewcommand{\bottomfraction}{0.70}
   \renewcommand{\textfraction}{0.15}
@@ -484,16 +515,45 @@
   \setcounter{topnumber}{9}
   \setcounter{bottomnumber}{9}
   \setcounter{totalnumber}{20}
-\fi
+}{}
+
+% Make sure page sizes etc are calculated after font selection
+\KOMAoptions{DIV=last}
 
 % Add ability to include line numbers
-\RequirePackage{lineno}
+\ifthenelse{\boolean{ADOC@mathlines}}{%
+  \RequirePackage[mathlines]{lineno}
+}{%
+  \RequirePackage{lineno}
+}
 % If you have an old lineno or do not have it, you can get it from the latex/other directory
 % \RequirePackage{latex/other/lineno}
 % \nolinenumbers
-\ifADOC@showframe
+
+% Show frame for checking dimensions etc.
+\ifthenelse{\boolean{ADOC@showframe}}{%
   \RequirePackage{showframe}
-\fi
+}
+
+% Try to avoid adding linenomath around unknown environments
+% Code adapted from https://tex.stackexchange.com/questions/436011/linenomath-printing-extra-numbers-on-last-line-of-multline-align-flalign-envir
+\ifthenelse{\boolean{ADOC@linenofix}}{%
+  \RequirePackage{xpatch}
+  \newcommand*\linenomathpatchAMS[1]{%
+    \expandafter\xpretocmd\csname #1\endcsname {\linenomathAMS}{}{}%
+    \expandafter\xpretocmd\csname #1*\endcsname{\linenomathAMS}{}{}%
+    \expandafter\xapptocmd\csname end#1\endcsname {\endlinenomath}{}{}%
+    \expandafter\xapptocmd\csname end#1*\endcsname{\endlinenomath}{}{}%
+  }
+  \expandafter\ifx\linenomath\linenomathWithnumbers
+    \typeout{atlasdoc: add line numbers to equations}
+    \let\linenomathAMS\linenomathWithnumbers
+    \xpatchcmd\linenomathAMS{\advance\postdisplaypenalty\linenopenalty}{}{\typeout{atlasdoc xpatch: Extra linenumber patch worked}}{\typeout{*** atlasdoc xpatch: Extra linenumber patch failed}}
+  \else
+    \typeout{atlasdoc: do not add line numbers to equations}
+    \let\linenomathAMS\linenomathNonumbers
+  \fi
+}{}
 
 % Compute the time in hours and minutes; make new variables \timehh and \timemm
 \newcount\timehh\newcount\timemm
@@ -506,14 +566,14 @@
 % \RequirePackage{scrdate,scrtime}
 
 % Draft heading/footer code
-\newcommand{\AtlasDraftHeading}{%
+\newcommand{\ADOC@DraftHeading}{%
   \ifthenelse{\ADOC@texlive < 2015}{%
     \RequirePackage[headsepline]{scrpage2}
   }{%
     \RequirePackage[headsepline]{scrlayer-scrpage}
   }
   \ihead{}
-  \chead[]{\fbox{\textsf\bfseries ATLAS DRAFT}}
+  \chead[]{\fbox{\normalfont\ADOC@draftheading}}
   \ohead{}
   \ifoot{\dateandtime}
   \cfoot{}
@@ -522,7 +582,7 @@
 }
 
 % Include fancier header and footer for HepData material document
-\ifADOC@HEPDATA
+\ifthenelse{\boolean{ADOC@HEPDATA}}{%
   \ifthenelse{\ADOC@texlive < 2015}{%
     \RequirePackage[headsepline]{scrpage2}
   }{%
@@ -530,125 +590,179 @@
   }
   \chead{ATLAS Collaboration --- arXiv:\AtlasArXivId\ \AtlasArXivCat}
   \pagestyle{scrheadings}
-\fi
-
-% BOOK, i.e. book heading/footer code
-\newcommand{\AtlasBookHeading}{%
-  \ifthenelse{\ADOC@texlive < 2015}{%
-    \RequirePackage[headsepline]{scrpage2}
-  }{%
-    \RequirePackage[headsepline]{scrlayer-scrpage}
-  }
-  \ifADOC@atlasdraft
-    \ifx\ADOC@draftversion\@empty%
-      \relax
-    \else
-      \ihead{ATLAS DRAFT}
-      \ifoot{\dateandtime}
-    \fi
-  \fi
-  \pagestyle{scrheadings}
-}
+}{}
 
 % Pass comment option to atlascomment.sty
-\ifADOC@LANGEDIT
-  \ifADOC@LANGSHOW
+\ifthenelse{\boolean{ADOC@LANGEDIT}}{%
+  \newcommand*{\ADOC@atlascomment}{atlascomment}
+  \ifthenelse{\boolean{ADOC@LANGSHOW}}{%
     \typeout{atlasdoc: turn on display of language editor comments}
-    \PassOptionsToPackage{comment=true}{\ATLASLATEXPATH atlascomment}
-  \else
+    \PassOptionsToPackage{comment=true}{\ADOC@atlascomment}
+  }{%
     \typeout{atlasdoc: turn off display of language editor comments}
-    \PassOptionsToPackage{comment=false}{\ATLASLATEXPATH atlascomment}
-  \fi
-  \RequirePackage{\ATLASLATEXPATH atlascomment}
-\fi
+    \PassOptionsToPackage{comment=false}{\ADOC@atlascomment}
+  }
+  \RequirePackage{\ADOC@atlascomment}
+}{}
 
 % Length needed for parbox/minipage in title page
-\newlength{\titlepageparbox}
-\setlength{\titlepageparbox}{\textwidth}
-%\addtolength{\titlepageparbox}{-2\fboxrule}
-%\addtolength{\titlepageparbox}{-2\fboxsep}
-%\addtolength{\titlepageparbox}{-9pt}
-%\typeout{titlepageparbox is \the\titlepageparbox}
+% \setlength{\titlepageparbox}{\linewidth}
+% \setlength{\fboxsep}{0pt}
+% \addtolength{\titlepageparbox}{-2\fboxrule}
+% \addtolength{\titlepageparbox}{-2\fboxsep}
+% \addtolength{\titlepageparbox}{-9pt}
+% \typeout{titlepageparbox is \the\titlepageparbox}
 
 %-------------------------------------------------------------------------------
 % Title page design
-\newcommand{\AtlasTitleHeader}{%
+% \showboxdepth=\maxdimen
+% \showboxbreadth=\maxdimen
+\newlength{\titlepageparbox}%
+\newcommand{\ATLAS@TitleHeader}{%
+  \setlength{\titlepageparbox}{\textwidth}%
+  % \addtolength{\titlepageparbox}{-11pt}%
+  % \typeout{ATLAS title titlepageparbox is \the\titlepageparbox, text width \the\textwidth, line width \the\linewidth}%
   \parbox[t][35mm]{\titlepageparbox}{%
-    \parbox[b][35mm][t]{0.24\titlepageparbox}{%
-      \includegraphics[height=25mm]{AT_atlaslogo_2015}
-    }
-    \hspace*{\fill}
-    \parbox[b][35mm][c]{0.48\titlepageparbox}{%
+    \parbox[b][35mm][t]{0.23\linewidth}{%
+      \ifthenelse{\boolean{ADOC@atlaslogo}}{%
+        \includegraphics[height=25mm]{AT_atlaslogo_2015}\par
+      }{%
+        \rule{0pt}{25mm}\par
+      }
+      \sffamily\mdseries\fontsize{11}{13.2}\selectfont
+      \ifthenelse{\equal{\ADOC@journal}{}}{\relax}{%
+        \par\ADOC@subprepend\ \ADOC@journal\par
+      }
+    }%
+    \hspace*{\fill}%
+    \parbox[b][35mm][c]{0.47\linewidth}{%
       \centering
-        {\sffamily\bfseries\fontsize{20}{24}\selectfont
-         \ifx\ADOC@docheading\@empty
-           \textsf{\ADOC@docheadingdefault}\par
-         \else
-           \textsf{\ADOC@docheading}\par
-         \fi
+      {\sffamily\bfseries\fontsize{20}{24}\selectfont
+        \ifthenelse{\equal{\ADOC@docheading}{}}{%
+          \typeout{atlasdoc: using default heading}
+          \textsf{\ADOC@docheadingdefault}\par
+        }{%
+          \typeout{atlasdoc: using special heading: \ADOC@docheading}
+          \textsf{\ADOC@docheading}\par
         }
-        \vspace*{2ex}
+      }
+      \vspace*{2ex}
+      % Do not include reference code for final version of PUB note
+      \ifthenelse{\boolean{ADOC@notenumber}}{%
         % ATLAS note number, if any
-        \ifx\ADOC@atlasnote\@empty
+        \ifthenelse{\equal{\ADOC@atlasnote}{}}{%
           % ATLAS reference code, if any and no note number given
-          \ifx\ADOC@refcode\@empty
+          \ifthenelse{\equal{\ADOC@refcode}{}}{%
             \mbox{}%
-          \else
+          }{%
+            % Do not include reference code for final version of PUB note
             {\Large \ADOC@refcode}\par
-          \fi
-        \else
+          }
+        }{%
           {\Large \ADOC@atlasnote}\par
-        \fi
+        }
         \vspace*{1.5ex}
-        % Date, if any
-        \ifADOC@datetop
-          \ifx\@date\@empty
-            \mbox{}\par
-          \else
-            \@date\par
-          \fi
-        \fi
-    }
-    \hspace*{\fill}
-    \parbox[b][35mm][t]{0.24\titlepageparbox}{%
-      \hspace*{\fill}\includegraphics[height=25mm]{AT_cernlogo}\par
-      \ifADOC@atlasdraft
-        \ifx\ADOC@draftversion\@empty
-          \relax
-        \else
+      }{%
+        \typeout{atlasdoc: note number turned off}
+        \par\vspace{1.4\baselineskip}
+      }
+      % Date, if any
+      \ifthenelse{\boolean{ADOC@datetop}}{%
+        \ifthenelse{\equal{\@date}{}}{%
+          \mbox{}\par
+        }{%
+          \@date\par
+        }
+      }{}
+    }%
+    \hspace*{\fill}%
+    \parbox[b][35mm][t]{0.23\linewidth}{%
+      \hspace*{\fill}
+      \ifthenelse{\boolean{ADOC@cernlogo}}{%
+        \includegraphics[height=25mm]{AT_cernlogo}\par
+      }{%
+        \rule{0pt}{25mm}\par
+      }
+      \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+        \ifthenelse{\equal{\ADOC@draftversion}{}}{\relax}{%
           \normalsize\hspace*{\fill}Draft version \ADOC@draftversion
-        \fi
-      \fi
+        }
+      }{}
     }
-  }\par
+  }
 }
 
 %-------------------------------------------------------------------------------
 % CERN preprint title header
-\newcommand{\CERNPreprintTitleHeader}{%
-  \parbox[t]{\linewidth}{%
-    {\centering
-      \sffamily\mdseries\fontsize{14}{16.8}\selectfont
-      EUROPEAN ORGANISATION FOR NUCLEAR RESEARCH (CERN)\par
-    }
+\newcommand{\ATLAS@CERNPreprintTitleHeader}{%
+  \setlength{\titlepageparbox}{\textwidth}%
+  % \addtolength{\titlepageparbox}{-11pt}%
+  % \typeout{CERN preprint titlepageparbox is \the\titlepageparbox, text width \the\textwidth, line width \the\linewidth}%
+  \parbox[t]{\titlepageparbox}{%
+    \makebox[\linewidth]{\centering%
+      \sffamily\mdseries\fontsize{14}{16.8}\selectfont%
+      EUROPEAN ORGANISATION FOR NUCLEAR RESEARCH (CERN)
+    }\par
+    \vspace*{2mm}%
+    \parbox[t]{0.45\linewidth}{%
+      \ifthenelse{\boolean{ADOC@atlaslogo}}{%
+        \includegraphics[height=25mm]{AT_atlaslogo_2015}
+        \ifthenelse{\boolean{ADOC@cmslogo}}{%
+          \includegraphics[height=25mm]{AT_cmslogo_2014}
+        }{%
+          \ifthenelse{\equal{\ADOC@extralogo}{}}{}{%
+            \includegraphics[height=25mm]{\ADOC@extralogo}
+          }
+        }
+        \par
+      }{%
+        \rule{0pt}{25mm}\par
+      }
+      \sffamily\mdseries\fontsize{11}{13.2}\selectfont
+      \ifthenelse{\equal{\ADOC@journalref}{}}{%
+        \ifthenelse{\equal{\ADOC@journal}{}}{\relax}{%
+          Submitted to: \ADOC@journal\par
+        }
+      }{%
+          \ADOC@journalref\par
+      }
+      \ifthenelse{\equal{\ADOC@doi}{}}{\relax}{%
+        DOI: \href{http://dx.doi.org/\ADOC@doi}{\ADOC@doi}\par
+      }
+    }%
+    \hspace*{\fill}%
+    \parbox[t]{0.45\linewidth}{%
+      \hspace*{\fill}
+      \ifthenelse{\boolean{ADOC@cernlogo}}{%
+        \includegraphics[height=25mm]{AT_cernlogo}\par
+      }{%
+        \rule{0pt}{25mm}\par
+      }
+      \sffamily\mdseries\fontsize{11}{13.2}\selectfont
+      \hspace*{\fill}\ADOC@preprintnumber\par
+      \hspace*{\fill}\ADOC@atlasdate\par
+    }%
+    \par
     \vspace*{2mm}
+    \rule{\linewidth}{1pt}\par
+  }%
+}
+
+%-------------------------------------------------------------------------------
+% Auxiliary material title header
+\newcommand{\ATLAS@HepDataTitleHeader}{%
+  \setlength{\titlepageparbox}{\textwidth}%
+  % \typeout{HepData titlepageparbox is \the\titlepageparbox, text width \the\textwidth, line width \the\linewidth}%
+  \parbox[t]{\titlepageparbox}{%
+    \makebox[\linewidth]{\centering%
+      \sffamily\mdseries\fontsize{14}{16.8}\selectfont%
+      EUROPEAN ORGANISATION FOR NUCLEAR RESEARCH (CERN)
+    }\par
+    \vspace*{2mm}%
     \parbox[t]{0.45\linewidth}{%
       \includegraphics[height=25mm]{AT_atlaslogo_2015}\par
       \sffamily\mdseries\fontsize{11}{13.2}\selectfont
-      \ifx\ADOC@journalref\@empty
-        \ifx\ADOC@journal\@empty
-          \relax
-        \else
-          Submitted to: \ADOC@journal\par
-        \fi
-      \else
-          \ADOC@journalref\par
-      \fi
-      \ifx\ADOC@doi\@empty
-        \relax
-      \else
-        DOI: \href{http://dx.doi.org/\ADOC@doi}{\ADOC@doi}\par
-      \fi
+      arXiv: \AtlasArXivId\ \AtlasArXivCat
     }
     \hspace*{\fill}
     \parbox[t]{0.45\linewidth}{%
@@ -663,350 +777,209 @@
 }
 
 %-------------------------------------------------------------------------------
-% Auxiliary material title header
-\newcommand{\HepDataTitleHeader}{%
-\parbox[t]{\linewidth}{%
-  {\centering
-    \sffamily\mdseries\fontsize{14}{16.8}\selectfont
-    EUROPEAN ORGANISATION FOR NUCLEAR RESEARCH (CERN)\par
-  }
-  \vspace*{2mm}
-  \parbox[t]{0.45\linewidth}{%
-    \includegraphics[height=25mm]{AT_atlaslogo_2015}\par
-    \sffamily\mdseries\fontsize{11}{13.2}\selectfont
-    arXiv: \AtlasArXivId\ \AtlasArXivCat
-  }
-  \hspace*{\fill}
-  \parbox[t]{0.45\linewidth}{%
-    \hspace*{\fill}\includegraphics[height=25mm]{AT_cernlogo}\par
-    \sffamily\mdseries\fontsize{11}{13.2}\selectfont
-    \hspace*{\fill}\ADOC@preprintnumber\par
-    \hspace*{\fill}\ADOC@atlasdate\par
-  }\par
-  \vspace*{2mm}
-  \rule{\linewidth}{1pt}\par
-}
-}
-
-%-------------------------------------------------------------------------------
 % Book title header - only ATLAS logo
-\newcommand{\AtlasBookTitleHeader}{%
-  \parbox[t]{\linewidth}{%
+\newcommand{\ATLAS@BookTitleHeader}{%
+  \setlength{\titlepageparbox}{\textwidth}%
+  \parbox[t]{\titlepageparbox}{%
     \includegraphics[height=25mm]{AT_atlaslogo_2015}\par
     \hspace*{\fill}
   }
 }
 
 %-------------------------------------------------------------------------------
-% ATLAS document title body
-%\newcommand{\AtlasTitleBody}{%
-%  {\centering
-%    {\bfseries\fontsize{16}{19.2}\selectfont \@title \par}
-%    \vskip 3em
-%    {\large
-%     \lineskip .75em
-%     \begin{tabular}[t]{c}
-%       \@author
-%     \end{tabular}\par}
-%  }\par
-%  \vspace{\stretch{0.5}}
-%  % Astract
-%  \if\AtlasAbstractText\@empty
-%    \mbox{}
-%  \else
-%    {\centering
-%      \bfseries\fontsize{12}{14.4}\selectfont
-%      \abstractname\par
-%    }
-%    {\fontseries{m}\fontsize{11}{13.2}\selectfont%
-%      \begin{quote}
-%        %\setlength{\parindent}{0pt}\setlength{\parskip}{0.5ex}\noindent\AtlasAbstractText
-%        \AtlasAbstractText
-%      \end{quote}
-%    }
-%  \fi
-%  % Submission details
-%  \ifx\ADOC@journal\@empty
-%    \relax
-%  \else
-%    \ifADOC@PAPER
-%      \vspace{\stretch{1}}
-%      \parbox[c]{\linewidth}{
-%        \centering
-%        \ADOC@subprepend\ \textit{\ADOC@journal}
-%      }\par
-%      \vspace{\stretch{1}}
-%    \fi
-%  \fi
-%}
-
-%-------------------------------------------------------------------------------
-% CERN Preprint title body
-%\newcommand{\CERNPreprintTitleBody}{%
-%  \parbox[t]{\linewidth}{%
-%    {\centering
-%      \bfseries\fontsize{16}{19.2}\selectfont
-%      %\fontfamily{phv}\bfseries\fontsize{16}{19.2}\selectfont
-%      \AtlasTitleText\par
-%    }
-%    \vspace*{6ex}
-%    {\centering
-%      \fontseries{m}\fontsize{12}{14.4}\selectfont
-%      %\fontfamily{phv}\fontseries{m}\fontsize{12}{14.4}\selectfont
-%      The ATLAS Collaboration\par
-%    }
-%    \vspace*{6ex}
-%    {\centering
-%      \bfseries\fontsize{12}{14.4}\selectfont
-%      %\fontfamily{phv}\bfseries\fontsize{12}{14.4}\selectfont
-%      \abstractname\par
-%    }
-%    {\fontseries{m}\fontsize{11}{13.2}\selectfont%
-%      %\fontfamily{phv}\fontseries{m}\fontsize{11}{13.2}\selectfont%
-%      \begin{quote}
-%      %\setlength{\parindent}{0pt}\setlength{\parskip}{0.5ex}\noindent\AtlasAbstractText
-%        \AtlasAbstractText
-%      \end{quote}
-%    }
-%  }
-%}
-
-%-------------------------------------------------------------------------------
-% Auxiliary material title body
-%\newcommand{\HepDataTitleBody}{%
-%  \parbox[t]{\linewidth}{%
-%    {\centering
-%      \bfseries\fontsize{16}{19.2}\selectfont
-%      %\fontfamily{phv}\bfseries\fontsize{16}{19.2}\selectfont
-%      Auxiliary figures and tables related to the paper\\[1.5ex]
-%      \AtlasTitleText\par
-%    }
-%    \vspace*{2ex}
-%    {\centering
-%      \fontseries{m}\fontsize{12}{14.4}\selectfont
-%      %\fontfamily{phv}\fontseries{m}\fontsize{12}{14.4}\selectfont
-%      The ATLAS Collaboration\par
-%    }
-%    \vspace*{2ex}
-%    {\centering
-%      \fontseries{m}\fontsize{12}{14.4}\selectfont
-%      %\fontfamily{phv}\fontseries{m}\fontsize{12}{14.4}\selectfont
-%      \ADOC@refcode\par
-%    }
-%    \vspace*{2ex}
-%    {\centering
-%      \bfseries\fontsize{12}{14.4}\selectfont
-%      %\fontfamily{phv}\bfseries\fontsize{12}{14.4}\selectfont
-%      \abstractname\par
-%    }
-%    {\centering
-%      \fontseries{m}\fontsize{11}{13.2}\selectfont%
-%      %\fontfamily{phv}\fontseries{m}\fontsize{11}{13.2}\selectfont%
-%      \begin{quote}
-%      %\setlength{\parindent}{0pt}\setlength{\parskip}{0.5ex}\noindent\AtlasAbstractText
-%        \AtlasAbstractText
-%      \end{quote}
-%    }
-%  }
-%}
-
-%-------------------------------------------------------------------------------
 % Copyright cover footer - parbox does not introduce spurious vertical space
-\newcommand{\AtlasCopyrightFooter}{%
-  \parbox[b]{\linewidth}{%
+\newcommand{\ATLAS@CopyrightFooter}{%
+  \setlength{\titlepageparbox}{\textwidth}
+  \addtolength{\titlepageparbox}{-11pt}
+  % \typeout{Copyright titlepageparbox is \the\titlepageparbox, text width \the\textwidth, line width \the\linewidth}
+  % \parbox[b]{\titlepageparbox}{%
+  {%
     \rmfamily\mdseries\fontsize{10}{12}\selectfont
-    \copyright\ \the\year \ CERN for the benefit of the ATLAS Collaboration.\newline
-    Reproduction of this article or parts of it is allowed as specified in the CC-BY-4.0 license.
-  }\par
+    \ifthenelse{\boolean{ADOC@cmslogo}}{%
+      \copyright\ \the\year \ CERN for the benefit of the ATLAS and CMS Collaborations.\newline
+      Reproduction of this article or parts of it is allowed as specified in the CC-BY-4.0 license.
+    }{%
+      \ifthenelse{\boolean{ADOC@atlaslogo}}{%
+        \copyright\ \the\year \ CERN for the benefit of the ATLAS Collaboration.\newline
+        Reproduction of this article or parts of it is allowed as specified in the CC-BY-4.0 license.
+      }{
+        \copyright\ \the\year \ CERN\newline
+        Reproduction of this article or parts of it is allowed as specified in the CC-BY-4.0 license.
+      }
+    }
+  }
 }
 
-% Add elements to KOMA-Script title page
-% Header
-\ifADOC@cernpreprint
-  \typeout{atlasdoc: defining CERN preprint title page}
-  \titlehead{\CERNPreprintTitleHeader}
-  \date{}%\vspace*{-5ex}}
-\else
-  \ifADOC@HEPDATA
-    \typeout{atlasdoc: defining HepData Material title page}
-    \titlehead{\HepDataTitleHeader}
-    \date{}%\vspace*{-5ex}
-  \else
-    \ifADOC@BOOK
-      \typeout{atlasdoc: defining ATLAS book title page}
-      \titlehead{\AtlasBookTitleHeader}
-    \else
-      \typeout{atlasdoc: defining ATLAS document title page}
-      \titlehead{\AtlasTitleHeader}
-    \fi
-  \fi
-\fi
-
-% Body and copyright
-\newlength{\abstractparbox}
-\setlength{\abstractparbox}{\textwidth}
-% \addtolength{\abstractparbox}{-2\fboxrule}
-% \addtolength{\abstractparbox}{-2\fboxsep}
-\newlength{\abstractheight}
-\setlength{\abstractheight}{0.50\textheight}
-% Add 5em to title height for notes
-% \ifADOC@NOTE
-%   \addtolength{\abstractheight}{-5em}
-% \fi
-\addtolength{\abstractheight}{-\ADOC@titleextraheight}
-\newlength{\copyrightoffset}
-\ifthenelse{\equal{\ADOC@maintitlesize}{small}}{%
-  \setlength{\copyrightoffset}{-8.0em}
-}{%
-  \setlength{\copyrightoffset}{-8.0em}
-}
-\addtolength{\copyrightoffset}{\ADOC@copyrightoffset}
-\newcommand{\AtlasAbstractCopyright}{%
-  % \vspace*{\stretch{1}}
-  % \fbox{\begin{minipage}[b][\abstractheight]{\abstractparbox}
-  \begin{minipage}[b][\abstractheight]{\abstractparbox}
-    % Abstract
-  % \vspace*{\stretch{1}}
-  \if\AtlasAbstractText\@empty
-      \mbox{}
-    \else
-      \begin{quote}\ADOC@abstractsize
-      \ifADOC@atlasdraft
-        \ifx\ADOC@draftversion\@empty%
-          \AtlasAbstractText\par
-        \else
-          \begin{internallinenumbers}
-            \AtlasAbstractText
-          \end{internallinenumbers}\par
-        \fi
-      \else
-        \AtlasAbstractText\par
-      \fi
-      \end{quote}
-    \fi
-    %\vspace*{\stretch{1}}
-    % Submission details
-    \ifx\ADOC@journal\@empty
-      \relax
-    \else
-      \ifADOC@cernpreprint
-        \relax
-      \else
-        \ifADOC@PAPER
-          \vskip 2em
-          \parbox[c]{\linewidth}{
-            \centering
-            \ADOC@subprepend\ \textit{\ADOC@journal}
-          }\par
-          \vskip 2em
-        \fi
-      \fi
-    \fi
-    \vspace*{\stretch{1}}
-    \AtlasCopyrightFooter
-  \end{minipage}\par
-  % \end{minipage}}\par
-  \vspace*{\copyrightoffset}
-}
-
-% Tweaks for ATLAS Books, i.e. TDR
-\ifADOC@BOOK
-  % Add a line under the title
-  \subtitle{\rule{\linewidth}{1.5pt}}
-  % Dummy author, as it is put in "publishers"
-  \author{}
-  % Add reference numbers, dates and author to "publishers"
-  \publishers{%
+% Information block for book option
+\ifthenelse{\boolean{ADOC@BOOK}}{%
+  \newcommand{\ATLAS@BookInfo}{%
     \begin{minipage}[b][0.4\textheight]{\textwidth}
-      \vspace*{\stretch{1}}
       \large\rmfamily\flushleft
       \begin{tabbing}
         Set first column \= Set second column \kill
-        \ifADOC@atlasdraft
-          \ifx\ADOC@draftversion\@empty
+        \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+          \ifthenelse{\equal{\ADOC@draftversion}{}}{%
             Reference: \> \ADOC@preprintnumber\\
               \> \ADOC@refcode\\
             Created:   \> \ADOC@atlasdate \\
             Last modified: \> \today \\
-          \else
+          }{%
             Draft version: \> \ADOC@draftversion\\
             Created: \> \dateandtime\\
-          \fi
-        \else
+          }
+        }{%
           Reference: \> \ADOC@preprintnumber\\
             \> \ADOC@refcode\\
           Created:   \> \ADOC@atlasdate \\
           Last modified: \> \today \\
-        \fi
+        }
         \textbf{Prepared by:} \> \textbf{The ATLAS Collaboration}
       \end{tabbing}\par
-      \vspace*{\stretch{1}}
-      \AtlasCopyrightFooter
     \end{minipage}
   }
-  % Use abstract option to decide if there is an abstract or not
-  \ifADOC@abstract
-    \dedication{\normalsize\rmfamily%
-      \begin{quote}\ADOC@abstractsize
-        \flushleft\textbf{Abstract}\\
-        \AtlasAbstractText
-      \end{quote}
+}{}
+
+% Command to create title page.
+\newcommand{\AtlasTitlePage}{%
+  % \typeout{In maketitle: line width1 is \the\linewidth, text width is \the\textwidth}
+  \setlength{\parindent}{\z@}
+  \setlength{\parskip}{\z@}
+  % \setlength{\parfillskip}{\z@}
+  % \typeout{In maketitle: line width2 is \the\linewidth, text width is \the\textwidth}
+  % Cover pages
+  \ifthenelse{\boolean{ADOC@coverpage}}{%
+    % Make sure line numbers are off for cover pages
+    \nolinenumbers
+    \ACOV@PrintAtlasCover
+    \clearpage
+    \ACOV@PrintAtlasCoverPageTwo
+    \clearpage
+    % Turn line numbers on for a draft with a version number.
+    \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+      \ifthenelse{\equal{\ADOC@draftversion}{}}{\relax}{\linenumbers}
+    }{}
+  }{}
+  % Empty page and start numbering from here
+  \thispagestyle{empty}
+  \pagenumbering{arabic}
+  % Header
+  {\parfillskip=0pt\emergencystretch=0.5\textwidth
+  \ifthenelse{\boolean{ADOC@cernpreprint}}{%
+    \typeout{atlasdoc: using CERN preprint title page}
+    \ATLAS@CERNPreprintTitleHeader\par
+  }{%
+    \ifthenelse{\boolean{ADOC@HEPDATA}}{%
+      \typeout{atlasdoc: using HepData Material title page}
+      \ATLAS@HepDataTitleHeader\par
+    }{%
+      \ifthenelse{\boolean{ADOC@BOOK}}{%
+        \typeout{atlasdoc: using ATLAS book title page}
+        \ATLAS@BookTitleHeader\par
+      }{%
+        \typeout{atlasdoc: using ATLAS document title page}
+        \ATLAS@TitleHeader\par
+      }
     }
-  \else
-    \typeout{atlasdoc: no abstract for this ATLAS book}
-    \relax
-  \fi
-\else
-  \publishers{\vspace*{\fill}\normalsize\rmfamily\AtlasAbstractCopyright}
-  % \publishers{\normalsize\rmfamily\AtlasAbstractCopyright}
-\fi
+  }
+  }
+  \vspace{4em plus2em minus2em}
+  \ifthenelse{\boolean{ADOC@BOOK}}{%
+    {\usekomafont{title}\ADOC@maintitlesize\flushleft\@title\par%
+      \rule{\linewidth}{1.5pt}\par}
+    % Extra information for TDR etc.
+    \ATLAS@BookInfo\par
+  }{%
+    {\usekomafont{title}\ADOC@maintitlesize\centering\@title\par}
+    \vspace{3em plus1em minus1em}
+    {\usekomafont{author}\centering\@author\par}
+  }
+  \vspace{2em}
+  % Abstract
+  \ifthenelse{\boolean{ADOC@abstract} \AND \NOT \boolean{ADOC@BOOK}}{%
+    \begin{quote}\ADOC@abstractsize
+      \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+        \ifthenelse{\equal{\ADOC@draftversion}{}}{%
+          \AtlasAbstractText\par
+        }{%
+          \begin{internallinenumbers}
+            \AtlasAbstractText
+          \end{internallinenumbers}\par
+        }
+      }{%
+        \AtlasAbstractText\par
+      }
+    \end{quote}
+  }{}
+  \par\vspace*{\stretch{1}}%
+  % Copyright
+  \ATLAS@CopyrightFooter
+  % Extra author information for special author lists.
+  \@thanks\let\@thanks\@empty
+  % Abstract for a book is on its own page
+  \ifthenelse{\boolean{ADOC@abstract} \AND \boolean{ADOC@BOOK}}{%
+    \cleardoublepage
+    \vspace*{\fill}
+    \begin{quote}
+      \ADOC@abstractsize\flushleft\textbf{Abstract}\newline
+      \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+        \ifthenelse{\equal{\ADOC@draftversion}{}}{%
+          \AtlasAbstractText\par
+        }{%
+          \begin{internallinenumbers}
+          \AtlasAbstractText
+          \end{internallinenumbers}\par
+        }
+      }{%
+        \AtlasAbstractText\par
+      }
+    \end{quote}
+    \vspace*{\fill}
+    \cleardoublepage
+  }{}
+}
+
+% Macro to replace \maketitle
+\newcommand{\AtlasMaketitle}{%
+  \begin{titlepage}
+    \AtlasTitlePage
+  \end{titlepage}
+}
+
+% Redefine \maketitle to use KOMA-Script titlepage environment
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \AtlasTitlePage
+  \end{titlepage}
+}
 
 \AtBeginDocument{%
-  % Cover pages - add here, so atlascover options work
-  \ifADOC@coverpage
-    \extratitle{%
-      % Turn line numbers off for cover pages
-      \nolinenumbers
-      \ACOV@PrintAtlasCover
-      \ACOV@PrintAtlasCoverPageTwo
-      % Turn line numbers back on
-      \ifADOC@atlasdraft
-        \ifx\ADOC@draftversion\@empty%
-          \relax
-        \else
-          \linenumbers
-        \fi
-      \fi
+  % Turn on line numbers and back references for draft documents with a version number
+  \ifthenelse{\boolean{ADOC@atlasdraft}}{%
+    \ifthenelse{\equal{\ADOC@draftversion}{}}{%
+      \typeout{*** atlasdoc: this ATLAS draft document does not have a version number}
+    }{%
+      \typeout{atlasdoc: this is an ATLAS draft document}
+      \ADOC@DraftHeading
+      \linenumbers
     }
-  \fi
-  % Add heading for books (i.e. TDR)
-  \ifADOC@BOOK
-    \AtlasBookHeading
-    % Add draft heading and line numbers
-    \ifADOC@atlasdraft
-      \ifx\ADOC@draftversion\@empty%
-        \typeout{*** atlasdoc: this ATLAS draft book does not have a version number}
-      \else
-        \typeout{atlasdoc: this is an ATLAS draft book}
-        \linenumbers
-      \fi
-    \else
-      \typeout{atlasdoc: this is the final version of an ATLAS book}
-    \fi
-  \else
-    % Add draft heading and line numbers
-    \ifADOC@atlasdraft
-      \ifx\ADOC@draftversion\@empty%
-        \typeout{*** atlasdoc: this ATLAS draft document does not have a version number!}
-      \else
-        \typeout{atlasdoc: this is an ATLAS draft document}
-        \AtlasDraftHeading
-        \linenumbers
-      \fi
-    \else
-      \typeout{atlasdoc: this is the final version of an ATLAS document}
-    \fi
-  \fi
+  }{%
+    \typeout{atlasdoc: this is the final version of an ATLAS document}
+  }
+  \ifthenelse{\boolean{ADOC@linenofix}}{%
+    \typeout{+++ atlasdoc: using lineno package fix}
+    \linenomathpatchAMS{align}
+    \linenomathpatchAMS{alignat}
+    \linenomathpatchAMS{equation}
+    \linenomathpatchAMS{flalign}
+    \linenomathpatchAMS{gather}
+    \linenomathpatchAMS{multline}
+  }{}
+  % \typeout{atlasdoc sizes:}
+  % \typeout{paper height and width \the\paperheight, \the\paperwidth}
+  % \typeout{PDF page height and width \the\pdfpageheight, \the\pdfpagewidth}
+  % \typeout{text height and width \the\textheight, \the\textwidth}
+  % \typeout{line width \the\linewidth}
+  % \typeout{margin width and sep \the\marginparwidth, \the\marginparsep}
 }
 
 \endinput

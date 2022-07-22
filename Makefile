@@ -1,6 +1,6 @@
 # Makefile for creating an ATLAS LaTeX document
 
-# Copyright (C) 2002-2018 CERN for the benefit of the ATLAS collaboration
+# Copyright (C) 2002-2022 CERN for the benefit of the ATLAS collaboration
 #------------------------------------------------------------------------------
 # By default makes mydocument.pdf using target run_pdflatex.
 # Replace mydocument with your main filename or add another target set.
@@ -11,28 +11,30 @@
 # Use "make clean" to cleanup.
 # Use "make cleanpdf" to delete $(BASENAME).pdf.
 # "make cleanall" also deletes the PDF file $(BASENAME).pdf.
-# Use "make cleanepstopdf" to rmeove PDF files created automatically from EPS files.
+# Use "make cleanepstopdf" to remove PDF files created automatically from EPS files.
 #   Note that FIGSDIR has to be set properly for this to work.
 
-# Set the default target to run_latexmk instead of run_pdflatex to use latexmk to compile.
+# Set the default target to run_pdflatex instead of run_latexmk to use explicit
+# pdflatex/biber commands to compile.
 
-# If you have to run latex rather than pdflatex adjust the dependencies of %.dvi target
-#   and use the command "make run_latex" to compile.
-# Specify dvipdf or dvips as the run_latex dependency,
-#   depending on which you want to use.
+# You can use the target version to check your TeX Live version.
 
 #-------------------------------------------------------------------------------
 # Check which TeX Live installation you have with the command pdflatex --version
-TEXLIVE  = 2016
+TEXLIVE  = 2020
 LATEX    = latex
 PDFLATEX = pdflatex
 # BIBTEX   = bibtex
 BIBTEX   = biber
 DVIPS    = dvips
 DVIPDF   = dvipdf
+TLVERS   = $(shell pdflatex --version | grep -Go 'TeX Live [0-9]*' | grep -Go '[0-9].*')
+# TLOKAY   = $(shell test $(TLVERS) -ge $(TEXLIVE) && echo true)
+TWIKI    = https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PubComLaTeXFAQ
 
 #-------------------------------------------------------------------------------
 # The main document filename
+###BASENAME = mydocument
 BASENAME = ANA-TOPQ-2019-17-PAPER
 
 #-------------------------------------------------------------------------------
@@ -45,15 +47,23 @@ FIGSDIR  = figs
 rwildcard=$(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $(subst *,%,$2),$d))
 EPSTOPDFFILES = $(call rwildcard, $(FIGSDIR), *eps-converted-to.pdf)
 
-# Default target - make mydocument.pdf with pdflatex
-default: run_pdflatex
-# Use latexmk instead to compile
-# default: run_latexmk
+# Default target - make mydocument.pdf with latexmk.
+default: run_latexmk
+# Use pdflatex/biber instead to compile.
+# default: run_pdflatex
 
 .PHONY: run_latexmk
 .PHONY: newdocument newdocumenttexmf newnotemetadata newpapermetadata newfiles
 .PHONY: draftcover preprintcover newdata
-.PHONY: clean cleanpdf help
+.PHONY: version clean cleanpdf help
+
+# Check TeX Live version
+version:
+	@echo "Checking version"
+	@echo "TLVERS $(TLVERS), TEXLIVE $(TEXLIVE)"
+	if [ $(TLVERS) -lt $(TEXLIVE) ]; then \
+		echo "Your TeX Live version ($(TLVERS)) is older than $(TEXLIVE). Please consult $(TWIKI)"; \
+	fi
 
 # Standard pdflatex target
 run_pdflatex: $(BASENAME).pdf
@@ -97,7 +107,7 @@ newbooktexmf: TEMPLATE=atlas-book
 newbooktexmf: newdocumenttexmf newfiles newpapermetadata
 
 draftcover:
-	if [ $(TEXLIVE) -ge 2007 -a $(TEXLIVE) -lt 2100 ]; then \
+	if [ $(TEXLIVE) -ge 2013 -a $(TEXLIVE) -lt 2100 ]; then \
 	  sed 's/texlive=20[0-9][0-9]/texlive=$(TEXLIVE)/' template/atlas-draft-cover.tex \
 	    >$(BASENAME)-draft-cover.tex; \
 	else \
@@ -116,7 +126,7 @@ newdata:
 	cp template/atlas-hepdata.tex $(BASENAME)-hepdata.tex
 
 newdocument:
-	if [ $(TEXLIVE) -ge 2007 -a $(TEXLIVE) -lt 2100 ]; then \
+	if [ $(TEXLIVE) -ge 2013 -a $(TEXLIVE) -lt 2100 ]; then \
 	  sed s/atlas-document/$(BASENAME)/ template/$(TEMPLATE).tex | \
 	    sed 's/texlive=20[0-9][0-9]/texlive=$(TEXLIVE)/' >$(BASENAME).tex; \
 	else \
@@ -125,11 +135,10 @@ newdocument:
 	fi
 
 newdocumenttexmf:
-	if [ $(TEXLIVE) -ge 2007 -a $(TEXLIVE) -lt 2100 ]; then \
+	if [ $(TEXLIVE) -ge 2013 -a $(TEXLIVE) -lt 2100 ]; then \
 	  sed s/atlas-document/$(BASENAME)/ template/$(TEMPLATE).tex | \
 	  sed 's/texlive=20[0-9][0-9]/texlive=$(TEXLIVE)/' | \
-	  sed 's/\\newcommand\*{\\ATLASLATEXPATH}{latex\/}/% \\newcommand\*{\\ATLASLATEXPATH}{latex\/}/' | \
-	  sed 's/% \\newcommand\*{\\ATLASLATEXPATH}{}/\\newcommand\*{\\ATLASLATEXPATH}{}/' \
+	  sed 's/\\RequirePackage{latex\/atlaslatexpath}/% \\RequirePackage{latex\/atlaslatexpath}/' \
 	  >$(BASENAME).tex; \
 	else \
 	  echo "Invalid value for TEXLIVE: $(TEXLIVE)"; \
@@ -187,7 +196,7 @@ help:
 	@echo "If your bib files are not in the main directory, adjust the %.pdf target accordingly." 
 	@echo ""
 	@echo "To compile the document using latexmk give the command:"
-	@echo "make latexmk"
+	@echo "make run_latexmk"
 	@echo "You can also adjust the 'default' target."
 	@echo ""
 	@echo "If atlaslatex is installed centrally, e.g. in ~/texmf:"
@@ -210,21 +219,22 @@ help:
 	@echo "make cleanps  to clean output PS files"
 	@echo "make cleanall to clean all files"
 	@echo "make cleanepstopdf to clean PDF files automatically made from EPS"
+	@echo "make version to check your TeX Live version"
 	@echo ""
 
 clean:
-	-rm *.dvi *.toc *.aux *.log *.out \
+	-rm *.dvi *.toc *.aux *.lof *.lot *.log *.out \
 		*.bbl *.blg *.brf *.bcf *-blx.bib *.run.xml \
-		*.cb *.ind *.idx *.ilg *.inx \
-		*.synctex.gz *~ *.fls *.fdb_latexmk .*.lb spellTmp 
+		*.cb *.ind *.idx *.ilg *.inx *.tdo \
+		*.synctex.gz *~ *.fls *.fdb_latexmk .*.lb spellTmp
 
 cleanpdf:
-	-rm $(BASENAME).pdf 
+	-rm $(BASENAME).pdf
 	-rm $(BASENAME)-draft-cover.pdf $(BASENAME)-preprint-cover.pdf
 	-rm $(BASENAME)-hepdata-main.pdf
 
 cleanps:
-	-rm $(BASENAME).ps 
+	-rm $(BASENAME).ps
 	-rm $(BASENAME)-draft-cover.ps $(BASENAME)-preprint-cover.ps
 	-rm $(BASENAME)-hepdata-main.ps
 
