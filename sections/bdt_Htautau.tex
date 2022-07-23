@@ -70,7 +70,7 @@ In the training process, all signal events from $tt(qH)$ and $tH$ are combined f
 
 Many potential variables were investigated in each SR separately. The discrimination of a given variable is quantified by the `separation' (which measures the degree of overlap between background and signal distribution shape) and `importance' (which ranks the power of the variable in the classification of the events) provided by the TMVA package. %~\cite{Hocker:2007ht}.
 The BDT discriminant is trained for each SR starting from a large list of variables; then the least important variables are removed sequentially, and the BDT is retrained until the
-receiver operating characteristic (ROC) score drops by more than 2\%.
+receiver operating characteristic (ROC) score, the area under the ROC curve, drops by more than 2\%.
 %The final variables used in SRs are shown in Table 5 with their ranking. 
 %and only those variables whose importance is larger than 2\% were kept.
 The final BDT input variables in each SR and their importance ranking are listed in Table~\ref{tab:importance}. The discriminating variables are as follows:
