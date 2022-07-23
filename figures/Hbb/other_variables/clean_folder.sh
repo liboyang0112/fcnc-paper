@@ -1,2 +1,0 @@
-rm *Prob*
-rm Summary*
