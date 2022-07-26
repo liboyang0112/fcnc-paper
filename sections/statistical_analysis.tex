@@ -37,7 +37,7 @@ fit is able to determine the strength of a simulated signal injected into the re
 The test statistic $q_\mu$ is defined as the profile likelihood ratio, 
 $q_\mu = -2\ln({\cal L}(\mu,{\hat{\hat{\theta}}}_\mu)/{\cal L}(\hat{\mu},\hat{\theta}))$,
 where $\hat{\mu}$ and $\hat{\theta}$ are the values of the parameters that
-maximise the likelihood function (subject to the constraint $0\leq \hat{\mu} \leq \mu$), and the ${\hat{\hat{\theta}}}_\mu$ are the values of the
+maximise the likelihood function (subject to the constraint $\hat{\mu} \geq 0$), and the ${\hat{\hat{\theta}}}_\mu$ are the values of the
 nuisance parameters that maximise the likelihood function for a given value of $\mu$. 
 The test statistic $q_\mu$ is evaluated with the {\textsc RooFit} package~\cite{Verkerke:2003ir,RooFitManual}.
 %A related statistic is used to determine whether the observed data is compatible with the background-only hypothesis (the so-called discovery test)  
