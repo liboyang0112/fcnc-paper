@@ -1,17 +1,19 @@
-
 Dear Editor,
 
 following the comments from the referee, the following changes were made on the manuscript:
 
-Section 1, 1st paragraph:
-Added the following references:  [14], [16], [17] and [21]-[25].
+Section 1, last second paragraph:
+Added the recent published CMS tqHgammagamma results in Table 1 and text as:
+"CMS also recently reported a search for $tqH$ in the $H\rightarrow \gamma\gamma$ mode using the full Run-2 data and set observed(expected) upper limits on $\mathcal{B}(t\to Hu)$ of $1.9\times10^{-4}(3.1\times10^{-4})$ and $\mathcal{B}(t\to Hc)$ of $7.3\times10^{-4}(5.1\times10^{-4})$ [36]."
 
-Section 7.2, 2nd paragraph:
+Added reference [36].
+
+Appendix A, end of 1st paragraph:
 Added the following sentence:
-“The discrimination of a given variable was quantified by the ``separation" and ``importance" measures provided by the TMVA package [103].”
- Section 8.2, 4th paragraph:
-Added the following sentence:
-“Since the fraction of signal and background in this kinematic regime is very small, these uncertainties have a negligible impact in the analyses. Finally, an uncertainty related to the application of $c$-jet scale factors to $\tau$-jets is considered, which also has a negligible impact.”
+"However, the interpretation of these scale factors is  difficult due to their large correlations."
+
+The following figures are updated:
+Figure 1 (i), Figure 2 (i), Figure 3 (f) (g) (i), Figure 4 (f) (g) (i), Figure 7 (d) (e) (f).
 
 Best regards,
 
