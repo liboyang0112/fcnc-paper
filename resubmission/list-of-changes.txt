@@ -6,7 +6,7 @@ Section 1, last second paragraph:
 Added the recent published CMS tqHgammagamma results in Table 1 and text as:
 "CMS also recently reported a search for $tqH$ in the $H\rightarrow \gamma\gamma$ mode using the full Run-2 data and set observed(expected) upper limits on $\mathcal{B}(t\to Hu)$ of $1.9\times10^{-4}(3.1\times10^{-4})$ and $\mathcal{B}(t\to Hc)$ of $7.3\times10^{-4}(5.1\times10^{-4})$ [36]."
 
-Added reference [36].
+Added reference [37].
 
 Appendix A, end of 1st paragraph:
 Added the following sentence:
